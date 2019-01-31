@@ -1,18 +1,19 @@
 package com.house.entity;
 
-import org.springframework.stereotype.Component;
-
-@Component
+/*
+账户信息
+ */
 public class Account {
-    private int accountid;
+    private long accountid;
     private String username;
     private String password;
+    private int accounttype; //1.用户 2.服务人员 3.管理员
 
-    public int getAccountid() {
+    public long getAccountid() {
         return this.accountid;
     }
 
-    public void setAccountid(int accountid) {
+    public void setAccountid(long accountid) {
         this.accountid = accountid;
     }
 
@@ -30,5 +31,13 @@ public class Account {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getAccounttype() {
+        return this.accounttype;
+    }
+
+    public void setAccounttype(int accounttype) {
+        this.accounttype = accounttype;
     }
 }

@@ -6,8 +6,5 @@
 <!--类名-->
 <mapper namespace="com.house.dao.AccountDao">
     <!--id:方法名   result：返回值类型-->
-    <insert id="insertAccount" useGeneratedKeys="true" keyColumn="account_id" keyProperty="accountid">
-		  insert into tb_account(username,password)
-		  values (#{username},#{password})
-	</insert>
+
 </mapper>
