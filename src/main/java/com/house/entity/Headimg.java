@@ -7,7 +7,8 @@ import java.util.Date;
  */
 public class Headimg {
     private Long headimgid;
-    private String headimgdes;
+    private String headimgtitle;
+    private String headimgdetails;
     private String headimgurl;
     private Integer priority;
     private Integer enablestatus;
@@ -22,12 +23,20 @@ public class Headimg {
         this.headimgid = headimgid;
     }
 
-    public String getHeadimgdes() {
-        return this.headimgdes;
+    public String getHeadimgtitle() {
+        return this.headimgtitle;
     }
 
-    public void setHeadimgdes(String headimgdes) {
-        this.headimgdes = headimgdes;
+    public void setHeadimgtitle(String headimgtitle) {
+        this.headimgtitle = headimgtitle;
+    }
+
+    public String getHeadimgdetails() {
+        return this.headimgdetails;
+    }
+
+    public void setHeadimgdetails(String headimgdetails) {
+        this.headimgdetails = headimgdetails;
     }
 
     public String getHeadimgurl() {

@@ -77,7 +77,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
     </appender>
-    <logger name="com.shop" level="${log.level}" additivity="true">
+    <logger name="com.house" level="${log.level}" additivity="true">
         <appender-ref ref="debugAppender"/>
         <appender-ref ref="infoAppender"/>
         <appender-ref ref="errorAppender"/>

@@ -16,15 +16,14 @@ public class Servicer {
     private Integer servicerscore;
     private String servicerprice;
     private String servicerdes;
-    private String servicerfile;
+    private String servicerfile; //提交的申请文件，zip格式
+    private Degree degree;
     List<ServiceType> serviceTypeList;
     List<WorkArea> workAreaList;
-    List<Evaluate> evaluateList;//评价可为空
-    List<Reserve> reserveList;//预定可为空
     private Date createtime;
     private Date lastedittime;
     private Account account;
-    private Integer enablestatus;
+    private Integer enablestatus;//-1.禁用 0.审核中 1.空闲 2.正在服务
 
     public long getServicerid() {
         return this.servicerid;
@@ -130,22 +129,6 @@ public class Servicer {
         this.workAreaList = workAreaList;
     }
 
-    public List<Evaluate> getEvaluateList() {
-        return this.evaluateList;
-    }
-
-    public void setEvaluateList(List<Evaluate> evaluateList) {
-        this.evaluateList = evaluateList;
-    }
-
-    public List<Reserve> getReserveList() {
-        return this.reserveList;
-    }
-
-    public void setReserveList(List<Reserve> reserveList) {
-        this.reserveList = reserveList;
-    }
-
     public Date getCreatetime() {
         return this.createtime;
     }
@@ -176,5 +159,13 @@ public class Servicer {
 
     public void setEnablestatus(Integer enablestatus) {
         this.enablestatus = enablestatus;
+    }
+
+    public Degree getDegree() {
+        return this.degree;
+    }
+
+    public void setDegree(Degree degree) {
+        this.degree = degree;
     }
 }

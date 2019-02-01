@@ -1,10 +1,8 @@
-package com.shop;
+package com.house;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.lang.reflect.Method;
 
 //加载xml文件
 @RunWith(SpringJUnit4ClassRunner.class)

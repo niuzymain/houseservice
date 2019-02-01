@@ -2,7 +2,7 @@ package com.house.entity;
 
 import java.util.Date;
 /*
-工作地点
+工作地点,分两级，城市和地区
  */
 public class WorkArea {
     private long workareaid;
@@ -10,7 +10,7 @@ public class WorkArea {
     private Integer priority;
     private Date createtime;
     private Date lastedittime;
-
+    private WorkArea parentarea;
     public long getWorkareaid() {
         return this.workareaid;
     }
@@ -49,5 +49,13 @@ public class WorkArea {
 
     public void setLastedittime(Date lastedittime) {
         this.lastedittime = lastedittime;
+    }
+
+    public WorkArea getParentarea() {
+        return this.parentarea;
+    }
+
+    public void setParentarea(WorkArea parentarea) {
+        this.parentarea = parentarea;
     }
 }

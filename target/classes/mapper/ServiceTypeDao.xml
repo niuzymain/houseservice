@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--类名-->
+<mapper namespace="com.house.dao.ServiceTypeDao">
+
+    <insert id="insertServiceType" parameterType="com.house.entity.ServiceType" useGeneratedKeys="true" keyColumn="servicetype_id" keyProperty="servicetypeid">
+      insert into
+      tb_servicetype(servicetype_name,priority,create_time,lastedit_time)
+      values (#{servicetypename},#{priority},#{createtime},#{lastedittime})
+    </insert>
+
+    <update id="updateServiceType" parameterType="com.house.entity.ServiceType">
+        update tb_servicetype
+        <set>
+            <if test="servicetypename != null">servicetype_name=#{servicetypename},</if>
+            <if test="priority != null">priority=#{priority},</if>
+            <if test="lastedittime != null">lastedit_time=#{lastedittime},</if>
+        </set>
+        where servicetype_id=#{servicetypeid}
+    </update>
+
+    <delete id="deleteServiceType" parameterType="long">
+        delete from tb_servicetype
+        where servicetype_id=#{servicetypeid}
+    </delete>
+
+    <select id="queryServiceType" resultType="com.house.entity.ServiceType">
+        select servicetype_id,servicetype_name,priority
+        from tb_servicetype
+    </select>
+
+</mapper>

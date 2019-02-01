@@ -15,7 +15,6 @@ public class User {
     private Date createtime;
     private Date lastedittime;
     private Account account;
-    private List<Reserve> reserveList;  //预定信息可为空
 
     public long getUserid() {
         return this.userid;
@@ -81,11 +80,4 @@ public class User {
         this.account = account;
     }
 
-    public List<Reserve> getReserveList() {
-        return this.reserveList;
-    }
-
-    public void setReserveList(List<Reserve> reserveList) {
-        this.reserveList = reserveList;
-    }
 }
