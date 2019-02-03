@@ -7,7 +7,7 @@ import java.util.List;
 public interface WorkAreaDao {
 //    添加地区
     int insertArea(WorkArea workArea);
-//    修改地区 ,若修改城市则先删除城市下所有地区
+//    修改地区 ,只能修改区域
     int updateArea(WorkArea workArea);
 //    删除地区
     int deleteArea(Long workareaid);
