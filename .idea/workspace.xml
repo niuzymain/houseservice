@@ -7,22 +7,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eb73dc7-a397-4b8d-a922-66f1030a9b43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/entity/Conditions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/typeDisplayImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/typeOperateImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/typeDisplay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/typeOperate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/route/CommonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/route/ServicerComtroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/route/SuperAdminComtroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/route/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/route/负责前端界面路由" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/servicer/TypeOperateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/servicer/Typedisplaycontroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/util/CheckCodeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/util/ImageUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/util/JSONutil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/common/CheckLoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/TypeDisplayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/TypeOperateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/dao/WorkAreaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/dao/WorkAreaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/typeDisplayImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/TypeDisplayImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/typeOperateImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/TypeOperateImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/typeDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/TypeDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/typeOperate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/TypeOperate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/servicer/TypeOperateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/servicer/Typedisplaycontroller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/entity/Servicer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/entity/Servicer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/Testcontroller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/mapper/AccountDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/mapper/AccountDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/common/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/common/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,7 +48,7 @@
           <entry key="project.closed" value="13" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.19" value="2" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.3" value="1" />
@@ -47,14 +56,14 @@
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="7" />
           <entry key="iml" value="1" />
-          <entry key="java" value="91" />
+          <entry key="java" value="103" />
           <entry key="js" value="3" />
           <entry key="md" value="1" />
           <entry key="properties" value="2" />
@@ -67,7 +76,7 @@
         <counts>
           <entry key="HTML" value="7" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="91" />
+          <entry key="JAVA" value="103" />
           <entry key="JavaScript" value="3" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="5" />
@@ -77,9 +86,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="62" />
+          <entry key="dummy" value="66" />
           <entry key="html" value="91" />
-          <entry key="java" value="7182" />
+          <entry key="java" value="7951" />
           <entry key="js" value="51" />
           <entry key="properties" value="22" />
           <entry key="txt" value="9" />
@@ -89,9 +98,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="91" />
-          <entry key="JAVA" value="7182" />
+          <entry key="JAVA" value="7951" />
           <entry key="JavaScript" value="51" />
-          <entry key="PLAIN_TEXT" value="71" />
+          <entry key="PLAIN_TEXT" value="75" />
           <entry key="Properties" value="22" />
           <entry key="SQL" value="40" />
           <entry key="XML" value="1879" />
@@ -102,48 +111,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/typeOperateImp.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/TypeOperateImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/typeDisplayImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2153#2154#0" expanded="true" />
-                <element signature="e#2215#2216#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/typeOperate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/typeDisplay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="330">
+              <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,24 +125,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/route/SuperAdminComtroller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state relative-caret-position="247">
+              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#496#497#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/TypeDisplayImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="907">
+              <caret line="58" column="42" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2153#2154#0" expanded="true" />
+                <element signature="e#2215#2216#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/servicer/TypeOperateController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/TypeDisplayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="19" column="48" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="48" />
+            <state relative-caret-position="1117">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,22 +161,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/WorkAreaDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/common/CheckLoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="44">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/servicer/Typedisplaycontroller.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/TypeOperateController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            <state relative-caret-position="122">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -203,10 +184,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/route/CommonController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="168">
+              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#396#397#0" expanded="true" />
+                <element signature="e#496#497#0" expanded="true" />
+                <element signature="e#520#521#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,8 +200,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/route/ServicerComtroller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="44">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -245,10 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/shop/dao/AccountDaotest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/house/entity/SuperAdmin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/house/entity/Apply.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/entity/ServiceType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/entity/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/entity/Degree.java" />
@@ -282,7 +263,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/house/entity/Conditions.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/Operate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/dto/OperateExe.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/TypeOperate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/TypeOperateImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/typeOperate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/dao/WorkAreaDao.java" />
@@ -295,7 +275,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/servicer/typeDisplayController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/route/SuperAdminComtroller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/servicer/typeOperateController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/TypeOperate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/web/servicer/Typedisplaycontroller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/servicer/TypeOperateController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/TypeDisplayImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/web/servicer/TypeDisplayController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/TypeDisplayController.java" />
       </list>
     </option>
   </component>
@@ -396,23 +381,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="houseservice" type="58d84e3e:PackageViewProjectNode" />
-              <item name="houseservice" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="58d84e3e:PackageViewProjectNode" />
-              <item name="houseservice" type="616d4139:PackageViewModuleNode" />
-              <item name="com.house" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -502,7 +470,26 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="house" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="house" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="house" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
@@ -513,16 +500,6 @@
               <item name="house" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="route" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="servicer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
@@ -664,13 +641,30 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="houseservice" type="58d84e3e:PackageViewProjectNode" />
+              <item name="houseservice" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="houseservice" type="58d84e3e:PackageViewProjectNode" />
+              <item name="houseservice" type="616d4139:PackageViewModuleNode" />
+              <item name="com.house" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549192885960" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549204217055" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -703,7 +697,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AdminDaotest.testinsert">
+  <component name="RunManager" selected="Tomcat Server.Tomcat">
     <configuration name="AccountDaotest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="houseservice" />
       <extension name="coverage">
@@ -947,6 +941,7 @@
       <workItem from="1549074570542" duration="2164000" />
       <workItem from="1549162074680" duration="5185000" />
       <workItem from="1549191723157" duration="1145000" />
+      <workItem from="1549201029074" duration="3149000" />
     </task>
     <servers />
   </component>
@@ -983,13 +978,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41576000" />
+    <option name="totallyTimeSpent" value="44725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2987897" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30332828" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -999,9 +993,9 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32879046" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31911263" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5546075" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32935154" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.23890784" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.2764505" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -1029,29 +1023,25 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/TypeDisplayController.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/TypeDisplayController.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/Evaluate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/Headimg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/Reserve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/index.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1093,9 +1083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-820">
           <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1280,16 +1267,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/route/ServicerComtroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/WorkAreaDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
+        <state relative-caret-position="154">
           <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1297,31 +1277,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/route/CommonController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/util/JSONutil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/route/SuperAdminComtroller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/util/CheckCodeUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/typeOperate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/util/ImageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/TypeOperate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
@@ -1331,7 +1308,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/typeDisplay.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/TypeOperateImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/TypeDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
@@ -1341,10 +1328,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/typeDisplayImp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/TypeDisplayImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+        <state relative-caret-position="907">
+          <caret line="58" column="42" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2153#2154#0" expanded="true" />
@@ -1353,27 +1340,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/typeOperateImp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/common/CheckLoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/TypeOperateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/servicer/Typedisplaycontroller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/route/ServicerComtroller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/servicer/TypeOperateController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/route/SuperAdminComtroller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="48" />
+        <state relative-caret-position="247">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/route/CommonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/TypeDisplayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1117">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

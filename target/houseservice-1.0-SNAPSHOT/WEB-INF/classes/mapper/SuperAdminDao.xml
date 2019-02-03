@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--类名-->
+<mapper namespace="com.house.dao.SuperAdminDao">
+    <!--id:方法名   result：返回值类型-->
+    <insert id="insertSuperAdmin" useGeneratedKeys="true" keyColumn="superadmin_id" keyProperty="superadminid">
+      insert into
+      tb_superadmin(superadmin_name,account_id)
+      values (#{adminname},#{accountid})
+    </insert>
+
+    <delete id="deleteSuperAdmin">
+        delete from tb_superadmin
+        where superadmin_id=#{adminid}
+    </delete>
+</mapper>

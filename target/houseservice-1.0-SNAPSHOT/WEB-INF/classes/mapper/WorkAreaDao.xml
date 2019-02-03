@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--类名-->
+<mapper namespace="com.house.dao.WorkAreaDao">
+
+    <insert id="insertArea" parameterType="com.house.entity.WorkArea" useGeneratedKeys="true" keyColumn="workarea_id" keyProperty="workareaid">
+      insert into
+      tb_workarea(workarea_name,priority,create_time,lastedit_time,parentarea_id)
+      values (#{workareaname},#{priority},#{createtime},#{lastedittime},#{parentarea.workareaid})
+    </insert>
+
+    <update id="updateArea" parameterType="com.house.entity.WorkArea">
+        update tb_workarea
+        <set>
+            <if test="workareaname != null">workarea_name=#{workareaname},</if>
+            <if test="priority != null">priority=#{priority},</if>
+            <if test="lastedittime != null">lastedit_time=#{lastedittime},</if>
+        </set>
+        where workarea_id=#{workareaid}
+    </update>
+
+    <delete id="deleteArea" parameterType="long">
+        delete from tb_workarea
+        where workarea_id=#{workareaid}
+    </delete>
+
+    <delete id="deleteChildArea" parameterType="long">
+        delete from tb_workarea
+        where parentarea_id=#{parentareaid}
+    </delete>
+
+    <select id="queryArea" resultType="com.house.entity.WorkArea">
+        select workarea_id,workarea_name,priority
+        from tb_workarea
+        where parentarea_id is null
+    </select>
+
+    <select id="queryAreaByParent" parameterType="long" resultType="com.house.entity.WorkArea">
+        select workarea_id,workarea_name,priority
+        from tb_workarea
+        where parentarea_id=#{parentareaid}
+    </select>
+
+</mapper>
