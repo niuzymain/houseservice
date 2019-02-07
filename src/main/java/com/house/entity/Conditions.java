@@ -5,8 +5,8 @@ package com.house.entity;
  */
 public class Conditions {
     private Degree degree;
-    private ServiceType serviceType;
-    private WorkArea workArea;
+    private ServiceType servicetype;
+    private WorkArea workarea;
 
     public Degree getDegree() {
         return this.degree;
@@ -16,19 +16,19 @@ public class Conditions {
         this.degree = degree;
     }
 
-    public ServiceType getServiceType() {
-        return this.serviceType;
+    public ServiceType getServicetype() {
+        return this.servicetype;
     }
 
-    public void setServiceType(ServiceType serviceType) {
-        this.serviceType = serviceType;
+    public void setServicetype(ServiceType servicetype) {
+        this.servicetype = servicetype;
     }
 
-    public WorkArea getWorkArea() {
-        return this.workArea;
+    public WorkArea getWorkarea() {
+        return this.workarea;
     }
 
-    public void setWorkArea(WorkArea workArea) {
-        this.workArea = workArea;
+    public void setWorkarea(WorkArea workarea) {
+        this.workarea = workarea;
     }
 }
