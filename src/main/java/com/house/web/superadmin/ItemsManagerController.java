@@ -100,7 +100,7 @@ public class ItemsManagerController {
             }
             return modelMap;
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             modelMap.put("success",false);
             modelMap.put("errormsg","错误："+e.getMessage());

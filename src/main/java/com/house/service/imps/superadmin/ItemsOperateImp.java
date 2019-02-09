@@ -136,7 +136,7 @@ public class ItemsOperateImp implements ItemsOperate {
                     childresult = 1;
                     result = workAreaDao.deleteArea(conditions.getWorkarea().getWorkareaid());
                 }
-                if(result <= 0 || childresult <= 0){
+                if(result <= 0 || childresult < 0){
                     throw new RuntimeException();
                 }
                 else{

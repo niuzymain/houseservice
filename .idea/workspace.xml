@@ -7,62 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eb73dc7-a397-4b8d-a922-66f1030a9b43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/service/common/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/common/LoginServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/common/CommonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/localareas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/showitems.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common/adminmenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common/commonlogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/showitems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/entity/Conditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/entity/Conditions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/TypeDisplayImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/ItemsDisplayImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/TypeOperateImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/ItemsOperateImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/TypeDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/ItemsDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/TypeOperate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/ItemsOperate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/common/CheckLoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/route/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/web/route/CommonRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/route/ServicerComtroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/web/route/ServicerRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/route/SuperAdminComtroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/web/route/SuperAdminRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/route/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/web/route/UserRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/TypeDisplayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/TypeOperateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/ItemsOperateImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/ItemsOperateImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ServiceTypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ServiceTypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/WorkAreaDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/WorkAreaDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/degreeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/degreeDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/common/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/entity/Conditions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/house/entity/Conditions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/service/imps/superadmin/TypeDisplayImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/service/imps/superadmin/TypeOperateImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/service/superadmin/TypeDisplay.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/service/superadmin/TypeOperate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/web/common/CheckLoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/web/route/CommonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/web/route/ServicerComtroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/web/route/SuperAdminComtroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/web/route/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/web/superadmin/TypeDisplayController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/web/superadmin/TypeOperateController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/showitems.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/showitems.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/common/adminmenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common/adminmenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/showitems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/showitems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ServiceTypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ServiceTypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/WorkAreaDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/WorkAreaDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/degreeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/degreeDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/entity/Conditions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/entity/Conditions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/imps/superadmin/TypeDisplayImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/imps/superadmin/TypeOperateImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/superadmin/TypeDisplay.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/superadmin/TypeOperate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/common/CheckLoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/route/CommonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/route/ServicerComtroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/route/SuperAdminComtroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/route/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/superadmin/TypeDisplayController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/superadmin/TypeOperateController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/mapper/ServiceTypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/mapper/ServiceTypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/mapper/WorkAreaDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/mapper/WorkAreaDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/mapper/degreeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/mapper/degreeDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/superadmin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/superadmin/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/common/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/superadmin/showitems.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/superadmin/showitems.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/common/adminmenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/common/adminmenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/superadmin/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/superadmin/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/superadmin/showitems.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/superadmin/showitems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,62 +48,63 @@
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.19" value="2" />
-          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.2" value="5" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.54" value="1" />
+          <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="17" />
+          <entry key="html" value="21" />
           <entry key="iml" value="1" />
-          <entry key="java" value="134" />
-          <entry key="js" value="15" />
+          <entry key="java" value="145" />
+          <entry key="js" value="19" />
           <entry key="md" value="1" />
           <entry key="properties" value="2" />
           <entry key="txt" value="4" />
-          <entry key="xml" value="56" />
+          <entry key="xml" value="62" />
           <entry key="负责前端界面路由" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="17" />
+          <entry key="HTML" value="21" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="134" />
-          <entry key="JavaScript" value="15" />
+          <entry key="JAVA" value="145" />
+          <entry key="JavaScript" value="19" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Properties" value="2" />
-          <entry key="XML" value="56" />
+          <entry key="XML" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="133" />
-          <entry key="html" value="908" />
-          <entry key="java" value="9298" />
-          <entry key="js" value="1348" />
+          <entry key="html" value="1172" />
+          <entry key="java" value="9299" />
+          <entry key="js" value="4032" />
           <entry key="properties" value="22" />
           <entry key="txt" value="9" />
-          <entry key="xml" value="1919" />
+          <entry key="xml" value="1946" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="911" />
-          <entry key="JAVA" value="9298" />
-          <entry key="JavaScript" value="1345" />
+          <entry key="HTML" value="1175" />
+          <entry key="JAVA" value="9299" />
+          <entry key="JavaScript" value="4029" />
           <entry key="PLAIN_TEXT" value="142" />
           <entry key="Properties" value="22" />
-          <entry key="SQL" value="40" />
-          <entry key="XML" value="1879" />
+          <entry key="SQL" value="45" />
+          <entry key="XML" value="1901" />
         </counts>
       </usages-collector>
     </session>
@@ -146,36 +115,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/showitems.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsManagerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/Conditions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+            <state relative-caret-position="191">
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -183,35 +135,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/showitems.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="52" lean-forward="true" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common/adminmenu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/showitems.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="26" column="86" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="26" selection-end-column="86" />
+            <state relative-caret-position="219">
+              <caret line="76" column="121" selection-start-line="76" selection-start-column="120" selection-end-line="76" selection-end-column="121" />
             </state>
           </provider>
         </entry>
@@ -241,12 +166,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/house/dao/AccountDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/WorkAreaDao.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/house/dao/AccountDaotest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/dao/DegreeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/AccountDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/degreeDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/dao/SuperAdminDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/SuperAdminDao.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/house/dao/AdminDaotest.java" />
@@ -271,7 +191,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/ItemsDisplayImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsDisplayController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsOperateController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsManagerController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/localarea.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/route/SuperAdminComtroller.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/localareas.html" />
@@ -283,14 +202,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/route/CommonController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/route/CommonRoute.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/common/CommonController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/login.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/login.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/operate.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/entity/Conditions.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/common/adminmenu.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/degreeDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ServiceTypeDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/WorkAreaDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/common/adminmenu.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/showitems.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/login.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/AccountDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsManagerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/ItemsOperateImp.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/showitems.js" />
       </list>
     </option>
@@ -336,62 +261,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="house" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="house" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -693,6 +562,63 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="house" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="house" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -709,15 +635,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549547185397" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549638162785" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Schoolshop" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -999,6 +924,8 @@
       <workItem from="1549191723157" duration="1145000" />
       <workItem from="1549201029074" duration="3437000" />
       <workItem from="1549520207717" duration="16800000" />
+      <workItem from="1549606937651" duration="12047000" />
+      <workItem from="1549705512265" duration="5027000" />
     </task>
     <servers />
   </component>
@@ -1035,13 +962,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61813000" />
+    <option name="totallyTimeSpent" value="78887000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.30786687" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.31694403" />
       <window_info id="Structure" order="1" sideWeight="0.50246304" side_tool="true" weight="0.30786687" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1051,9 +978,9 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32879046" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3327645" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34129694" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32935154" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.40443686" />
+      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.28668943" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -1082,36 +1009,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/Operate.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dto/OperateExe.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/WorkArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/SuperAdmin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AccountDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="26" column="39" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -1155,28 +1052,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/ItemsOperate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="220" column="59" selection-start-line="220" selection-start-column="59" selection-end-line="220" selection-end-column="59" />
-          <folding>
-            <element signature="e#19327#19328#0" expanded="true" />
-            <element signature="e#19410#19411#0" expanded="true" />
-            <element signature="e#21107#21108#0" expanded="true" />
-            <element signature="e#21134#21135#0" expanded="true" />
-            <element signature="e#24329#24330#0" expanded="true" />
-            <element signature="e#24394#24395#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1187,33 +1066,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsDisplayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WorkAreaDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/ItemsOperateImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsDisplayController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/util/CheckCodeUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1266,9 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1283,9 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,13 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="197" selection-start-line="197" selection-end-line="197" />
         </state>
       </provider>
     </entry>
@@ -1328,32 +1168,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/itemsoperate.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/itemsoperate.js" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/ItemsDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/common/CommonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1361,9 +1183,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1371,78 +1190,160 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-132">
           <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsManagerController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="276">
+          <caret line="26" column="86" selection-start-line="22" selection-start-column="4" selection-end-line="26" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ServiceTypeDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SuperAdminDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WorkAreaDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/degreeDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/Conditions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        <state relative-caret-position="110">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/login.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/WorkArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="26" column="86" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="26" selection-end-column="86" />
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/common/CommonController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="54">
+          <caret line="38" column="97" lean-forward="true" selection-start-line="38" selection-start-column="97" selection-end-line="38" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AccountDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="28" column="90" selection-start-line="28" selection-start-column="90" selection-end-line="28" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common/commonlogin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
-          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/showitems.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common/adminmenu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="154">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="13" column="49" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.3.RELEASE/spring-aop-5.1.3.RELEASE-sources.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/ItemsOperateImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="138" column="48" selection-start-line="138" selection-start-column="48" selection-end-line="138" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/ItemsOperate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/ItemsManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="90" column="38" lean-forward="true" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/showitems.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/showitems.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="52" lean-forward="true" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+        <state relative-caret-position="219">
+          <caret line="76" column="121" selection-start-line="76" selection-start-column="120" selection-end-line="76" selection-end-column="121" />
         </state>
       </provider>
     </entry>

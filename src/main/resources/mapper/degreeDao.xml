@@ -29,5 +29,6 @@
     <select id="queryDegreeList" parameterType="com.house.entity.Degree" resultType="com.house.entity.Degree">
       select degree_id,degree_name,priority
       from tb_degree
+      order by priority desc
     </select>
 </mapper>

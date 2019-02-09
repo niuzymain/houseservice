@@ -36,12 +36,14 @@
         select workarea_id,workarea_name,priority
         from tb_workarea
         where parentarea_id is null
+        order by priority desc
     </select>
 
     <select id="queryAreaByParent" parameterType="long" resultType="com.house.entity.WorkArea">
         select workarea_id,workarea_name,priority
         from tb_workarea
         where parentarea_id=#{parentareaid}
+        order by priority desc
     </select>
 
 </mapper>

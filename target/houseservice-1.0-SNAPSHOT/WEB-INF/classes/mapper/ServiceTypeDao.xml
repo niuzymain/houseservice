@@ -30,6 +30,7 @@
     <select id="queryServiceType" resultType="com.house.entity.ServiceType">
         select servicetype_id,servicetype_name,priority
         from tb_servicetype
+        order by priority desc
     </select>
 
 </mapper>
