@@ -1,3 +1,4 @@
+// 从url中取参数
 function getURLarg(variable){
     var query = window.location.search.substring(1);
     var vars = query.split("&");
@@ -10,3 +11,4 @@ function getURLarg(variable){
     }
     return(false);
 }
+//判断验证码

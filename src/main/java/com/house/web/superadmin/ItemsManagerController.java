@@ -66,7 +66,7 @@ public class ItemsManagerController {
         return modelMap;
     }
 
-    @RequestMapping(value = "/operate",method = RequestMethod.POST)
+    @RequestMapping(value = "/operateitems",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> OperateItems(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();

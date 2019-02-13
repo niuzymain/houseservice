@@ -14,7 +14,7 @@ $(function () {
                 }
             }
             else {
-                alert(data.errormsg);
+                alert(data.errorfmsg);
             }
         })
         //绑定所有操作按钮
@@ -24,7 +24,7 @@ $(function () {
         $("#submit").click(function () {
             var formdata = insertitem("新增", "城市");
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,
@@ -45,7 +45,7 @@ $(function () {
             var target = e.currentTarget;
             var formdata = deleteitem("删除","城市",target.id)
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,
@@ -90,7 +90,7 @@ $(function () {
         $("#submit").click(function () {
             var formdata = insertitem("新增", "服务类别");
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,
@@ -111,7 +111,7 @@ $(function () {
             var target = e.currentTarget;
             var formdata = deleteitem("删除","服务类别",target.id)
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,
@@ -155,7 +155,7 @@ $(function () {
         $("#submit").click(function () {
             var formdata = insertitem("新增", "学历");
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,
@@ -176,7 +176,7 @@ $(function () {
             var target = e.currentTarget;
             var formdata = deleteitem("删除","学历",target.id)
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,

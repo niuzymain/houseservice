@@ -22,4 +22,26 @@ public class SuperAdminRoute {
     private String displayAreas(){
         return "superadmin/localareas";
     }
+
+    @RequestMapping(value = "/headimg",method = RequestMethod.GET)
+    private String headImg(){
+        return "superadmin/headimg";
+    }
+
+    @RequestMapping(value = "/servicer",method = RequestMethod.GET)
+    private String Qualify(){
+        return "superadmin/servicer";
+    }
+
+    @RequestMapping(value = "/addadmin",method = RequestMethod.GET)
+    private String addAdmin(){
+        return "superadmin/addadmin";
+    }
+
+    @RequestMapping(value = "/operateheadimg",method = RequestMethod.GET)
+    private String operateHeadimg(){
+        return "superadmin/operateheadimg";
+    }
+
+
 }

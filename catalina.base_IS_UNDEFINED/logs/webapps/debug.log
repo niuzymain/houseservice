@@ -1,108 +1,12 @@
-2019-02-01 16;19:22.192[main] DEBUG com.house.dao.WorkAreaDao.updateArea - ==>  Preparing: update tb_workarea SET workarea_name=? where workarea_id=? 
-2019-02-01 16;19:22.257[main] DEBUG com.house.dao.WorkAreaDao.updateArea - ==> Parameters: update area(String), 2(Long)
-2019-02-01 16;19:22.375[main] DEBUG com.house.dao.WorkAreaDao.updateArea - <==    Updates: 1
-2019-02-01 16;21:33.690[main] DEBUG com.house.dao.WorkAreaDao.insertArea - ==>  Preparing: insert into tb_workarea(workarea_name,priority,create_time,lastedit_time,parentarea_id) values (?,?,?,?,?) 
-2019-02-01 16;21:33.752[main] DEBUG com.house.dao.WorkAreaDao.insertArea - ==> Parameters: area2(String), null, null, null, 1(Long)
-2019-02-01 16;21:33.851[main] DEBUG com.house.dao.WorkAreaDao.insertArea - <==    Updates: 1
-2019-02-01 16;21:46.889[main] DEBUG com.house.dao.WorkAreaDao.deleteArea - ==>  Preparing: delete from tb_workarea where workarea_id=? 
-2019-02-01 16;21:46.958[main] DEBUG com.house.dao.WorkAreaDao.deleteArea - ==> Parameters: 3(Long)
-2019-02-01 16;21:47.179[main] DEBUG com.house.dao.WorkAreaDao.deleteArea - <==    Updates: 1
-2019-02-01 16;23:07.839[main] DEBUG com.house.dao.WorkAreaDao.insertArea - ==>  Preparing: insert into tb_workarea(workarea_name,priority,create_time,lastedit_time,parentarea_id) values (?,?,?,?,?) 
-2019-02-01 16;23:07.902[main] DEBUG com.house.dao.WorkAreaDao.insertArea - ==> Parameters: area2(String), null, null, null, 1(Long)
-2019-02-01 16;23:08.078[main] DEBUG com.house.dao.WorkAreaDao.insertArea - <==    Updates: 1
-2019-02-01 16;28:45.446[main] DEBUG com.house.dao.WorkAreaDao.deleteChildArea - ==>  Preparing: delete from tb_workarea where parentarea_id=? 
-2019-02-01 16;28:45.498[main] DEBUG com.house.dao.WorkAreaDao.deleteChildArea - ==> Parameters: 1(Long)
-2019-02-01 16;28:45.581[main] DEBUG com.house.dao.WorkAreaDao.deleteChildArea - <==    Updates: 2
-2019-02-01 16;37:23.988[main] DEBUG com.house.dao.WorkAreaDao.insertArea - ==>  Preparing: insert into tb_workarea(workarea_name,priority,create_time,lastedit_time,parentarea_id) values (?,?,?,?,?) 
-2019-02-01 16;37:24.040[main] DEBUG com.house.dao.WorkAreaDao.insertArea - ==> Parameters: area2(String), null, null, null, 1(Long)
-2019-02-01 16;37:24.133[main] DEBUG com.house.dao.WorkAreaDao.insertArea - <==    Updates: 1
-2019-02-01 16;39:03.803[main] DEBUG com.house.dao.WorkAreaDao.insertArea - ==>  Preparing: insert into tb_workarea(workarea_name,priority,create_time,lastedit_time,parentarea_id) values (?,?,?,?,?) 
-2019-02-01 16;39:03.862[main] DEBUG com.house.dao.WorkAreaDao.insertArea - ==> Parameters: area3(String), null, null, null, 1(Long)
-2019-02-01 16;39:03.988[main] DEBUG com.house.dao.WorkAreaDao.insertArea - <==    Updates: 1
-2019-02-01 16;39:27.493[main] DEBUG com.house.dao.WorkAreaDao.queryArea - ==>  Preparing: select workarea_id,workarea_name,priority form tb_workarea where parentare_id=null 
-2019-02-01 16;39:27.537[main] DEBUG com.house.dao.WorkAreaDao.queryArea - ==> Parameters: 
-2019-02-01 16;40:49.237[main] DEBUG com.house.dao.WorkAreaDao.queryArea - ==>  Preparing: select workarea_id,workarea_name,priority from tb_workarea where parentare_id=null 
-2019-02-01 16;40:49.285[main] DEBUG com.house.dao.WorkAreaDao.queryArea - ==> Parameters: 
-2019-02-01 16;41:14.692[main] DEBUG com.house.dao.WorkAreaDao.queryArea - ==>  Preparing: select workarea_id,workarea_name,priority from tb_workarea where parentarea_id=null 
-2019-02-01 16;41:14.737[main] DEBUG com.house.dao.WorkAreaDao.queryArea - ==> Parameters: 
-2019-02-01 16;41:14.845[main] DEBUG com.house.dao.WorkAreaDao.queryArea - <==      Total: 0
-2019-02-01 16;42:07.954[main] DEBUG com.house.dao.WorkAreaDao.queryAreaByParent - ==>  Preparing: select workarea_id,workarea_name,priority from tb_workarea where parentarea_id=? 
-2019-02-01 16;42:08.012[main] DEBUG com.house.dao.WorkAreaDao.queryAreaByParent - ==> Parameters: 1(Long)
-2019-02-01 16;42:08.048[main] DEBUG com.house.dao.WorkAreaDao.queryAreaByParent - <==      Total: 2
-2019-02-01 16;42:29.600[main] DEBUG com.house.dao.WorkAreaDao.queryArea - ==>  Preparing: select workarea_id,workarea_name,priority from tb_workarea where parentarea_id is null 
-2019-02-01 16;42:29.644[main] DEBUG com.house.dao.WorkAreaDao.queryArea - ==> Parameters: 
-2019-02-01 16;42:29.692[main] DEBUG com.house.dao.WorkAreaDao.queryArea - <==      Total: 1
-2019-02-01 16;44:12.536[main] DEBUG com.house.dao.WorkAreaDao.queryArea - ==>  Preparing: select workarea_id,workarea_name,priority from tb_workarea where parentarea_id is null 
-2019-02-01 16;44:12.575[main] DEBUG com.house.dao.WorkAreaDao.queryArea - ==> Parameters: 
-2019-02-01 16;44:12.623[main] DEBUG com.house.dao.WorkAreaDao.queryArea - <==      Total: 1
-2019-02-01 16;44:28.443[main] DEBUG com.house.dao.WorkAreaDao.queryAreaByParent - ==>  Preparing: select workarea_id,workarea_name,priority from tb_workarea where parentarea_id=? 
-2019-02-01 16;44:28.493[main] DEBUG com.house.dao.WorkAreaDao.queryAreaByParent - ==> Parameters: 1(Long)
-2019-02-01 16;44:28.581[main] DEBUG com.house.dao.WorkAreaDao.queryAreaByParent - <==      Total: 2
-2019-02-01 17;10:39.181[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - ==>  Preparing: insert into tb_servicetype(servicetype_name,priority,create_time,lastedit_time) values (?,?,?,?) 
-2019-02-01 17;13:20.736[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - ==>  Preparing: insert into tb_servicetype(servicetype_name,priority,create_time,lastedit_time) values (?,?,?,?) 
-2019-02-01 17;13:20.837[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - ==> Parameters: type0(String), null, null, null
-2019-02-01 17;13:20.926[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - <==    Updates: 1
-2019-02-01 17;13:20.957[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - ==>  Preparing: insert into tb_servicetype(servicetype_name,priority,create_time,lastedit_time) values (?,?,?,?) 
-2019-02-01 17;13:20.958[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - ==> Parameters: type1(String), null, null, null
-2019-02-01 17;13:21.090[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - <==    Updates: 1
-2019-02-01 17;13:21.091[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - ==>  Preparing: insert into tb_servicetype(servicetype_name,priority,create_time,lastedit_time) values (?,?,?,?) 
-2019-02-01 17;13:21.092[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - ==> Parameters: type2(String), null, null, null
-2019-02-01 17;13:21.201[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - <==    Updates: 1
-2019-02-01 17;15:07.892[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - ==>  Preparing: insert into tb_servicetype(servicetype_name,priority,create_time,lastedit_time) values (?,?,?,?) 
-2019-02-01 17;15:07.944[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - ==> Parameters: updatetype(String), null, null, null
-2019-02-01 17;15:08.102[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - <==    Updates: 1
-2019-02-01 17;15:44.781[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - ==>  Preparing: insert into tb_servicetype(servicetype_name,priority,create_time,lastedit_time) values (?,?,?,?) 
-2019-02-01 17;15:44.841[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - ==> Parameters: updatetype(String), null, null, null
-2019-02-01 17;15:45.009[main] DEBUG com.house.dao.ServiceTypeDao.insertServiceType - <==    Updates: 1
-2019-02-01 17;16:47.280[main] DEBUG com.house.dao.ServiceTypeDao.updateServiceType - ==>  Preparing: update tb_servicetype SET servicetype_name=? where servicetype_id=? 
-2019-02-01 17;17:23.281[main] DEBUG com.house.dao.ServiceTypeDao.updateServiceType - ==>  Preparing: update tb_servicetype SET servicetype_name=? where servicetype_id=? 
-2019-02-01 17;17:23.333[main] DEBUG com.house.dao.ServiceTypeDao.updateServiceType - ==> Parameters: updatetype(String), 3(Long)
-2019-02-01 17;17:23.519[main] DEBUG com.house.dao.ServiceTypeDao.updateServiceType - <==    Updates: 1
-2019-02-01 17;18:02.543[main] DEBUG com.house.dao.ServiceTypeDao.deleteServiceType - ==>  Preparing: delete from tb_servicetype where servicetype_id=? 
-2019-02-01 17;18:02.595[main] DEBUG com.house.dao.ServiceTypeDao.deleteServiceType - ==> Parameters: 4(Long)
-2019-02-01 17;18:02.830[main] DEBUG com.house.dao.ServiceTypeDao.deleteServiceType - <==    Updates: 1
-2019-02-01 17;18:48.469[main] DEBUG com.house.dao.ServiceTypeDao.queryServiceType - ==>  Preparing: select servicetype_id,servicetype_name,priority from tb_servicetype 
-2019-02-01 17;18:48.536[main] DEBUG com.house.dao.ServiceTypeDao.queryServiceType - ==> Parameters: 
-2019-02-01 17;18:48.589[main] DEBUG com.house.dao.ServiceTypeDao.queryServiceType - <==      Total: 4
-2019-02-01 17;19:28.561[main] DEBUG com.house.dao.ServiceTypeDao.updateServiceType - ==>  Preparing: update tb_servicetype SET servicetype_name=? where servicetype_id=? 
-2019-02-01 17;19:28.605[main] DEBUG com.house.dao.ServiceTypeDao.updateServiceType - ==> Parameters: updatetype(String), 3(Long)
-2019-02-01 17;19:28.607[main] DEBUG com.house.dao.ServiceTypeDao.updateServiceType - <==    Updates: 1
-2019-02-01 17;20:37.455[main] DEBUG com.house.dao.ServiceTypeDao.queryServiceType - ==>  Preparing: select servicetype_id,servicetype_name,priority from tb_servicetype 
-2019-02-01 17;20:37.499[main] DEBUG com.house.dao.ServiceTypeDao.queryServiceType - ==> Parameters: 
-2019-02-01 17;20:37.537[main] DEBUG com.house.dao.ServiceTypeDao.queryServiceType - <==      Total: 4
-2019-02-01 17;52:55.889[main] DEBUG com.house.dao.WorkAreaDao.queryAreaByParent - ==>  Preparing: select workarea_id,workarea_name,priority from tb_workarea where parentarea_id=? 
-2019-02-01 17;52:55.942[main] DEBUG com.house.dao.WorkAreaDao.queryAreaByParent - ==> Parameters: 1(Long)
-2019-02-01 17;52:55.989[main] DEBUG com.house.dao.WorkAreaDao.queryAreaByParent - <==      Total: 2
-2019-02-01 17;56:51.743[main] DEBUG com.house.dao.AccountDao.insertAccount - ==>  Preparing: insert into tb_account(username,password,account_type) values(?,?,?) 
-2019-02-01 17;56:51.807[main] DEBUG com.house.dao.AccountDao.insertAccount - ==> Parameters: username0(String), password0(String), 1(Integer)
-2019-02-01 17;56:52.000[main] DEBUG com.house.dao.AccountDao.insertAccount - <==    Updates: 1
-2019-02-01 17;56:52.027[main] DEBUG com.house.dao.AccountDao.insertAccount - ==>  Preparing: insert into tb_account(username,password,account_type) values(?,?,?) 
-2019-02-01 17;56:52.028[main] DEBUG com.house.dao.AccountDao.insertAccount - ==> Parameters: username1(String), password1(String), 1(Integer)
-2019-02-01 17;56:52.089[main] DEBUG com.house.dao.AccountDao.insertAccount - <==    Updates: 1
-2019-02-01 17;56:52.090[main] DEBUG com.house.dao.AccountDao.insertAccount - ==>  Preparing: insert into tb_account(username,password,account_type) values(?,?,?) 
-2019-02-01 17;56:52.091[main] DEBUG com.house.dao.AccountDao.insertAccount - ==> Parameters: username2(String), password2(String), 1(Integer)
-2019-02-01 17;56:52.195[main] DEBUG com.house.dao.AccountDao.insertAccount - <==    Updates: 1
-2019-02-01 17;57:52.838[main] DEBUG com.house.dao.AccountDao.updateAccount - ==>  Preparing: update tb_account set password=? where account_id=? 
-2019-02-01 17;57:52.881[main] DEBUG com.house.dao.AccountDao.updateAccount - ==> Parameters: updatepass(String), 1(Long)
-2019-02-01 17;57:52.980[main] DEBUG com.house.dao.AccountDao.updateAccount - <==    Updates: 1
-2019-02-01 17;58:47.165[main] DEBUG com.house.dao.AccountDao.deleteAccount - ==>  Preparing: delete from tb_account where account_id=? 
-2019-02-01 17;58:47.223[main] DEBUG com.house.dao.AccountDao.deleteAccount - ==> Parameters: 2(Long)
-2019-02-01 17;58:47.417[main] DEBUG com.house.dao.AccountDao.deleteAccount - <==    Updates: 1
-2019-02-01 18;01:25.293[main] DEBUG com.house.dao.AccountDao.queryAccount - ==>  Preparing: select account_id from tb_account where username=? and password=? and account_type=?; 
-2019-02-01 18;01:25.334[main] DEBUG com.house.dao.AccountDao.queryAccount - ==> Parameters: a(String), b(String), 3(Integer)
-2019-02-01 18;01:25.368[main] DEBUG com.house.dao.AccountDao.queryAccount - <==      Total: 0
-2019-02-01 18;02:08.367[main] DEBUG com.house.dao.AccountDao.queryAccount - ==>  Preparing: select account_id from tb_account where username=? and password=? and account_type=?; 
-2019-02-01 18;02:08.437[main] DEBUG com.house.dao.AccountDao.queryAccount - ==> Parameters: a(String), b(String), 3(Integer)
-2019-02-01 18;02:08.471[main] DEBUG com.house.dao.AccountDao.queryAccount - <==      Total: 0
-2019-02-01 18;02:24.615[main] DEBUG com.house.dao.AccountDao.queryAccount - ==>  Preparing: select account_id from tb_account where username=? and password=? and account_type=?; 
-2019-02-01 18;02:24.669[main] DEBUG com.house.dao.AccountDao.queryAccount - ==> Parameters: 11(String), 22(String), 2(Integer)
-2019-02-01 18;02:24.716[main] DEBUG com.house.dao.AccountDao.queryAccount - <==      Total: 1
-2019-02-01 18;02:38.489[main] DEBUG com.house.dao.AccountDao.queryAccount - ==>  Preparing: select account_id from tb_account where username=? and password=? and account_type=?; 
-2019-02-01 18;02:38.540[main] DEBUG com.house.dao.AccountDao.queryAccount - ==> Parameters: 11(String), 21(String), 2(Integer)
-2019-02-01 18;02:38.577[main] DEBUG com.house.dao.AccountDao.queryAccount - <==      Total: 0
-2019-02-01 18;02:52.975[main] DEBUG com.house.dao.AccountDao.queryAccount - ==>  Preparing: select account_id from tb_account where username=? and password=? and account_type=?; 
-2019-02-01 18;02:53.031[main] DEBUG com.house.dao.AccountDao.queryAccount - ==> Parameters: 11(String), 22(String), 0(Integer)
-2019-02-01 18;02:53.065[main] DEBUG com.house.dao.AccountDao.queryAccount - <==      Total: 0
-2019-02-01 18;36:20.640[main] DEBUG com.house.dao.SuperAdminDao.insertSuperAdmin - ==>  Preparing: insert into tb_superadmin(superadmin_name,account_id) values (?,?) 
-2019-02-01 18;36:20.694[main] DEBUG com.house.dao.SuperAdminDao.insertSuperAdmin - ==> Parameters: admin1(String), 5(Long)
-2019-02-01 18;36:20.871[main] DEBUG com.house.dao.SuperAdminDao.insertSuperAdmin - <==    Updates: 1
+2019-02-13 21;19:04.954[main] DEBUG com.house.dao.HeadimgDao.selectById - ==>  Preparing: select headimg_id,headimg_title,headimg_details,headimg_url,priority,enable_status,create_time,lastedit_time from tb_headimg where headimg_id=? 
+2019-02-13 21;19:05.126[main] DEBUG com.house.dao.HeadimgDao.selectById - ==> Parameters: 11(Long)
+2019-02-13 21;19:05.235[main] DEBUG com.house.dao.HeadimgDao.selectById - <==      Total: 1
+2019-02-13 21;19:05.329[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==>  Preparing: update tb_headimg SET headimg_url=? where headimg_id=? 
+2019-02-13 21;19:05.329[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==> Parameters: \headimg\headimg11_20190213211905.jpg(String), 11(Long)
+2019-02-13 21;19:05.360[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - <==    Updates: 1
+2019-02-13 21;19:31.581[main] DEBUG com.house.dao.HeadimgDao.selectById - ==>  Preparing: select headimg_id,headimg_title,headimg_details,headimg_url,priority,enable_status,create_time,lastedit_time from tb_headimg where headimg_id=? 
+2019-02-13 21;19:31.628[main] DEBUG com.house.dao.HeadimgDao.selectById - ==> Parameters: 11(Long)
+2019-02-13 21;19:31.722[main] DEBUG com.house.dao.HeadimgDao.selectById - <==      Total: 1
+2019-02-13 21;19:31.769[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==>  Preparing: update tb_headimg SET headimg_url=? where headimg_id=? 
+2019-02-13 21;19:31.769[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==> Parameters: \headimg\headimg11_20190213211931.jpg(String), 11(Long)
+2019-02-13 21;19:31.785[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - <==    Updates: 1

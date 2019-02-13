@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--类名-->
+<mapper namespace="com.house.dao.HeadimgDao">
+    <!--id:方法名   result：返回值类型-->
+    <insert id="insertHeadImg" useGeneratedKeys="true" keyColumn="headimg_id" keyProperty="headimgid">
+      insert into
+      tb_headimg(headimg_title,headimg_details,headimg_url,priority,enable_status,create_time,lastedit_time)
+      values (#{headimgtitle},#{headimgdetails},#{headimgurl},#{priority},#{enablestatus},#{createtime},#{lastedittime})
+    </insert>
+
+    <delete id="deleteHeadImg" parameterType="Long">
+        delete from tb_headimg
+        where headimg_id=#{headimgid}
+    </delete>
+
+    <update id="updateHeadImg" parameterType="com.house.entity.Headimg">
+        update tb_headimg
+        <set>
+            <if test="headimgtitle != null">headimg_title=#{headimgtitle},</if>
+            <if test="headimgdetails != null">headimg_details=#{headimgdetails},</if>
+            <if test="headimgurl != null">headimg_url=#{headimgurl},</if>
+            <if test="priority != null">priority=#{priority},</if>
+            <if test="enablestatus != null">enable_status=#{enablestatus},</if>
+            <if test="createtime != null">create_time=#{createtime},</if>
+            <if test="lastedittime != null">lastedit_time=#{lastedittime},</if>
+        </set>
+        where headimg_id=#{headimgid}
+    </update>
+
+    <select id="selectHeadImg" resultType="com.house.entity.Headimg">
+        select headimg_id,headimg_title,headimg_details,headimg_url,priority,enable_status,create_time,lastedit_time
+        from tb_headimg
+        where enable_status=1
+        order by priority desc
+        limit 4
+    </select>
+
+    <select id="selectById" resultType="com.house.entity.Headimg">
+        select headimg_id,headimg_title,headimg_details,headimg_url,priority,enable_status,create_time,lastedit_time
+        from tb_headimg
+        where headimg_id=#{headimgid}
+    </select>
+</mapper>

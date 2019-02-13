@@ -11,7 +11,7 @@ public class Headimg {
     private String headimgdetails;
     private String headimgurl;
     private Integer priority;
-    private Integer enablestatus;
+    private Integer enablestatus;//0禁用 1可用
     private Date createtime;
     private Date lastedittime;
 

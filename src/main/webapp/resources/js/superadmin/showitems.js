@@ -9,12 +9,16 @@ $(function () {
         $.getJSON("/admin/getitems?type=城市", function (data) {
             if (data.success) {
                 for (var i = 0; i < data.result.length; i++) {
-                    var body = "<tr><td><a href=/admin/displayareas?parentid="+data.result[i].workarea.workareaid+"> "+ data.result[i].workarea.workareaname + "</a></td><td>" + data.result[i].workarea.priority + "</td><td><a href='#' class='delete' id="+data.result[i].workarea.workareaid+">删除</a></td></tr>"
+                    var body = "<tr>" +
+                                    "<td><a href=/admin/displayareas?parentid="+data.result[i].workarea.workareaid+"> "+ data.result[i].workarea.workareaname + "</a></td>" +
+                                    "<td>" + data.result[i].workarea.priority + "</td>" +
+                                    "<td><a href='#' class='delete' id="+data.result[i].workarea.workareaid+">删除</a></td>" +
+                                "</tr>"
                     $("#itemlist tbody").append(body);
                 }
             }
             else {
-                alert(data.errormsg);
+                alert(data.errorfmsg);
             }
         })
         //绑定所有操作按钮
@@ -24,7 +28,7 @@ $(function () {
         $("#submit").click(function () {
             var formdata = insertitem("新增", "城市");
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,
@@ -45,7 +49,7 @@ $(function () {
             var target = e.currentTarget;
             var formdata = deleteitem("删除","城市",target.id)
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,
@@ -90,7 +94,7 @@ $(function () {
         $("#submit").click(function () {
             var formdata = insertitem("新增", "服务类别");
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,
@@ -111,7 +115,7 @@ $(function () {
             var target = e.currentTarget;
             var formdata = deleteitem("删除","服务类别",target.id)
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,
@@ -155,7 +159,7 @@ $(function () {
         $("#submit").click(function () {
             var formdata = insertitem("新增", "学历");
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,
@@ -176,7 +180,7 @@ $(function () {
             var target = e.currentTarget;
             var formdata = deleteitem("删除","学历",target.id)
             $.ajax({
-                url: "/admin/operate",
+                url: "/admin/operateitems",
                 data: formdata,
                 type: "post",
                 contentType: false,

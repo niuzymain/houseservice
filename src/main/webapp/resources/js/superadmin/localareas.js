@@ -1,5 +1,11 @@
 $(function () {
-    var head = "<tr><td>区域名称</td><td>优先级</td><td>操作</td><td><a href='#' id='insert'>新增地区</a></td><td><a href='#' id='submit'>提交</a></td></tr>"
+    var head = "<tr>" +
+                    "<td>区域名称</td>" +
+                    "<td>优先级</td>" +
+                    "<td>操作</td>" +
+                    "<td><a href='#' id='insert'>新增地区</a></td>" +
+                    "<td><a href='#' id='submit'>提交</a></td>" +
+                "</tr>"
     $("#arealist thead").append(head);
     var parentid = getURLarg("parentid");
     $.getJSON("/admin/getcityareas?parentid=" + parentid, function (data) {
