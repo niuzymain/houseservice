@@ -34,9 +34,7 @@
     <select id="selectHeadImg" resultType="com.house.entity.Headimg">
         select headimg_id,headimg_title,headimg_details,headimg_url,priority,enable_status,create_time,lastedit_time
         from tb_headimg
-        where enable_status=1
         order by priority desc
-        limit 4
     </select>
 
     <select id="selectById" resultType="com.house.entity.Headimg">

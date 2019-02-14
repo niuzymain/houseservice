@@ -9,5 +9,7 @@ public interface HeadimgDao {
     int updateHeadImg(Headimg headimg);
     int deleteHeadImg(Long headimgid);
     List<Headimg> selectHeadImg();
+    //选取轮播图前端展示
+    List<Headimg> selectDisplay();
     Headimg selectById(Long headimgid);
 }

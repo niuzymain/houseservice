@@ -27,7 +27,7 @@ public class HeadimgController {
     @Autowired
     private HeadimgService headimgService;
 
-    @RequestMapping(value = "/addheadimg",method = RequestMethod.GET)
+    @RequestMapping(value = "/addheadimg",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> AddHeadimg(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();
@@ -50,13 +50,20 @@ public class HeadimgController {
                 return modelMap;
             }
             //添加轮播图
-            HeadimgExecution he = headimgService.AddHeadimg(headimg,imgfile.getInputStream(),imgfile.getOriginalFilename());
-            if(he.getState() != HeadimgEnum.SUCCESS.getState()){
-                modelMap.put("success",false);
-                modelMap.put("errormsg",he.getStateinfo());
+            if(headimg != null && imgfile != null){
+                HeadimgExecution he = headimgService.AddHeadimg(headimg,imgfile.getInputStream(),imgfile.getOriginalFilename());
+                if(he.getState() != HeadimgEnum.SUCCESS.getState()){
+                    modelMap.put("success",false);
+                    modelMap.put("errormsg",he.getStateinfo());
+                }
+                else{
+                    modelMap.put("success",true);
+                }
             }
             else{
-                modelMap.put("success",true);
+                modelMap.put("success",false);
+                modelMap.put("errormsg","信息不全");
+                return modelMap;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,7 +73,7 @@ public class HeadimgController {
         return modelMap;
     }
 
-    @RequestMapping(value = "/editheadimg",method = RequestMethod.GET)
+    @RequestMapping(value = "/editheadimg",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> EditHeadimg(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();
@@ -86,10 +93,10 @@ public class HeadimgController {
             //添加轮播图
             HeadimgExecution he = new HeadimgExecution();
             if(imgfile == null){
-                he = headimgService.AddHeadimg(headimg,null,null);
+                he = headimgService.UpdataHeadimg(headimg,null,null);
             }
             else{
-                he = headimgService.AddHeadimg(headimg,imgfile.getInputStream(),imgfile.getOriginalFilename());
+                he = headimgService.UpdataHeadimg(headimg,imgfile.getInputStream(),imgfile.getOriginalFilename());
             }
             if(he.getState() != HeadimgEnum.SUCCESS.getState()){
                 modelMap.put("success",false);
@@ -106,7 +113,7 @@ public class HeadimgController {
         return modelMap;
     }
 
-    @RequestMapping(value = "/delheadimg",method = RequestMethod.GET)
+    @RequestMapping(value = "/delheadimg",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> DelHeadimg(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();

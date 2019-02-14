@@ -23,6 +23,7 @@ public class HeadimgServiceImp implements HeadimgService {
     @Transactional
     public HeadimgExecution AddHeadimg(Headimg headimg, InputStream inputStream, String filename) {
         int result;
+        headimg.setEnablestatus(1);
         try {
             if (inputStream == null) {
                 return new HeadimgExecution(HeadimgEnum.IMGNULL);

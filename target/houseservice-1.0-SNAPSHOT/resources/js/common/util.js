@@ -9,6 +9,6 @@ function getURLarg(variable){
             return pair[1];
         }
     }
-    return(false);
+    return null;
 }
 //判断验证码

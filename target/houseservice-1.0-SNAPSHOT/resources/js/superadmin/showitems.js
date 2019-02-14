@@ -9,7 +9,11 @@ $(function () {
         $.getJSON("/admin/getitems?type=城市", function (data) {
             if (data.success) {
                 for (var i = 0; i < data.result.length; i++) {
-                    var body = "<tr><td><a href=/admin/displayareas?parentid="+data.result[i].workarea.workareaid+"> "+ data.result[i].workarea.workareaname + "</a></td><td>" + data.result[i].workarea.priority + "</td><td><a href='#' class='delete' id="+data.result[i].workarea.workareaid+">删除</a></td></tr>"
+                    var body = "<tr>" +
+                                    "<td><a href=/admin/displayareas?parentid="+data.result[i].workarea.workareaid+"> "+ data.result[i].workarea.workareaname + "</a></td>" +
+                                    "<td>" + data.result[i].workarea.priority + "</td>" +
+                                    "<td><a href='#' class='delete' id="+data.result[i].workarea.workareaid+">删除</a></td>" +
+                                "</tr>"
                     $("#itemlist tbody").append(body);
                 }
             }

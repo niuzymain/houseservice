@@ -1,4 +1,5 @@
 com\house\dao\AccountDaotest.class
+com\house\service\HeadimgServicetest.class
 com\house\Basetest.class
 com\house\dao\TypeDaotest.class
 com\house\dao\AdminDaotest.class
