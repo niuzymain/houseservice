@@ -18,12 +18,13 @@ public class Servicer {
     private String servicerdes;
     private String servicerfile; //提交的申请文件，zip格式
     private Degree degree;
-    List<ServiceType> serviceTypeList;
-    List<WorkArea> workAreaList;
+    private ServiceType servicerAndTypeList;
+    private WorkArea workArea;
     private Date createtime;
     private Date lastedittime;
-    private Account account;
     private Integer enablestatus;//-1.禁用 0.审核中 1.空闲 2.正在服务
+    private String accountname;
+    private String password;
 
     public long getServicerid() {
         return this.servicerid;
@@ -113,22 +114,6 @@ public class Servicer {
         this.servicerdes = servicerdes;
     }
 
-    public List<ServiceType> getServiceTypeList() {
-        return this.serviceTypeList;
-    }
-
-    public void setServiceTypeList(List<ServiceType> serviceTypeList) {
-        this.serviceTypeList = serviceTypeList;
-    }
-
-    public List<WorkArea> getWorkAreaList() {
-        return this.workAreaList;
-    }
-
-    public void setWorkAreaList(List<WorkArea> workAreaList) {
-        this.workAreaList = workAreaList;
-    }
-
     public Date getCreatetime() {
         return this.createtime;
     }
@@ -143,14 +128,6 @@ public class Servicer {
 
     public void setLastedittime(Date lastedittime) {
         this.lastedittime = lastedittime;
-    }
-
-    public Account getAccount() {
-        return this.account;
-    }
-
-    public void setAccount(Account account) {
-        this.account = account;
     }
 
     public Integer getEnablestatus() {
@@ -168,4 +145,37 @@ public class Servicer {
     public void setDegree(Degree degree) {
         this.degree = degree;
     }
+
+    public String getAccountname() {
+        return this.accountname;
+    }
+
+    public void setAccountname(String accountname) {
+        this.accountname = accountname;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public ServiceType getServicerAndTypeList() {
+        return this.servicerAndTypeList;
+    }
+
+    public void setServicerAndTypeList(ServiceType servicerAndTypeList) {
+        this.servicerAndTypeList = servicerAndTypeList;
+    }
+
+    public WorkArea getWorkArea() {
+        return this.workArea;
+    }
+
+    public void setWorkArea(WorkArea workArea) {
+        this.workArea = workArea;
+    }
 }
+

@@ -4,6 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style type="text/css">
+        div{
+            float:left;
+        }
+        #menu{
+            margin-right:30px;
+        }
+        select{
+            margin-bottom:30px;
+        }
+    </style>
 </head>
 <body>
     <h1>账户管理</h1>
@@ -14,7 +25,7 @@
             </li>
             <li>
                 <a href="/admin/display" id="itemmanager">分类管理</a>
-                <ul id="itemmenulist">
+                <ul id="itemmenulist" style="display: none">
                     <li><a href="#" id="areamanager">区域管理</a></li>
                     <li><a href="#" id="categorymanager">类别管理</a></li>
                     <li><a href="#" id="degreemanager">学历管理</a></li>
@@ -26,19 +37,25 @@
             <li>
                 <a href="/admin/servicer" id="servicermanager">服务人员审核</a>
             </li>
-            <li>
-                <a href="/admin/addadmin" id="adminmanager">添加管理员</a>
-            </li>
         </ul>
     </div>
-    <div id="account">
+    <div id="users">
+        <select id="usertype">
+            <option value="user">用户</option>
+            <option value="servicer">服务人员</option>
+        </select>
+        <table id="userlist">
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <!--<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>-->
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>-->
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>-->
     <script type="text/javascript" src="../resources/js/superadmin/main.js"></script>
-    <!--界面左侧列表js-->
-    <script type="text/javascript" src="../resources/js/common/adminmenu.js"></script>
+    <script type="text/javascript" src="../resources/js/common/util.js"></script>
 </body>
 </html>

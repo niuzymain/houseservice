@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--类名-->
+<mapper namespace="com.house.dao.ServicerDao">
+    <update id="updateServicer" parameterType="com.house.entity.Servicer">
+        update tb_servicer
+        <set>
+            <if test="enablestatus != null">enable_status=#{enablestatus},</if>
+        </set>
+        where servicer_id=#{servicerid}
+    </update>
+    <!--id:方法名   result：返回值类型-->
+    <select id="queryServicer" resultType="com.house.entity.Servicer">
+--         select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,servicer_img,servicer_experience,servicer_score,servicer_price,servicer_des,servicer_file,degree_id,create_time,lastedit_time,enable_status
+        select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,enable_status
+        from tb_servicer
+    </select>
+
+    <select id="queryServicerById" resultType="com.house.entity.Servicer">
+--         select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,servicer_img,servicer_experience,servicer_score,servicer_price,servicer_des,servicer_file,degree_id,create_time,lastedit_time,enable_status
+        select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,enable_status
+        from tb_servicer
+        where servicer_id=#{servicerid}
+    </select>
+</mapper>

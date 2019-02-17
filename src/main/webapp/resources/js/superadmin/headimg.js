@@ -1,5 +1,4 @@
 $(function () {
-    // 状态为连接形式,添加新增和提交功能
     var head = "<tr>" +
         "<td>标题</td>" +
         "<td>描述</td>" +
@@ -29,17 +28,6 @@ $(function () {
         }
     })
 })
-
-//根据状态值显示状态名称
-function statusinfo(data) {
-    if (data == 1) {
-        return "可用"
-    }
-    else {
-        return "禁用"
-    }
-
-}
 
 //修改轮播图状态
 function changestatus(target) {

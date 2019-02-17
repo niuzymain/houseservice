@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style type="text/css">
-        .first{
+        div{
             float:left;
         }
         #menu{
@@ -15,7 +15,7 @@
 </head>
 <body>
     <h1>展示</h1>
-    <div id="menu" class="first">
+    <div id="menu">
         <ul id="lists">
             <li>
                 <a href="/admin/main" id="usermanager">账户管理</a>
@@ -28,10 +28,16 @@
                     <li><a href="#" id="degreemanager">学历管理</a></li>
                 </ul>
             </li>
+            <li>
+                <a href="/admin/headimg" id="headimgmanager">轮播图管理</a>
+            </li>
+            <li>
+                <a href="/admin/servicer" id="servicermanager">服务人员审核</a>
+            </li>
         </ul>
     </div>
 
-    <div id="item" class="first">
+    <div id="item">
         <table id="itemlist">
             <thead>
             </thead>
@@ -44,7 +50,5 @@
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>-->
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>-->
     <script type="text/javascript" src="../resources/js/superadmin/showitems.js"></script>
-    <!--界面左侧列表js-->
-    <script type="text/javascript" src="../resources/js/common/adminmenu.js"></script>
 </body>
 </html>

@@ -1,17 +1,17 @@
 $(function() {
     var type;
     $("#submit").click(function() {
-        type = 3;
+        type = "管理员";
         var username = $("#username").val();
         var password = $("#password").val();
-        var account = {
-            "username":username,
+        var superadmin = {
+            "accountname":username,
             "password":password,
-            "accounttype":type
         };
         // 这里添加判断验证码是否为空
         var formdata = new FormData();
-        formdata.append("loginstr",JSON.stringify(account));
+        formdata.append("loginstr",JSON.stringify(superadmin));
+        formdata.append("type",type)
         $.ajax({
             url:"/common/checklogin",
             type:"post",

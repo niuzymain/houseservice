@@ -1,6 +1,8 @@
 package com.house.entity;
 
 import java.util.Date;
+import java.util.List;
+
 /*
 服务类别
  */
@@ -10,7 +12,7 @@ public class ServiceType {
     private Integer priority;
     private Date createtime;
     private Date lastedittime;
-
+    private List<Servicer> servicerList;
     public long getServicetypeid() {
         return this.servicetypeid;
     }
@@ -49,5 +51,13 @@ public class ServiceType {
 
     public void setLastedittime(Date lastedittime) {
         this.lastedittime = lastedittime;
+    }
+
+    public List<Servicer> getServicerList() {
+        return this.servicerList;
+    }
+
+    public void setServicerList(List<Servicer> servicerList) {
+        this.servicerList = servicerList;
     }
 }

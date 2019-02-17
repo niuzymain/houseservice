@@ -1,8 +1,8 @@
 package com.house.dao;
 
+import com.house.entity.SuperAdmin;
 import org.apache.ibatis.annotations.Param;
 
 public interface SuperAdminDao {
-    int insertSuperAdmin(@Param("adminname")String adminname,@Param("accountid")long accountid);
-    int deleteSuperAdmin(@Param("adminid")long adminid);
+    SuperAdmin queryAdmin(SuperAdmin superAdmin);
 }

@@ -14,7 +14,8 @@ public class User {
     private String userphone;
     private Date createtime;
     private Date lastedittime;
-    private Account account;
+    private String accountname;
+    private String password;
 
     public long getUserid() {
         return this.userid;
@@ -72,12 +73,19 @@ public class User {
         this.lastedittime = lastedittime;
     }
 
-    public Account getAccount() {
-        return this.account;
+    public String getAccountname() {
+        return this.accountname;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setAccountname(String accountname) {
+        this.accountname = accountname;
     }
 
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

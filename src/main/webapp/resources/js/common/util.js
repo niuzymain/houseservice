@@ -12,3 +12,14 @@ function getURLarg(variable){
     return null;
 }
 //判断验证码
+
+//根据状态值显示状态名称
+function statusinfo(data) {
+    if (data == 1) {
+        return "可用"
+    }
+    else if(data == 0){
+        return "禁用"
+    }
+
+}

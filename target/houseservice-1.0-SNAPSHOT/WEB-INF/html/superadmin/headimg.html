@@ -18,8 +18,24 @@
 <body>
     <h1>轮播图管理</h1>
     <div id="menu">
-        <ul>
-            <l1>这里是操作列表</l1>
+        <ul id="lists">
+            <li>
+                <a href="/admin/main" id="usermanager">账户管理</a>
+            </li>
+            <li>
+                <a href="/admin/display" id="itemmanager">分类管理</a>
+                <ul id="itemmenulist" style="display: none">
+                    <li><a href="#" id="areamanager">区域管理</a></li>
+                    <li><a href="#" id="categorymanager">类别管理</a></li>
+                    <li><a href="#" id="degreemanager">学历管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" id="headimgmanager">轮播图管理</a>
+            </li>
+            <li>
+                <a href="/admin/servicer" id="servicermanager">服务人员审核</a>
+            </li>
         </ul>
     </div>
     <div id="headimg">
@@ -35,5 +51,6 @@
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>-->
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>-->
     <script type="text/javascript" src="../resources/js/superadmin/headimg.js"></script>
+    <script type="text/javascript" src="../resources/js/common/util.js"></script>
 </body>
 </html>

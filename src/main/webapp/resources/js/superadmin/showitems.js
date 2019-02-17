@@ -1,5 +1,4 @@
 $(function () {
-    itemsmenu();
     ////////////////////////////////////////显示区域列表/////////////////////////////////////////////
     $("#areamanager").click(function () {
         $("#itemlist thead").empty();

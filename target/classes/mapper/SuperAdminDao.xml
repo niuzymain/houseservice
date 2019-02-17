@@ -6,14 +6,9 @@
 <!--类名-->
 <mapper namespace="com.house.dao.SuperAdminDao">
     <!--id:方法名   result：返回值类型-->
-    <insert id="insertSuperAdmin" useGeneratedKeys="true" keyColumn="superadmin_id" keyProperty="superadminid">
-      insert into
-      tb_superadmin(superadmin_name,account_id)
-      values (#{adminname},#{accountid})
-    </insert>
-
-    <delete id="deleteSuperAdmin">
-        delete from tb_superadmin
-        where superadmin_id=#{adminid}
-    </delete>
+    <select id="queryAdmin" resultType="com.house.entity.SuperAdmin">
+        select superadmin_id
+        from tb_superadmin
+        where account_name=#{accountname} and pass_word=#{password}
+    </select>
 </mapper>

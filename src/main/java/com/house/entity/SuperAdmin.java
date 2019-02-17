@@ -4,8 +4,8 @@ package com.house.entity;
  */
 public class SuperAdmin {
     private Long superadminid;
-    private String superadminname;
-    private Account account;
+    private String accountname;
+    private String password;
 
     public Long getSuperadminid() {
         return this.superadminid;
@@ -15,19 +15,20 @@ public class SuperAdmin {
         this.superadminid = superadminid;
     }
 
-    public String getSuperadminname() {
-        return this.superadminname;
+
+    public String getAccountname() {
+        return this.accountname;
     }
 
-    public void setSuperadminname(String superadminname) {
-        this.superadminname = superadminname;
+    public void setAccountname(String accountname) {
+        this.accountname = accountname;
     }
 
-    public Account getAccount() {
-        return this.account;
+    public String getPassword() {
+        return this.password;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

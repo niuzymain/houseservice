@@ -33,11 +33,6 @@ public class SuperAdminRoute {
         return "superadmin/servicer";
     }
 
-    @RequestMapping(value = "/addadmin",method = RequestMethod.GET)
-    private String addAdmin(){
-        return "superadmin/addadmin";
-    }
-
     @RequestMapping(value = "/operateheadimg",method = RequestMethod.GET)
     private String operateHeadimg(){
         return "superadmin/operateheadimg";

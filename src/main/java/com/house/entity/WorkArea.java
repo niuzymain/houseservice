@@ -1,6 +1,8 @@
 package com.house.entity;
 
 import java.util.Date;
+import java.util.List;
+
 /*
 工作地点,分两级，城市和地区
  */
@@ -11,6 +13,7 @@ public class WorkArea {
     private Date createtime;
     private Date lastedittime;
     private WorkArea parentarea;
+    private List<Servicer> servicerList;
     public long getWorkareaid() {
         return this.workareaid;
     }
@@ -57,5 +60,13 @@ public class WorkArea {
 
     public void setParentarea(WorkArea parentarea) {
         this.parentarea = parentarea;
+    }
+
+    public List<Servicer> getServicerList() {
+        return this.servicerList;
+    }
+
+    public void setServicerList(List<Servicer> servicerList) {
+        this.servicerList = servicerList;
     }
 }
