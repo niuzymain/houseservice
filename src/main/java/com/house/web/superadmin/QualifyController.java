@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,16 +20,33 @@ public class QualifyController {
 
     @RequestMapping("/qualifylist")
     @ResponseBody
-    public Map<String,Object> getQualifyList(){
-        Map<String,Object> modelMap = new HashMap<>();
-        try{
+    public Map<String, Object> getQualifyList() {
+        Map<String, Object> modelMap = new HashMap<>();
+        try {
             List<Servicer> servicerList = qualifyService.qualifyList();
-            modelMap.put("success",true);
-            modelMap.put("result",servicerList);
-        }catch (Exception e){
+            modelMap.put("success", true);
+            modelMap.put("result", servicerList);
+        } catch (Exception e) {
             e.printStackTrace();
-            modelMap.put("success",false);
-            modelMap.put("errormsg",e.getMessage());
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
+        }
+        return modelMap;
+    }
+
+    @RequestMapping("/getqualifydetail")
+    @ResponseBody
+    public Map<String, Object> getQualifyDetail(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        Long servicerid = Long.parseLong(request.getParameter("servicerid"));
+        try {
+            Servicer servicer = qualifyService.getQualifyById(servicerid);
+            modelMap.put("success", true);
+            modelMap.put("result", servicer);
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
         }
         return modelMap;
 

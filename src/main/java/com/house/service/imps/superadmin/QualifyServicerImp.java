@@ -21,6 +21,13 @@ public class QualifyServicerImp implements QualifyService {
     }
 
     @Override
+    public Servicer getQualifyById(Long servicerid) {
+        Servicer condition = new Servicer();
+        condition.setServicerid(servicerid);
+        return servicerDao.querySingleServicer(condition);
+    }
+
+    @Override
     @Transactional
     public int qualifyOperate(AdminMsg adminMsg,int checkstatus,boolean ispass) {
         return 0;

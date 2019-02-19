@@ -11,5 +11,6 @@ import java.util.List;
 
 public interface QualifyService {
     List<Servicer> qualifyList();
+    Servicer getQualifyById(Long servicerid);
     int qualifyOperate(AdminMsg adminMsg, int checkstatus, boolean ispass);
 }

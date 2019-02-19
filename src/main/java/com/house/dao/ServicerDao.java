@@ -10,5 +10,5 @@ public interface ServicerDao {
     public int updateServicer(Servicer servicer);
     public List<Servicer> queryServicer(@Param("condition") Servicer condition);
     public List<Servicer> queryQualify();
-    public Servicer querySingleServicer(Servicer condition);
+    public Servicer querySingleServicer(@Param("condition")Servicer condition);
 }
