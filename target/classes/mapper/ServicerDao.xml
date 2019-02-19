@@ -32,10 +32,15 @@
             <result column="servicetype_name" property="servicetypename"/>
             <result column="stpriority" property="priority"/>
         </association>
-        <association property="workarea" column="workarea_id" javaType="com.house.entity.WorkArea">
-            <id column="workarea_id" property="workareaid"/>
-            <result column="workarea_name" property="workareaname"/>
-            <result column="wpriority" property="priority"/>
+        <association property="city" column="city_id" javaType="com.house.entity.WorkArea">
+            <id column="city_id" property="workareaid"/>
+            <result column="city_name" property="workareaname"/>
+            <result column="cpriority" property="priority"/>
+        </association>
+        <association property="local" column="local_id" javaType="com.house.entity.WorkArea">
+            <id column="local_id" property="workareaid"/>
+            <result column="local_name" property="workareaname"/>
+            <result column="lpriority" property="priority"/>
         </association>
     </resultMap>
 
@@ -72,14 +77,18 @@
         st.servicetype_id,
         st.servicetype_name,
         st.priority as stpriority,
-        w.workarea_id,
-        w.workarea_name,
-        w.priority as wpriority
-        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea w
+        c.workarea_id as city_id,
+        c.workarea_name as city_name,
+        c.priority as cpriority,
+        l.workarea_id as local_id,
+        l.workarea_name as local_name,
+        l.priority as lpriority
+        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
         <where>
             and s.degree_id=d.degree_id
             and s.servicetype_id=st.servicetype_id
-            and s.workarea_id=w.workarea_id
+            and s.city_id=c.workarea_id
+            and s.local_id=l.workarea_id
         </where>
     </select>
 
@@ -106,15 +115,19 @@
         st.servicetype_id,
         st.servicetype_name,
         st.priority as stpriority,
-        w.workarea_id,
-        w.workarea_name,
-        w.priority as wpriority
-        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea w
+        c.workarea_id as city_id,
+        c.workarea_name as city_name,
+        c.priority as cpriority,
+        l.workarea_id as local_id,
+        l.workarea_name as local_name,
+        l.priority as lpriority
+        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
         <where>
+            and check_status=0
             and s.degree_id=d.degree_id
             and s.servicetype_id=st.servicetype_id
-            and s.workarea_id=w.workarea_id
-            and check_status=0
+            and s.city_id=c.workarea_id
+            and s.local_id=l.workarea_id
         </where>
         order by lastedit_time desc
     </select>

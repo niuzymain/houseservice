@@ -19,7 +19,8 @@ public class Servicer {
     private String servicerfile; //提交的申请文件，zip格式
     private Degree degree;
     private ServiceType servicetype;
-    private WorkArea workarea;
+    private WorkArea city;
+    private WorkArea local;
     private Date createtime;
     private Date lastedittime;
     private Integer enablestatus;// 0.禁用 1.可用 2.服务中
@@ -171,12 +172,12 @@ public class Servicer {
         this.servicetype = servicetype;
     }
 
-    public WorkArea getWorkarea() {
-        return this.workarea;
+    public WorkArea getCity() {
+        return this.city;
     }
 
-    public void setWorkarea(WorkArea workarea) {
-        this.workarea = workarea;
+    public void setCity(WorkArea city) {
+        this.city = city;
     }
 
     public Integer getCheckstatus() {
@@ -185,6 +186,14 @@ public class Servicer {
 
     public void setCheckstatus(Integer checkstatus) {
         this.checkstatus = checkstatus;
+    }
+
+    public WorkArea getLocal() {
+        return this.local;
+    }
+
+    public void setLocal(WorkArea local) {
+        this.local = local;
     }
 }
 
