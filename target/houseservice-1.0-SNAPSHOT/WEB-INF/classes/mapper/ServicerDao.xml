@@ -5,8 +5,6 @@
 
 <!--类名-->
 <mapper namespace="com.house.dao.ServicerDao">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     <resultMap type="com.house.entity.Servicer" id="servicermap">
         <id column="servicer_id" property="servicerid"/>
@@ -34,46 +32,22 @@
             <result column="servicetype_name" property="servicetypename"/>
             <result column="priority" property="priority"/>
         </association>
-        <association property="city" column="city_id" javaType="com.house.entity.WorkArea" select="queryAreaById">
-            <id column="workarea_id" property="workareaid"/>
-            <result column="worearea_name" property="workareaname"/>
-            <result column="priority" property="priority"/>
-        </association>
-        <association property="lcoal" column="lcoal_id" javaType="com.house.entity.WorkArea" select="queryAreaById">
+        <association property="workarea" column="workarea_id" javaType="com.house.entity.WorkArea">
             <id column="workarea_id" property="workareaid"/>
             <result column="worearea_name" property="workareaname"/>
             <result column="priority" property="priority"/>
         </association>
     </resultMap>
 
-    <resultMap id="areamapper" type="com.house.entity.WorkArea">
-        <id column="workarea_id" property="workareaid"/>
-        <result column="worearea_name" property="workareaname"/>
-        <result column="priority" property="priority"/>
-    </resultMap>
-
-=======
->>>>>>> parent of 49a0d14... admin-qualify
-=======
->>>>>>> parent of 49a0d14... admin-qualify
     <update id="updateServicer" parameterType="com.house.entity.Servicer">
         update tb_servicer
         <set>
             <if test="enablestatus != null">enable_status=#{enablestatus},</if>
+            <if test="createtime != null">create_time=#{createtime},</if>
+            <if test="lastedittime != null">lastedit_time=#{lastedittime},</if>
         </set>
         where servicer_id=#{servicerid}
     </update>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    <select id="queryAreaById" parameterType="int" resultMap="areamapper">
-        select
-        workarea_id,
-        workarea_name,
-        priority
-        from tb_workarea
-        where workarea_id=#{_parameter}
-    </select>
 
     <select id="queryServicer" resultMap="servicermap">
         select
@@ -97,11 +71,12 @@
         d.priority as dpriority,
         st.servicetype_id,
         st.servicetype_name,
-        st.priority as stpriority
-        from tb_servicer s,tb_degree d,tb_servicetype st
+        st.priority as stpriority,
+        w.workarea_id,
+        w.workarea_name,
+        w.priority as wpriority
+        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea w
         <where>
-            and s.degree_id=d.degree_id
-            and s.servicetype_id=st.servicetype_id
         </where>
     </select>
 
@@ -127,30 +102,26 @@
         d.priority as dpriority,
         st.servicetype_id,
         st.servicetype_name,
-        st.priority as stpriority
-        from tb_servicer s,tb_degree d,tb_servicetype st
+        st.priority as stpriority,
+        w.workarea_id,
+        w.workarea_name,
+        w.priority as wpriority
+        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea w
         where check_status=0
-              and s.degree_id=d.degree_id
-              and s.servicetype_id=st.servicetype_id
         order by lastedit_time desc
-=======
-=======
->>>>>>> parent of 49a0d14... admin-qualify
-    <!--id:方法名   result：返回值类型-->
-    <select id="queryServicer" resultType="com.house.entity.Servicer">
---         select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,servicer_img,servicer_experience,servicer_score,servicer_price,servicer_des,servicer_file,degree_id,create_time,lastedit_time,enable_status
-        select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,enable_status
-        from tb_servicer
-<<<<<<< HEAD
->>>>>>> parent of 49a0d14... admin-qualify
-=======
->>>>>>> parent of 49a0d14... admin-qualify
     </select>
 
-    <select id="queryServicerById" resultType="com.house.entity.Servicer">
+    <select id="querySingleServicer" resultType="com.house.entity.Servicer">
 --         select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,servicer_img,servicer_experience,servicer_score,servicer_price,servicer_des,servicer_file,degree_id,create_time,lastedit_time,enable_status
         select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,enable_status
         from tb_servicer
-        where servicer_id=#{servicerid}
+        <where>
+            <if test="servicerid != null">
+                and servicer_id=#{servicerid}
+            </if>
+            <if test="enablestatus != null">
+                and enable_status=#{enablestatus}
+            </if>
+        </where>
     </select>
 </mapper>

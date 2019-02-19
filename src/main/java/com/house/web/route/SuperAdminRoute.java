@@ -28,9 +28,9 @@ public class SuperAdminRoute {
         return "superadmin/headimg";
     }
 
-    @RequestMapping(value = "/servicer",method = RequestMethod.GET)
+    @RequestMapping(value = "/qualify",method = RequestMethod.GET)
     private String Qualify(){
-        return "superadmin/servicer";
+        return "superadmin/qualify";
     }
 
     @RequestMapping(value = "/operateheadimg",method = RequestMethod.GET)

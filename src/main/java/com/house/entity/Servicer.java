@@ -1,7 +1,7 @@
 package com.house.entity;
 
 import java.util.Date;
-import java.util.List;
+
 /*
 服务人员
  */
@@ -22,7 +22,8 @@ public class Servicer {
     private WorkArea workarea;
     private Date createtime;
     private Date lastedittime;
-    private Integer enablestatus;//-1.禁用 0.审核中 1.空闲 2.正在服务
+    private Integer enablestatus;// 0.禁用 1.可用 2.服务中
+    private Integer checkstatus; //0.审核 1.通过 -1.未通过
     private String accountname;
     private String password;
 
@@ -86,6 +87,14 @@ public class Servicer {
         return this.servicerscore;
     }
 
+    public String getServicerfile() {
+        return this.servicerfile;
+    }
+
+    public void setServicerfile(String servicerfile) {
+        this.servicerfile = servicerfile;
+    }
+
     public void setServicerscore(Integer servicerscore) {
         this.servicerscore = servicerscore;
     }
@@ -104,38 +113,6 @@ public class Servicer {
 
     public void setServicerdes(String servicerdes) {
         this.servicerdes = servicerdes;
-    }
-
-    public String getServicerfile() {
-        return this.servicerfile;
-    }
-
-    public void setServicerfile(String servicerfile) {
-        this.servicerfile = servicerfile;
-    }
-
-    public Degree getDegree() {
-        return this.degree;
-    }
-
-    public void setDegree(Degree degree) {
-        this.degree = degree;
-    }
-
-    public ServiceType getServicetype() {
-        return this.servicetype;
-    }
-
-    public void setServicetype(ServiceType servicetype) {
-        this.servicetype = servicetype;
-    }
-
-    public WorkArea getWorkarea() {
-        return this.workarea;
-    }
-
-    public void setWorkarea(WorkArea workarea) {
-        this.workarea = workarea;
     }
 
     public Date getCreatetime() {
@@ -162,6 +139,14 @@ public class Servicer {
         this.enablestatus = enablestatus;
     }
 
+    public Degree getDegree() {
+        return this.degree;
+    }
+
+    public void setDegree(Degree degree) {
+        this.degree = degree;
+    }
+
     public String getAccountname() {
         return this.accountname;
     }
@@ -176,6 +161,30 @@ public class Servicer {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public ServiceType getServicetype() {
+        return this.servicetype;
+    }
+
+    public void setServicetype(ServiceType servicetype) {
+        this.servicetype = servicetype;
+    }
+
+    public WorkArea getWorkarea() {
+        return this.workarea;
+    }
+
+    public void setWorkarea(WorkArea workarea) {
+        this.workarea = workarea;
+    }
+
+    public Integer getCheckstatus() {
+        return this.checkstatus;
+    }
+
+    public void setCheckstatus(Integer checkstatus) {
+        this.checkstatus = checkstatus;
     }
 }
 
