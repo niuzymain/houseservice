@@ -32,11 +32,22 @@
             <result column="servicetype_name" property="servicetypename"/>
             <result column="priority" property="priority"/>
         </association>
-        <association property="workarea" column="workarea_id" javaType="com.house.entity.WorkArea">
+        <association property="city" column="city_id" javaType="com.house.entity.WorkArea" select="queryAreaById">
             <id column="workarea_id" property="workareaid"/>
             <result column="worearea_name" property="workareaname"/>
             <result column="priority" property="priority"/>
         </association>
+        <association property="lcoal" column="lcoal_id" javaType="com.house.entity.WorkArea" select="queryAreaById">
+            <id column="workarea_id" property="workareaid"/>
+            <result column="worearea_name" property="workareaname"/>
+            <result column="priority" property="priority"/>
+        </association>
+    </resultMap>
+
+    <resultMap id="areamapper" type="com.house.entity.WorkArea">
+        <id column="workarea_id" property="workareaid"/>
+        <result column="worearea_name" property="workareaname"/>
+        <result column="priority" property="priority"/>
     </resultMap>
 
     <update id="updateServicer" parameterType="com.house.entity.Servicer">
@@ -48,6 +59,15 @@
         </set>
         where servicer_id=#{servicerid}
     </update>
+
+    <select id="queryAreaById" parameterType="int" resultMap="areamapper">
+        select
+        workarea_id,
+        workarea_name,
+        priority
+        from tb_workarea
+        where workarea_id=#{_parameter}
+    </select>
 
     <select id="queryServicer" resultMap="servicermap">
         select
@@ -71,12 +91,11 @@
         d.priority as dpriority,
         st.servicetype_id,
         st.servicetype_name,
-        st.priority as stpriority,
-        w.workarea_id,
-        w.workarea_name,
-        w.priority as wpriority
-        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea w
+        st.priority as stpriority
+        from tb_servicer s,tb_degree d,tb_servicetype st
         <where>
+            and s.degree_id=d.degree_id
+            and s.servicetype_id=st.servicetype_id
         </where>
     </select>
 
@@ -102,12 +121,11 @@
         d.priority as dpriority,
         st.servicetype_id,
         st.servicetype_name,
-        st.priority as stpriority,
-        w.workarea_id,
-        w.workarea_name,
-        w.priority as wpriority
-        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea w
+        st.priority as stpriority
+        from tb_servicer s,tb_degree d,tb_servicetype st
         where check_status=0
+              and s.degree_id=d.degree_id
+              and s.servicetype_id=st.servicetype_id
         order by lastedit_time desc
     </select>
 
