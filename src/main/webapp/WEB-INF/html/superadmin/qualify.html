@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--展示地区，服务类型等类别和操作选项-->
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style type="text/css">
-        div{
-            float:left;
-        }
-        #menu{
-            margin-right: 50px;
-        }
-    </style>
 </head>
 <body>
-    <h1>展示</h1>
+    <h1>服务人员审核</h1>
     <div id="menu">
         <ul id="lists">
             <li>
                 <a href="/admin/main" id="usermanager">账户管理</a>
             </li>
             <li>
-                <a href="#" id="itemmanager">分类管理</a>
-                <ul id="itemmenulist">
+                <a href="/admin/display" id="itemmanager">分类管理</a>
+                <ul id="itemmenulist" style="display: none">
                     <li><a href="#" id="areamanager">区域管理</a></li>
                     <li><a href="#" id="categorymanager">类别管理</a></li>
                     <li><a href="#" id="degreemanager">学历管理</a></li>
@@ -32,13 +23,12 @@
                 <a href="/admin/headimg" id="headimgmanager">轮播图管理</a>
             </li>
             <li>
-                <a href="/admin/qualify" id="servicerqualify">服务人员审核</a>
+                <a href="#" id="servicerqualify">服务人员审核</a>
             </li>
         </ul>
     </div>
-
-    <div id="item">
-        <table id="itemlist">
+    <div id="qualify">
+        <table id="qualifylist">
             <thead>
             </thead>
             <tbody>
@@ -49,6 +39,6 @@
     <!--<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>-->
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>-->
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>-->
-    <script type="text/javascript" src="../resources/js/superadmin/showitems.js"></script>
+    <script type="text/javascript" src="../resources/js/superadmin/qualify.js"></script>
 </body>
 </html>

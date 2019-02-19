@@ -1,7 +1,7 @@
 package com.house.entity;
 
 import java.util.Date;
-import java.util.List;
+
 /*
 服务人员
  */
@@ -18,11 +18,12 @@ public class Servicer {
     private String servicerdes;
     private String servicerfile; //提交的申请文件，zip格式
     private Degree degree;
-    private ServiceType servicerAndTypeList;
-    private WorkArea workArea;
+    private ServiceType servicetype;
+    private WorkArea workarea;
     private Date createtime;
     private Date lastedittime;
-    private Integer enablestatus;//-1.禁用 0.审核中 1.空闲 2.正在服务
+    private Integer enablestatus;// 0.禁用 1.可用 2.服务中
+    private Integer checkstatus; //0.审核 1.通过 -1.未通过
     private String accountname;
     private String password;
 
@@ -162,20 +163,28 @@ public class Servicer {
         this.password = password;
     }
 
-    public ServiceType getServicerAndTypeList() {
-        return this.servicerAndTypeList;
+    public ServiceType getServicetype() {
+        return this.servicetype;
     }
 
-    public void setServicerAndTypeList(ServiceType servicerAndTypeList) {
-        this.servicerAndTypeList = servicerAndTypeList;
+    public void setServicetype(ServiceType servicetype) {
+        this.servicetype = servicetype;
     }
 
-    public WorkArea getWorkArea() {
-        return this.workArea;
+    public WorkArea getWorkarea() {
+        return this.workarea;
     }
 
-    public void setWorkArea(WorkArea workArea) {
-        this.workArea = workArea;
+    public void setWorkarea(WorkArea workarea) {
+        this.workarea = workarea;
+    }
+
+    public Integer getCheckstatus() {
+        return this.checkstatus;
+    }
+
+    public void setCheckstatus(Integer checkstatus) {
+        this.checkstatus = checkstatus;
     }
 }
 

@@ -9,7 +9,7 @@ $(function () {
                     "<td>" + data.result[i].username + "</td>" +
                     "<td>" + data.result[i].usersex + "</td>" +
                     "<td>" + data.result[i].userphone + "</td>" +
-                    "<td>" + data.result[i].createtime + "</td>" +
+                    "<td>" + timeStamp2String(data.result[i].createtime) + "</td>" +
                     "<td><td><a href=# onclick=changestatus(this) id=" + data.result[i].userid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
                     "</tr>"
                 $("#userlist tbody").append(body);
@@ -34,7 +34,7 @@ $(function () {
                                         "<td>" + data.result[i].username + "</td>" +
                                         "<td>" + data.result[i].usersex + "</td>" +
                                         "<td>" + data.result[i].userphone + "</td>" +
-                                        "<td>" + data.result[i].createtime + "</td>" +
+                                        "<td>" + timeStamp2String(data.result[i].createtime) + "</td>" +
                                         "<td><td><a href=# onclick=changestatus(this) id=" + data.result[i].userid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
                                     "</tr>"
                         $("#userlist tbody").append(body);
@@ -57,7 +57,7 @@ $(function () {
                                         "<td>" + data.result[i].servicername + "</td>" +
                                         "<td>" + data.result[i].servicersex + "</td>" +
                                         "<td>" + data.result[i].servicerphone + "</td>" +
-                                        "<td>" + data.result[i].createtime + "</td>" +
+                                        "<td>" + timeStamp2String(data.result[i].createtime) + "</td>" +
                                          "<td><td><a href=# onclick=changestatus(this) id=" + data.result[i].servicerid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
                                     "</tr>"
                         $("#userlist tbody").append(body);
@@ -105,8 +105,8 @@ function changestatus(target) {
                 servicerid: target.id,
                 enablestatus: 1
             }
-            formdata.append("type","user");
-            formdata.append("operatestr", JSON.stringify(user))
+            formdata.append("type","servicer");
+            formdata.append("operatestr", JSON.stringify(servicer))
         }
     }
     $.ajax({
