@@ -1,7 +1,7 @@
 package com.house.entity;
 
 import java.util.Date;
-
+import java.util.List;
 /*
 服务人员
  */
@@ -18,13 +18,17 @@ public class Servicer {
     private String servicerdes;
     private String servicerfile; //提交的申请文件，zip格式
     private Degree degree;
+<<<<<<< HEAD
     private ServiceType servicetype;
     private WorkArea city;
     private WorkArea local;
+=======
+    private ServiceType servicerAndTypeList;
+    private WorkArea workArea;
+>>>>>>> parent of 49a0d14... admin-qualify
     private Date createtime;
     private Date lastedittime;
-    private Integer enablestatus;// 0.禁用 1.可用 2.服务中
-    private Integer checkstatus; //0.审核 1.通过 -1.未通过
+    private Integer enablestatus;//-1.禁用 0.审核中 1.空闲 2.正在服务
     private String accountname;
     private String password;
 
@@ -164,6 +168,7 @@ public class Servicer {
         this.password = password;
     }
 
+<<<<<<< HEAD
     public ServiceType getServicetype() {
         return this.servicetype;
     }
@@ -172,13 +177,22 @@ public class Servicer {
         this.servicetype = servicetype;
     }
 
-
-    public Integer getCheckstatus() {
-        return this.checkstatus;
+=======
+    public ServiceType getServicerAndTypeList() {
+        return this.servicerAndTypeList;
     }
 
-    public void setCheckstatus(Integer checkstatus) {
-        this.checkstatus = checkstatus;
+    public void setServicerAndTypeList(ServiceType servicerAndTypeList) {
+        this.servicerAndTypeList = servicerAndTypeList;
+    }
+>>>>>>> parent of 49a0d14... admin-qualify
+
+    public WorkArea getWorkArea() {
+        return this.workArea;
+    }
+
+    public void setWorkArea(WorkArea workArea) {
+        this.workArea = workArea;
     }
 
     public WorkArea getCity() {

@@ -121,10 +121,9 @@ public class UserManageController {
     public Map<String,Object>getServicerById(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();
         Long servicerid = Long.parseLong(request.getParameter("servicerid"));
-        Servicer condition = new Servicer();
-        condition.setServicerid(servicerid);
+        Servicer servicer = new Servicer();
         try{
-            Servicer servicer = userInfoManage.getSingleServicer(condition);
+            servicer = userInfoManage.getServicerById(servicerid);
             modelMap.put("success",true);
             modelMap.put("result",servicer);
         }catch (Exception e){

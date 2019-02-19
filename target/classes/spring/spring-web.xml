@@ -38,12 +38,12 @@
      </bean>
 
     <!--登陆认证拦截器-->
-    <!--<mvc:interceptors>-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/admin/**"/>-->
-            <!--<bean class="com.house.interceptor.AdminLoginInterceptor"/>-->
-        <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/admin/**"/>
+            <bean class="com.house.interceptor.AdminLoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
      <!--在spring-mvc.xml文件中加入这段配置后，spring返回给页面的都是utf-8编码了-->
      <!--<bean-->

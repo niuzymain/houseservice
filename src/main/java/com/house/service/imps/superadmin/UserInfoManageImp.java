@@ -28,11 +28,11 @@ public class UserInfoManageImp implements UserInfoManage {
 
     @Override
     public List<Servicer> getServicerList() {
-        return servicerDao.queryServicer(new Servicer());
+        return servicerDao.queryServicer();
     }
 
     @Override
-    public Servicer getSingleServicer(Servicer servicer) {
-        return servicerDao.querySingleServicer(servicer);
+    public Servicer getServicerById(Long servicerid) {
+        return servicerDao.queryServicerById(servicerid);
     }
 }

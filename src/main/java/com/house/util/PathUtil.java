@@ -5,10 +5,10 @@ package com.house.util;
  */
 public class PathUtil {
     public static String rootPath(){
-        return "G:/HouseService/files";
+        return "G:\\HouseService\\files";
     }
 
     public static String headimgPath(){
-        return "/headimg/";
+        return "\\headimg\\";
     }
 }

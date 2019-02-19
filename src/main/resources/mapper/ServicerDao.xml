@@ -5,6 +5,7 @@
 
 <!--类名-->
 <mapper namespace="com.house.dao.ServicerDao">
+<<<<<<< HEAD
 
     <resultMap type="com.house.entity.Servicer" id="servicermap">
         <id column="servicer_id" property="servicerid"/>
@@ -50,15 +51,16 @@
         <result column="priority" property="priority"/>
     </resultMap>
 
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
     <update id="updateServicer" parameterType="com.house.entity.Servicer">
         update tb_servicer
         <set>
             <if test="enablestatus != null">enable_status=#{enablestatus},</if>
-            <if test="createtime != null">create_time=#{createtime},</if>
-            <if test="lastedittime != null">lastedit_time=#{lastedittime},</if>
         </set>
         where servicer_id=#{servicerid}
     </update>
+<<<<<<< HEAD
 
     <select id="queryAreaById" parameterType="int" resultMap="areamapper">
         select
@@ -127,19 +129,19 @@
               and s.degree_id=d.degree_id
               and s.servicetype_id=st.servicetype_id
         order by lastedit_time desc
-    </select>
-
-    <select id="querySingleServicer" resultType="com.house.entity.Servicer">
+=======
+    <!--id:方法名   result：返回值类型-->
+    <select id="queryServicer" resultType="com.house.entity.Servicer">
 --         select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,servicer_img,servicer_experience,servicer_score,servicer_price,servicer_des,servicer_file,degree_id,create_time,lastedit_time,enable_status
         select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,enable_status
         from tb_servicer
-        <where>
-            <if test="servicerid != null">
-                and servicer_id=#{servicerid}
-            </if>
-            <if test="enablestatus != null">
-                and enable_status=#{enablestatus}
-            </if>
-        </where>
+>>>>>>> parent of 49a0d14... admin-qualify
+    </select>
+
+    <select id="queryServicerById" resultType="com.house.entity.Servicer">
+--         select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,servicer_img,servicer_experience,servicer_score,servicer_price,servicer_des,servicer_file,degree_id,create_time,lastedit_time,enable_status
+        select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,enable_status
+        from tb_servicer
+        where servicer_id=#{servicerid}
     </select>
 </mapper>

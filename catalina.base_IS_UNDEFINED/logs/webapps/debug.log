@@ -1,27 +1,12 @@
-2019-02-19 12;22:55.723[main] DEBUG com.house.dao.ServicerDao.queryServicer - ==>  Preparing: select s.servicer_id, s.servicer_name, s.servicer_age, s.servicer_sex, s.servicer_phone, s.servicer_img, s.servicer_experience, s.servicer_score, s.servicer_price, s.servicer_des, s.servicer_file, s.create_time, s.lastedit_time, s.enable_status, d.degree_id, d.degree_name, d.priority as dpriority, st.servicetype_id, st.servicetype_name, st.priority as stpriority, w.workarea_id, w.workarea_name, w.priority as wpriority from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea w 
-2019-02-19 12;22:55.770[main] DEBUG com.house.dao.ServicerDao.queryServicer - ==> Parameters: 
-2019-02-19 12;22:55.879[main] DEBUG com.house.dao.ServicerDao.queryServicer - <==      Total: 288
-2019-02-19 12;23:42.303[main] DEBUG com.house.dao.ServicerDao.queryServicer - ==>  Preparing: select s.servicer_id, s.servicer_name, s.servicer_age, s.servicer_sex, s.servicer_phone, s.servicer_img, s.servicer_experience, s.servicer_score, s.servicer_price, s.servicer_des, s.servicer_file, s.create_time, s.lastedit_time, s.enable_status, d.degree_id, d.degree_name, d.priority as dpriority, st.servicetype_id, st.servicetype_name, st.priority as stpriority, w.workarea_id, w.workarea_name, w.priority as wpriority from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea w 
-2019-02-19 12;23:42.381[main] DEBUG com.house.dao.ServicerDao.queryServicer - ==> Parameters: 
-2019-02-19 12;23:42.506[main] DEBUG com.house.dao.ServicerDao.queryServicer - <==      Total: 288
-2019-02-19 12;23:42.567[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==>  Preparing: update tb_servicer SET enable_status=?, create_time=?, lastedit_time=? where servicer_id=? 
-2019-02-19 12;23:42.599[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==> Parameters: 1(Integer), 2019-02-19 12:23:42.522(Timestamp), 2019-02-19 12:23:42.522(Timestamp), 3(Long)
-2019-02-19 12;23:42.661[main] DEBUG com.house.dao.ServicerDao.updateServicer - <==    Updates: 1
-2019-02-19 12;23:42.661[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==>  Preparing: update tb_servicer SET enable_status=?, create_time=?, lastedit_time=? where servicer_id=? 
-2019-02-19 12;23:42.661[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==> Parameters: 1(Integer), 2019-02-19 12:23:42.522(Timestamp), 2019-02-19 12:23:42.522(Timestamp), 4(Long)
-2019-02-19 12;23:42.771[main] DEBUG com.house.dao.ServicerDao.updateServicer - <==    Updates: 1
-2019-02-19 12;23:42.771[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==>  Preparing: update tb_servicer SET enable_status=?, create_time=?, lastedit_time=? where servicer_id=? 
-2019-02-19 12;23:42.771[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==> Parameters: 1(Integer), 2019-02-19 12:23:42.522(Timestamp), 2019-02-19 12:23:42.522(Timestamp), 5(Long)
-2019-02-19 12;23:42.896[main] DEBUG com.house.dao.ServicerDao.updateServicer - <==    Updates: 1
-2019-02-19 12;32:43.850[main] DEBUG com.house.dao.ServicerDao.queryServicer - ==>  Preparing: select s.servicer_id, s.servicer_name, s.servicer_age, s.servicer_sex, s.servicer_phone, s.servicer_img, s.servicer_experience, s.servicer_score, s.servicer_price, s.servicer_des, s.servicer_file, s.create_time, s.lastedit_time, s.enable_status, s.check_status, d.degree_id, d.degree_name, d.priority as dpriority, st.servicetype_id, st.servicetype_name, st.priority as stpriority, w.workarea_id, w.workarea_name, w.priority as wpriority from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea w 
-2019-02-19 12;32:43.943[main] DEBUG com.house.dao.ServicerDao.queryServicer - ==> Parameters: 
-2019-02-19 12;32:44.099[main] DEBUG com.house.dao.ServicerDao.queryServicer - <==      Total: 288
-2019-02-19 12;32:44.209[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==>  Preparing: update tb_servicer SET enable_status=?, create_time=?, lastedit_time=? where servicer_id=? 
-2019-02-19 12;32:44.209[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==> Parameters: 1(Integer), 2019-02-19 12:32:44.131(Timestamp), 2019-02-19 12:32:44.131(Timestamp), 3(Long)
-2019-02-19 12;32:44.334[main] DEBUG com.house.dao.ServicerDao.updateServicer - <==    Updates: 1
-2019-02-19 12;32:44.334[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==>  Preparing: update tb_servicer SET enable_status=?, create_time=?, lastedit_time=? where servicer_id=? 
-2019-02-19 12;32:44.349[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==> Parameters: 1(Integer), 2019-02-19 12:32:44.131(Timestamp), 2019-02-19 12:32:44.131(Timestamp), 4(Long)
-2019-02-19 12;32:44.425[main] DEBUG com.house.dao.ServicerDao.updateServicer - <==    Updates: 1
-2019-02-19 12;32:44.426[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==>  Preparing: update tb_servicer SET enable_status=?, create_time=?, lastedit_time=? where servicer_id=? 
-2019-02-19 12;32:44.427[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==> Parameters: 1(Integer), 2019-02-19 12:32:44.131(Timestamp), 2019-02-19 12:32:44.131(Timestamp), 5(Long)
-2019-02-19 12;32:44.476[main] DEBUG com.house.dao.ServicerDao.updateServicer - <==    Updates: 1
+2019-02-13 21;19:04.954[main] DEBUG com.house.dao.HeadimgDao.selectById - ==>  Preparing: select headimg_id,headimg_title,headimg_details,headimg_url,priority,enable_status,create_time,lastedit_time from tb_headimg where headimg_id=? 
+2019-02-13 21;19:05.126[main] DEBUG com.house.dao.HeadimgDao.selectById - ==> Parameters: 11(Long)
+2019-02-13 21;19:05.235[main] DEBUG com.house.dao.HeadimgDao.selectById - <==      Total: 1
+2019-02-13 21;19:05.329[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==>  Preparing: update tb_headimg SET headimg_url=? where headimg_id=? 
+2019-02-13 21;19:05.329[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==> Parameters: \headimg\headimg11_20190213211905.jpg(String), 11(Long)
+2019-02-13 21;19:05.360[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - <==    Updates: 1
+2019-02-13 21;19:31.581[main] DEBUG com.house.dao.HeadimgDao.selectById - ==>  Preparing: select headimg_id,headimg_title,headimg_details,headimg_url,priority,enable_status,create_time,lastedit_time from tb_headimg where headimg_id=? 
+2019-02-13 21;19:31.628[main] DEBUG com.house.dao.HeadimgDao.selectById - ==> Parameters: 11(Long)
+2019-02-13 21;19:31.722[main] DEBUG com.house.dao.HeadimgDao.selectById - <==      Total: 1
+2019-02-13 21;19:31.769[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==>  Preparing: update tb_headimg SET headimg_url=? where headimg_id=? 
+2019-02-13 21;19:31.769[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==> Parameters: \headimg\headimg11_20190213211931.jpg(String), 11(Long)
+2019-02-13 21;19:31.785[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - <==    Updates: 1
