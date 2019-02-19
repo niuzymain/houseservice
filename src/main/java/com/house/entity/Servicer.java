@@ -18,14 +18,8 @@ public class Servicer {
     private String servicerdes;
     private String servicerfile; //提交的申请文件，zip格式
     private Degree degree;
-<<<<<<< HEAD
     private ServiceType servicetype;
-    private WorkArea city;
-    private WorkArea local;
-=======
-    private ServiceType servicerAndTypeList;
-    private WorkArea workArea;
->>>>>>> parent of 49a0d14... admin-qualify
+    private WorkArea workarea;
     private Date createtime;
     private Date lastedittime;
     private Integer enablestatus;//-1.禁用 0.审核中 1.空闲 2.正在服务
@@ -92,14 +86,6 @@ public class Servicer {
         return this.servicerscore;
     }
 
-    public String getServicerfile() {
-        return this.servicerfile;
-    }
-
-    public void setServicerfile(String servicerfile) {
-        this.servicerfile = servicerfile;
-    }
-
     public void setServicerscore(Integer servicerscore) {
         this.servicerscore = servicerscore;
     }
@@ -118,6 +104,38 @@ public class Servicer {
 
     public void setServicerdes(String servicerdes) {
         this.servicerdes = servicerdes;
+    }
+
+    public String getServicerfile() {
+        return this.servicerfile;
+    }
+
+    public void setServicerfile(String servicerfile) {
+        this.servicerfile = servicerfile;
+    }
+
+    public Degree getDegree() {
+        return this.degree;
+    }
+
+    public void setDegree(Degree degree) {
+        this.degree = degree;
+    }
+
+    public ServiceType getServicetype() {
+        return this.servicetype;
+    }
+
+    public void setServicetype(ServiceType servicetype) {
+        this.servicetype = servicetype;
+    }
+
+    public WorkArea getWorkarea() {
+        return this.workarea;
+    }
+
+    public void setWorkarea(WorkArea workarea) {
+        this.workarea = workarea;
     }
 
     public Date getCreatetime() {
@@ -144,14 +162,6 @@ public class Servicer {
         this.enablestatus = enablestatus;
     }
 
-    public Degree getDegree() {
-        return this.degree;
-    }
-
-    public void setDegree(Degree degree) {
-        this.degree = degree;
-    }
-
     public String getAccountname() {
         return this.accountname;
     }
@@ -166,49 +176,6 @@ public class Servicer {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-<<<<<<< HEAD
-    public ServiceType getServicetype() {
-        return this.servicetype;
-    }
-
-    public void setServicetype(ServiceType servicetype) {
-        this.servicetype = servicetype;
-    }
-
-=======
-    public ServiceType getServicerAndTypeList() {
-        return this.servicerAndTypeList;
-    }
-
-    public void setServicerAndTypeList(ServiceType servicerAndTypeList) {
-        this.servicerAndTypeList = servicerAndTypeList;
-    }
->>>>>>> parent of 49a0d14... admin-qualify
-
-    public WorkArea getWorkArea() {
-        return this.workArea;
-    }
-
-    public void setWorkArea(WorkArea workArea) {
-        this.workArea = workArea;
-    }
-
-    public WorkArea getCity() {
-        return this.city;
-    }
-
-    public void setCity(WorkArea city) {
-        this.city = city;
-    }
-
-    public WorkArea getLocal() {
-        return this.local;
-    }
-
-    public void setLocal(WorkArea local) {
-        this.local = local;
     }
 }
 

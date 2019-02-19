@@ -7,12 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eb73dc7-a397-4b8d-a922-66f1030a9b43" name="Default Changelist" comment="">
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/com/house/entity/Servicer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/entity/Servicer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/qualify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/qualify.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/qualify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/qualify.js" afterDir="false" />
 =======
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
       <change afterPath="$PROJECT_DIR$/src/main/java/com/house/dao/ServicerDao.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/house/dao/UserDao.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/house/interceptor/AdminLoginInterceptor.java" afterDir="false" />
@@ -105,6 +106,9 @@
       <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/superadmin/showitems.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/superadmin/showitems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/house/dao/AccountDaotest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/house/dao/AdminDaotest.class" beforeDir="false" />
+<<<<<<< HEAD
+>>>>>>> parent of 49a0d14... admin-qualify
+=======
 >>>>>>> parent of 49a0d14... admin-qualify
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -157,6 +161,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="html" value="86" />
           <entry key="iml" value="1" />
           <entry key="java" value="342" />
@@ -166,6 +171,8 @@
           <entry key="txt" value="4" />
           <entry key="xml" value="106" />
 =======
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
           <entry key="html" value="77" />
           <entry key="iml" value="1" />
           <entry key="java" value="293" />
@@ -174,12 +181,16 @@
           <entry key="properties" value="2" />
           <entry key="txt" value="4" />
           <entry key="xml" value="91" />
+<<<<<<< HEAD
+>>>>>>> parent of 49a0d14... admin-qualify
+=======
 >>>>>>> parent of 49a0d14... admin-qualify
           <entry key="负责前端界面路由" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <entry key="HTML" value="86" />
           <entry key="IDEA_MODULE" value="1" />
@@ -190,6 +201,8 @@
           <entry key="Properties" value="2" />
           <entry key="XML" value="106" />
 =======
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
           <entry key="HTML" value="77" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="293" />
@@ -198,11 +211,15 @@
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="91" />
+<<<<<<< HEAD
+>>>>>>> parent of 49a0d14... admin-qualify
+=======
 >>>>>>> parent of 49a0d14... admin-qualify
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <entry key="dummy" value="179" />
           <entry key="html" value="2573" />
@@ -212,6 +229,8 @@
           <entry key="txt" value="9" />
           <entry key="xml" value="4829" />
 =======
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
           <entry key="dummy" value="150" />
           <entry key="html" value="2434" />
           <entry key="java" value="16665" />
@@ -219,11 +238,15 @@
           <entry key="properties" value="22" />
           <entry key="txt" value="9" />
           <entry key="xml" value="3548" />
+<<<<<<< HEAD
+>>>>>>> parent of 49a0d14... admin-qualify
+=======
 >>>>>>> parent of 49a0d14... admin-qualify
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <entry key="HTML" value="2598" />
           <entry key="JAVA" value="17621" />
@@ -232,6 +255,15 @@
           <entry key="Properties" value="22" />
           <entry key="SQL" value="136" />
           <entry key="XML" value="4693" />
+=======
+          <entry key="HTML" value="2459" />
+          <entry key="JAVA" value="16665" />
+          <entry key="JavaScript" value="7999" />
+          <entry key="PLAIN_TEXT" value="159" />
+          <entry key="Properties" value="22" />
+          <entry key="SQL" value="73" />
+          <entry key="XML" value="3475" />
+>>>>>>> parent of 49a0d14... admin-qualify
 =======
           <entry key="HTML" value="2459" />
           <entry key="JAVA" value="16665" />
@@ -254,8 +286,13 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/UserManageController.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="32">
               <caret line="115" selection-start-line="115" selection-end-line="115" />
+=======
+            <state relative-caret-position="264">
+              <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+>>>>>>> parent of 49a0d14... admin-qualify
 =======
             <state relative-caret-position="264">
               <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
@@ -269,6 +306,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/qualify.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
@@ -277,16 +315,22 @@
                 <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
 =======
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/ServicerDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
               <caret line="9" column="29" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="29" />
+<<<<<<< HEAD
+>>>>>>> parent of 49a0d14... admin-qualify
+=======
 >>>>>>> parent of 49a0d14... admin-qualify
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/Servicer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -311,6 +355,12 @@
             <state relative-caret-position="243">
               <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
 >>>>>>> parent of 49a0d14... admin-qualify
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+>>>>>>> parent of 49a0d14... admin-qualify
             </state>
           </provider>
         </entry>
@@ -327,12 +377,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
               <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+<<<<<<< HEAD
+>>>>>>> parent of 49a0d14... admin-qualify
+=======
 >>>>>>> parent of 49a0d14... admin-qualify
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/UserInfoManageImp.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -343,12 +397,17 @@
                 <element signature="e#786#787#0" expanded="true" />
                 <element signature="e#850#851#0" expanded="true" />
 =======
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/servicer/ServicerServiceImp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
               <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> parent of 49a0d14... admin-qualify
+=======
 >>>>>>> parent of 49a0d14... admin-qualify
               </folding>
             </state>
@@ -357,6 +416,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/qualify.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -364,6 +424,10 @@
 =======
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/user/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/user/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> parent of 49a0d14... admin-qualify
             <state relative-caret-position="110">
               <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="28" />
             </state>
@@ -385,6 +449,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/QualifyController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="93">
@@ -395,6 +460,10 @@
 =======
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/HeadimgController.java">
           <provider selected="true" editor-type-id="text-editor">
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/HeadimgController.java">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> parent of 49a0d14... admin-qualify
             <state relative-caret-position="199">
               <caret line="37" column="71" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="37" selection-end-column="71" />
             </state>
@@ -406,6 +475,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1254">
               <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+<<<<<<< HEAD
+>>>>>>> parent of 49a0d14... admin-qualify
+=======
 >>>>>>> parent of 49a0d14... admin-qualify
             </state>
           </provider>
@@ -502,6 +574,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/servicer/ServicerServiceImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/UserManageController.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/route/SuperAdminRoute.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html" />
@@ -521,6 +594,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/qualify.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/entity/Servicer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml" />
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
 =======
 >>>>>>> parent of 49a0d14... admin-qualify
       </list>
@@ -565,9 +640,15 @@
     </treeState>
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="420" />
     <option name="y" value="67" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="346" />
+    <option name="y" value="183" />
+>>>>>>> parent of 49a0d14... admin-qualify
 =======
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="346" />
@@ -1008,8 +1089,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550563284053" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550385813604" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Schoolshop" />
+>>>>>>> parent of 49a0d14... admin-qualify
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550385813604" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Schoolshop" />
@@ -1034,8 +1120,13 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <recent name="G:\Projects\IDEAworkspace\houseservice\src\main\webapp\resources\js\superadmin" />
       <recent name="G:\Projects\IDEAworkspace\houseservice\src\main\resources\mapper" />
+=======
+      <recent name="G:\Projects\IDEAworkspace\houseservice\src\main\resources\mapper" />
+      <recent name="G:\Projects\IDEAworkspace\houseservice\src\main\webapp\resources\js\superadmin" />
+>>>>>>> parent of 49a0d14... admin-qualify
 =======
       <recent name="G:\Projects\IDEAworkspace\houseservice\src\main\resources\mapper" />
       <recent name="G:\Projects\IDEAworkspace\houseservice\src\main\webapp\resources\js\superadmin" />
@@ -1323,9 +1414,13 @@
       <workItem from="1550288761749" duration="4730000" />
       <workItem from="1550322616703" duration="1688000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1550378375119" duration="6868000" />
       <workItem from="1550489688144" duration="5707000" />
       <workItem from="1550542257780" duration="11609000" />
+=======
+      <workItem from="1550378375119" duration="6000000" />
+>>>>>>> parent of 49a0d14... admin-qualify
 =======
       <workItem from="1550378375119" duration="6000000" />
 >>>>>>> parent of 49a0d14... admin-qualify
@@ -1366,7 +1461,11 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="170855000" />
+=======
+    <option name="totallyTimeSpent" value="152671000" />
+>>>>>>> parent of 49a0d14... admin-qualify
 =======
     <option name="totallyTimeSpent" value="152671000" />
 >>>>>>> parent of 49a0d14... admin-qualify
@@ -1376,7 +1475,11 @@
     <editor active="true" />
     <layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.32753405" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.30711043" />
+>>>>>>> parent of 49a0d14... admin-qualify
 =======
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.30711043" />
 >>>>>>> parent of 49a0d14... admin-qualify
@@ -1392,7 +1495,11 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32423207" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32935154" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.1450512" />
+=======
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.3105802" />
+>>>>>>> parent of 49a0d14... admin-qualify
 =======
       <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.3105802" />
 >>>>>>> parent of 49a0d14... admin-qualify
@@ -1475,8 +1582,11 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
 =======
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/AccountDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/SuperAdmin.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1486,6 +1596,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/WorkAreaDao.xml">
+<<<<<<< HEAD
+>>>>>>> parent of 49a0d14... admin-qualify
+=======
 >>>>>>> parent of 49a0d14... admin-qualify
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1494,13 +1607,17 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/user/UserService.java">
 =======
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/common/LoginService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/common/LoginServiceImp.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/degreeDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-66" />
+<<<<<<< HEAD
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/house/dao/AccountDaotest.java" />
@@ -1620,26 +1737,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
+=======
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common/commonlogin.js">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/house/dao/AccountDaotest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/house/dao/AdminDaotest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/ServiceTypeDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        <state relative-caret-position="88">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ServiceTypeDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/bind/annotation/ResponseBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/ServicerAndWorkarea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/ServicerAndType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/showitems.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="42" selection-start-line="5" selection-start-column="7" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/UserInfoManageImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/Servicer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="164" column="49" selection-start-line="164" selection-start-column="49" selection-end-line="164" selection-end-column="49" />
+          <folding>
+            <element signature="e#3915#3916#0" expanded="true" />
+            <element signature="e#4089#4090#0" expanded="true" />
+            <element signature="e#4125#4126#0" expanded="true" />
+            <element signature="e#4175#4176#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+          </folding>
+>>>>>>> parent of 49a0d14... admin-qualify
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/ServiceType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+          <folding>
+            <element signature="e#1289#1290#0" expanded="true" />
+            <element signature="e#1353#1354#0" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common/util.js">
 >>>>>>> parent of 49a0d14... admin-qualify
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="19" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/SuperAdminDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+>>>>>>> parent of 49a0d14... admin-qualify
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/headimg.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="271">
           <caret line="53" column="67" selection-start-line="53" selection-start-column="67" selection-end-line="53" selection-end-column="67" />
         </state>
@@ -1670,11 +1865,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+=======
+        <state relative-caret-position="751">
+          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+          <folding>
+            <element signature="e#1599#1600#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/AdminServiceimp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/WorkArea.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+          <folding>
+            <element signature="e#1462#1463#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/showitems.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common/commonlogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="19" />
+>>>>>>> parent of 49a0d14... admin-qualify
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/headimg.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="197">
           <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
@@ -1777,11 +2013,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="14" column="13" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="14" selection-end-column="13" />
+=======
+        <state relative-caret-position="271">
+          <caret line="53" column="67" selection-start-line="53" selection-start-column="67" selection-end-line="53" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/ServicerDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/AdminService.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SuperAdminDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/route/SuperAdminRoute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/AdminServiceimp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.3.RELEASE/spring-webmvc-5.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/HandlerExecutionChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/common/CommonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="51" column="73" lean-forward="true" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/interceptor/AdminLoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/common/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="58" column="67" selection-start-line="58" selection-start-column="67" selection-end-line="58" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+>>>>>>> parent of 49a0d14... admin-qualify
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/HeadimgServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="132">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="29" />
         </state>
@@ -1823,11 +2148,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-255">
           <caret line="37" column="39" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="39" />
+=======
+        <state relative-caret-position="154">
+          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/UserInfoManage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/headimg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="65" column="1" lean-forward="true" selection-start-line="32" selection-end-line="65" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/HeadimgController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="37" column="71" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="37" selection-end-column="71" />
+>>>>>>> parent of 49a0d14... admin-qualify
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-220">
           <caret line="62" column="58" lean-forward="true" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
         </state>
@@ -1895,6 +2258,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1805">
           <caret line="183" column="31" selection-start-line="183" selection-start-column="31" selection-end-line="183" selection-end-column="31" />
+=======
+        <state relative-caret-position="176">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/ServicerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/user/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/user/UserServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/servicer/ServicerServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+>>>>>>> parent of 49a0d14... admin-qualify
           <folding>
             <element signature="e#4221#4222#0" expanded="true" />
             <element signature="e#4260#4261#0" expanded="true" />
@@ -1911,6 +2316,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/UserInfoManageImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -1920,6 +2326,8 @@
             <element signature="e#786#787#0" expanded="true" />
             <element signature="e#850#851#0" expanded="true" />
 =======
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/servicer/ServicerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1933,6 +2341,9 @@
           <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> parent of 49a0d14... admin-qualify
+=======
 >>>>>>> parent of 49a0d14... admin-qualify
           </folding>
         </state>
@@ -1940,6 +2351,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/UserManageController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="32">
           <caret line="115" selection-start-line="115" selection-end-line="115" />
@@ -1953,6 +2365,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
           <caret line="94" column="56" lean-forward="true" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
+=======
+        <state relative-caret-position="-1254">
+          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+>>>>>>> parent of 49a0d14... admin-qualify
 =======
         <state relative-caret-position="-1254">
           <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />

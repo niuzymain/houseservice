@@ -6,6 +6,7 @@
 <!--类名-->
 <mapper namespace="com.house.dao.ServicerDao">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <resultMap type="com.house.entity.Servicer" id="servicermap">
         <id column="servicer_id" property="servicerid"/>
@@ -53,6 +54,8 @@
 
 =======
 >>>>>>> parent of 49a0d14... admin-qualify
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
     <update id="updateServicer" parameterType="com.house.entity.Servicer">
         update tb_servicer
         <set>
@@ -60,6 +63,7 @@
         </set>
         where servicer_id=#{servicerid}
     </update>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <select id="queryAreaById" parameterType="int" resultMap="areamapper">
@@ -130,11 +134,16 @@
               and s.servicetype_id=st.servicetype_id
         order by lastedit_time desc
 =======
+=======
+>>>>>>> parent of 49a0d14... admin-qualify
     <!--id:方法名   result：返回值类型-->
     <select id="queryServicer" resultType="com.house.entity.Servicer">
 --         select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,servicer_img,servicer_experience,servicer_score,servicer_price,servicer_des,servicer_file,degree_id,create_time,lastedit_time,enable_status
         select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,enable_status
         from tb_servicer
+<<<<<<< HEAD
+>>>>>>> parent of 49a0d14... admin-qualify
+=======
 >>>>>>> parent of 49a0d14... admin-qualify
     </select>
 
