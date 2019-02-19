@@ -25,17 +25,17 @@
         <association property="degree" column="degree_id" javaType="com.house.entity.Degree">
             <id column="degree_id" property="degreeid"/>
             <result column="degree_name" property="degreename"/>
-            <result column="priority" property="priority"/>
+            <result column="dpriority" property="priority"/>
         </association>
         <association property="servicetype" column="servicetype_id" javaType="com.house.entity.ServiceType">
             <id column="servicetype_id" property="servicetypeid"/>
             <result column="servicetype_name" property="servicetypename"/>
-            <result column="priority" property="priority"/>
+            <result column="stpriority" property="priority"/>
         </association>
         <association property="workarea" column="workarea_id" javaType="com.house.entity.WorkArea">
             <id column="workarea_id" property="workareaid"/>
-            <result column="worearea_name" property="workareaname"/>
-            <result column="priority" property="priority"/>
+            <result column="workarea_name" property="workareaname"/>
+            <result column="wpriority" property="priority"/>
         </association>
     </resultMap>
 
@@ -77,6 +77,9 @@
         w.priority as wpriority
         from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea w
         <where>
+            and s.degree_id=d.degree_id
+            and s.servicetype_id=st.servicetype_id
+            and s.workarea_id=w.workarea_id
         </where>
     </select>
 
@@ -107,7 +110,12 @@
         w.workarea_name,
         w.priority as wpriority
         from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea w
-        where check_status=0
+        <where>
+            and s.degree_id=d.degree_id
+            and s.servicetype_id=st.servicetype_id
+            and s.workarea_id=w.workarea_id
+            and check_status=0
+        </where>
         order by lastedit_time desc
     </select>
 

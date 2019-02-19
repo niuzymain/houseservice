@@ -38,5 +38,9 @@ public class SuperAdminRoute {
         return "superadmin/operateheadimg";
     }
 
+    @RequestMapping(value = "/qualifydetail",method = RequestMethod.GET)
+    private String qualifyDetail(){
+        return "superadmin/qualifydetail";
+    }
 
 }

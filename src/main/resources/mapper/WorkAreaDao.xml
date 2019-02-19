@@ -46,4 +46,9 @@
         order by priority desc
     </select>
 
+    <select id="queryParentArea" resultType="String">
+        select workarea_name
+        from tb_workarea
+        where workarea_id=#{areaid}
+    </select>
 </mapper>

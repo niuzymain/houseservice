@@ -17,4 +17,6 @@ public interface WorkAreaDao {
     List<WorkArea> queryArea();
 //    选择某城市下的所有区域
     List<WorkArea> queryAreaByParent(Long parentareaid);
+
+    String queryParentArea(Long areaid);
 }
