@@ -1,5 +1,5 @@
 $(function () {
-    $.getJSON("/admin/qualifylist",function(data){
+    $.getJSON("/admin/getqualifylist",function(data){
         if(data.success){
             for(var i=0;i<data.result.length;i++){
                 var body = "<tr>" +

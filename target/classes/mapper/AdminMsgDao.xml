@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--类名-->
+<mapper namespace="com.house.dao.AdminMsgDao">
+    <!--id:方法名   result：返回值类型-->
+    <insert id="insertAdminmsg" parameterType="com.house.entity.AdminMsg" useGeneratedKeys="true" keyColumn="adminmsg_id" keyProperty="adminmsgid">
+      insert into
+      tb_adminmsg(create_time,adminmsg_des,user_id,servicer_id)
+      values(#{adminmsg.createtime},#{adminmsg.adminmsgdes},#{adminmsg.user.userid},#{adminmsg.servicer.servicerid})
+    </insert>
+
+</mapper>

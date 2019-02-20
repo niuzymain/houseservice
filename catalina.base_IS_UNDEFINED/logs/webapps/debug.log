@@ -1,12 +1,8 @@
-2019-02-13 21;19:04.954[main] DEBUG com.house.dao.HeadimgDao.selectById - ==>  Preparing: select headimg_id,headimg_title,headimg_details,headimg_url,priority,enable_status,create_time,lastedit_time from tb_headimg where headimg_id=? 
-2019-02-13 21;19:05.126[main] DEBUG com.house.dao.HeadimgDao.selectById - ==> Parameters: 11(Long)
-2019-02-13 21;19:05.235[main] DEBUG com.house.dao.HeadimgDao.selectById - <==      Total: 1
-2019-02-13 21;19:05.329[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==>  Preparing: update tb_headimg SET headimg_url=? where headimg_id=? 
-2019-02-13 21;19:05.329[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==> Parameters: \headimg\headimg11_20190213211905.jpg(String), 11(Long)
-2019-02-13 21;19:05.360[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - <==    Updates: 1
-2019-02-13 21;19:31.581[main] DEBUG com.house.dao.HeadimgDao.selectById - ==>  Preparing: select headimg_id,headimg_title,headimg_details,headimg_url,priority,enable_status,create_time,lastedit_time from tb_headimg where headimg_id=? 
-2019-02-13 21;19:31.628[main] DEBUG com.house.dao.HeadimgDao.selectById - ==> Parameters: 11(Long)
-2019-02-13 21;19:31.722[main] DEBUG com.house.dao.HeadimgDao.selectById - <==      Total: 1
-2019-02-13 21;19:31.769[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==>  Preparing: update tb_headimg SET headimg_url=? where headimg_id=? 
-2019-02-13 21;19:31.769[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - ==> Parameters: \headimg\headimg11_20190213211931.jpg(String), 11(Long)
-2019-02-13 21;19:31.785[main] DEBUG com.house.dao.HeadimgDao.updateHeadImg - <==    Updates: 1
+2019-02-20 10;45:46.263[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - ==>  Preparing: insert into tb_adminmsg(create_time,adminmsg_des,user_id,service_id) values(?,?,?,?) 
+2019-02-20 10;45:46.420[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - ==> Parameters: null, desdesdesdes(String), null, null
+2019-02-20 10;46:24.560[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - ==>  Preparing: insert into tb_adminmsg(create_time,adminmsg_des,user_id,servicer_id) values(?,?,?,?) 
+2019-02-20 10;46:24.607[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - ==> Parameters: null, desdesdesdes(String), null, null
+2019-02-20 10;46:48.516[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - ==>  Preparing: insert into tb_adminmsg(create_time,adminmsg_des,user_id,servicer_id) values(?,?,?,?) 
+2019-02-20 10;46:48.563[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - ==> Parameters: null, desdesdesdes(String), null, null
+2019-02-20 10;46:48.734[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - <==    Updates: 1
+2019-02-20 10;47:14.531[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - ==>  Preparing: insert into tb_adminmsg(create_time,adminmsg_des,user_id,servicer_id) values(?,?,?,?) 

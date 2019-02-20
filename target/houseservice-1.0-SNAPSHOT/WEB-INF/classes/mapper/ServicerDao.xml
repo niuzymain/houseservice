@@ -50,6 +50,7 @@
         update tb_servicer
         <set>
             <if test="enablestatus != null">enable_status=#{enablestatus},</if>
+            <if test="checkstatus != null">check_status=#{checkstatus},</if>
             <if test="createtime != null">create_time=#{createtime},</if>
             <if test="lastedittime != null">lastedit_time=#{lastedittime},</if>
         </set>

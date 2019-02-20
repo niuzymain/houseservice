@@ -20,4 +20,77 @@ $(function () {
            alert(data.errormsg);
        }
    })
+    $("#pass").click(function(){
+        var msg = $("#message").val();
+        var formdata = new FormData();
+        if(msg != ""){
+            var adminmsg = {
+                adminmsgdes:msg,
+                servicer:{
+                    servicerid:servicerid
+                }
+            }
+            formdata.append("adminmsg",JSON.stringify(adminmsg));
+        }
+        var servicer = {
+            servicerid:servicerid,
+            checkstatus:1
+        }
+        formdata.append("servicer",JSON.stringify(servicer));
+        $.ajax({
+            url:"/admin/qualifyoperate",
+            data: formdata,
+            type: "post",
+            contentType: false,
+            processData: false,
+            cache: false,
+            success:function(data){
+                if(data.success){
+                    alert("success")
+                    window.location.href="/admin/qualify"
+                }
+                else{
+                    alert("error:"+data.errormsg)
+                }
+            }
+        })
+    })
+
+    $("#back").click(function(){
+        var msg = $("#message").val();
+        var formdata = new FormData();
+        if(msg == ""){
+            alert("请填写不通过原因");
+            return false;
+        }
+        var adminmsg = {
+            adminmsgdes:msg,
+            servicer:{
+                servicerid:servicerid
+            }
+        }
+        formdata.append("adminmsg",JSON.stringify(adminmsg));
+        var servicer = {
+            servicerid:servicerid,
+            checkstatus:-1
+        }
+        formdata.append("servicer",JSON.stringify(servicer));
+        $.ajax({
+            url:"/admin/qualifyoperate",
+            data: formdata,
+            type: "post",
+            contentType: false,
+            processData: false,
+            cache: false,
+            success:function(data){
+                if(data.success){
+                    alert("success")
+                    window.location.href="/admin/qualify"
+                }
+                else{
+                    alert("error:"+data.errormsg)
+                }
+            }
+        })
+    })
 })

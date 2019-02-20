@@ -1,5 +1,6 @@
 package com.house.service.imps.superadmin;
 
+import com.house.dao.AdminMsgDao;
 import com.house.dao.ServicerDao;
 import com.house.entity.AdminMsg;
 import com.house.entity.Servicer;
@@ -14,6 +15,8 @@ import java.util.List;
 public class QualifyServicerImp implements QualifyService {
     @Autowired
     private ServicerDao servicerDao;
+    @Autowired
+    private AdminMsgDao adminMsgDao;
 
     @Override
     public List<Servicer> qualifyList() {
@@ -29,7 +32,22 @@ public class QualifyServicerImp implements QualifyService {
 
     @Override
     @Transactional
-    public int qualifyOperate(AdminMsg adminMsg,int checkstatus,boolean ispass) {
-        return 0;
+    public int qualifyOperate(AdminMsg adminMsg,Servicer servicer) {
+        int msgresult = 0;
+        int servicerresult = 0;
+        try {
+            if(adminMsg != null){
+                msgresult = adminMsgDao.insertAdminmsg(adminMsg);
+            }
+            servicerresult = servicerDao.updateServicer(servicer);
+            if(msgresult == 1 && servicerresult == 1){
+                return 1;
+            }
+            else{
+                throw new RuntimeException();
+            }
+        }catch (Exception e){
+            throw new RuntimeException();
+        }
     }
 }
