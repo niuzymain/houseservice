@@ -22,7 +22,7 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>Kaptcha</servlet-name>
+    <servlet-name>CheckCode</servlet-name>
     <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
     <!--边界-->
     <init-param>
@@ -70,8 +70,8 @@
     </init-param>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Kaptcha</servlet-name>
-    <url-pattern>/kaptcha</url-pattern>
+    <servlet-name>CheckCode</servlet-name>
+    <url-pattern>/checkcode</url-pattern>
   </servlet-mapping>
 
 </web-app>

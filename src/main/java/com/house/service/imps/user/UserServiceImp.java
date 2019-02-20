@@ -29,4 +29,9 @@ public class UserServiceImp implements UserService {
         }
 
     }
+
+    @Override
+    public User selectSingleUser(User condition) {
+        return userDao.querySingleUser(condition);
+    }
 }

@@ -1,9 +1,13 @@
 package com.house.web.common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.house.entity.Servicer;
 import com.house.entity.SuperAdmin;
 import com.house.entity.User;
+import com.house.service.servicer.ServicerService;
 import com.house.service.superadmin.AdminService;
+import com.house.service.user.UserService;
+import com.house.util.CheckCodeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,23 +26,34 @@ import java.util.Map;
 public class CommonController {
     @Autowired
     private AdminService adminService;
-
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private ServicerService servicerService;
     @RequestMapping(value = "/checklogin",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> checkLogin(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();
+        boolean checkcode = CheckCodeUtil.isCodeEqual(request);
+        if(!checkcode){
+            modelMap.put("success",false);
+            modelMap.put("errormsg","验证码不正确");
+            return modelMap;
+        }
         Object account = null;
         String loginstr = request.getParameter("loginstr");
         String accounttype = request.getParameter("type");
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            if(accounttype.equals("用户")){
-
+            if(accounttype.equals("user")){
+                User user = objectMapper.readValue(loginstr,User.class);
+                account = userService.selectSingleUser(user);
             }
-            else if(accounttype.equals("服务人员")){
-
+            else if(accounttype.equals("servicer")){
+                Servicer servicer = objectMapper.readValue(loginstr,Servicer.class);
+                account = servicerService.selectSingleServicer(servicer);
             }
-            else if(accounttype.equals("管理员")){
+            else if(accounttype.equals("admin")){
                 SuperAdmin superAdmin = objectMapper.readValue(loginstr,SuperAdmin.class);
                 account = adminService.checkLogin(superAdmin);
             }

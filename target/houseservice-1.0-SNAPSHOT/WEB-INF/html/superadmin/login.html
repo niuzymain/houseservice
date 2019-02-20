@@ -14,7 +14,9 @@
             <input type="password" id="password" placeholder="这里是密码">
         </li>
         <li>
-            <input type="text" value="这里是验证码">
+            <input type="text" id="checkcode" placeholder="验证码">
+            <img id="checkcodeimg" alt="点击更换" title="点击更换" onclick="changecode(this)"
+                 src="../checkcode"> <!--路由到验证码servlet-->
         </li>
         <li>
             <input type="button" value="登陆" id="submit">
@@ -25,5 +27,6 @@
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>-->
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>-->
     <script type="text/javascript" src="../resources/js/superadmin/login.js"></script>
+    <script type="text/javascript" src="../resources/js/common/util.js"></script>
 </body>
 </html>

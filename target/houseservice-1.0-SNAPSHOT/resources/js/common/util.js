@@ -11,8 +11,10 @@ function getURLarg(variable){
     }
     return null;
 }
-//判断验证码
-
+//更换验证码
+function changecode(target){
+    target.src="../checkcode?"+Math.floor(Math.random()*100);
+}
 //根据状态值显示状态名称
 function statusinfo(data) {
     if (data == 1) {

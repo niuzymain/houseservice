@@ -18,9 +18,13 @@
         from tb_user
     </select>
 
-    <select id="queryUserById" resultType="com.house.entity.User">
+    <select id="querySingleUser" resultType="com.house.entity.User">
         select user_id,user_name,user_sex,enable_status,user_phone,create_time,lastedit_time
         from tb_user
-        where user_id=#{userid}
+        <where>
+            <if test="condition.userid != 0"> and user_id=#{condition.userid}</if>
+            <if test="condition.accountname != null">and account_name=#{condition.accountname}</if>
+            <if test="condition.password != null">and pass_word=#{condition.password}</if>
+        </where>
     </select>
 </mapper>

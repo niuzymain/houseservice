@@ -126,7 +126,9 @@
         l.priority as lpriority
         from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
         <where>
-            and servicer_id=#{condition.servicerid}
+            <if test="condition.servicerid != 0"> and servicer_id=#{condition.servicerid}</if>
+            <if test="condition.accountname != null">and account_name=#{condition.accountname}</if>
+            <if test="condition.password != null">and pass_word=#{condition.password}</if>
             and s.degree_id=d.degree_id
             and s.servicetype_id=st.servicetype_id
             and s.city_id=c.workarea_id

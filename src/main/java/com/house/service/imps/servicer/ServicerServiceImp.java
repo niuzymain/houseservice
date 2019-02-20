@@ -29,4 +29,9 @@ public class ServicerServiceImp implements ServicerService {
         }
 
     }
+
+    @Override
+    public Servicer selectSingleServicer(Servicer condition) {
+        return servicerDao.querySingleServicer(condition);
+    }
 }

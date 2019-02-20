@@ -23,7 +23,9 @@ public class UserInfoManageImp implements UserInfoManage {
 
     @Override
     public User getUserById(Long userid) {
-        return userDao.queryUserById(userid);
+        User user = new User();
+        user.setUserid(userid);
+        return userDao.querySingleUser(user);
     }
 
     @Override
