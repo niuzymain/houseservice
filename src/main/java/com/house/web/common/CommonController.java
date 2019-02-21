@@ -34,12 +34,12 @@ public class CommonController {
     @ResponseBody
     public Map<String,Object> checkLogin(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();
-        boolean checkcode = CheckCodeUtil.isCodeEqual(request);
-        if(!checkcode){
-            modelMap.put("success",false);
-            modelMap.put("errormsg","验证码不正确");
-            return modelMap;
-        }
+//        boolean checkcode = CheckCodeUtil.isCodeEqual(request);
+//        if(!checkcode){
+//            modelMap.put("success",false);
+//            modelMap.put("errormsg","验证码不正确");
+//            return modelMap;
+//        }
         Object account = null;
         String loginstr = request.getParameter("loginstr");
         String accounttype = request.getParameter("type");

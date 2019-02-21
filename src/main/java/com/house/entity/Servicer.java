@@ -7,12 +7,13 @@ import java.util.Date;
  */
 public class Servicer {
     private long servicerid;
+    private String serviceridnum;
     private String servicername;
     private Integer servicerage;
-    private String servicersex;
+    private Integer servicersex; //1.男 2.女
     private String servicerphone;
     private String servicerimg;
-    private String servicerexperience;
+    private Integer servicerexperience; //月为单位
     private Integer servicerscore;
     private String servicerprice;
     private String servicerdes;
@@ -52,11 +53,11 @@ public class Servicer {
         this.servicerage = servicerage;
     }
 
-    public String getServicersex() {
+    public Integer getServicersex() {
         return this.servicersex;
     }
 
-    public void setServicersex(String servicersex) {
+    public void setServicersex(Integer servicersex) {
         this.servicersex = servicersex;
     }
 
@@ -76,11 +77,11 @@ public class Servicer {
         this.servicerimg = servicerimg;
     }
 
-    public String getServicerexperience() {
+    public Integer getServicerexperience() {
         return this.servicerexperience;
     }
 
-    public void setServicerexperience(String servicerexperience) {
+    public void setServicerexperience(Integer servicerexperience) {
         this.servicerexperience = servicerexperience;
     }
 
@@ -194,6 +195,14 @@ public class Servicer {
 
     public void setLocal(WorkArea local) {
         this.local = local;
+    }
+
+    public String getServiceridnum() {
+        return this.serviceridnum;
+    }
+
+    public void setServiceridnum(String serviceridnum) {
+        this.serviceridnum = serviceridnum;
     }
 }
 

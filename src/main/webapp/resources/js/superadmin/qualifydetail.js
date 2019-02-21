@@ -3,6 +3,7 @@ $(function () {
    $.getJSON("/admin/getqualifydetail?servicerid="+servicerid,function(data){
        if(data.success){
            $(".name").append(data.result.servicername)
+           $(".idnum").append(data.result.serviceridnum)
            $(".age").append(data.result.servicerage)
            $(".sex").append(data.result.servicersex)
            $(".phone").append(data.result.servicerphone)

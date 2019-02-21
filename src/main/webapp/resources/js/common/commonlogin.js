@@ -1,4 +1,13 @@
 $(function () {
+    $("#register").click(function(){
+        var type = $('input:radio[name="type"]:checked').val();
+        if(type == "user"){
+            //跳转客户注册界面
+        }
+        else{
+            window.location.href="/servicer/register"
+        }
+    })
     $("#submit").click(function () {
         var username = $("#username").val();
         var password = $("#password").val();

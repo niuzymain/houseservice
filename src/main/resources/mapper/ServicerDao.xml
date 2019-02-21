@@ -8,6 +8,7 @@
 
     <resultMap type="com.house.entity.Servicer" id="servicermap">
         <id column="servicer_id" property="servicerid"/>
+        <result column="servicer_idnum" property="serviceridnum"/>
         <result column="servicer_name" property="servicername"/>
         <result column="servicer_age" property="servicerage"/>
         <result column="servicer_sex" property="servicersex"/>
@@ -46,7 +47,12 @@
         </association>
     </resultMap>
 
-       <update id="updateServicer" parameterType="com.house.entity.Servicer">
+    <insert id="insertServicer" parameterType="com.house.entity.Servicer" useGeneratedKeys="true"
+            keyColumn="servicer_id" keyProperty="servicerid">
+        insert into tb_servicer()
+    </insert>
+
+    <update id="updateServicer" parameterType="com.house.entity.Servicer">
         update tb_servicer
         <set>
             <if test="enablestatus != null">enable_status=#{enablestatus},</if>
@@ -60,6 +66,7 @@
     <select id="queryServicer" resultMap="servicermap">
         select
         s.servicer_id,
+        s.servicer_idnum,
         s.servicer_name,
         s.servicer_age,
         s.servicer_sex,
@@ -98,6 +105,7 @@
     <select id="querySingleServicer" resultMap="servicermap">
         select
         s.servicer_id,
+        s.servicer_idnum,
         s.servicer_name,
         s.servicer_age,
         s.servicer_sex,
@@ -126,7 +134,7 @@
         l.priority as lpriority
         from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
         <where>
-            <if test="condition.servicerid != 0"> and servicer_id=#{condition.servicerid}</if>
+            <if test="condition.servicerid != 0">and servicer_id=#{condition.servicerid}</if>
             <if test="condition.accountname != null">and account_name=#{condition.accountname}</if>
             <if test="condition.password != null">and pass_word=#{condition.password}</if>
             and s.degree_id=d.degree_id
@@ -137,7 +145,6 @@
     </select>
 
     <select id="queryQualify" resultType="com.house.entity.Servicer">
---         select servicer_id,servicer_name,servicer_age,servicer_sex,servicer_phone,servicer_img,servicer_experience,servicer_score,servicer_price,servicer_des,servicer_file,degree_id,create_time,lastedit_time,enable_status
         select servicer_id,servicer_name,lastedit_time
         from tb_servicer
         where

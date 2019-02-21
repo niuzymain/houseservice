@@ -8,6 +8,7 @@
 
     <resultMap type="com.house.entity.Servicer" id="servicermap">
         <id column="servicer_id" property="servicerid"/>
+        <result column="servicer_idnum" property="serviceridnum"/>
         <result column="servicer_name" property="servicername"/>
         <result column="servicer_age" property="servicerage"/>
         <result column="servicer_sex" property="servicersex"/>
@@ -60,6 +61,7 @@
     <select id="queryServicer" resultMap="servicermap">
         select
         s.servicer_id,
+        s.servicer_idnum,
         s.servicer_name,
         s.servicer_age,
         s.servicer_sex,
@@ -98,6 +100,7 @@
     <select id="querySingleServicer" resultMap="servicermap">
         select
         s.servicer_id,
+        s.servicer_idnum,
         s.servicer_name,
         s.servicer_age,
         s.servicer_sex,
