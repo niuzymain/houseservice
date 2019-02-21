@@ -51,6 +51,9 @@ $(function(){
         formdata.append("register",JSON.stringify(servicer))
         formdata.append("img",img);
         formdata.append("file",file);
+        $.ajax({
+
+        })
     })
 })
 //从数据库中获取字段
