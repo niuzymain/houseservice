@@ -1,4 +1,4 @@
-// 从url中取参数
+////////////////////////////// 从url中取参数/////////////////////////////////////
 function getURLarg(variable){
     var query = window.location.search.substring(1);
     var vars = query.split("&");
@@ -11,17 +11,44 @@ function getURLarg(variable){
     }
     return null;
 }
-//更换验证码
+
+///////////////////////////////////更换验证码///////////////////////////////////////
 function changecode(target){
     target.src="../checkcode?"+Math.floor(Math.random()*100);
 }
-//根据状态值显示状态名称
+
+/////////////////////////根据状态值显示状态名称//////////////////////////////////////////
 function statusinfo(data) {
     if (data == 1) {
         return "可用"
     }
     else if(data == 0){
         return "禁用"
+    }
+
+}
+
+/////////////////////////////////根据性别值显示性别名称////////////////////////////////
+function sexinfo(data) {
+    if (data == 1) {
+        return "男"
+    }
+    else if(data == 2){
+        return "女"
+    }
+
+}
+
+////////////////////////////根据经验值显示经验名称//////////////////////////////////
+function experienceinfo(data) {
+    if(data == 0){
+        return "无经验"
+    }
+    else if (data < 12) {
+        return data+"个月"
+    }
+    else {
+        return data/12+"年"
     }
 
 }

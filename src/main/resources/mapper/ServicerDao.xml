@@ -127,10 +127,10 @@
             <if test="servicer.servicerfile != null">
                 servicer_file = #{servicer.servicerfile,jdbcType=VARCHAR},
             </if>
-            <if test="servicer.city.workareaid != null">
+            <if test="servicer.city != null &amp;&amp; servicer.city.workareaid != null">
                 city_id = #{servicer.city.workareaid,jdbcType=INTEGER},
             </if>
-            <if test="servicer.local.workareaid != null">
+            <if test="servicer.local != null &amp;&amp; servicer.local.workareaid != null">
                 local_id = #{servicer.local.workareaid,jdbcType=INTEGER},
             </if>
             <if test="servicer.createtime != null">
@@ -151,10 +151,10 @@
             <if test="servicer.password != null">
                 pass_word = #{servicer.password,jdbcType=VARCHAR},
             </if>
-            <if test="servicer.degree.degreeid != null">
+            <if test="servicer.degree != null &amp;&amp; servicer.degree.degreeid != null">
                 degree_id = #{servicer.degree.degreeid,jdbcType=INTEGER},
             </if>
-            <if test="servicer.servicetype.servicetypeid != null">
+            <if test="servicer.servicetype != null &amp;&amp; servicer.servicetype.servicetypeid != null">
                 servicetype_id = #{servicer.servicetype.servicetypeid,jdbcType=INTEGER},
             </if>
         </set>

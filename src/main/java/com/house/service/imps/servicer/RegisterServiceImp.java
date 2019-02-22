@@ -54,6 +54,7 @@ public class RegisterServiceImp implements RegisterService {
         try{
             ///////////////////////赋初值////////////////////////////////////
             servicer.setCreatetime(new Date());
+            servicer.setLastedittime(new Date());
             servicer.setEnablestatus(1);
             servicer.setCheckstatus(0);
             result = servicerDao.insertServicer(servicer);
