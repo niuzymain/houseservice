@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.mapper.TbServicerMapper">
+  <resultMap id="BaseResultMap" type="mybatis.entity.TbServicer">
+    <id column="servicer_id" jdbcType="INTEGER" property="servicerId" />
+    <result column="servicer_idnum" jdbcType="VARCHAR" property="servicerIdnum" />
+    <result column="servicer_name" jdbcType="VARCHAR" property="servicerName" />
+    <result column="servicer_age" jdbcType="INTEGER" property="servicerAge" />
+    <result column="servicer_sex" jdbcType="INTEGER" property="servicerSex" />
+    <result column="servicer_phone" jdbcType="VARCHAR" property="servicerPhone" />
+    <result column="servicer_img" jdbcType="VARCHAR" property="servicerImg" />
+    <result column="servicer_experience" jdbcType="INTEGER" property="servicerExperience" />
+    <result column="servicer_score" jdbcType="INTEGER" property="servicerScore" />
+    <result column="servicer_price" jdbcType="VARCHAR" property="servicerPrice" />
+    <result column="servicer_des" jdbcType="VARCHAR" property="servicerDes" />
+    <result column="servicer_file" jdbcType="VARCHAR" property="servicerFile" />
+    <result column="city_id" jdbcType="INTEGER" property="cityId" />
+    <result column="local_id" jdbcType="INTEGER" property="localId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="lastedit_time" jdbcType="TIMESTAMP" property="lasteditTime" />
+    <result column="enable_status" jdbcType="INTEGER" property="enableStatus" />
+    <result column="check_status" jdbcType="INTEGER" property="checkStatus" />
+    <result column="account_name" jdbcType="VARCHAR" property="accountName" />
+    <result column="pass_word" jdbcType="VARCHAR" property="passWord" />
+    <result column="degree_id" jdbcType="INTEGER" property="degreeId" />
+    <result column="servicetype_id" jdbcType="INTEGER" property="servicetypeId" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    servicer_id, servicer_idnum, servicer_name, servicer_age, servicer_sex, servicer_phone, 
+    servicer_img, servicer_experience, servicer_score, servicer_price, servicer_des, 
+    servicer_file, city_id, local_id, create_time, lastedit_time, enable_status, check_status, 
+    account_name, pass_word, degree_id, servicetype_id
+  </sql>
+  <select id="selectByExample" parameterType="mybatis.entity.TbServicerExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tb_servicer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_servicer
+    where servicer_id = #{servicerId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tb_servicer
+    where servicer_id = #{servicerId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="mybatis.entity.TbServicerExample">
+    delete from tb_servicer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="mybatis.entity.TbServicer">
+    insert into tb_servicer (servicer_id, servicer_idnum, servicer_name, 
+      servicer_age, servicer_sex, servicer_phone, 
+      servicer_img, servicer_experience, servicer_score, 
+      servicer_price, servicer_des, servicer_file, 
+      city_id, local_id, create_time, 
+      lastedit_time, enable_status, check_status, 
+      account_name, pass_word, degree_id, 
+      servicetype_id)
+    values (#{servicerId,jdbcType=INTEGER}, #{servicerIdnum,jdbcType=VARCHAR}, #{servicerName,jdbcType=VARCHAR}, 
+      #{servicerAge,jdbcType=INTEGER}, #{servicerSex,jdbcType=INTEGER}, #{servicerPhone,jdbcType=VARCHAR}, 
+      #{servicerImg,jdbcType=VARCHAR}, #{servicerExperience,jdbcType=INTEGER}, #{servicerScore,jdbcType=INTEGER}, 
+      #{servicerPrice,jdbcType=VARCHAR}, #{servicerDes,jdbcType=VARCHAR}, #{servicerFile,jdbcType=VARCHAR}, 
+      #{cityId,jdbcType=INTEGER}, #{localId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{lasteditTime,jdbcType=TIMESTAMP}, #{enableStatus,jdbcType=INTEGER}, #{checkStatus,jdbcType=INTEGER}, 
+      #{accountName,jdbcType=VARCHAR}, #{passWord,jdbcType=VARCHAR}, #{degreeId,jdbcType=INTEGER}, 
+      #{servicetypeId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="mybatis.entity.TbServicer">
+    insert into tb_servicer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="servicerId != null">
+        servicer_id,
+      </if>
+      <if test="servicerIdnum != null">
+        servicer_idnum,
+      </if>
+      <if test="servicerName != null">
+        servicer_name,
+      </if>
+      <if test="servicerAge != null">
+        servicer_age,
+      </if>
+      <if test="servicerSex != null">
+        servicer_sex,
+      </if>
+      <if test="servicerPhone != null">
+        servicer_phone,
+      </if>
+      <if test="servicerImg != null">
+        servicer_img,
+      </if>
+      <if test="servicerExperience != null">
+        servicer_experience,
+      </if>
+      <if test="servicerScore != null">
+        servicer_score,
+      </if>
+      <if test="servicerPrice != null">
+        servicer_price,
+      </if>
+      <if test="servicerDes != null">
+        servicer_des,
+      </if>
+      <if test="servicerFile != null">
+        servicer_file,
+      </if>
+      <if test="cityId != null">
+        city_id,
+      </if>
+      <if test="localId != null">
+        local_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lasteditTime != null">
+        lastedit_time,
+      </if>
+      <if test="enableStatus != null">
+        enable_status,
+      </if>
+      <if test="checkStatus != null">
+        check_status,
+      </if>
+      <if test="accountName != null">
+        account_name,
+      </if>
+      <if test="passWord != null">
+        pass_word,
+      </if>
+      <if test="degreeId != null">
+        degree_id,
+      </if>
+      <if test="servicetypeId != null">
+        servicetype_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="servicerId != null">
+        #{servicerId,jdbcType=INTEGER},
+      </if>
+      <if test="servicerIdnum != null">
+        #{servicerIdnum,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerName != null">
+        #{servicerName,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerAge != null">
+        #{servicerAge,jdbcType=INTEGER},
+      </if>
+      <if test="servicerSex != null">
+        #{servicerSex,jdbcType=INTEGER},
+      </if>
+      <if test="servicerPhone != null">
+        #{servicerPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerImg != null">
+        #{servicerImg,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerExperience != null">
+        #{servicerExperience,jdbcType=INTEGER},
+      </if>
+      <if test="servicerScore != null">
+        #{servicerScore,jdbcType=INTEGER},
+      </if>
+      <if test="servicerPrice != null">
+        #{servicerPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerDes != null">
+        #{servicerDes,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerFile != null">
+        #{servicerFile,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null">
+        #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="localId != null">
+        #{localId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasteditTime != null">
+        #{lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null">
+        #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="checkStatus != null">
+        #{checkStatus,jdbcType=INTEGER},
+      </if>
+      <if test="accountName != null">
+        #{accountName,jdbcType=VARCHAR},
+      </if>
+      <if test="passWord != null">
+        #{passWord,jdbcType=VARCHAR},
+      </if>
+      <if test="degreeId != null">
+        #{degreeId,jdbcType=INTEGER},
+      </if>
+      <if test="servicetypeId != null">
+        #{servicetypeId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="mybatis.entity.TbServicerExample" resultType="java.lang.Long">
+    select count(*) from tb_servicer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update tb_servicer
+    <set>
+      <if test="record.servicerId != null">
+        servicer_id = #{record.servicerId,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicerIdnum != null">
+        servicer_idnum = #{record.servicerIdnum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerName != null">
+        servicer_name = #{record.servicerName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerAge != null">
+        servicer_age = #{record.servicerAge,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicerSex != null">
+        servicer_sex = #{record.servicerSex,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicerPhone != null">
+        servicer_phone = #{record.servicerPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerImg != null">
+        servicer_img = #{record.servicerImg,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerExperience != null">
+        servicer_experience = #{record.servicerExperience,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicerScore != null">
+        servicer_score = #{record.servicerScore,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicerPrice != null">
+        servicer_price = #{record.servicerPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerDes != null">
+        servicer_des = #{record.servicerDes,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerFile != null">
+        servicer_file = #{record.servicerFile,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cityId != null">
+        city_id = #{record.cityId,jdbcType=INTEGER},
+      </if>
+      <if test="record.localId != null">
+        local_id = #{record.localId,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.lasteditTime != null">
+        lastedit_time = #{record.lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.enableStatus != null">
+        enable_status = #{record.enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.checkStatus != null">
+        check_status = #{record.checkStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.accountName != null">
+        account_name = #{record.accountName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.passWord != null">
+        pass_word = #{record.passWord,jdbcType=VARCHAR},
+      </if>
+      <if test="record.degreeId != null">
+        degree_id = #{record.degreeId,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicetypeId != null">
+        servicetype_id = #{record.servicetypeId,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update tb_servicer
+    set servicer_id = #{record.servicerId,jdbcType=INTEGER},
+      servicer_idnum = #{record.servicerIdnum,jdbcType=VARCHAR},
+      servicer_name = #{record.servicerName,jdbcType=VARCHAR},
+      servicer_age = #{record.servicerAge,jdbcType=INTEGER},
+      servicer_sex = #{record.servicerSex,jdbcType=INTEGER},
+      servicer_phone = #{record.servicerPhone,jdbcType=VARCHAR},
+      servicer_img = #{record.servicerImg,jdbcType=VARCHAR},
+      servicer_experience = #{record.servicerExperience,jdbcType=INTEGER},
+      servicer_score = #{record.servicerScore,jdbcType=INTEGER},
+      servicer_price = #{record.servicerPrice,jdbcType=VARCHAR},
+      servicer_des = #{record.servicerDes,jdbcType=VARCHAR},
+      servicer_file = #{record.servicerFile,jdbcType=VARCHAR},
+      city_id = #{record.cityId,jdbcType=INTEGER},
+      local_id = #{record.localId,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      lastedit_time = #{record.lasteditTime,jdbcType=TIMESTAMP},
+      enable_status = #{record.enableStatus,jdbcType=INTEGER},
+      check_status = #{record.checkStatus,jdbcType=INTEGER},
+      account_name = #{record.accountName,jdbcType=VARCHAR},
+      pass_word = #{record.passWord,jdbcType=VARCHAR},
+      degree_id = #{record.degreeId,jdbcType=INTEGER},
+      servicetype_id = #{record.servicetypeId,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="mybatis.entity.TbServicer">
+    update tb_servicer
+    <set>
+      <if test="servicerIdnum != null">
+        servicer_idnum = #{servicerIdnum,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerName != null">
+        servicer_name = #{servicerName,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerAge != null">
+        servicer_age = #{servicerAge,jdbcType=INTEGER},
+      </if>
+      <if test="servicerSex != null">
+        servicer_sex = #{servicerSex,jdbcType=INTEGER},
+      </if>
+      <if test="servicerPhone != null">
+        servicer_phone = #{servicerPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerImg != null">
+        servicer_img = #{servicerImg,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerExperience != null">
+        servicer_experience = #{servicerExperience,jdbcType=INTEGER},
+      </if>
+      <if test="servicerScore != null">
+        servicer_score = #{servicerScore,jdbcType=INTEGER},
+      </if>
+      <if test="servicerPrice != null">
+        servicer_price = #{servicerPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerDes != null">
+        servicer_des = #{servicerDes,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerFile != null">
+        servicer_file = #{servicerFile,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null">
+        city_id = #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="localId != null">
+        local_id = #{localId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasteditTime != null">
+        lastedit_time = #{lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null">
+        enable_status = #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="checkStatus != null">
+        check_status = #{checkStatus,jdbcType=INTEGER},
+      </if>
+      <if test="accountName != null">
+        account_name = #{accountName,jdbcType=VARCHAR},
+      </if>
+      <if test="passWord != null">
+        pass_word = #{passWord,jdbcType=VARCHAR},
+      </if>
+      <if test="degreeId != null">
+        degree_id = #{degreeId,jdbcType=INTEGER},
+      </if>
+      <if test="servicetypeId != null">
+        servicetype_id = #{servicetypeId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where servicer_id = #{servicerId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="mybatis.entity.TbServicer">
+    update tb_servicer
+    set servicer_idnum = #{servicerIdnum,jdbcType=VARCHAR},
+      servicer_name = #{servicerName,jdbcType=VARCHAR},
+      servicer_age = #{servicerAge,jdbcType=INTEGER},
+      servicer_sex = #{servicerSex,jdbcType=INTEGER},
+      servicer_phone = #{servicerPhone,jdbcType=VARCHAR},
+      servicer_img = #{servicerImg,jdbcType=VARCHAR},
+      servicer_experience = #{servicerExperience,jdbcType=INTEGER},
+      servicer_score = #{servicerScore,jdbcType=INTEGER},
+      servicer_price = #{servicerPrice,jdbcType=VARCHAR},
+      servicer_des = #{servicerDes,jdbcType=VARCHAR},
+      servicer_file = #{servicerFile,jdbcType=VARCHAR},
+      city_id = #{cityId,jdbcType=INTEGER},
+      local_id = #{localId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      lastedit_time = #{lasteditTime,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=INTEGER},
+      check_status = #{checkStatus,jdbcType=INTEGER},
+      account_name = #{accountName,jdbcType=VARCHAR},
+      pass_word = #{passWord,jdbcType=VARCHAR},
+      degree_id = #{degreeId,jdbcType=INTEGER},
+      servicetype_id = #{servicetypeId,jdbcType=INTEGER}
+    where servicer_id = #{servicerId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="mybatis.entity.TbServicer">
+    <id column="servicer_id" jdbcType="INTEGER" property="servicerId" />
+    <result column="servicer_idnum" jdbcType="VARCHAR" property="servicerIdnum" />
+    <result column="servicer_name" jdbcType="VARCHAR" property="servicerName" />
+    <result column="servicer_age" jdbcType="INTEGER" property="servicerAge" />
+    <result column="servicer_sex" jdbcType="INTEGER" property="servicerSex" />
+    <result column="servicer_phone" jdbcType="VARCHAR" property="servicerPhone" />
+    <result column="servicer_img" jdbcType="VARCHAR" property="servicerImg" />
+    <result column="servicer_experience" jdbcType="INTEGER" property="servicerExperience" />
+    <result column="servicer_score" jdbcType="INTEGER" property="servicerScore" />
+    <result column="servicer_price" jdbcType="VARCHAR" property="servicerPrice" />
+    <result column="servicer_des" jdbcType="VARCHAR" property="servicerDes" />
+    <result column="servicer_file" jdbcType="VARCHAR" property="servicerFile" />
+    <result column="city_id" jdbcType="INTEGER" property="cityId" />
+    <result column="local_id" jdbcType="INTEGER" property="localId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="lastedit_time" jdbcType="TIMESTAMP" property="lasteditTime" />
+    <result column="enable_status" jdbcType="INTEGER" property="enableStatus" />
+    <result column="check_status" jdbcType="INTEGER" property="checkStatus" />
+    <result column="account_name" jdbcType="VARCHAR" property="accountName" />
+    <result column="pass_word" jdbcType="VARCHAR" property="passWord" />
+    <result column="degree_id" jdbcType="INTEGER" property="degreeId" />
+    <result column="servicetype_id" jdbcType="INTEGER" property="servicetypeId" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    servicer_id, servicer_idnum, servicer_name, servicer_age, servicer_sex, servicer_phone, 
+    servicer_img, servicer_experience, servicer_score, servicer_price, servicer_des, 
+    servicer_file, city_id, local_id, create_time, lastedit_time, enable_status, check_status, 
+    account_name, pass_word, degree_id, servicetype_id
+  </sql>
+  <select id="selectByExample" parameterType="mybatis.entity.TbServicerExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tb_servicer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_servicer
+    where servicer_id = #{servicerId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tb_servicer
+    where servicer_id = #{servicerId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="mybatis.entity.TbServicerExample">
+    delete from tb_servicer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="mybatis.entity.TbServicer">
+    insert into tb_servicer (servicer_id, servicer_idnum, servicer_name, 
+      servicer_age, servicer_sex, servicer_phone, 
+      servicer_img, servicer_experience, servicer_score, 
+      servicer_price, servicer_des, servicer_file, 
+      city_id, local_id, create_time, 
+      lastedit_time, enable_status, check_status, 
+      account_name, pass_word, degree_id, 
+      servicetype_id)
+    values (#{servicerId,jdbcType=INTEGER}, #{servicerIdnum,jdbcType=VARCHAR}, #{servicerName,jdbcType=VARCHAR}, 
+      #{servicerAge,jdbcType=INTEGER}, #{servicerSex,jdbcType=INTEGER}, #{servicerPhone,jdbcType=VARCHAR}, 
+      #{servicerImg,jdbcType=VARCHAR}, #{servicerExperience,jdbcType=INTEGER}, #{servicerScore,jdbcType=INTEGER}, 
+      #{servicerPrice,jdbcType=VARCHAR}, #{servicerDes,jdbcType=VARCHAR}, #{servicerFile,jdbcType=VARCHAR}, 
+      #{cityId,jdbcType=INTEGER}, #{localId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{lasteditTime,jdbcType=TIMESTAMP}, #{enableStatus,jdbcType=INTEGER}, #{checkStatus,jdbcType=INTEGER}, 
+      #{accountName,jdbcType=VARCHAR}, #{passWord,jdbcType=VARCHAR}, #{degreeId,jdbcType=INTEGER}, 
+      #{servicetypeId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="mybatis.entity.TbServicer">
+    insert into tb_servicer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="servicerId != null">
+        servicer_id,
+      </if>
+      <if test="servicerIdnum != null">
+        servicer_idnum,
+      </if>
+      <if test="servicerName != null">
+        servicer_name,
+      </if>
+      <if test="servicerAge != null">
+        servicer_age,
+      </if>
+      <if test="servicerSex != null">
+        servicer_sex,
+      </if>
+      <if test="servicerPhone != null">
+        servicer_phone,
+      </if>
+      <if test="servicerImg != null">
+        servicer_img,
+      </if>
+      <if test="servicerExperience != null">
+        servicer_experience,
+      </if>
+      <if test="servicerScore != null">
+        servicer_score,
+      </if>
+      <if test="servicerPrice != null">
+        servicer_price,
+      </if>
+      <if test="servicerDes != null">
+        servicer_des,
+      </if>
+      <if test="servicerFile != null">
+        servicer_file,
+      </if>
+      <if test="cityId != null">
+        city_id,
+      </if>
+      <if test="localId != null">
+        local_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lasteditTime != null">
+        lastedit_time,
+      </if>
+      <if test="enableStatus != null">
+        enable_status,
+      </if>
+      <if test="checkStatus != null">
+        check_status,
+      </if>
+      <if test="accountName != null">
+        account_name,
+      </if>
+      <if test="passWord != null">
+        pass_word,
+      </if>
+      <if test="degreeId != null">
+        degree_id,
+      </if>
+      <if test="servicetypeId != null">
+        servicetype_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="servicerId != null">
+        #{servicerId,jdbcType=INTEGER},
+      </if>
+      <if test="servicerIdnum != null">
+        #{servicerIdnum,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerName != null">
+        #{servicerName,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerAge != null">
+        #{servicerAge,jdbcType=INTEGER},
+      </if>
+      <if test="servicerSex != null">
+        #{servicerSex,jdbcType=INTEGER},
+      </if>
+      <if test="servicerPhone != null">
+        #{servicerPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerImg != null">
+        #{servicerImg,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerExperience != null">
+        #{servicerExperience,jdbcType=INTEGER},
+      </if>
+      <if test="servicerScore != null">
+        #{servicerScore,jdbcType=INTEGER},
+      </if>
+      <if test="servicerPrice != null">
+        #{servicerPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerDes != null">
+        #{servicerDes,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerFile != null">
+        #{servicerFile,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null">
+        #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="localId != null">
+        #{localId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasteditTime != null">
+        #{lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null">
+        #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="checkStatus != null">
+        #{checkStatus,jdbcType=INTEGER},
+      </if>
+      <if test="accountName != null">
+        #{accountName,jdbcType=VARCHAR},
+      </if>
+      <if test="passWord != null">
+        #{passWord,jdbcType=VARCHAR},
+      </if>
+      <if test="degreeId != null">
+        #{degreeId,jdbcType=INTEGER},
+      </if>
+      <if test="servicetypeId != null">
+        #{servicetypeId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="mybatis.entity.TbServicerExample" resultType="java.lang.Long">
+    select count(*) from tb_servicer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update tb_servicer
+    <set>
+      <if test="record.servicerId != null">
+        servicer_id = #{record.servicerId,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicerIdnum != null">
+        servicer_idnum = #{record.servicerIdnum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerName != null">
+        servicer_name = #{record.servicerName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerAge != null">
+        servicer_age = #{record.servicerAge,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicerSex != null">
+        servicer_sex = #{record.servicerSex,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicerPhone != null">
+        servicer_phone = #{record.servicerPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerImg != null">
+        servicer_img = #{record.servicerImg,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerExperience != null">
+        servicer_experience = #{record.servicerExperience,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicerScore != null">
+        servicer_score = #{record.servicerScore,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicerPrice != null">
+        servicer_price = #{record.servicerPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerDes != null">
+        servicer_des = #{record.servicerDes,jdbcType=VARCHAR},
+      </if>
+      <if test="record.servicerFile != null">
+        servicer_file = #{record.servicerFile,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cityId != null">
+        city_id = #{record.cityId,jdbcType=INTEGER},
+      </if>
+      <if test="record.localId != null">
+        local_id = #{record.localId,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.lasteditTime != null">
+        lastedit_time = #{record.lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.enableStatus != null">
+        enable_status = #{record.enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.checkStatus != null">
+        check_status = #{record.checkStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.accountName != null">
+        account_name = #{record.accountName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.passWord != null">
+        pass_word = #{record.passWord,jdbcType=VARCHAR},
+      </if>
+      <if test="record.degreeId != null">
+        degree_id = #{record.degreeId,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicetypeId != null">
+        servicetype_id = #{record.servicetypeId,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update tb_servicer
+    set servicer_id = #{record.servicerId,jdbcType=INTEGER},
+      servicer_idnum = #{record.servicerIdnum,jdbcType=VARCHAR},
+      servicer_name = #{record.servicerName,jdbcType=VARCHAR},
+      servicer_age = #{record.servicerAge,jdbcType=INTEGER},
+      servicer_sex = #{record.servicerSex,jdbcType=INTEGER},
+      servicer_phone = #{record.servicerPhone,jdbcType=VARCHAR},
+      servicer_img = #{record.servicerImg,jdbcType=VARCHAR},
+      servicer_experience = #{record.servicerExperience,jdbcType=INTEGER},
+      servicer_score = #{record.servicerScore,jdbcType=INTEGER},
+      servicer_price = #{record.servicerPrice,jdbcType=VARCHAR},
+      servicer_des = #{record.servicerDes,jdbcType=VARCHAR},
+      servicer_file = #{record.servicerFile,jdbcType=VARCHAR},
+      city_id = #{record.cityId,jdbcType=INTEGER},
+      local_id = #{record.localId,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      lastedit_time = #{record.lasteditTime,jdbcType=TIMESTAMP},
+      enable_status = #{record.enableStatus,jdbcType=INTEGER},
+      check_status = #{record.checkStatus,jdbcType=INTEGER},
+      account_name = #{record.accountName,jdbcType=VARCHAR},
+      pass_word = #{record.passWord,jdbcType=VARCHAR},
+      degree_id = #{record.degreeId,jdbcType=INTEGER},
+      servicetype_id = #{record.servicetypeId,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="mybatis.entity.TbServicer">
+    update tb_servicer
+    <set>
+      <if test="servicerIdnum != null">
+        servicer_idnum = #{servicerIdnum,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerName != null">
+        servicer_name = #{servicerName,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerAge != null">
+        servicer_age = #{servicerAge,jdbcType=INTEGER},
+      </if>
+      <if test="servicerSex != null">
+        servicer_sex = #{servicerSex,jdbcType=INTEGER},
+      </if>
+      <if test="servicerPhone != null">
+        servicer_phone = #{servicerPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerImg != null">
+        servicer_img = #{servicerImg,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerExperience != null">
+        servicer_experience = #{servicerExperience,jdbcType=INTEGER},
+      </if>
+      <if test="servicerScore != null">
+        servicer_score = #{servicerScore,jdbcType=INTEGER},
+      </if>
+      <if test="servicerPrice != null">
+        servicer_price = #{servicerPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerDes != null">
+        servicer_des = #{servicerDes,jdbcType=VARCHAR},
+      </if>
+      <if test="servicerFile != null">
+        servicer_file = #{servicerFile,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null">
+        city_id = #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="localId != null">
+        local_id = #{localId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasteditTime != null">
+        lastedit_time = #{lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null">
+        enable_status = #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="checkStatus != null">
+        check_status = #{checkStatus,jdbcType=INTEGER},
+      </if>
+      <if test="accountName != null">
+        account_name = #{accountName,jdbcType=VARCHAR},
+      </if>
+      <if test="passWord != null">
+        pass_word = #{passWord,jdbcType=VARCHAR},
+      </if>
+      <if test="degreeId != null">
+        degree_id = #{degreeId,jdbcType=INTEGER},
+      </if>
+      <if test="servicetypeId != null">
+        servicetype_id = #{servicetypeId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where servicer_id = #{servicerId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="mybatis.entity.TbServicer">
+    update tb_servicer
+    set servicer_idnum = #{servicerIdnum,jdbcType=VARCHAR},
+      servicer_name = #{servicerName,jdbcType=VARCHAR},
+      servicer_age = #{servicerAge,jdbcType=INTEGER},
+      servicer_sex = #{servicerSex,jdbcType=INTEGER},
+      servicer_phone = #{servicerPhone,jdbcType=VARCHAR},
+      servicer_img = #{servicerImg,jdbcType=VARCHAR},
+      servicer_experience = #{servicerExperience,jdbcType=INTEGER},
+      servicer_score = #{servicerScore,jdbcType=INTEGER},
+      servicer_price = #{servicerPrice,jdbcType=VARCHAR},
+      servicer_des = #{servicerDes,jdbcType=VARCHAR},
+      servicer_file = #{servicerFile,jdbcType=VARCHAR},
+      city_id = #{cityId,jdbcType=INTEGER},
+      local_id = #{localId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      lastedit_time = #{lasteditTime,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=INTEGER},
+      check_status = #{checkStatus,jdbcType=INTEGER},
+      account_name = #{accountName,jdbcType=VARCHAR},
+      pass_word = #{passWord,jdbcType=VARCHAR},
+      degree_id = #{degreeId,jdbcType=INTEGER},
+      servicetype_id = #{servicetypeId,jdbcType=INTEGER}
+    where servicer_id = #{servicerId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -22,6 +22,30 @@ public class FilesUtil {
         return PathUtil.headimgPath()+savename;  //返回相对路径
     }
 
+    public static String saveServicerImg(InputStream img,Long servicerid,String imgname) throws Exception {
+        String imgRealname = "servicerimg"+servicerid+"_"+sformat.format(new Date());   //文件名
+        String imgExtensionname = getExtensionname(imgname);  //扩展名
+        String imgSavename = imgRealname+imgExtensionname;
+        String imgSavedir = PathUtil.rootPath()+PathUtil.servicerimg(); //存储目录
+        Mkdir(imgSavedir);
+        String imgSavepath = imgSavedir+imgSavename; //绝对路径
+        File img1 = new File(imgSavepath);
+        SaveFile(img,img1); //存储文件
+        return PathUtil.servicerimg()+imgSavename;  //返回相对路径
+    }
+
+    public static String saveServicerFiles(InputStream file,Long servicerid,String filename) throws Exception {
+        String fileRealname = "servicerfile"+servicerid+"_"+sformat.format(new Date());   //文件名
+        String fileExtensionname = getExtensionname(filename);  //扩展名
+        String fileSavename = fileRealname+fileExtensionname;
+        String fileSavedir = PathUtil.rootPath()+PathUtil.servicerfile(); //存储目录
+        Mkdir(fileSavedir);
+        String fileSavepath = fileSavedir+fileSavename; //绝对路径
+        File file1 = new File(fileSavepath);
+        SaveFile(file,file1); //存储文件
+        return PathUtil.servicerfile()+fileSavename;  //返回相对路径
+    }
+
     /*
     删除文件
      */

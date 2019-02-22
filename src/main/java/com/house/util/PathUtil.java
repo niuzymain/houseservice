@@ -11,4 +11,12 @@ public class PathUtil {
     public static String headimgPath(){
         return "/headimg/";
     }
+
+    public static String servicerimg(){
+        return "/servicerimg/";
+    }
+
+    public static String servicerfile(){
+        return "/servicerfile/";
+    }
 }

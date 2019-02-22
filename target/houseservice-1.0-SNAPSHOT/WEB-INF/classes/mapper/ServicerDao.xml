@@ -49,18 +49,116 @@
 
     <insert id="insertServicer" parameterType="com.house.entity.Servicer" useGeneratedKeys="true"
             keyColumn="servicer_id" keyProperty="servicerid">
-        insert into tb_servicer()
+        insert into
+        tb_servicer(servicer_idnum,
+                    servicer_name,
+                    servicer_age,
+                    servicer_sex,
+                    servicer_phone,
+                    servicer_experience,
+                    servicer_price,
+                    servicer_des,
+                    city_id,
+                    local_id,
+                    create_time,
+                    lastedit_time,
+                    enable_status,
+                    check_status,
+                    account_name,
+                    pass_word,
+                    degree_id,
+                    servicetype_id)
+    values(#{serviceridnum,jdbcType=VARCHAR},
+            #{servicername,jdbcType=VARCHAR},
+            #{servicerage,jdbcType=INTEGER},
+            #{servicersex,jdbcType=INTEGER},
+            #{servicerphone,jdbcType=VARCHAR},
+            #{servicerexperience,jdbcType=INTEGER},
+            #{servicerprice,jdbcType=VARCHAR},
+            #{servicerdes,jdbcType=VARCHAR},
+            #{city.workareaid,jdbcType=INTEGER},
+            #{local.workareaid,jdbcType=INTEGER},
+            #{createtime,jdbcType=TIMESTAMP},
+            #{lastedittime,jdbcType=TIMESTAMP},
+            #{enablestatus,jdbcType=INTEGER},
+            #{checkstatus,jdbcType=INTEGER},
+            #{accountname,jdbcType=VARCHAR},
+            #{password,jdbcType=VARCHAR},
+            #{degree.degreeid,jdbcType=INTEGER},
+            #{servicetype.servicetypeid,jdbcType=INTEGER})
     </insert>
 
     <update id="updateServicer" parameterType="com.house.entity.Servicer">
         update tb_servicer
         <set>
-            <if test="enablestatus != null">enable_status=#{enablestatus},</if>
-            <if test="checkstatus != null">check_status=#{checkstatus},</if>
-            <if test="createtime != null">create_time=#{createtime},</if>
-            <if test="lastedittime != null">lastedit_time=#{lastedittime},</if>
+            <if test="servicer.servicerid != null">
+                servicer_id = #{servicer.servicerid,jdbcType=INTEGER},
+            </if>
+            <if test="servicer.serviceridnum != null">
+                servicer_idnum = #{servicer.serviceridnum,jdbcType=VARCHAR},
+            </if>
+            <if test="servicer.servicername != null">
+                servicer_name = #{servicer.servicername,jdbcType=VARCHAR},
+            </if>
+            <if test="servicer.servicerage != null">
+                servicer_age = #{servicer.servicerage,jdbcType=INTEGER},
+            </if>
+            <if test="servicer.servicersex != null">
+                servicer_sex = #{servicer.servicersex,jdbcType=INTEGER},
+            </if>
+            <if test="servicer.servicerphone != null">
+                servicer_phone = #{servicer.servicerphone,jdbcType=VARCHAR},
+            </if>
+            <if test="servicer.servicerimg != null">
+                servicer_img = #{servicer.servicerimg,jdbcType=VARCHAR},
+            </if>
+            <if test="servicer.servicerexperience != null">
+                servicer_experience = #{servicer.servicerexperience,jdbcType=INTEGER},
+            </if>
+            <if test="servicer.servicerscore != null">
+                servicer_score = #{servicer.servicerscore,jdbcType=INTEGER},
+            </if>
+            <if test="servicer.servicerprice != null">
+                servicer_price = #{servicer.servicerprice,jdbcType=VARCHAR},
+            </if>
+            <if test="servicer.servicerdes != null">
+                servicer_des = #{servicer.servicerdes,jdbcType=VARCHAR},
+            </if>
+            <if test="servicer.servicerfile != null">
+                servicer_file = #{servicer.servicerfile,jdbcType=VARCHAR},
+            </if>
+            <if test="servicer.city.workareaid != null">
+                city_id = #{servicer.city.workareaid,jdbcType=INTEGER},
+            </if>
+            <if test="servicer.local.workareaid != null">
+                local_id = #{servicer.local.workareaid,jdbcType=INTEGER},
+            </if>
+            <if test="servicer.createtime != null">
+                create_time = #{servicer.createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="servicer.lastedittime != null">
+                lastedit_time = #{servicer.lastedittime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="servicer.enablestatus != null">
+                enable_status = #{servicer.enablestatus,jdbcType=INTEGER},
+            </if>
+            <if test="servicer.checkstatus != null">
+                check_status = #{servicer.checkstatus,jdbcType=INTEGER},
+            </if>
+            <if test="servicer.accountname != null">
+                account_name = #{servicer.accountname,jdbcType=VARCHAR},
+            </if>
+            <if test="servicer.password != null">
+                pass_word = #{servicer.password,jdbcType=VARCHAR},
+            </if>
+            <if test="servicer.degree.degreeid != null">
+                degree_id = #{servicer.degree.degreeid,jdbcType=INTEGER},
+            </if>
+            <if test="servicer.servicetype.servicetypeid != null">
+                servicetype_id = #{servicer.servicetype.servicetypeid,jdbcType=INTEGER},
+            </if>
         </set>
-        where servicer_id=#{servicerid}
+        where servicer_id=#{servicer.servicerid}
     </update>
 
     <select id="queryServicer" resultMap="servicermap">

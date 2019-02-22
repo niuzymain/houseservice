@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.mapper.TbHeadimgMapper">
+  <resultMap id="BaseResultMap" type="mybatis.entity.TbHeadimg">
+    <id column="headimg_id" jdbcType="INTEGER" property="headimgId" />
+    <result column="headimg_title" jdbcType="VARCHAR" property="headimgTitle" />
+    <result column="headimg_details" jdbcType="VARCHAR" property="headimgDetails" />
+    <result column="headimg_url" jdbcType="VARCHAR" property="headimgUrl" />
+    <result column="priority" jdbcType="INTEGER" property="priority" />
+    <result column="enable_status" jdbcType="INTEGER" property="enableStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="lastedit_time" jdbcType="TIMESTAMP" property="lasteditTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    headimg_id, headimg_title, headimg_details, headimg_url, priority, enable_status, 
+    create_time, lastedit_time
+  </sql>
+  <select id="selectByExample" parameterType="mybatis.entity.TbHeadimgExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tb_headimg
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_headimg
+    where headimg_id = #{headimgId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tb_headimg
+    where headimg_id = #{headimgId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="mybatis.entity.TbHeadimgExample">
+    delete from tb_headimg
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="mybatis.entity.TbHeadimg">
+    insert into tb_headimg (headimg_id, headimg_title, headimg_details, 
+      headimg_url, priority, enable_status, 
+      create_time, lastedit_time)
+    values (#{headimgId,jdbcType=INTEGER}, #{headimgTitle,jdbcType=VARCHAR}, #{headimgDetails,jdbcType=VARCHAR}, 
+      #{headimgUrl,jdbcType=VARCHAR}, #{priority,jdbcType=INTEGER}, #{enableStatus,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{lasteditTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="mybatis.entity.TbHeadimg">
+    insert into tb_headimg
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="headimgId != null">
+        headimg_id,
+      </if>
+      <if test="headimgTitle != null">
+        headimg_title,
+      </if>
+      <if test="headimgDetails != null">
+        headimg_details,
+      </if>
+      <if test="headimgUrl != null">
+        headimg_url,
+      </if>
+      <if test="priority != null">
+        priority,
+      </if>
+      <if test="enableStatus != null">
+        enable_status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lasteditTime != null">
+        lastedit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="headimgId != null">
+        #{headimgId,jdbcType=INTEGER},
+      </if>
+      <if test="headimgTitle != null">
+        #{headimgTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="headimgDetails != null">
+        #{headimgDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="headimgUrl != null">
+        #{headimgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="priority != null">
+        #{priority,jdbcType=INTEGER},
+      </if>
+      <if test="enableStatus != null">
+        #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasteditTime != null">
+        #{lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="mybatis.entity.TbHeadimgExample" resultType="java.lang.Long">
+    select count(*) from tb_headimg
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update tb_headimg
+    <set>
+      <if test="record.headimgId != null">
+        headimg_id = #{record.headimgId,jdbcType=INTEGER},
+      </if>
+      <if test="record.headimgTitle != null">
+        headimg_title = #{record.headimgTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.headimgDetails != null">
+        headimg_details = #{record.headimgDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="record.headimgUrl != null">
+        headimg_url = #{record.headimgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.priority != null">
+        priority = #{record.priority,jdbcType=INTEGER},
+      </if>
+      <if test="record.enableStatus != null">
+        enable_status = #{record.enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.lasteditTime != null">
+        lastedit_time = #{record.lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update tb_headimg
+    set headimg_id = #{record.headimgId,jdbcType=INTEGER},
+      headimg_title = #{record.headimgTitle,jdbcType=VARCHAR},
+      headimg_details = #{record.headimgDetails,jdbcType=VARCHAR},
+      headimg_url = #{record.headimgUrl,jdbcType=VARCHAR},
+      priority = #{record.priority,jdbcType=INTEGER},
+      enable_status = #{record.enableStatus,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      lastedit_time = #{record.lasteditTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="mybatis.entity.TbHeadimg">
+    update tb_headimg
+    <set>
+      <if test="headimgTitle != null">
+        headimg_title = #{headimgTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="headimgDetails != null">
+        headimg_details = #{headimgDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="headimgUrl != null">
+        headimg_url = #{headimgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="priority != null">
+        priority = #{priority,jdbcType=INTEGER},
+      </if>
+      <if test="enableStatus != null">
+        enable_status = #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasteditTime != null">
+        lastedit_time = #{lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where headimg_id = #{headimgId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="mybatis.entity.TbHeadimg">
+    update tb_headimg
+    set headimg_title = #{headimgTitle,jdbcType=VARCHAR},
+      headimg_details = #{headimgDetails,jdbcType=VARCHAR},
+      headimg_url = #{headimgUrl,jdbcType=VARCHAR},
+      priority = #{priority,jdbcType=INTEGER},
+      enable_status = #{enableStatus,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      lastedit_time = #{lasteditTime,jdbcType=TIMESTAMP}
+    where headimg_id = #{headimgId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="mybatis.entity.TbHeadimg">
+    <id column="headimg_id" jdbcType="INTEGER" property="headimgId" />
+    <result column="headimg_title" jdbcType="VARCHAR" property="headimgTitle" />
+    <result column="headimg_details" jdbcType="VARCHAR" property="headimgDetails" />
+    <result column="headimg_url" jdbcType="VARCHAR" property="headimgUrl" />
+    <result column="priority" jdbcType="INTEGER" property="priority" />
+    <result column="enable_status" jdbcType="INTEGER" property="enableStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="lastedit_time" jdbcType="TIMESTAMP" property="lasteditTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    headimg_id, headimg_title, headimg_details, headimg_url, priority, enable_status, 
+    create_time, lastedit_time
+  </sql>
+  <select id="selectByExample" parameterType="mybatis.entity.TbHeadimgExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tb_headimg
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_headimg
+    where headimg_id = #{headimgId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tb_headimg
+    where headimg_id = #{headimgId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="mybatis.entity.TbHeadimgExample">
+    delete from tb_headimg
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="mybatis.entity.TbHeadimg">
+    insert into tb_headimg (headimg_id, headimg_title, headimg_details, 
+      headimg_url, priority, enable_status, 
+      create_time, lastedit_time)
+    values (#{headimgId,jdbcType=INTEGER}, #{headimgTitle,jdbcType=VARCHAR}, #{headimgDetails,jdbcType=VARCHAR}, 
+      #{headimgUrl,jdbcType=VARCHAR}, #{priority,jdbcType=INTEGER}, #{enableStatus,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{lasteditTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="mybatis.entity.TbHeadimg">
+    insert into tb_headimg
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="headimgId != null">
+        headimg_id,
+      </if>
+      <if test="headimgTitle != null">
+        headimg_title,
+      </if>
+      <if test="headimgDetails != null">
+        headimg_details,
+      </if>
+      <if test="headimgUrl != null">
+        headimg_url,
+      </if>
+      <if test="priority != null">
+        priority,
+      </if>
+      <if test="enableStatus != null">
+        enable_status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lasteditTime != null">
+        lastedit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="headimgId != null">
+        #{headimgId,jdbcType=INTEGER},
+      </if>
+      <if test="headimgTitle != null">
+        #{headimgTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="headimgDetails != null">
+        #{headimgDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="headimgUrl != null">
+        #{headimgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="priority != null">
+        #{priority,jdbcType=INTEGER},
+      </if>
+      <if test="enableStatus != null">
+        #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasteditTime != null">
+        #{lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="mybatis.entity.TbHeadimgExample" resultType="java.lang.Long">
+    select count(*) from tb_headimg
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update tb_headimg
+    <set>
+      <if test="record.headimgId != null">
+        headimg_id = #{record.headimgId,jdbcType=INTEGER},
+      </if>
+      <if test="record.headimgTitle != null">
+        headimg_title = #{record.headimgTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.headimgDetails != null">
+        headimg_details = #{record.headimgDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="record.headimgUrl != null">
+        headimg_url = #{record.headimgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.priority != null">
+        priority = #{record.priority,jdbcType=INTEGER},
+      </if>
+      <if test="record.enableStatus != null">
+        enable_status = #{record.enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.lasteditTime != null">
+        lastedit_time = #{record.lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update tb_headimg
+    set headimg_id = #{record.headimgId,jdbcType=INTEGER},
+      headimg_title = #{record.headimgTitle,jdbcType=VARCHAR},
+      headimg_details = #{record.headimgDetails,jdbcType=VARCHAR},
+      headimg_url = #{record.headimgUrl,jdbcType=VARCHAR},
+      priority = #{record.priority,jdbcType=INTEGER},
+      enable_status = #{record.enableStatus,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      lastedit_time = #{record.lasteditTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="mybatis.entity.TbHeadimg">
+    update tb_headimg
+    <set>
+      <if test="headimgTitle != null">
+        headimg_title = #{headimgTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="headimgDetails != null">
+        headimg_details = #{headimgDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="headimgUrl != null">
+        headimg_url = #{headimgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="priority != null">
+        priority = #{priority,jdbcType=INTEGER},
+      </if>
+      <if test="enableStatus != null">
+        enable_status = #{enableStatus,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasteditTime != null">
+        lastedit_time = #{lasteditTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where headimg_id = #{headimgId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="mybatis.entity.TbHeadimg">
+    update tb_headimg
+    set headimg_title = #{headimgTitle,jdbcType=VARCHAR},
+      headimg_details = #{headimgDetails,jdbcType=VARCHAR},
+      headimg_url = #{headimgUrl,jdbcType=VARCHAR},
+      priority = #{priority,jdbcType=INTEGER},
+      enable_status = #{enableStatus,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      lastedit_time = #{lasteditTime,jdbcType=TIMESTAMP}
+    where headimg_id = #{headimgId,jdbcType=INTEGER}
+  </update>
+</mapper>
