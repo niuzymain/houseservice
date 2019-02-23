@@ -52,6 +52,9 @@ public class CommonController {
             else if(accounttype.equals("servicer")){
                 Servicer servicer = objectMapper.readValue(loginstr,Servicer.class);
                 account = servicerService.selectSingleServicer(servicer);
+                if(account != null){
+                    modelMap.put("route","/servicer/reserve?servicerid="+((Servicer) account).getServicerid());
+                }
             }
             else if(accounttype.equals("admin")){
                 SuperAdmin superAdmin = objectMapper.readValue(loginstr,SuperAdmin.class);

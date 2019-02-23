@@ -366,10 +366,7 @@
     from tb_reserve
     where reserve_id = #{reserveId,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from tb_reserve
-    where reserve_id = #{reserveId,jdbcType=INTEGER}
-  </delete>
+
   <delete id="deleteByExample" parameterType="mybatis.entity.TbReserveExample">
     delete from tb_reserve
     <if test="_parameter != null">

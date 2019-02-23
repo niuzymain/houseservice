@@ -45,7 +45,7 @@ $(function () {
             cache: false,
             success: function (data) {
                 if (data.success) {
-                    alert("success 后端返回跳转界面")
+                    window.location.href=data.route
                 }
                 else {
                     alert(data.errormsg);

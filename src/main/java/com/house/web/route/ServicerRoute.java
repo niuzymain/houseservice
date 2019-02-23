@@ -7,8 +7,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/servicer")
 public class ServicerRoute {
+
     @RequestMapping(value = "/register",method = RequestMethod.GET)
     private String servicerRegister(){
         return"servicer/register";
+    }
+
+    @RequestMapping(value = "/reserve",method = RequestMethod.GET)
+    private String servicerReserve(){
+        return"servicer/reserve";
     }
 }

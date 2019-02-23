@@ -36,7 +36,7 @@ $(function () {
         formdata.append("operatestr",JSON.stringify(condition))
         formdata.append("operate","新增")
         $.ajax({
-            url: "/admin/operate",
+            url: "/admin/operateitems",
             data: formdata,
             type: "post",
             contentType: false,
