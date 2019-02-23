@@ -64,7 +64,7 @@ $(function () {
         formdata.append("operatestr",JSON.stringify(condition))
         formdata.append("operate","删除")
         $.ajax({
-            url: "/admin/operate",
+            url: "/admin/operateitems",
             data: formdata,
             type: "post",
             contentType: false,

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--首页,默认人员管理页面-->
+<!--展示地区和操作选项-->
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -9,24 +9,21 @@
             float:left;
         }
         #menu{
-            margin-right:30px;
-        }
-        select{
-            margin-bottom:30px;
+            margin-right: 50px;
         }
     </style>
 </head>
 <body>
-    <h1>账户管理</h1>
+    <h1>展示区域信息</h1>
     <div id="menu">
         <ul id="lists">
             <li>
-                <a href="#" id="usermanager">账户管理</a>
+                <a href="/admin/main" id="usermanager">账户管理</a>
             </li>
             <li>
-                <a href="#" id="itemmanager" onclick=displaychange()>分类管理</a>
-                <ul id="itemmenulist" style="display: none">
-                    <li><a href="/admin/displayareas" id="areamanager">区域管理</a></li>
+                <a href="#" id="itemmanager">分类管理</a>
+                <ul id="itemmenulist">
+                    <li><a href="#" id="areamanager">区域管理</a></li>
                     <li><a href="/admin/displaytypes" id="categorymanager">类别管理</a></li>
                     <li><a href="/admin/displaydegrees" id="degreemanager">学历管理</a></li>
                 </ul>
@@ -39,12 +36,9 @@
             </li>
         </ul>
     </div>
-    <div id="users">
-        <select id="usertype">
-            <option value="user">用户</option>
-            <option value="servicer">服务人员</option>
-        </select>
-        <table id="userlist">
+
+    <div id="item">
+        <table id="itemlist">
             <thead>
             </thead>
             <tbody>
@@ -55,7 +49,6 @@
     <!--<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>-->
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>-->
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>-->
-    <script type="text/javascript" src="../resources/js/superadmin/main.js"></script>
-    <script type="text/javascript" src="../resources/js/common/util.js"></script>
+    <script type="text/javascript" src="../resources/js/superadmin/showareas.js"></script>
 </body>
 </html>

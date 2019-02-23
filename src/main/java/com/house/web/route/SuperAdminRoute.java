@@ -13,12 +13,22 @@ public class SuperAdminRoute {
         return "superadmin/main";
     }
 
-    @RequestMapping(value = "/display",method = RequestMethod.GET)
-    private String Display(){
-        return "superadmin/showitems";
+    @RequestMapping(value = "/displayareas",method = RequestMethod.GET)
+    private String DisplayAreas(){
+        return "superadmin/showareas";
     }
 
-    @RequestMapping(value = "/displayareas",method = RequestMethod.GET)
+    @RequestMapping(value = "/displaytypes",method = RequestMethod.GET)
+    private String DisplayTypes(){
+        return "superadmin/showtypes";
+    }
+
+    @RequestMapping(value = "/displaydegrees",method = RequestMethod.GET)
+    private String DisplayDegrees(){
+        return "superadmin/showdegrees";
+    }
+
+    @RequestMapping(value = "/displaylocals",method = RequestMethod.GET)
     private String displayAreas(){
         return "superadmin/localareas";
     }

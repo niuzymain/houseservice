@@ -1,11 +1,10 @@
 ////////////////////////////// 从url中取参数/////////////////////////////////////
-function getURLarg(variable){
+function getURLarg(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split("&");
-    for (var i=0;i<vars.length;i++) {
+    for (var i = 0; i < vars.length; i++) {
         var pair = vars[i].split("=");
-        if(pair[0] == variable)
-        {
+        if (pair[0] == variable) {
             return pair[1];
         }
     }
@@ -13,8 +12,8 @@ function getURLarg(variable){
 }
 
 ///////////////////////////////////更换验证码///////////////////////////////////////
-function changecode(target){
-    target.src="../checkcode?"+Math.floor(Math.random()*100);
+function changecode(target) {
+    target.src = "../checkcode?" + Math.floor(Math.random() * 100);
 }
 
 /////////////////////////根据状态值显示状态名称//////////////////////////////////////////
@@ -22,7 +21,7 @@ function statusinfo(data) {
     if (data == 1) {
         return "可用"
     }
-    else if(data == 0){
+    else if (data == 0) {
         return "禁用"
     }
 
@@ -33,7 +32,7 @@ function sexinfo(data) {
     if (data == 1) {
         return "男"
     }
-    else if(data == 2){
+    else if (data == 2) {
         return "女"
     }
 
@@ -41,20 +40,20 @@ function sexinfo(data) {
 
 ////////////////////////////根据经验值显示经验名称//////////////////////////////////
 function experienceinfo(data) {
-    if(data == 0){
+    if (data == 0) {
         return "无经验"
     }
     else if (data < 12) {
-        return data+"个月"
+        return data + "个月"
     }
     else {
-        return data/12+"年"
+        return data / 12 + "年"
     }
 
 }
 
 //格式化date
-function timeStamp2String(time){
+function timeStamp2String(time) {
     var datetime = new Date();
     datetime.setTime(time);
     var year = datetime.getFullYear();
@@ -64,4 +63,9 @@ function timeStamp2String(time){
     // var minute = datetime.getMinutes()< 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
     // var second = datetime.getSeconds()< 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
     return year + "-" + month + "-" + date/*+" "+hour+":"+minute+":"+second*/;
+}
+
+//二级列表显示切换
+function displaychange() {
+    $("#itemmenulist").show();
 }
