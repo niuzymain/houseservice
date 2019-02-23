@@ -17,4 +17,9 @@ public class ServicerRoute {
     private String servicerReserve(){
         return"servicer/reserve";
     }
+
+    @RequestMapping(value = "/reservedetail",method = RequestMethod.GET)
+    private String servicerReserveDetail(){
+        return"servicer/reservedetail";
+    }
 }
