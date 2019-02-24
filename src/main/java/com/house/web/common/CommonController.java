@@ -48,35 +48,56 @@ public class CommonController {
             if(accounttype.equals("user")){
                 User user = objectMapper.readValue(loginstr,User.class);
                 account = userService.selectSingleUser(user);
-                if(account != null){
-                    //json中添加跳转页面url
-//                    modelMap.put("route","/servicer/reserve?servicerid="+((Servicer) account).getServicerid());
+                if(account == null){
+                    modelMap.put("success",false);
+                    modelMap.put("errormsg","用户不存在");
+                }
+                else if(((User) account).getEnablestatus() == 0){
+                    modelMap.put("success",false);
+                    modelMap.put("errormsg","账户不可用");
+                }
+                else{
+                    modelMap.put("success",true);
+///////////////////////////这里session添加个人信息，根据accountid查找/////////////////////////////////////////
+                    request.getSession().setAttribute("accountinfo",account);
+/////////////////////////添加跳转路由///////////////////////////////////////////////////////
+//                    modelMap.put("route","/servicer/reserve");
                 }
             }
             else if(accounttype.equals("servicer")){
                 Servicer servicer = objectMapper.readValue(loginstr,Servicer.class);
                 account = servicerService.selectSingleServicer(servicer);
-                if(account != null){
+                if(account == null){
+                    modelMap.put("success",false);
+                    modelMap.put("errormsg","用户不存在");
+                }
+                else if(((Servicer) account).getEnablestatus() == 0){
+                    modelMap.put("success",false);
+                    modelMap.put("errormsg","账户不可用");
+                }
+                else{
+                    modelMap.put("success",true);
+///////////////////////////这里session添加个人信息，根据accountid查找/////////////////////////////////////////
+                    request.getSession().setAttribute("accountinfo",account);
                     modelMap.put("route","/servicer/reserve");
                 }
             }
             else if(accounttype.equals("admin")){
                 SuperAdmin superAdmin = objectMapper.readValue(loginstr,SuperAdmin.class);
                 account = adminService.checkLogin(superAdmin);
+                if(account != null){
+                    modelMap.put("success",true);
+///////////////////////////这里session添加个人信息，根据accountid查找/////////////////////////////////////////
+                    request.getSession().setAttribute("accountinfo",account);
+                }
+                else{
+                    modelMap.put("success",false);
+                    modelMap.put("errormsg","管理员不存在");
+                }
             }
             else{
                 modelMap.put("success",false);
                 modelMap.put("errormsg","用户类型为空");
-            }
-            if(account != null){
-                modelMap.put("success",true);
-///////////////////////////这里session添加个人信息，根据accountid查找/////////////////////////////////////////
-                request.getSession().setAttribute("accountinfo",account);
-
-            }
-            else{
-                modelMap.put("success",false);
-                modelMap.put("errormsg","用户不存在");
             }
             return modelMap;
         } catch (Exception e) {
