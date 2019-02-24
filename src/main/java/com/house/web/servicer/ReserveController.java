@@ -1,6 +1,7 @@
 package com.house.web.servicer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.house.dto.ServicerExecution;
 import com.house.entity.Reserve;
 import com.house.entity.Servicer;
 import com.house.service.servicer.ReserveService;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.rmi.ServerException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,9 +28,11 @@ public class ReserveController {
     @ResponseBody
     public Map<String,Object> getReserveList(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();
+        Integer enablestatus = Integer.parseInt(request.getParameter("enablestatus"));
         Servicer servicer = (Servicer) request.getSession().getAttribute("accountinfo");
         Reserve reserve = new Reserve();
         reserve.setServicer(servicer);
+        reserve.setEnablestatus(enablestatus);
         try{
             List<Reserve> reserveList = reserveService.getReserveList(reserve);
             modelMap.put("success",true);
@@ -60,18 +64,19 @@ public class ReserveController {
         }
     }
 
-    @RequestMapping(value = "/operatereserve",method = RequestMethod.GET)
+    @RequestMapping(value = "/operatereserve",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> OperateReserve(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();
         String reservestr = request.getParameter("reservestr");
+        String status = request.getParameter("status");
         ObjectMapper objectMapper = new ObjectMapper();
         try{
             Reserve reserve = objectMapper.readValue(reservestr,Reserve.class);
-            int result = reserveService.updateReserve(reserve);
-            if(result <= 0){
+            ServicerExecution servicerExecution = reserveService.operateReserve(reserve,status);
+            if(servicerExecution.getState() != 1){
                 modelMap.put("success",false);
-                modelMap.put("errormsg","内部错误");
+                modelMap.put("errormsg",servicerExecution.getStateinfo());
             }
             else{
                 modelMap.put("success",true);

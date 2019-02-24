@@ -8,6 +8,10 @@
             float: left;
             margin-left: 30px;
         }
+        .reserve{
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
         </style>
 </head>
 <body>
@@ -15,20 +19,32 @@
     <div id="menu" class="first">
         <ul id="lists">
             <li>
-               aaa
+                <a href="#">预约情况查询</a>
             </li>
             <li>
-               bbb
+                <a href="#">历史评价</a>
             </li>
             <li>
-               ccc
-            </li>
-            <li>
-                ddd
+                <a href="#" id="userinfo">个人中心</a>
+                <ul id="infolist" style="display: none">
+                    <li>
+                        <a href="#">编辑信息</a>
+                    </li>
+                    <li>
+                        <a href="#">收件箱</a>
+                     </li>
+                </ul>
             </li>
         </ul>
     </div>
     <div id="reserves" class="first">
+        <select>
+            <option value="-1">已拒绝</option>
+            <option value="0" selected="selected">待接受</option>
+            <option value="1">已接受</option>
+        </select>
+        <div id="reservelist">
+        </div>
     </div>
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <!--<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>-->

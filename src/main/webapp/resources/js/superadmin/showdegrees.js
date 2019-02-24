@@ -39,27 +39,27 @@ $(function () {
             }
         })
     })
-    $("#itemlist").on("click", ".delete", function (e) {
-        var target = e.currentTarget;
-        var formdata = deleteitem("删除", target.id)
-        $.ajax({
-            url: "/admin/operateitems",
-            data: formdata,
-            type: "post",
-            contentType: false,
-            processData: false,
-            cache: false,
-            success: function (data) {
-                if (data.success) {
-                    alert("success");
-                    location.reload();
-                }
-                else {
-                    alert("error：" + data.errormsg);
-                }
-            }
-        })
-    })
+    // $("#itemlist").on("click", ".delete", function (e) {
+    //     var target = e.currentTarget;
+    //     var formdata = deleteitem("删除", target.id)
+    //     $.ajax({
+    //         url: "/admin/operateitems",
+    //         data: formdata,
+    //         type: "post",
+    //         contentType: false,
+    //         processData: false,
+    //         cache: false,
+    //         success: function (data) {
+    //             if (data.success) {
+    //                 alert("success");
+    //                 location.reload();
+    //             }
+    //             else {
+    //                 alert("error：" + data.errormsg);
+    //             }
+    //         }
+    //     })
+    // })
 })
 
 function insertitem(operatetype) {

@@ -48,12 +48,16 @@ public class CommonController {
             if(accounttype.equals("user")){
                 User user = objectMapper.readValue(loginstr,User.class);
                 account = userService.selectSingleUser(user);
+                if(account != null){
+                    //json中添加跳转页面url
+//                    modelMap.put("route","/servicer/reserve?servicerid="+((Servicer) account).getServicerid());
+                }
             }
             else if(accounttype.equals("servicer")){
                 Servicer servicer = objectMapper.readValue(loginstr,Servicer.class);
                 account = servicerService.selectSingleServicer(servicer);
                 if(account != null){
-                    modelMap.put("route","/servicer/reserve?servicerid="+((Servicer) account).getServicerid());
+                    modelMap.put("route","/servicer/reserve");
                 }
             }
             else if(accounttype.equals("admin")){

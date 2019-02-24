@@ -7,17 +7,18 @@
 <mapper namespace="com.house.dao.ReserveDao">
 
     <sql id="Base_Column_List">
-    r.reserve_id, r.create_time, r.reserve_addr, r.reserve_des, r.reserve_phone, r.reserve_meg, u.user_id,
-    u.user_name,s.servicer_name,s.servicer_id, r.enable_status
-  </sql>
+        r.reserve_id, r.create_time, r.reserve_time,r.reserve_addr, r.reserve_des, r.reserve_phone, r.reserve_msg, u.user_id,
+        u.user_name,s.servicer_name,s.servicer_id, r.enable_status
+    </sql>
 
     <resultMap id="BaseResultMap" type="com.house.entity.Reserve">
         <id column="reserve_id" property="reserveid"/>
-       <result column="create_time"  property="createtime"/>
+        <result column="create_time" property="createtime"/>
+        <result column="reserve_time" property="reservetime"/>
         <result column="reserve_addr" property="reserveaddr"/>
         <result column="reserve_des" property="reservedes"/>
         <result column="reserve_phone" property="reservephone"/>
-        <result column="reserve_meg" property="reservemeg"/>
+        <result column="reserve_msg" property="reservemsg"/>
         <result column="enable_status" property="enablestatus"/>
         <association property="user" column="user_id" javaType="com.house.entity.User">
             <id column="user_id" property="userid"/>
@@ -30,12 +31,12 @@
     </resultMap>
 
     <insert id="inseerReserve" useGeneratedKeys="true" keyColumn="reserve_id" keyProperty="reserveid">
-        insert into tb_reserve (create_time, reserve_addr,
-          reserve_des, reserve_phone, reserve_meg,
+        insert into tb_reserve (create_time, reserve_time,reserve_addr,
+          reserve_des, reserve_phone, reserve_msg,
           user_id, servicer_id, enable_status
           )
-        values (#{reserve.createtime,jdbcType=TIMESTAMP}, #{reserve.reserveaddr,jdbcType=VARCHAR},
-          #{reserve.reservedes,jdbcType=VARCHAR}, #{reserve.reservephone,jdbcType=VARCHAR}, #{reserve.reservemeg,jdbcType=VARCHAR},
+        values (#{reserve.createtime,jdbcType=TIMESTAMP}, #{reserve.reservetime,jdbcType=TIMESTAMP}, #{reserve.reserveaddr,jdbcType=VARCHAR},
+          #{reserve.reservedes,jdbcType=VARCHAR}, #{reserve.reservephone,jdbcType=VARCHAR}, #{reserve.reservemsg,jdbcType=VARCHAR},
           #{reserve.user.userid,jdbcType=INTEGER}, #{reserve.servicer.servicerid,jdbcType=INTEGER}, #{reserve.enablestatus,jdbcType=INTEGER}
           )
     </insert>
@@ -46,6 +47,9 @@
             <if test="reserve.createtime != null">
                 create_time = #{reserve.createtime,jdbcType=TIMESTAMP},
             </if>
+            <if test="reserve.reservetime != null">
+                reserve_time = #{reserve.reservetime,jdbcType=TIMESTAMP},
+            </if>
             <if test="reserve.reserveaddr != null">
                 reserve_addr = #{reserve.reserveaddr,jdbcType=VARCHAR},
             </if>
@@ -55,13 +59,13 @@
             <if test="reserve.reservephone != null">
                 reserve_phone = #{reserve.reservephone,jdbcType=VARCHAR},
             </if>
-            <if test="reserve.reservemeg != null">
-                reserve_meg = #{reserve.reservemeg,jdbcType=VARCHAR},
+            <if test="reserve.reservemsg != null">
+                reserve_msg = #{reserve.reservemsg,jdbcType=VARCHAR},
             </if>
-            <if test="reserve.user.userid != null">
+            <if test="reserve.user != null &amp;&amp;reserve.user.userid != null">
                 user_id = #{reserve.user.userid,jdbcType=INTEGER},
             </if>
-            <if test="reserve.servicer.servicerid != null">
+            <if test="reserve.servicer != null &amp;&amp;reserve.servicer.servicerid != null">
                 servicer_id = #{reserve.servicer.servicerid,jdbcType=INTEGER},
             </if>
             <if test="reserve.enablestatus != null">
@@ -92,7 +96,9 @@
             <if test="condition.servicer != null &amp;&amp;condition.servicer.servicerid != null">
                 and r.servicer_id=#{condition.servicer.servicerid}
                 and s.servicer_id=#{condition.servicer.servicerid}
-
+            </if>
+            <if test="condition.enablestatus != null">
+                and r.enable_status=#{condition.enablestatus}
             </if>
         </where>
         order by create_time desc

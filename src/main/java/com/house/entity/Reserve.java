@@ -8,13 +8,14 @@ import java.util.Date;
 public class Reserve {
     private long reserveid;
     private Date createtime;
+    private Date reservetime;
     private String reserveaddr;
     private String reservedes;
     private String reservephone;
     private String reservemsg;//预约留言，服务人员编辑
     private User user;
     private Servicer servicer;
-    private Integer enablestatus;//预约状态 0.已取消 1.等待 2.进行中 3.完成
+    private Integer enablestatus;//预约状态 -1.拒绝 0.等待 1.服务中
 
     public long getReserveid() {
         return this.reserveid;
@@ -86,5 +87,13 @@ public class Reserve {
 
     public void setEnablestatus(Integer enablestatus) {
         this.enablestatus = enablestatus;
+    }
+
+    public Date getReservetime() {
+        return this.reservetime;
+    }
+
+    public void setReservetime(Date reservetime) {
+        this.reservetime = reservetime;
     }
 }
