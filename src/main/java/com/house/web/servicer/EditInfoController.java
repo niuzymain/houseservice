@@ -42,7 +42,7 @@ public class EditInfoController {
         return modelMap;
     }
 
-    @RequestMapping(value = "/editservicerinfo",method = RequestMethod.GET)
+    @RequestMapping(value = "/editservicerinfo",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> editServicerInfo(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();
@@ -62,7 +62,19 @@ public class EditInfoController {
                 img = (CommonsMultipartFile) multipartHttpServletRequest.getFile("img");
                 file = (CommonsMultipartFile) multipartHttpServletRequest.getFile("file");
             }
-            ServicerExecution se = editInfoService.editInfo(servicer,img.getInputStream(),img.getOriginalFilename(),file.getInputStream(),file.getOriginalFilename());
+            ServicerExecution se = new ServicerExecution();
+            if(img == null && file == null){
+                se = editInfoService.editInfo(servicer);
+            }
+            else if(img != null && file == null){
+                se = editInfoService.editInfo(servicer,img.getInputStream(),img.getOriginalFilename());
+            }
+            else if(img == null && file != null){
+                se = editInfoService.editInfo(servicer,file.getInputStream(),file.getOriginalFilename());
+            }
+            else{
+                se = editInfoService.editInfo(servicer,img.getInputStream(),img.getOriginalFilename(),file.getInputStream(),file.getOriginalFilename());
+            }
             if(se.getState() == ServicerEnum.SUCCESS.getState()){
                 modelMap.put("success",true);
             }

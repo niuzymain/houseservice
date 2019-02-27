@@ -5,7 +5,7 @@ import java.util.Date;
 /*
 用户评价
  */
-public class Evaluate {
+public class  Evaluate {
     private long evaluateid;
     private String evaluatedes;
     private Integer evaluatescore;

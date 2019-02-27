@@ -69,10 +69,10 @@ $(function () {
                 servicetypeid: $(".type select").val()
             },
             city: {
-                workareaid: $(".area .citys").val()
+                workareaid: $(".area #citys").val()
             },
             local: {
-                workareaid: $(".area .locals").val()
+                workareaid: $(".area #locals").val()
             },
             accountname: $(".account .accountname").val(),
             password: $(".account .password").val()
@@ -80,11 +80,11 @@ $(function () {
         var img = $(".img input")[0].files[0];
         var file = $(".file input")[0].files[0];
         var formdata = new FormData();
-        formdata.append("register", JSON.stringify(servicer))
+        formdata.append("str", JSON.stringify(servicer))
         formdata.append("img", img);
         formdata.append("file", file);
         $.ajax({
-            url: "/servicer/registeroperate",
+            url: "/servicer/editservicerinfo",
             data: formdata,
             type: "post",
             contentType: false,
@@ -93,7 +93,7 @@ $(function () {
             success:function(data){
                 if(data.success){
                     alert("success")
-                    window.location.href="/login/common"
+                    window.location.href="/servicer/displayinfo"
                 }
                 else{
                     alert(data.errormsg)

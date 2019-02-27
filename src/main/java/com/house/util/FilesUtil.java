@@ -80,7 +80,7 @@ public class FilesUtil {
     /*
     获取扩展名
      */
-    private static String getExtensionname(String filename) {
+    public static String getExtensionname(String filename) {
         return filename.substring(filename.lastIndexOf("."));
     }
 
