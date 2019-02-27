@@ -3,6 +3,13 @@
 <!--首页,默认人员管理页面-->
 <head>
     <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>新建待办事项</title>
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
     <title>Title</title>
     <style type="text/css">
         div{
@@ -19,25 +26,40 @@
 <body>
     <h1>账户管理</h1>
     <div id="menu">
-        <ul id="lists">
-            <li>
-                <a href="#" id="usermanager">账户管理</a>
-            </li>
-            <li>
-                <a href="#" id="itemmanager" onclick=displaychange()>分类管理</a>
-                <ul id="itemmenulist" class="secondmenu" style="display: none">
-                    <li><a href="/admin/displayareas" id="areamanager">区域管理</a></li>
-                    <li><a href="/admin/displaytypes" id="categorymanager">类别管理</a></li>
-                    <li><a href="/admin/displaydegrees" id="degreemanager">学历管理</a></li>
+        <ul id="lists" class="sui-nav nav-list nav-xlarge">
+            <li><a href="#" id="usermanager">账户管理</a></li>
+            <li class="nav-header"><a href="#" id="itemmanager" onclick=displaychange()>分类管理</a>
+                <ul id="itemmenulist" class="secondmenu sui-nav nav-list" style="display: none">
+                    <li ><a href="/admin/displayareas" id="areamanager">区域管理</a></li>
+                    <li ><a href="/admin/displaytypes" id="categorymanager">类别管理</a></li>
+                    <li ><a href="/admin/displaydegrees" id="degreemanager">学历管理</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="/admin/headimg" id="headimgmanager">轮播图管理</a>
-            </li>
-            <li>
-                <a href="/admin/qualify" id="servicerqualify">服务人员审核</a>
-            </li>
+            <li><a href="/admin/headimg" id="headimgmanager">轮播图管理</a></li>
+            <li><a href="/admin/qualify" id="servicerqualify">服务人员审核</a></li>
         </ul>
+
+
+
+        <!--<ul id="lists">-->
+            <!--<li>-->
+                <!--<a href="#" id="usermanager">账户管理</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#" id="itemmanager" onclick=displaychange()>分类管理</a>-->
+                <!--<ul id="itemmenulist" class="secondmenu" style="display: none">-->
+                    <!--<li><a href="/admin/displayareas" id="areamanager">区域管理</a></li>-->
+                    <!--<li><a href="/admin/displaytypes" id="categorymanager">类别管理</a></li>-->
+                    <!--<li><a href="/admin/displaydegrees" id="degreemanager">学历管理</a></li>-->
+                <!--</ul>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="/admin/headimg" id="headimgmanager">轮播图管理</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="/admin/qualify" id="servicerqualify">服务人员审核</a>-->
+            <!--</li>-->
+        <!--</ul>-->
     </div>
     <div id="users">
         <select id="usertype">

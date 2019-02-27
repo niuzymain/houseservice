@@ -7,47 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eb73dc7-a397-4b8d-a922-66f1030a9b43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/servicer/EditInfoServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/service/schedule/AnotherJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/service/schedule/HelloJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/service/schedule/HelloSchedue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/service/servicer/EditInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/house/web/servicer/EditInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/displayinfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/editinfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/servicer/displayinfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/servicer/editinfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/demo/HelloJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/demo/HelloSchedue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/entity/Reserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/entity/Reserve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/imps/servicer/ReserveServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/servicer/ReserveServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/route/ServicerRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/web/route/ServicerRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/reserve.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/reserve.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/headimg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/headimg.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/qualify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/qualify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/first.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/first.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/common/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/servicer/reserve.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/servicer/reserve.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/localareas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/localareas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/service/imps/servicer/ReserveServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/house/service/imps/servicer/ReserveServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/house/web/route/ServicerRoute.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/house/web/route/ServicerRoute.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/imps/servicer/ReserveServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/imps/servicer/ReserveServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/route/ServicerRoute.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/route/ServicerRoute.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/servicer/reserve.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/servicer/reserve.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/superadmin/headimg.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/superadmin/headimg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/house/service/imps/servicer/EditInfoServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/house/service/imps/servicer/EditInfoServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/house/service/servicer/EditInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/house/service/servicer/EditInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/house/web/servicer/EditInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/house/web/servicer/EditInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/imps/servicer/EditInfoServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/imps/servicer/EditInfoServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/servicer/EditInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/servicer/EditInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/servicer/EditInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/servicer/EditInfoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/superadmin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/superadmin/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/superadmin/qualify.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/superadmin/qualify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/first.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/first.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/common/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/common/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/servicer/reserve.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/servicer/reserve.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/superadmin/localareas.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/superadmin/localareas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/superadmin/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/superadmin/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,7 +34,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="15" />
-          <entry key="html" value="113" />
+          <entry key="html" value="114" />
           <entry key="java" value="274" />
           <entry key="js" value="105" />
           <entry key="md" value="1" />
@@ -79,7 +47,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="15" />
-          <entry key="HTML" value="113" />
+          <entry key="HTML" value="114" />
           <entry key="JAVA" value="274" />
           <entry key="JavaScript" value="105" />
           <entry key="Markdown" value="1" />
@@ -92,7 +60,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="html" value="2404" />
+          <entry key="html" value="2469" />
           <entry key="java" value="9455" />
           <entry key="js" value="5854" />
           <entry key="txt" value="15" />
@@ -101,7 +69,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2412" />
+          <entry key="HTML" value="2477" />
           <entry key="JAVA" value="9455" />
           <entry key="JavaScript" value="5846" />
           <entry key="PLAIN_TEXT" value="26" />
@@ -133,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/editinfo.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="205">
-              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
             </state>
           </provider>
         </entry>
@@ -164,13 +132,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/servicer/EditInfoServiceImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="38" column="64" lean-forward="true" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
+            <state relative-caret-position="261">
+              <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -189,7 +169,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/HeadimgServiceImp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+              <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -198,7 +178,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/servicer/RegisterController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="274">
-              <caret line="83" column="13" lean-forward="true" selection-start-line="75" selection-start-column="12" selection-end-line="83" selection-end-column="13" />
+              <caret line="83" column="13" selection-start-line="75" selection-start-column="12" selection-end-line="83" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -211,15 +191,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/servicer/displayinfo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -291,7 +262,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/servicer/EditInfoServicer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/servicer/EditInfoServicerImp.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/first.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/common/util.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/headimg.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/qualify.html" />
@@ -304,6 +274,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/servicer/EditInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/servicer/EditInfoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/servicer/EditInfoServiceImp.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html" />
       </list>
     </option>
   </component>
@@ -980,7 +951,7 @@
       <workItem from="1551002789225" duration="3519000" />
       <workItem from="1551082785487" duration="9609000" />
       <workItem from="1551149651901" duration="16526000" />
-      <workItem from="1551233053037" duration="2572000" />
+      <workItem from="1551233053037" duration="3943000" />
     </task>
     <servers />
   </component>
@@ -1017,7 +988,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112771000" />
+    <option name="totallyTimeSpent" value="114142000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1030,9 +1001,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4935484" visible="true" weight="0.301059" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4935484" visible="true" weight="0.301059" />
       <window_info id="Structure" order="1" sideWeight="0.5064516" side_tool="true" weight="0.30786687" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1044,7 +1014,7 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32764506" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.334471" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.20136519" />
-      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.2764505" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.3225256" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.21160409" />
@@ -1133,6 +1103,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1175,6 +1148,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="66" column="113" selection-start-line="66" selection-start-column="113" selection-end-line="66" selection-end-column="113" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1209,13 +1185,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common/commonlogin.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="27" column="57" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="57" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/headimg.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1356,7 +1325,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/editinfo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>
@@ -1370,7 +1339,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/servicer/RegisterController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
-          <caret line="83" column="13" lean-forward="true" selection-start-line="75" selection-start-column="12" selection-end-line="83" selection-end-column="13" />
+          <caret line="83" column="13" selection-start-line="75" selection-start-column="12" selection-end-line="83" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1394,7 +1363,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/HeadimgServiceImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1410,10 +1379,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/servicer/EditInfoServiceImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="38" column="64" lean-forward="true" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
+        <state relative-caret-position="261">
+          <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
