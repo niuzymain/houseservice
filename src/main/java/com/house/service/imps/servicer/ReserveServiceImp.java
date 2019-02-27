@@ -6,6 +6,7 @@ import com.house.dto.ServicerExecution;
 import com.house.entity.Reserve;
 import com.house.entity.Servicer;
 import com.house.enums.ServicerEnum;
+import com.house.service.schedule.HelloSchedue;
 import com.house.service.servicer.ReserveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -53,6 +54,7 @@ public class ReserveServiceImp implements ReserveService {
                 if(servicerstatus.getEnablestatus() == 2){
                     return new ServicerExecution(ServicerEnum.Servicing);
                 }
+////////////////////////////////////////服务人员状态设为服务中////////////////////////////////////////////////
                 servicer.setEnablestatus(2);
                 result = servicerDao.updateServicer(servicer);
                 if (result <= 0) {
@@ -62,6 +64,7 @@ public class ReserveServiceImp implements ReserveService {
                 if (result <= 0) {
                     throw new RuntimeException();
                 }
+//////////////////////////////////////开启定时任务/////////////////////////////////////////////////////////////////////
                 return new ServicerExecution(ServicerEnum.SUCCESS);
             } else if (status.equals("refuse")) {
                 result = reserveDao.updateReserve(reserve);

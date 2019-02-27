@@ -53,32 +53,32 @@ $(function () {
             }
         })
     })
-    $("#arealist").on("click", ".delete", function (e) {
-        var target = e.currentTarget;
-        var formdata = new FormData();
-        var condition = {
-            workarea:{
-                workareaid:target.id
-            }
-        }
-        formdata.append("operatestr",JSON.stringify(condition))
-        formdata.append("operate","删除")
-        $.ajax({
-            url: "/admin/operateitems",
-            data: formdata,
-            type: "post",
-            contentType: false,
-            processData: false,
-            cache: false,
-            success: function (data) {
-                if (data.success) {
-                    alert("success");
-                    location.reload();
-                }
-                else {
-                    alert("error：" + data.errormsg);
-                }
-            }
-        })
-    })
+    // $("#arealist").on("click", ".delete", function (e) {
+    //     var target = e.currentTarget;
+    //     var formdata = new FormData();
+    //     var condition = {
+    //         workarea:{
+    //             workareaid:target.id
+    //         }
+    //     }
+    //     formdata.append("operatestr",JSON.stringify(condition))
+    //     formdata.append("operate","删除")
+    //     $.ajax({
+    //         url: "/admin/operateitems",
+    //         data: formdata,
+    //         type: "post",
+    //         contentType: false,
+    //         processData: false,
+    //         cache: false,
+    //         success: function (data) {
+    //             if (data.success) {
+    //                 alert("success");
+    //                 location.reload();
+    //             }
+    //             else {
+    //                 alert("error：" + data.errormsg);
+    //             }
+    //         }
+    //     })
+    // })
 })

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>修改信息</h1>
+    <div id="infoarea">
+    </div>
+    <div id="operate">
+        <p class="name">姓名:<input type="text"></p>
+        <p class="sex">性别：
+            <select class="select">
+                <option value="1">男</option>
+                <option value="2">女</option>
+            </select>
+        </p>
+        <p class="idnum">身份证号:<input type="text"></p>
+        <p class="age">年龄：<input type="text"></p>
+        <p class="phone">电话：<input type="text"></p>
+        <p class="experience">工作经验：
+            <select class="select">
+                <option value="0">无经验</option>
+                <option value="3">3个月</option>
+                <option value="6">6个月</option>
+                <option value="12">1年</option>
+                <option value="24">2年</option>
+                <option value="36">3年</option>
+                <option value="48">4年</option>
+                <option value="60">5年</option>
+                <option value="72">6年</option>
+                <option value="84">7年以上</option>
+            </select>
+        </p>
+        <p class="salary">期望薪资：
+            <select class="select">
+                <option value="1100">1100</option>
+                <option value="1200">1200</option>
+                <option value="1300">1300</option>
+                <option value="1400">1400</option>
+                <option value="1500">1500</option>
+                <option value="1600">1600</option>
+                <option value="1700">1700</option>
+                <option value="1800">1800</option>
+                <option value="1900">1900</option>
+                <option value="2000">2000</option>
+                <option value="2100">2100</option>
+                <option value="2200">2200</option>
+                <option value="2300">2300</option>
+                <option value="2400">2400</option>
+                <option value="2500">2500</option>
+                <option value="2600">2600</option>
+                <option value="2700">2700</option>
+                <option value="2800">2800</option>
+                <option value="2900">2900</option>
+                <option value="3000">3000</option>
+                <option value="3100">3100</option>
+                <option value="3200">3200</option>
+                <option value="3300">3300</option>
+                <option value="3400">3400</option>
+                <option value="3500">3500</option>
+                <option value="3600">3600</option>
+                <option value="3700">3700</option>
+                <option value="3800">3800</option>
+                <option value="3900">3900</option>
+                <option value="4000">4000</option>
+                <option value="4100">4100</option>
+                <option value="4200">4200</option>
+                <option value="4300">4300</option>
+                <option value="4400">4400</option>
+                <option value="4500">4500</option>
+                <option value="4600">4600</option>
+                <option value="4700">4700</option>
+                <option value="4800">4800</option>
+                <option value="4900">4900</option>
+                <option value="5000">5000</option>
+                <option value="5100">5100</option>
+                <option value="5200">5200</option>
+                <option value="5300">5300</option>
+                <option value="5400">5400</option>
+                <option value="5500">5500</option>
+                <option value="5600">5600</option>
+                <option value="5700">5700</option>
+                <option value="5800">5800</option>
+                <option value="5900">5900</option>
+                <option value="6000">6000</option>
+            </select>
+        </p>
+        <p class="area">期望工作区域：
+            <!--从数据库中取区域信息-->
+            <select id="citys" class="select">
+
+            </select>
+            <select id="locals" class="select">
+
+            </select>
+        </p>
+        <p class="degree">学历：
+            <select class="select">
+
+            </select>
+        </p>
+        <p class="type">服务类型：
+            <select class="select">
+            </select>
+        </p>
+        <p class="img">照片：<input type="file"></p>
+        <p class="file">简历文件，以zip格式：<input type="file" ></p>
+        <p class="des">个人简介：<textarea></textarea></p>
+        <a href="/servicer/displayinfo">返回</a>
+        <a href="#" id="submit">提交</a>
+    </div>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>-->
+    <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>-->
+    <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>-->
+    <script type="text/javascript" src="../resources/js/servicer/editinfo.js"></script>
+    <script type="text/javascript" src="../resources/js/common/util.js"></script>
+</body>
+</html>

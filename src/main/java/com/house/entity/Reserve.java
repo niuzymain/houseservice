@@ -15,7 +15,7 @@ public class Reserve {
     private String reservemsg;//预约留言，服务人员编辑
     private User user;
     private Servicer servicer;
-    private Integer enablestatus;//预约状态 -1.拒绝 0.等待 1.服务中
+    private Integer enablestatus;//预约状态 -2.已过期 -1.拒绝 0.等待 1.服务中 2.完成
 
     public long getReserveid() {
         return this.reserveid;

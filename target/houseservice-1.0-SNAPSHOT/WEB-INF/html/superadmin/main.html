@@ -25,7 +25,7 @@
             </li>
             <li>
                 <a href="#" id="itemmanager" onclick=displaychange()>分类管理</a>
-                <ul id="itemmenulist" style="display: none">
+                <ul id="itemmenulist" class="secondmenu" style="display: none">
                     <li><a href="/admin/displayareas" id="areamanager">区域管理</a></li>
                     <li><a href="/admin/displaytypes" id="categorymanager">类别管理</a></li>
                     <li><a href="/admin/displaydegrees" id="degreemanager">学历管理</a></li>
@@ -41,7 +41,7 @@
     </div>
     <div id="users">
         <select id="usertype">
-            <option value="user">用户</option>
+            <option value="user" selected="selected">用户</option>
             <option value="servicer">服务人员</option>
         </select>
         <table id="userlist">

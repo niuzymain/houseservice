@@ -22,4 +22,14 @@ public class ServicerRoute {
     private String servicerReserveDetail(){
         return"servicer/reservedetail";
     }
+
+    @RequestMapping(value = "/displayinfo",method = RequestMethod.GET)
+    private String servicerDisplay(){
+        return"servicer/displayinfo";
+    }
+
+    @RequestMapping(value = "/editinfo",method = RequestMethod.GET)
+    private String servicerEdit(){
+        return"servicer/editinfo";
+    }
 }

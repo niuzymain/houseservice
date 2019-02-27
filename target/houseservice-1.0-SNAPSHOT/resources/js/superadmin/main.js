@@ -58,8 +58,9 @@ $(function () {
                                         "<td>" + data.result[i].servicersex + "</td>" +
                                         "<td>" + data.result[i].servicerphone + "</td>" +
                                         "<td>" + timeStamp2String(data.result[i].createtime) + "</td>" +
-                                         "<td><td><a href=# onclick=changestatus(this) id=" + data.result[i].servicerid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
-                                    "</tr>"
+                                        "<td><a href=# onclick=changestatus(this) id=" + data.result[i].servicerid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
+                                        "<td><a href=#>查看详情</a></td>" +
+                            "</tr>"
                         $("#userlist tbody").append(body);
                     }
                 }

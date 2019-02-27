@@ -67,5 +67,5 @@ function timeStamp2String(time) {
 
 //二级列表显示切换
 function displaychange() {
-    $("#itemmenulist").show();
+    $(".secondmenu").show();
 }
