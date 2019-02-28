@@ -37,4 +37,9 @@ public class ServicerRoute {
     private String servicerSvaluate(){
         return"servicer/evaluate";
     }
+
+    @RequestMapping(value = "/message",method = RequestMethod.GET)
+    private String servicerMessage(){
+        return"servicer/message";
+    }
 }

@@ -70,7 +70,7 @@ public class QualifyController {
                 result = qualifyService.qualifyOperate(adminMsg,servicer);
             }
             else{
-                result = qualifyService.qualifyOperate(new AdminMsg(),servicer);
+                result = qualifyService.qualifyOperate(null,servicer);
             }
             if(result > 0 ){
                 modelMap.put("success", true);

@@ -165,6 +165,66 @@ public class TbReserveExample {
             return (Criteria) this;
         }
 
+        public Criteria andReserveTimeIsNull() {
+            addCriterion("reserve_time is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andReserveTimeIsNotNull() {
+            addCriterion("reserve_time is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andReserveTimeEqualTo(Date value) {
+            addCriterion("reserve_time =", value, "reserveTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andReserveTimeNotEqualTo(Date value) {
+            addCriterion("reserve_time <>", value, "reserveTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andReserveTimeGreaterThan(Date value) {
+            addCriterion("reserve_time >", value, "reserveTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andReserveTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("reserve_time >=", value, "reserveTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andReserveTimeLessThan(Date value) {
+            addCriterion("reserve_time <", value, "reserveTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andReserveTimeLessThanOrEqualTo(Date value) {
+            addCriterion("reserve_time <=", value, "reserveTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andReserveTimeIn(List<Date> values) {
+            addCriterion("reserve_time in", values, "reserveTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andReserveTimeNotIn(List<Date> values) {
+            addCriterion("reserve_time not in", values, "reserveTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andReserveTimeBetween(Date value1, Date value2) {
+            addCriterion("reserve_time between", value1, value2, "reserveTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andReserveTimeNotBetween(Date value1, Date value2) {
+            addCriterion("reserve_time not between", value1, value2, "reserveTime");
+            return (Criteria) this;
+        }
+
         public Criteria andCreateTimeIsNull() {
             addCriterion("create_time is null");
             return (Criteria) this;
@@ -435,73 +495,73 @@ public class TbReserveExample {
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegIsNull() {
-            addCriterion("reserve_meg is null");
+        public Criteria andReserveMsgIsNull() {
+            addCriterion("reserve_msg is null");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegIsNotNull() {
-            addCriterion("reserve_meg is not null");
+        public Criteria andReserveMsgIsNotNull() {
+            addCriterion("reserve_msg is not null");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegEqualTo(String value) {
-            addCriterion("reserve_meg =", value, "reserveMeg");
+        public Criteria andReserveMsgEqualTo(String value) {
+            addCriterion("reserve_msg =", value, "reserveMsg");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegNotEqualTo(String value) {
-            addCriterion("reserve_meg <>", value, "reserveMeg");
+        public Criteria andReserveMsgNotEqualTo(String value) {
+            addCriterion("reserve_msg <>", value, "reserveMsg");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegGreaterThan(String value) {
-            addCriterion("reserve_meg >", value, "reserveMeg");
+        public Criteria andReserveMsgGreaterThan(String value) {
+            addCriterion("reserve_msg >", value, "reserveMsg");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegGreaterThanOrEqualTo(String value) {
-            addCriterion("reserve_meg >=", value, "reserveMeg");
+        public Criteria andReserveMsgGreaterThanOrEqualTo(String value) {
+            addCriterion("reserve_msg >=", value, "reserveMsg");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegLessThan(String value) {
-            addCriterion("reserve_meg <", value, "reserveMeg");
+        public Criteria andReserveMsgLessThan(String value) {
+            addCriterion("reserve_msg <", value, "reserveMsg");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegLessThanOrEqualTo(String value) {
-            addCriterion("reserve_meg <=", value, "reserveMeg");
+        public Criteria andReserveMsgLessThanOrEqualTo(String value) {
+            addCriterion("reserve_msg <=", value, "reserveMsg");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegLike(String value) {
-            addCriterion("reserve_meg like", value, "reserveMeg");
+        public Criteria andReserveMsgLike(String value) {
+            addCriterion("reserve_msg like", value, "reserveMsg");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegNotLike(String value) {
-            addCriterion("reserve_meg not like", value, "reserveMeg");
+        public Criteria andReserveMsgNotLike(String value) {
+            addCriterion("reserve_msg not like", value, "reserveMsg");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegIn(List<String> values) {
-            addCriterion("reserve_meg in", values, "reserveMeg");
+        public Criteria andReserveMsgIn(List<String> values) {
+            addCriterion("reserve_msg in", values, "reserveMsg");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegNotIn(List<String> values) {
-            addCriterion("reserve_meg not in", values, "reserveMeg");
+        public Criteria andReserveMsgNotIn(List<String> values) {
+            addCriterion("reserve_msg not in", values, "reserveMsg");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegBetween(String value1, String value2) {
-            addCriterion("reserve_meg between", value1, value2, "reserveMeg");
+        public Criteria andReserveMsgBetween(String value1, String value2) {
+            addCriterion("reserve_msg between", value1, value2, "reserveMsg");
             return (Criteria) this;
         }
 
-        public Criteria andReserveMegNotBetween(String value1, String value2) {
-            addCriterion("reserve_meg not between", value1, value2, "reserveMeg");
+        public Criteria andReserveMsgNotBetween(String value1, String value2) {
+            addCriterion("reserve_msg not between", value1, value2, "reserveMsg");
             return (Criteria) this;
         }
 

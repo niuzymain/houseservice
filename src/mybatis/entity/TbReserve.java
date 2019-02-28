@@ -5,6 +5,8 @@ import java.util.Date;
 public class TbReserve {
     private Integer reserveId;
 
+    private Date reserveTime;
+
     private Date createTime;
 
     private String reserveAddr;
@@ -13,7 +15,7 @@ public class TbReserve {
 
     private String reservePhone;
 
-    private String reserveMeg;
+    private String reserveMsg;
 
     private Integer userId;
 
@@ -27,6 +29,14 @@ public class TbReserve {
 
     public void setReserveId(Integer reserveId) {
         this.reserveId = reserveId;
+    }
+
+    public Date getReserveTime() {
+        return reserveTime;
+    }
+
+    public void setReserveTime(Date reserveTime) {
+        this.reserveTime = reserveTime;
     }
 
     public Date getCreateTime() {
@@ -61,12 +71,12 @@ public class TbReserve {
         this.reservePhone = reservePhone == null ? null : reservePhone.trim();
     }
 
-    public String getReserveMeg() {
-        return reserveMeg;
+    public String getReserveMsg() {
+        return reserveMsg;
     }
 
-    public void setReserveMeg(String reserveMeg) {
-        this.reserveMeg = reserveMeg == null ? null : reserveMeg.trim();
+    public void setReserveMsg(String reserveMsg) {
+        this.reserveMsg = reserveMsg == null ? null : reserveMsg.trim();
     }
 
     public Integer getUserId() {

@@ -5,11 +5,46 @@
 
 <!--类名-->
 <mapper namespace="com.house.dao.AdminMsgDao">
+
+    <resultMap id="BaseResultMap" type="com.house.entity.AdminMsg">
+        <id column="adminmsg_id" jdbcType="INTEGER" property="adminmsgid"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createtime"/>
+        <result column="adminmsg_des" jdbcType="VARCHAR" property="adminmsgdes"/>
+        <association property="user" column="user_id" javaType="com.house.entity.User">
+            <id column="user_id" jdbcType="INTEGER" property="userid"/>
+            <result column="user_name" jdbcType="INTEGER" property="username"/>
+        </association>
+        <association property="servicer" column="servicer_id" javaType="com.house.entity.Servicer">
+            <id column="servicer_id" jdbcType="INTEGER" property="servicerid"/>
+            <result column="servicer_name" jdbcType="INTEGER" property="servicername"/>
+        </association>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        a.adminmsg_id, a.create_time, a.adminmsg_des, u.user_id, u.user_name,s.servicer_id,s.servicer_name
+    </sql>
+
     <!--id:方法名   result：返回值类型-->
-    <insert id="insertAdminmsg" parameterType="com.house.entity.AdminMsg" useGeneratedKeys="true" keyColumn="adminmsg_id" keyProperty="adminmsgid">
+    <insert id="insertAdminmsg" useGeneratedKeys="true" keyColumn="adminmsg_id" keyProperty="adminmsgid">
       insert into
       tb_adminmsg(create_time,adminmsg_des,user_id,servicer_id)
       values(#{adminmsg.createtime},#{adminmsg.adminmsgdes},#{adminmsg.user.userid},#{adminmsg.servicer.servicerid})
     </insert>
 
+    <select id="queryMessageList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from tb_adminmsg a,tb_user u,tb_servicer s
+        <where>
+            <if test="adminmsg.user != null &amp;&amp; adminmsg.user.userid != null">
+                and a.user_id=#{adminmsg.user.userid}
+                and u.user_id=#{adminmsg.user.userid}
+            </if>
+            <if test="adminmsg.servicer != null &amp;&amp; adminmsg.servicer.servicerid != null">
+                and a.servicer_id=#{adminmsg.servicer.servicerid}
+                and s.servicer_id=#{adminmsg.servicer.servicerid}
+            </if>
+        </where>
+        order by create_time desc
+    </select>
 </mapper>

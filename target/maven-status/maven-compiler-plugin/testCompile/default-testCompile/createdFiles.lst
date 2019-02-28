@@ -1,5 +1,8 @@
 com\house\service\HeadimgServicetest.class
 com\house\Basetest.class
 com\house\dao\TypeDaotest.class
+demo\HelloSchedue.class
 com\house\dao\WorkAreaDaotest.class
 com\house\service\UpdateServicer.class
+com\house\dao\ReserveDaotest.class
+demo\HelloJob.class
