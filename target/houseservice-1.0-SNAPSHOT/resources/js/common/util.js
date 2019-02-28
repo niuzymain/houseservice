@@ -24,6 +24,9 @@ function statusinfo(data) {
     else if (data == 0) {
         return "禁用"
     }
+    else if (data == 2) {
+        return "服务中"
+    }
 
 }
 

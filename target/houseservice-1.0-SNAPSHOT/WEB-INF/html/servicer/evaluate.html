@@ -8,21 +8,17 @@
             float: left;
             margin-left: 30px;
         }
-        .reserve{
-            border: 1px solid red;
-            border-collapse: collapse;
-        }
-        </style>
+    </style>
 </head>
 <body>
-    <h1>预约信息</h1>
+    <h1>评价信息</h1>
     <div id="menu" class="first">
         <ul id="lists">
             <li>
-                <a href="#">预约情况查询</a>
+                <a href="/servicer/reserve">预约情况查询</a>
             </li>
             <li>
-                <a href="/servicer/evaluate">历史评价</a>
+                <a href="#">历史评价</a>
             </li>
             <li>
                 <a href="#" id="userinfo" onclick="displaychange()">个人中心</a>
@@ -32,25 +28,20 @@
                     </li>
                     <li>
                         <a href="#">收件箱</a>
-                     </li>
+                    </li>
                 </ul>
             </li>
         </ul>
     </div>
-    <div id="reserves" class="first">
-        <select>
-            <option value="-1">已拒绝</option>
-            <option value="0" selected="selected">待接受</option>
-            <option value="1">已接受</option>
-        </select>
-        <div id="reservelist">
-        </div>
+    <div id="evaluate" class="first">
+        <ul id="evaluatelist">
+        </ul>
     </div>
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <!--<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>-->
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>-->
     <!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>-->
-    <script type="text/javascript" src="../resources/js/servicer/reserve.js"></script>
+    <script type="text/javascript" src="../resources/js/servicer/evaluate.js"></script>
     <script type="text/javascript" src="../resources/js/common/util.js"></script>
 </body>
 </html>

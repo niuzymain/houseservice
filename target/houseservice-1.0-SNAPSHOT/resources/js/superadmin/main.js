@@ -92,6 +92,10 @@ function changestatus(target) {
             formdata.append("operatestr", JSON.stringify(servicer))
         }
     }
+    else if(target.text == "服务中"){
+        alert("不可操作")
+        return false;
+    }
     else {
         if($("#usertype").val() == "user"){
             var user = {

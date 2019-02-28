@@ -32,4 +32,9 @@ public class ServicerRoute {
     private String servicerEdit(){
         return"servicer/editinfo";
     }
+
+    @RequestMapping(value = "/evaluate",method = RequestMethod.GET)
+    private String servicerSvaluate(){
+        return"servicer/evaluate";
+    }
 }

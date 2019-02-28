@@ -18,7 +18,7 @@
         <result column="create_time" jdbcType="TIMESTAMP" property="createtime"/>
         <result column="enable_status" jdbcType="INTEGER" property="enablestatus"/>
         <association property="user" column="user_id" javaType="com.house.entity.User">
-            <id column="user_id" jdbcType="INTEGER" property="userId"/>
+            <id column="user_id" jdbcType="INTEGER" property="userid"/>
             <result column="user_name" jdbcType="INTEGER" property="username"/>
         </association>
         <association property="servicer" column="servicer_id" javaType="com.house.entity.Servicer">
