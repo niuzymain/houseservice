@@ -11,8 +11,12 @@ public class CommonRoute {
     private String adminLogin(){
         return"superadmin/login";
     }
-    @RequestMapping(value = "/common",method = RequestMethod.GET)
-    private String commonLogin(){
-        return"common/login";
+    @RequestMapping(value = "/servicer",method = RequestMethod.GET)
+    private String servicerLogin(){
+        return"servicer/login";
+    }
+    @RequestMapping(value = "/user",method = RequestMethod.GET)
+    private String userLogin(){
+        return"user/login";
     }
 }

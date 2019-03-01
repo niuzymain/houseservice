@@ -61,7 +61,7 @@ public class CommonController {
 ///////////////////////////这里session添加个人信息，根据accountid查找/////////////////////////////////////////
                     request.getSession().setAttribute("accountinfo",account);
 /////////////////////////添加跳转路由///////////////////////////////////////////////////////
-//                    modelMap.put("route","/servicer/reserve");
+                   modelMap.put("route","/user/main");
                 }
             }
             else if(accounttype.equals("servicer")){

@@ -52,7 +52,6 @@ function experienceinfo(data) {
     else {
         return data / 12 + "年"
     }
-
 }
 
 //格式化date
