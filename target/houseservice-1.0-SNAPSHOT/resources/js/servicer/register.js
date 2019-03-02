@@ -61,7 +61,7 @@ $(function () {
             success:function(data){
                 if(data.success){
                     alert("success")
-                    window.location.href="/login/common"
+                    window.location.href="/login/servicer"
                 }
                 else{
                     alert(data.errormsg)

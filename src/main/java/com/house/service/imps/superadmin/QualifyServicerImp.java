@@ -41,6 +41,9 @@ public class QualifyServicerImp implements QualifyService {
                 adminMsg.setCreatetime(new Date());
                 msgresult = adminMsgDao.insertAdminmsg(adminMsg);
             }
+            else{
+                msgresult = 1;
+            }
             servicerresult = servicerDao.updateServicer(servicer);
             if(msgresult == 1 && servicerresult == 1){
                 return 1;

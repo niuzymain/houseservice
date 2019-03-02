@@ -12,4 +12,9 @@ public class UserRoute {
     private String userMain(){
         return"user/main";
     }
+
+    @RequestMapping(value = "/headimgdetail",method = RequestMethod.GET)
+    private String userHeadimgDetail(){
+        return"user/headimgdetail";
+    }
 }
