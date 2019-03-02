@@ -72,12 +72,6 @@ function displaychange() {
     $(".secondmenu").show();
 }
 
-//点击高亮
-function highlight(target){
-    $("#leftmenu li").attr("class","");
-    target.setAttribute("class","active")
-}
-
 //开启轮播图
 function runheadimg(){
     var innerGroup = $(".innerwraper");

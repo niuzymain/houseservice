@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.InputStream;
+import java.util.Date;
 
 @Service
 public class EditInfoServiceImp implements EditInfoService {
@@ -31,6 +32,7 @@ public class EditInfoServiceImp implements EditInfoService {
     @Override
     public ServicerExecution editInfo(Servicer servicer) {
         servicer.setCheckstatus(0);
+        servicer.setLastedittime(new Date());
         int result;
         try {
             result = servicerDao.updateServicer(servicer);
@@ -47,6 +49,7 @@ public class EditInfoServiceImp implements EditInfoService {
     @Override
     public ServicerExecution editInfo(Servicer servicer, InputStream inputStream, String name) {
         servicer.setCheckstatus(0);
+        servicer.setLastedittime(new Date());
         int result;
         try {
             Servicer temp = servicerDao.querySingleServicer(servicer);
@@ -82,6 +85,7 @@ public class EditInfoServiceImp implements EditInfoService {
     @Transactional
     public ServicerExecution editInfo(Servicer servicer, InputStream img, String imgname, InputStream file, String filename) {
         servicer.setCheckstatus(0);
+        servicer.setLastedittime(new Date());
         int result;
         try {
             Servicer temp = servicerDao.querySingleServicer(servicer);

@@ -1,0 +1,18 @@
+.am-article{
+    text-align: center;
+}
+#img{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 800px;
+    max-height:500px;
+    margin-bottom: 20px;
+}
+#des{
+    width:800px;
+    height: 100%;
+    margin: 0 auto;
+}
+.am-btn-primary{
+    margin-right: 400px;
+}

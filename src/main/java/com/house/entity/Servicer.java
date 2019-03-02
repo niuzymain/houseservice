@@ -15,7 +15,7 @@ public class Servicer {
     private String servicerimg;
     private Integer servicerexperience; //月为单位
     private Integer servicerscore;
-    private String servicerprice;
+    private Integer servicerprice;
     private String servicerdes;
     private String servicerfile; //提交的申请文件，zip格式
     private Degree degree;
@@ -101,11 +101,11 @@ public class Servicer {
         this.servicerscore = servicerscore;
     }
 
-    public String getServicerprice() {
+    public Integer getServicerprice() {
         return this.servicerprice;
     }
 
-    public void setServicerprice(String servicerprice) {
+    public void setServicerprice(Integer servicerprice) {
         this.servicerprice = servicerprice;
     }
 

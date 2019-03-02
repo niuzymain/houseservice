@@ -5,6 +5,7 @@ import com.house.entity.Degree;
 import com.house.entity.ServiceType;
 import com.house.entity.Servicer;
 import com.house.entity.WorkArea;
+import com.house.service.common.CommonService;
 import com.house.service.servicer.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,14 +28,17 @@ public class RegisterController {
     @Autowired
     private RegisterService registerService;
 
+    @Autowired
+    private CommonService commonService;
+
     @RequestMapping(value = "/getitemlist",method = RequestMethod.GET)
     @ResponseBody
     public Map<String,Object> getItemList(){
         Map<String,Object> modelMap = new HashMap<>();
         try{
-            List<WorkArea> workAreaList = registerService.getCitys();
-            List<ServiceType> serviceTypeList = registerService.getServicetype();
-            List<Degree> degreeList = registerService.getDegree();
+            List<WorkArea> workAreaList = commonService.getCitys();
+            List<ServiceType> serviceTypeList = commonService.getServicetype();
+            List<Degree> degreeList = commonService.getDegree();
             modelMap.put("success",true);
             modelMap.put("citys",workAreaList);
             modelMap.put("types",serviceTypeList);
@@ -54,7 +58,7 @@ public class RegisterController {
         Long parentid = Long.parseLong(request.getParameter("parentid"));
         List<WorkArea> workAreaList = new ArrayList<>();
         try{
-            workAreaList = registerService.getLocals(parentid);
+            workAreaList = commonService.getLocals(parentid);
             modelMap.put("success",true);
             modelMap.put("locals",workAreaList);
         }catch (Exception e){

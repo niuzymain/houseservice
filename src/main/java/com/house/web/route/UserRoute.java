@@ -17,4 +17,14 @@ public class UserRoute {
     private String userHeadimgDetail(){
         return"user/headimgdetail";
     }
+
+    @RequestMapping(value = "/servicerpage",method = RequestMethod.GET)
+    private String userServicerPage(){
+        return"user/servicerpage";
+    }
+
+    @RequestMapping(value = "/servicerdetail",method = RequestMethod.GET)
+    private String userServicerDetail(){
+        return"user/servicerdetail";
+    }
 }

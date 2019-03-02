@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.InputStream;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -24,6 +25,8 @@ public class HeadimgServiceImp implements HeadimgService {
     public HeadimgExecution AddHeadimg(Headimg headimg, InputStream inputStream, String filename) {
         int result;
         headimg.setEnablestatus(1);
+        headimg.setCreatetime(new Date());
+        headimg.setLastedittime(new Date());
         try {
             if (inputStream == null) {
                 return new HeadimgExecution(HeadimgEnum.IMGNULL);
@@ -61,6 +64,7 @@ public class HeadimgServiceImp implements HeadimgService {
                 String url = FilesUtil.saveHeadimg(inputStream,headimg.getHeadimgid(),filename);
                 headimg.setHeadimgurl(url);
             }
+            headimg.setLastedittime(new Date());
             result = headimgDao.updateHeadImg(headimg);
             if (result <= 0) {
                 throw new RuntimeException();

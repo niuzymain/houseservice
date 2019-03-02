@@ -9,9 +9,5 @@ import java.io.InputStream;
 import java.util.List;
 
 public interface RegisterService {
-    List<WorkArea> getCitys();
-    List<ServiceType> getServicetype();
-    List<Degree> getDegree();
-    List<WorkArea> getLocals(Long parentid);
     int addServicer(Servicer servicer, InputStream img,String imgname,InputStream file,String filename) throws Exception;
 }

@@ -18,34 +18,9 @@ import java.util.List;
 
 @Service
 public class RegisterServiceImp implements RegisterService {
-    @Autowired
-    private WorkAreaDao workAreaDao;
-    @Autowired
-    private ServiceTypeDao serviceTypeDao;
-    @Autowired
-    private DegreeDao degreeDao;
+
     @Autowired
     private ServicerDao servicerDao;
-
-    @Override
-    public List<WorkArea> getCitys() {
-        return workAreaDao.queryArea();
-    }
-
-    @Override
-    public List<ServiceType> getServicetype() {
-        return serviceTypeDao.queryServiceType();
-    }
-
-    @Override
-    public List<Degree> getDegree() {
-        return degreeDao.queryDegreeList();
-    }
-
-    @Override
-    public List<WorkArea> getLocals(Long parentid) {
-        return workAreaDao.queryAreaByParent(parentid);
-    }
 
     @Override
     @Transactional
