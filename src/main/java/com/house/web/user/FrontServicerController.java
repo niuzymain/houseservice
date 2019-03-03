@@ -23,7 +23,7 @@ public class FrontServicerController {
     @Autowired
     private FrontServicerService frontServicerService;
 
-    @RequestMapping(value = "/getavailableservicer",method = RequestMethod.GET)
+    @RequestMapping(value = "/getavailableservicer",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> getAvailableServicer(HttpServletRequest request){
         Map<String,Object> modelmap = new HashMap<>();

@@ -142,3 +142,24 @@ function runheadimg(){
         })
     }
 }
+
+//从数据库中获取字段
+function getItemsFromDB() {
+    $.getJSON("/common/getitemlist", function (data) {
+        if (data.success) {
+            var i;
+            for (i = 0; i < data.degrees.length; i++) {
+                $(".degree select").append("<option value=" + data.degrees[i].degreeid + ">" + data.degrees[i].degreename + "</option>")
+            }
+            for (i = 0; i < data.citys.length; i++) {
+                $(".area .citys").append("<option value=" + data.citys[i].workareaid + ">" + data.citys[i].workareaname + "</option>")
+            }
+            for (i = 0; i < data.types.length; i++) {
+                $(".type select").append("<option value=" + data.types[i].servicetypeid + ">" + data.types[i].servicetypename + "</option>")
+            }
+        }
+        else {
+            alert(data.errormsg)
+        }
+    })
+}

@@ -1,35 +1,58 @@
 #condition{
-    margin-left: 30px;
-    border: 1px solid black;
+    margin-left: 50px;
+}
+#conditionselect{
+    padding-bottom: 5px;
+    border-bottom: 1px dashed darkgray;
 }
 
-#condition ul{
-    border-bottom: 1px grey dashed;
-    margin-bottom: 5px;
+#conditionselect select{
+    margin-right: 20px;
 }
 
-#condition ul li{
-    list-style:none; /* 将默认的列表符号去掉 */
-    display:inline;
-    margin-right: 10px;
-    font-size:15px;
+#showcondition{
+    margin-top: 5px;
+    border-bottom: 1px dashed darkgray;
 }
 
-#condition ul li a{
-    text-decoration:none;
-    color: dodgerblue;
+#display{
+    margin-left: 50px;
+    margin-top: 20px;
 }
 
-#condition ul li a:hover{
-    background-color:pink;
+#order button{
+    margin-right:10px;
 }
 
-.active{
-    background-color:pink;
-}
-
-.item-name{
+#showcondition span{
     font-weight:bold;
+    font-size: 15px;
+}
+
+#search{
+    margin-left: 200px;
+}
+
+.frontservicer{
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    padding:5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border:1px solid black;
+}
+
+.frontservicer img{
+    width: 200px;
+    height: 200px;
+}
+
+.des{
+    color: black;
+}
+.s-sex{
+    margin-left: 20px;
 }
 
 

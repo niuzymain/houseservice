@@ -28,47 +28,6 @@ public class RegisterController {
     @Autowired
     private RegisterService registerService;
 
-    @Autowired
-    private CommonService commonService;
-
-    @RequestMapping(value = "/getitemlist",method = RequestMethod.GET)
-    @ResponseBody
-    public Map<String,Object> getItemList(){
-        Map<String,Object> modelMap = new HashMap<>();
-        try{
-            List<WorkArea> workAreaList = commonService.getCitys();
-            List<ServiceType> serviceTypeList = commonService.getServicetype();
-            List<Degree> degreeList = commonService.getDegree();
-            modelMap.put("success",true);
-            modelMap.put("citys",workAreaList);
-            modelMap.put("types",serviceTypeList);
-            modelMap.put("degrees",degreeList);
-        }catch (Exception e){
-            e.printStackTrace();
-            modelMap.put("success",false);
-            modelMap.put("errormsg",e.getMessage());
-        }
-        return modelMap;
-    }
-
-    @RequestMapping(value = "/getlocals",method = RequestMethod.GET)
-    @ResponseBody
-    public Map<String,Object> getLocals(HttpServletRequest request){
-        Map<String,Object> modelMap = new HashMap<>();
-        Long parentid = Long.parseLong(request.getParameter("parentid"));
-        List<WorkArea> workAreaList = new ArrayList<>();
-        try{
-            workAreaList = commonService.getLocals(parentid);
-            modelMap.put("success",true);
-            modelMap.put("locals",workAreaList);
-        }catch (Exception e){
-            e.printStackTrace();
-            modelMap.put("success",false);
-            modelMap.put("errormsg",e.getMessage());
-        }
-        return modelMap;
-    }
-
     @RequestMapping(value = "/registeroperate",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> RegisterOperate(HttpServletRequest request){

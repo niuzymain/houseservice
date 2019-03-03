@@ -7,7 +7,7 @@ $(function () {
 ////////////////////////////////根据城市获取地区信息///////////////////////////////////////////////
     $(".area .citys").on("change", function () {
         $(".area .locals").html("<option selected=selected value=0>请选择</option>");
-        $.getJSON("/servicer/getlocals?parentid=" + $(".area .citys").val(), function (data) {
+        $.getJSON("/common/getlocals?parentid=" + $(".area .citys").val(), function (data) {
             if (data.success) {
                 var i;
                 for (i = 0; i < data.locals.length; i++) {
@@ -70,24 +70,3 @@ $(function () {
         })
     })
 })
-
-//从数据库中获取字段
-function getItemsFromDB() {
-    $.getJSON("/servicer/getitemlist", function (data) {
-        if (data.success) {
-            var i;
-            for (i = 0; i < data.degrees.length; i++) {
-                $(".degree select").append("<option value=" + data.degrees[i].degreeid + ">" + data.degrees[i].degreename + "</option>")
-            }
-            for (i = 0; i < data.citys.length; i++) {
-                $(".area .citys").append("<option value=" + data.citys[i].workareaid + ">" + data.citys[i].workareaname + "</option>")
-            }
-            for (i = 0; i < data.types.length; i++) {
-                $(".type select").append("<option value=" + data.types[i].servicetypeid + ">" + data.types[i].servicetypename + "</option>")
-            }
-        }
-        else {
-            alert(data.errormsg)
-        }
-    })
-}

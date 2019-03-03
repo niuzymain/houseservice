@@ -15,7 +15,7 @@ public class FrontServicerTest extends Basetest {
     @Test
     public void testQueryServicer(){
         Servicer servicer = new Servicer();
-        servicer.setServicerprice(3000);
+        servicer.setServicerprice(6000);
         List<Servicer> servicerList = servicerDao.queryServicerForUser(servicer,"price",0,3);
         for (Servicer s:servicerList) {
             System.out.println("servicername:"+s.getServicername()+"   servicerprice:"+s.getServicerprice());
