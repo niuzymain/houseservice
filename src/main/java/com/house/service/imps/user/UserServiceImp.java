@@ -13,6 +13,24 @@ public class UserServiceImp implements UserService {
     private UserDao userDao;
 
     @Override
+    public int addUser(User user) {
+        user.setEnablestatus(1);
+        int result = 0;
+        try{
+           result =  userDao.insertUser(user);
+           if(result <= 0){
+               throw new RuntimeException();
+           }
+           else{
+                return result;
+           }
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new RuntimeException();
+        }
+    }
+
+    @Override
     @Transactional
     public int editUser(User user) {
         try{

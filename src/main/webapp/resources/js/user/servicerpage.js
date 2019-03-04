@@ -1,5 +1,5 @@
 $(function () {
-    var pagesize = 2
+    var pagesize = 20
     var pageindex = 1
     ////////////////////////////////////初始化界面////////////////////////////////////////////////////////
     var formdata = new FormData()
@@ -35,6 +35,7 @@ $(function () {
         cache: false,
         success: function (data) {
             if (data.success) {
+                checkaccount(data)
                 displayServicer(data);
                 $('#pageindex').pagination({
                     styleClass: ['pagination-large'],
@@ -86,6 +87,7 @@ $(function () {
                             cache: false,
                             success: function (data) {
                                 if (data.success) {
+                                    // checkaccount(data)
                                     displayServicer(data);
                                     $('#pageindex').pagination('updateItemsCount', data.count)
                                 }
@@ -238,8 +240,9 @@ $(function () {
             cache: false,
             success: function (data) {
                 if (data.success) {
+                    // checkaccount(data)
                     displayServicer(data);
-                    $('#pageindex').pagination('updateItemsCount', data.count,1)
+                    $('#pageindex').pagination('updateItemsCount', data.count, 1)
                 }
                 else {
                     alert(data.errormsg)
@@ -292,8 +295,9 @@ $(function () {
             cache: false,
             success: function (data) {
                 if (data.success) {
+// checkaccount(data)
                     displayServicer(data);
-                    $('#pageindex').pagination('updateItemsCount', data.count,1)
+                    $('#pageindex').pagination('updateItemsCount', data.count, 1)
                 }
                 else {
                     alert(data.errormsg)
@@ -327,6 +331,16 @@ function displayServicer(data) {
     }
 }
 
-// function setPagination(totalcount,pagesize){
-//
-// }
+function checkaccount(data) {
+    $("#userinfo").empty();
+    if (data.account != null) {
+        $("#userinfo").append("个人中心")
+        $("#userinfo").click(function () {
+            window.open("/user/userinfo", '_blank')
+        })
+    }
+    else {
+        $("#userinfo").append("登陆/注册")
+        $("#userinfo").attr("href", "/login/user")
+    }
+}

@@ -46,7 +46,12 @@
         <!--<mvc:interceptor>-->
             <!--<mvc:mapping path="/servicer/**"/>-->
             <!--<mvc:mapping path="/user/**"/>-->
-            <!--<bean class="com.house.interceptor.CommonLoginInterceptor"/>-->
+            <!--<bean class="com.house.interceptor.ServicerLoginInterceptor"/>-->
+        <!--</mvc:interceptor>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/servicer/**"/>-->
+            <!--<mvc:mapping path="/user/**"/>-->
+            <!--<bean class="com.house.interceptor.UserLoginInterceptor"/>-->
         <!--</mvc:interceptor>-->
     <!--</mvc:interceptors>-->
 

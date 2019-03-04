@@ -6,6 +6,18 @@
 <!--类名-->
 <mapper namespace="com.house.dao.UserDao">
     <!--id:方法名   result：返回值类型-->
+
+    <insert id="insertUser" parameterType="com.house.entity.User" useGeneratedKeys="true" keyColumn="user_id" keyProperty="userid">
+    insert into tb_user (user_id, user_name, user_sex,
+    enable_status, user_phone, create_time,
+    lastedit_time, account_name, pass_word
+    )
+    values (#{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{usersex,jdbcType=VARCHAR},
+    #{enablestatus,jdbcType=INTEGER}, #{userphone,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP},
+    #{lastedittime,jdbcType=TIMESTAMP}, #{accountname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
+    )
+    </insert>
+
     <update id="updateUser" parameterType="com.house.entity.User">
         update tb_user
         <set>

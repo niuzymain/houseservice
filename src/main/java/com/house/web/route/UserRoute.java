@@ -27,4 +27,29 @@ public class UserRoute {
     private String userServicerDetail(){
         return"user/servicerdetail";
     }
+
+    @RequestMapping(value = "/userinfo",method = RequestMethod.GET)
+    private String userInfo(){
+        return"user/userinfo";
+    }
+
+    @RequestMapping(value = "/register",method = RequestMethod.GET)
+    private String userRegister(){
+        return"user/register";
+    }
+
+    @RequestMapping(value = "/reserve",method = RequestMethod.GET)
+    private String userReserve(){
+        return"user/reserve";
+    }
+
+    @RequestMapping(value = "/record",method = RequestMethod.GET)
+    private String userRecord(){
+        return"user/record";
+    }
+
+    @RequestMapping(value = "/recorddetail",method = RequestMethod.GET)
+    private String userRecordDetail(){
+        return"user/recorddetail";
+    }
 }

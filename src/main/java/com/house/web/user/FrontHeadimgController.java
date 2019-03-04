@@ -1,6 +1,7 @@
 package com.house.web.user;
 
 import com.house.dto.HeadimgExecution;
+import com.house.entity.User;
 import com.house.enums.HeadimgEnum;
 import com.house.service.user.FrontHeadimgService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +23,14 @@ public class FrontHeadimgController {
     @RequestMapping(value = "/getheadimglist",method = RequestMethod.GET)
     @ResponseBody
     public Map<String,Object> getHeadimgList(HttpServletRequest request){
+        User user = (User) request.getSession().getAttribute("accountinfo");
         Map<String,Object> modelmap = new HashMap<>();
         try{
             HeadimgExecution he = frontHeadimgService.checkHeadimg();
             if(he.getState() == HeadimgEnum.SUCCESS.getState()){
                 modelmap.put("success",true);
                 modelmap.put("result",he.getHeadimgList());
+                modelmap.put("account",user);
             }
             else{
                 modelmap.put("success",false);

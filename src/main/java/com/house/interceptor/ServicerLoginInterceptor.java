@@ -6,9 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /*
-管理员登陆拦截器
+服务人员登陆拦截器
  */
-public class CommonLoginInterceptor extends HandlerInterceptorAdapter {
+public class ServicerLoginInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         Object obj = request.getSession().getAttribute("accountinfo");
@@ -16,7 +16,7 @@ public class CommonLoginInterceptor extends HandlerInterceptorAdapter {
             return true;
         }
         else{
-            response.sendRedirect("/login/common");
+            response.sendRedirect("/login/servicer");
             return false;
         }
     }

@@ -60,6 +60,7 @@ public class ReserveServiceImp implements ReserveService {
                 if (result <= 0) {
                     throw new RuntimeException();
                 }
+                reserve.setEnablestatus(1);
                 result = reserveDao.updateReserve(reserve);
                 if (result <= 0) {
                     throw new RuntimeException();
@@ -67,6 +68,7 @@ public class ReserveServiceImp implements ReserveService {
 //////////////////////////////////////开启定时任务/////////////////////////////////////////////////////////////////////
                 return new ServicerExecution(ServicerEnum.SUCCESS);
             } else if (status.equals("refuse")) {
+                reserve.setEnablestatus(-1);
                 result = reserveDao.updateReserve(reserve);
                 if (result <= 0) {
                     throw new RuntimeException();

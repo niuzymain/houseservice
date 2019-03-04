@@ -1,0 +1,43 @@
+#servicer,#comment{
+    margin-left: 50px;
+}
+
+h1,h3{
+    text-align: center;
+}
+
+#img-operate{
+    height: 400px;
+}
+
+#img-operate img{
+    width: 400px;
+    height: 400px;
+}
+
+.inner{
+    float:left;
+}
+
+.button{
+    margin-left: 20px;
+    margin-top: 350px;
+}
+
+.reserve{
+    margin-left: 80px;
+}
+
+#detail{
+    margin-top: 20px;
+    width:800px;
+}
+
+#comment{
+    margin-top: 20px;
+    width:1000px;
+}
+
+.c-score{
+    margin-left: 50px;
+}
