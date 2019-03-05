@@ -5,7 +5,7 @@ $(function () {
             var detailDiv = "<div id='info'>" +
                 "<p id='userid' style='display: none'>"+data.result.user.userid+"</p>"+
                 "<p id='servicerid' style='display: none'>"+data.result.servicer.servicerid+"</p>"+
-                "<p>预约人:"+data.result.user.username+"</p>"+
+                "<p>联系方式:"+data.result.reservephone+"</p>"+
                 "<p>预约时间:"+timeStamp2String(data.result.reservetime)+"</p>"+
                 "<p>预约地点:"+data.result.reserveaddr+"</p>"+
                 "<p>预约备注:"+data.result.reservedes+"</p>" +

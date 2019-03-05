@@ -11,36 +11,42 @@
 </head>
 <body>
 <h1>预约申请</h1>
-<form class="sui-form form-horizontal">
+<div class="sui-form form-horizontal">
     <div class="control-group">
-        <label for="inputEmail" class="control-label">邮箱：</label>
+        <label for="inputtime" class="control-label">预约时间：</label>
         <div class="controls">
-            <input type="text" id="inputEmail" placeholder="Email">
+            <input type="date" id="inputtime">
         </div>
     </div>
     <div class="control-group">
-        <label for="inputPassword" class="control-label">密码：</label>
+        <label for="inputtime" class="control-label">详细地址：</label>
         <div class="controls">
-            <input type="password" id="inputPassword" placeholder="Password">
+            <input type="text" id="inputaddr">
+        </div>
+    </div>
+    <div class="control-group">
+        <label for="inputphone" class="control-label">联系方式：</label>
+        <div class="controls">
+            <input type="text" id="inputphone">
+        </div>
+    </div>
+    <div class="control-group">
+        <label for="inputdes" class="control-label">备注：</label>
+        <div class="controls">
+            <textarea id="inputdes" placeholder="这里是备注"></textarea>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label"></label>
         <div class="controls">
-            <label data-toggle="checkbox" class="checkbox-pretty inline">
-                <input type="checkbox" name="remember-me"><span>记住我</span>
-            </label>
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label"></label>
-        <div class="controls">
-            <button type="submit" class="sui-btn btn-primary">返回</button>
+            <button type="submit" class="sui-btn btn-primary" id="back">返回</button>
         </div>
         <div class="controls">
-            <button type="submit" class="sui-btn btn-primary">提交</button>
+            <button type="submit" class="sui-btn btn-primary" id="submit">提交</button>
         </div>
     </div>
-</form>
+</div>
+<script type="text/javascript" src="../resources/js/common/util.js"></script>
+<script type="text/javascript" src="../resources/js/user/reserve.js"></script>
 </body>
 </html>
