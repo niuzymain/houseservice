@@ -15,6 +15,8 @@
         <id column="reserve_id" property="reserveid"/>
         <result column="create_time" property="createtime"/>
         <result column="reserve_time" property="reservetime"/>
+        <result column="end_time" property="endtime"/>
+        <result column="reserve_contract" property="reservecontract"/>
         <result column="reserve_addr" property="reserveaddr"/>
         <result column="reserve_des" property="reservedes"/>
         <result column="reserve_phone" property="reservephone"/>
@@ -31,13 +33,13 @@
     </resultMap>
 
     <insert id="inseerReserve" useGeneratedKeys="true" keyColumn="reserve_id" keyProperty="reserveid">
-        insert into tb_reserve (create_time, reserve_time,reserve_addr,
-          reserve_des, reserve_phone, reserve_msg,
+        insert into tb_reserve (create_time, reserve_time,end_time,reserve_addr,
+          reserve_des, reserve_phone, reserve_msg,reserve_contract,
           user_id, servicer_id, enable_status
           )
-        values (#{reserve.createtime,jdbcType=TIMESTAMP}, #{reserve.reservetime,jdbcType=TIMESTAMP}, #{reserve.reserveaddr,jdbcType=VARCHAR},
+        values (#{reserve.createtime,jdbcType=TIMESTAMP}, #{reserve.reservetime,jdbcType=TIMESTAMP}, #{reserve.endtime,jdbcType=TIMESTAMP}, #{reserve.reserveaddr,jdbcType=VARCHAR},
           #{reserve.reservedes,jdbcType=VARCHAR}, #{reserve.reservephone,jdbcType=VARCHAR}, #{reserve.reservemsg,jdbcType=VARCHAR},
-          #{reserve.user.userid,jdbcType=INTEGER}, #{reserve.servicer.servicerid,jdbcType=INTEGER}, #{reserve.enablestatus,jdbcType=INTEGER}
+          #{reserve.reservecontract,jdbcType=VARCHAR},#{reserve.user.userid,jdbcType=INTEGER}, #{reserve.servicer.servicerid,jdbcType=INTEGER}, #{reserve.enablestatus,jdbcType=INTEGER}
           )
     </insert>
 

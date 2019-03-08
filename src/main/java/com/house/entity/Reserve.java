@@ -9,13 +9,15 @@ public class Reserve {
     private long reserveid;
     private Date createtime;
     private Date reservetime;
+    private Date endtime;
     private String reserveaddr;
+    private String reservecontract;
     private String reservedes;
     private String reservephone;
     private String reservemsg;//预约留言，服务人员编辑
     private User user;
     private Servicer servicer;
-    private Integer enablestatus;//预约状态 -2.已过期 -1.拒绝 0.等待 1.服务中 2.完成
+    private Integer enablestatus;//预约状态  -1.取消 0.等待 1.已受理 2.已确认 3.已完成
 
     public long getReserveid() {
         return this.reserveid;
@@ -95,5 +97,21 @@ public class Reserve {
 
     public void setReservetime(Date reservetime) {
         this.reservetime = reservetime;
+    }
+
+    public Date getEndtime() {
+        return this.endtime;
+    }
+
+    public void setEndtime(Date endtime) {
+        this.endtime = endtime;
+    }
+
+    public String getReservecontract() {
+        return this.reservecontract;
+    }
+
+    public void setReservecontract(String reservecontract) {
+        this.reservecontract = reservecontract;
     }
 }

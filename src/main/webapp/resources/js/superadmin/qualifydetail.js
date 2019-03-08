@@ -27,6 +27,7 @@ $(function () {
         if(msg != ""){
             var adminmsg = {
                 adminmsgdes:msg,
+                type:0,
                 servicer:{
                     servicerid:servicerid
                 }
@@ -66,6 +67,7 @@ $(function () {
         }
         var adminmsg = {
             adminmsgdes:msg,
+            type:0,
             servicer:{
                 servicerid:servicerid
             }

@@ -19,7 +19,7 @@ public class MessageServiceImp implements MessageService {
         AdminMsg adminMsg = new AdminMsg();
         adminMsg.setServicer(servicer);
         try{
-            List<AdminMsg> adminMsgList = adminMsgDao.queryMessageList(adminMsg);
+            List<AdminMsg> adminMsgList = adminMsgDao.queryServicerMessageList(adminMsg);
             return adminMsgList;
         }catch (Exception e){
             e.printStackTrace();

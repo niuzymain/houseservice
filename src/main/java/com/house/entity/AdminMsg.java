@@ -12,6 +12,7 @@ public class AdminMsg {
     private Date createtime;
     private User user;
     private Servicer servicer;
+    private Integer type; //0.特定对象 1.面向用户 2.面向服务人员 3.面向所有用户
 
     public Long getAdminmsgid() {
         return this.adminmsgid;
@@ -51,5 +52,13 @@ public class AdminMsg {
 
     public void setServicer(Servicer servicer) {
         this.servicer = servicer;
+    }
+
+    public Integer getType() {
+        return this.type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
     }
 }

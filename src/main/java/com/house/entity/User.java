@@ -16,6 +16,7 @@ public class User {
     private Date lastedittime;
     private String accountname;
     private String password;
+    private String useremail;
 
     public long getUserid() {
         return this.userid;
@@ -87,5 +88,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getUseremail() {
+        return this.useremail;
+    }
+
+    public void setUseremail(String useremail) {
+        this.useremail = useremail;
     }
 }

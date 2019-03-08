@@ -10,11 +10,11 @@
     <insert id="insertUser" parameterType="com.house.entity.User" useGeneratedKeys="true" keyColumn="user_id" keyProperty="userid">
     insert into tb_user (user_id, user_name, user_sex,
     enable_status, user_phone, create_time,
-    lastedit_time, account_name, pass_word
+    lastedit_time, account_name, pass_word,user_email
     )
     values (#{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{usersex,jdbcType=VARCHAR},
     #{enablestatus,jdbcType=INTEGER}, #{userphone,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP},
-    #{lastedittime,jdbcType=TIMESTAMP}, #{accountname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
+    #{lastedittime,jdbcType=TIMESTAMP}, #{accountname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},#{useremail,jdbcType=VARCHAR}
     )
     </insert>
 
@@ -22,16 +22,17 @@
         update tb_user
         <set>
             <if test="enablestatus != null">enable_status=#{enablestatus},</if>
+            <if test="useremail != null">user_email=#{useremail},</if>
         </set>
         where user_id=#{userid}
     </update>
     <select id="queryUser" resultType="com.house.entity.User">
-        select user_id,user_name,user_sex,enable_status,user_phone,create_time,lastedit_time
+        select user_id,user_name,user_sex,enable_status,user_phone,create_time,lastedit_time,user_email
         from tb_user
     </select>
 
     <select id="querySingleUser" resultType="com.house.entity.User">
-        select user_id,user_name,user_sex,enable_status,user_phone,create_time,lastedit_time
+        select user_id,user_name,user_sex,enable_status,user_phone,create_time,lastedit_time,user_email
         from tb_user
         <where>
             <if test="condition.userid != 0"> and user_id=#{condition.userid}</if>

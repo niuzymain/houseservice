@@ -28,6 +28,7 @@ public class Servicer {
     private Integer checkstatus; //0.审核 1.通过 -1.未通过
     private String accountname;
     private String password;
+    private String servicercontract;
 
     public long getServicerid() {
         return this.servicerid;
@@ -203,6 +204,14 @@ public class Servicer {
 
     public void setServiceridnum(String serviceridnum) {
         this.serviceridnum = serviceridnum;
+    }
+
+    public String getServicercontract() {
+        return this.servicercontract;
+    }
+
+    public void setServicercontract(String servicercontract) {
+        this.servicercontract = servicercontract;
     }
 }
 
