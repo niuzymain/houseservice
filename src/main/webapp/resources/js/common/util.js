@@ -73,7 +73,7 @@ function displaychange() {
 }
 
 //开启轮播图
-function runheadimg(){
+function runheadimg() {
     var innerGroup = $(".innerwraper");
     var leftArrow = $(".left-arrow");
     var rightArrow = $(".right-arrow");
@@ -82,14 +82,14 @@ function runheadimg(){
     var _index = 0;
     var timer = null;
     var flag = true;
-    rightArrow.on("click", function() {
+    rightArrow.on("click", function () {
         //右箭头
         flag = false;
         clearInterval(timer);
         _index++;
         selectPic(_index);
     })
-    leftArrow.on("click", function() {
+    leftArrow.on("click", function () {
         //左箭头
         flag = false;
         clearInterval(timer);
@@ -100,17 +100,17 @@ function runheadimg(){
         _index--;
         selectPic(_index);
     })
-    spanGroup.on("click", function() {
+    spanGroup.on("click", function () {
         //导航切换
         _index = spanGroup.index($(this));
         selectPic(_index);
     })
 
-    $(".container").hover(function() {
+    $(".container").hover(function () {
         //鼠标移入
         clearInterval(timer);
         flag = false;
-    }, function() {
+    }, function () {
         flag = true;
         timer = setInterval(go, 3000);
     });
@@ -121,6 +121,7 @@ function runheadimg(){
             timer = setInterval(go, 3000);
         }
     }
+
     autoGo(flag);
 
     function go() {
@@ -128,11 +129,12 @@ function runheadimg(){
         _index++;
         selectPic(_index);
     }
+
     function selectPic(num) {
         $(".pagination span").eq(num).addClass("active").siblings().removeClass("active");
         $(".inner").animate({
             left: -num * imgWidth,
-        }, 1000, function() {
+        }, 1000, function () {
             //检查是否到最后一张
             if (_index == innerGroup.length - 1) {
                 _index %= 4;
@@ -163,3 +165,23 @@ function getItemsFromDB() {
         }
     })
 }
+
+//////////////////////////////预约状态前端展示////////////////////////////////
+function reserveinfo(data) {
+    if (data == -2) {
+        return "已超时"
+    }
+    else if (data == -1) {
+        return "已拒绝"
+    }
+    else if (data == 0) {
+        return "待处理"
+    }
+    else if (data == 1) {
+        return "已接受"
+    }
+    else {
+        return "已完成"
+    }
+}
+

@@ -65,7 +65,7 @@ public class CommonController {
                 } else {
                     modelMap.put("success", true);
 ///////////////////////////这里session添加个人信息，根据accountid查找/////////////////////////////////////////
-                    request.getSession().setAttribute("accountinfo", account);
+                    request.getSession().setAttribute("useraccount", account);
 /////////////////////////添加跳转路由///////////////////////////////////////////////////////
                     modelMap.put("route", "/user/main");
                 }
@@ -81,7 +81,7 @@ public class CommonController {
                 } else {
                     modelMap.put("success", true);
 ///////////////////////////这里session添加个人信息，根据accountid查找/////////////////////////////////////////
-                    request.getSession().setAttribute("accountinfo", account);
+                    request.getSession().setAttribute("serviceraccount", account);
                     modelMap.put("route", "/servicer/reserve");
                 }
             } else if (accounttype.equals("admin")) {
@@ -90,7 +90,7 @@ public class CommonController {
                 if (account != null) {
                     modelMap.put("success", true);
 ///////////////////////////这里session添加个人信息，根据accountid查找/////////////////////////////////////////
-                    request.getSession().setAttribute("accountinfo", account);
+                    request.getSession().setAttribute("adminaccount", account);
                 } else {
                     modelMap.put("success", false);
                     modelMap.put("errormsg", "管理员不存在");

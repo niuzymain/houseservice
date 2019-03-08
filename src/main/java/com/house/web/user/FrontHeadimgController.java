@@ -23,7 +23,7 @@ public class FrontHeadimgController {
     @RequestMapping(value = "/getheadimglist",method = RequestMethod.GET)
     @ResponseBody
     public Map<String,Object> getHeadimgList(HttpServletRequest request){
-        User user = (User) request.getSession().getAttribute("accountinfo");
+        User user = (User) request.getSession().getAttribute("useraccount");
         Map<String,Object> modelmap = new HashMap<>();
         try{
             HeadimgExecution he = frontHeadimgService.checkHeadimg();

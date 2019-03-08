@@ -25,7 +25,7 @@ public class MessageController {
     public Map<String, Object> getServicerInfo(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
         try {
-            Servicer servicer = (Servicer) request.getSession().getAttribute("accountinfo");
+            Servicer servicer = (Servicer) request.getSession().getAttribute("serviceraccount");
             List<AdminMsg> adminMsgList = messageService.checkMessage(servicer);
             modelMap.put("success", true);
             modelMap.put("result", adminMsgList);

@@ -48,8 +48,8 @@ public class UserRoute {
         return"user/record";
     }
 
-    @RequestMapping(value = "/recorddetail",method = RequestMethod.GET)
-    private String userRecordDetail(){
-        return"user/recorddetail";
+    @RequestMapping(value = "/evaluate",method = RequestMethod.GET)
+    private String userEvaluate(){
+        return"user/evaluate";
     }
 }

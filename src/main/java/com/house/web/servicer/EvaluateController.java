@@ -25,7 +25,7 @@ public class EvaluateController {
     public Map<String,Object> getEvaluateList(HttpServletRequest request){
         Map<String,Object> modelmap = new HashMap<>();
         try{
-            Servicer servicer = (Servicer) request.getSession().getAttribute("accountinfo");
+            Servicer servicer = (Servicer) request.getSession().getAttribute("serviceraccount");
             List<Evaluate> evaluateList = evaluateService.checkEvaluate(servicer);
             modelmap.put("success",true);
             modelmap.put("result",evaluateList);

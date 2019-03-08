@@ -29,7 +29,7 @@ public class EditInfoController {
     @ResponseBody
     public Map<String,Object> getServicerInfo(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();
-        Servicer servicer = (Servicer)request.getSession().getAttribute("accountinfo");
+        Servicer servicer = (Servicer)request.getSession().getAttribute("serviceraccount");
         ServicerExecution se = editInfoService.getServicerInfo(servicer);
         if(se.getState() == ServicerEnum.SUCCESS.getState()){
             modelMap.put("success",true);
@@ -48,7 +48,7 @@ public class EditInfoController {
         Map<String,Object> modelMap = new HashMap<>();
         ObjectMapper objectMapper = new ObjectMapper();
         String servicerstr = request.getParameter("str");
-        Servicer currentservicer = (Servicer)request.getSession().getAttribute("accountinfo");
+        Servicer currentservicer = (Servicer)request.getSession().getAttribute("serviceraccount");
         try{
             Servicer servicer = objectMapper.readValue(servicerstr,Servicer.class);
             servicer.setServicerid(currentservicer.getServicerid());

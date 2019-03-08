@@ -29,7 +29,7 @@ public class ReserveController {
     public Map<String,Object> getReserveList(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<>();
         Integer enablestatus = Integer.parseInt(request.getParameter("enablestatus"));
-        Servicer servicer = (Servicer) request.getSession().getAttribute("accountinfo");
+        Servicer servicer = (Servicer) request.getSession().getAttribute("serviceraccount");
         Reserve reserve = new Reserve();
         reserve.setServicer(servicer);
         reserve.setEnablestatus(enablestatus);

@@ -31,7 +31,7 @@ public class FrontServicerController {
     @RequestMapping(value = "/getavailableservicer", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> getAvailableServicer(HttpServletRequest request) {
-        User user = (User) request.getSession().getAttribute("accountinfo");
+        User user = (User) request.getSession().getAttribute("useraccount");
         Map<String, Object> modelmap = new HashMap<>();
         ObjectMapper objectMapper = new ObjectMapper();
         String servicerstr = request.getParameter("servicerstr");

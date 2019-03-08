@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ServicerLoginInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        Object obj = request.getSession().getAttribute("accountinfo");
+        Object obj = request.getSession().getAttribute("serviceraccount");
         if(obj != null){
             return true;
         }

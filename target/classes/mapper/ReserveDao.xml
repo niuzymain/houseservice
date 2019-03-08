@@ -97,11 +97,21 @@
                 and r.servicer_id=#{condition.servicer.servicerid}
                 and s.servicer_id=#{condition.servicer.servicerid}
             </if>
-            <if test="condition.enablestatus != null">
-                and r.enable_status=#{condition.enablestatus}
-            </if>
+            <choose>
+                <when test="condition.enablestatus == -1">
+                    and r.enable_status&lt;=#{condition.enablestatus}
+                </when>
+                <when test="condition.enablestatus == 1">
+                    and r.enable_status&gt;=#{condition.enablestatus}
+                </when>
+                <when test="condition.enablestatus == 0">
+                    and r.enable_status=#{condition.enablestatus}
+                </when>
+                <otherwise>
+                </otherwise>
+            </choose>
         </where>
-        order by create_time desc
+        order by reserve_time desc
     </select>
 
     <select id="querySingleReserve" resultMap="BaseResultMap">

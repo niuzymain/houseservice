@@ -24,7 +24,7 @@ public class UserReserveController {
     @ResponseBody
     public Map<String,Object> addReserve(HttpServletRequest request){
         Map<String,Object> modelmap = new HashMap<>();
-        User user = (User)request.getSession().getAttribute("accountinfo");
+        User user = (User)request.getSession().getAttribute("useraccount");
         String reservestr = request.getParameter("reservestr");
         ObjectMapper objectMapper = new ObjectMapper();
         try{

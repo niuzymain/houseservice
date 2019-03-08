@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class AdminLoginInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        Object obj = request.getSession().getAttribute("accountinfo");
+        Object obj = request.getSession().getAttribute("adminaccount");
         if(obj != null){
             return true;
         }
