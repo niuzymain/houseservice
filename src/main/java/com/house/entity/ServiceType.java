@@ -13,6 +13,7 @@ public class ServiceType {
     private Date createtime;
     private Date lastedittime;
     private List<Servicer> servicerList;
+    private Integer level;
     public long getServicetypeid() {
         return this.servicetypeid;
     }
@@ -59,5 +60,13 @@ public class ServiceType {
 
     public void setServicerList(List<Servicer> servicerList) {
         this.servicerList = servicerList;
+    }
+
+    public Integer getLevel() {
+        return this.level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
     }
 }

@@ -7,6 +7,7 @@ public class Degree {
     private Long degreeid;
     private String degreename;
     private Integer priority;
+    private Integer level;
 
     public Long getDegreeid() {
         return this.degreeid;
@@ -30,5 +31,13 @@ public class Degree {
 
     public void setPriority(Integer priority) {
         this.priority = priority;
+    }
+
+    public Integer getLevel() {
+        return this.level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
     }
 }

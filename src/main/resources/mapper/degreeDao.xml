@@ -8,8 +8,8 @@
     <!--id:方法名   result：返回值类型-->
     <insert id="insertDegree" parameterType="com.house.entity.Degree" useGeneratedKeys="true" keyColumn="degree_id" keyProperty="degreeid">
       insert into
-      tb_degree(degree_name,priority)
-      values(#{degreename},#{priority})
+      tb_degree(degree_name,priority,level)
+      values(#{degreename},#{priority},#{level})
     </insert>
 
     <update id="updateDegree" parameterType="com.house.entity.Degree">
@@ -27,7 +27,7 @@
     </delete>
 
     <select id="queryDegreeList" parameterType="com.house.entity.Degree" resultType="com.house.entity.Degree">
-      select degree_id,degree_name,priority
+      select degree_id,degree_name,priority,level
       from tb_degree
       order by priority desc
     </select>

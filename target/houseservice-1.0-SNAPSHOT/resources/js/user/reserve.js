@@ -2,7 +2,6 @@ $(function () {
     var servicerid = getURLarg("servicerid")
     $("#submit").click(function(){
         var reserve = {
-            reservetime:$("#inputtime").val(),
             reserveaddr:$("#inputaddr").val(),
             reservedes:$("#inputdes").val(),
             reservephone:$("#inputphone").val(),

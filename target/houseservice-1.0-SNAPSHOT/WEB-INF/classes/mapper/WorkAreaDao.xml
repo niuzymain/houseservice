@@ -8,8 +8,8 @@
 
     <insert id="insertArea" parameterType="com.house.entity.WorkArea" useGeneratedKeys="true" keyColumn="workarea_id" keyProperty="workareaid">
       insert into
-      tb_workarea(workarea_name,priority,create_time,lastedit_time,parentarea_id)
-      values (#{workareaname},#{priority},#{createtime},#{lastedittime},#{parentarea.workareaid})
+      tb_workarea(workarea_name,priority,create_time,lastedit_time,parentarea_id,level)
+      values (#{workareaname},#{priority},#{createtime},#{lastedittime},#{parentarea.workareaid},#{level})
     </insert>
 
     <update id="updateArea" parameterType="com.house.entity.WorkArea">
@@ -33,7 +33,7 @@
     </delete>
 
     <select id="queryArea" resultType="com.house.entity.WorkArea">
-        select workarea_id,workarea_name,priority
+        select workarea_id,workarea_name,priority,level
         from tb_workarea
         where parentarea_id is null
         order by priority desc

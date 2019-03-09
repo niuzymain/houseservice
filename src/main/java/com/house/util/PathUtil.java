@@ -19,4 +19,12 @@ public class PathUtil {
     public static String servicerfile(){
         return "/servicerfile/";
     }
+
+    public static String reservecontract(){
+        return "/contract/reservecontract";
+    }
+
+    public static String servicercontract(){
+        return "/contract/servicercontract";
+    }
 }

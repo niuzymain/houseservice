@@ -8,8 +8,8 @@
 
     <insert id="insertServiceType" parameterType="com.house.entity.ServiceType" useGeneratedKeys="true" keyColumn="servicetype_id" keyProperty="servicetypeid">
       insert into
-      tb_servicetype(servicetype_name,priority,create_time,lastedit_time)
-      values (#{servicetypename},#{priority},#{createtime},#{lastedittime})
+      tb_servicetype(servicetype_name,priority,create_time,lastedit_time,level)
+      values (#{servicetypename},#{priority},#{createtime},#{lastedittime},#{level})
     </insert>
 
     <update id="updateServiceType" parameterType="com.house.entity.ServiceType">
@@ -28,7 +28,7 @@
     </delete>
 
     <select id="queryServiceType" resultType="com.house.entity.ServiceType">
-        select servicetype_id,servicetype_name,priority
+        select servicetype_id,servicetype_name,priority,level
         from tb_servicetype
         order by priority desc
     </select>

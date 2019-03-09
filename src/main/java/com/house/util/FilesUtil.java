@@ -46,6 +46,30 @@ public class FilesUtil {
         return PathUtil.servicerfile()+fileSavename;  //返回相对路径
     }
 
+    public static String saveServicerConntract(InputStream file,Long servicerid,String filename) throws Exception {
+        String ScRealname = "servicercontract"+servicerid+"_"+sformat.format(new Date());   //文件名
+        String ScExtensionname = getExtensionname(filename);  //扩展名
+        String ScSavename = ScRealname+ScExtensionname;
+        String ScSavedir = PathUtil.rootPath()+PathUtil.servicercontract(); //存储目录
+        Mkdir(ScSavedir);
+        String ScSavepath = ScSavedir+ScSavename; //绝对路径
+        File file1 = new File(ScSavepath);
+        SaveFile(file,file1); //存储文件
+        return PathUtil.servicercontract()+ScSavename;  //返回相对路径
+    }
+
+    public static String saveReserveConntract(InputStream file,Long reserveid,String filename) throws Exception {
+        String RcRealname = "reservecontract"+reserveid+"_"+sformat.format(new Date());   //文件名
+        String RcExtensionname = getExtensionname(filename);  //扩展名
+        String RcSavename = RcRealname+RcExtensionname;
+        String RcSavedir = PathUtil.rootPath()+PathUtil.reservecontract(); //存储目录
+        Mkdir(RcSavedir);
+        String RcSavepath = RcSavedir+RcSavename; //绝对路径
+        File file1 = new File(RcSavepath);
+        SaveFile(file,file1); //存储文件
+        return PathUtil.reservecontract()+RcSavename;  //返回相对路径
+    }
+
     /*
     删除文件
      */

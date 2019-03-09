@@ -14,6 +14,7 @@ public class WorkArea {
     private Date lastedittime;
     private WorkArea parentarea;
     private List<Servicer> servicerList;
+    private Integer level;
     public long getWorkareaid() {
         return this.workareaid;
     }
@@ -68,5 +69,13 @@ public class WorkArea {
 
     public void setServicerList(List<Servicer> servicerList) {
         this.servicerList = servicerList;
+    }
+
+    public Integer getLevel() {
+        return this.level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
     }
 }

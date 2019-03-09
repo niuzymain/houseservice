@@ -6,6 +6,38 @@
 <!--类名-->
 <mapper namespace="com.house.dao.ServicerDao">
 
+    <sql id="Base_Column_List">
+               s.servicer_id,
+        s.servicer_idnum,
+        s.servicer_name,
+        s.servicer_age,
+        s.servicer_sex,
+        s.servicer_phone,
+        s.servicer_img,
+        s.servicer_experience,
+        s.servicer_score,
+        s.servicer_price,
+        s.servicer_des,
+        s.servicer_file,
+        s.servicer_contract,
+        s.create_time,
+        s.lastedit_time,
+        s.enable_status,
+        s.check_status,
+        d.degree_id,
+        d.degree_name,
+        d.priority as dpriority,
+        st.servicetype_id,
+        st.servicetype_name,
+        st.priority as stpriority,
+        c.workarea_id as city_id,
+        c.workarea_name as city_name,
+        c.priority as cpriority,
+        l.workarea_id as local_id,
+        l.workarea_name as local_name,
+        l.priority as lpriority
+    </sql>
+
     <resultMap type="com.house.entity.Servicer" id="servicermap">
         <id column="servicer_id" property="servicerid"/>
         <result column="servicer_idnum" property="serviceridnum"/>
@@ -19,6 +51,7 @@
         <result column="servicer_price" property="servicerprice"/>
         <result column="servicer_des" property="servicerdes"/>
         <result column="servicer_file" property="servicerfile"/>
+        <result column="servicer_contract" property="servicerfile"/>
         <result column="create_time" property="createtime"/>
         <result column="lastedit_time" property="lastedittime"/>
         <result column="enable_status" property="enablestatus"/>
@@ -58,6 +91,7 @@
                     servicer_experience,
                     servicer_price,
                     servicer_des,
+                    servicer_contract,
                     city_id,
                     local_id,
                     create_time,
@@ -76,6 +110,7 @@
             #{servicerexperience,jdbcType=INTEGER},
             #{servicerprice,jdbcType=VARCHAR},
             #{servicerdes,jdbcType=VARCHAR},
+            #{servicercontract,jdbcType=VARCHAR},
             #{city.workareaid,jdbcType=INTEGER},
             #{local.workareaid,jdbcType=INTEGER},
             #{createtime,jdbcType=TIMESTAMP},
@@ -124,6 +159,9 @@
             <if test="servicer.servicerdes != null">
                 servicer_des = #{servicer.servicerdes,jdbcType=VARCHAR},
             </if>
+            <if test="servicer.servicerdes != null">
+                servicer_contract = #{servicer.servicercontract,jdbcType=VARCHAR},
+            </if>
             <if test="servicer.servicerfile != null">
                 servicer_file = #{servicer.servicerfile,jdbcType=VARCHAR},
             </if>
@@ -163,34 +201,7 @@
 
     <select id="queryServicer" resultMap="servicermap">
         select
-        s.servicer_id,
-        s.servicer_idnum,
-        s.servicer_name,
-        s.servicer_age,
-        s.servicer_sex,
-        s.servicer_phone,
-        s.servicer_img,
-        s.servicer_experience,
-        s.servicer_score,
-        s.servicer_price,
-        s.servicer_des,
-        s.servicer_file,
-        s.create_time,
-        s.lastedit_time,
-        s.enable_status,
-        s.check_status,
-        d.degree_id,
-        d.degree_name,
-        d.priority as dpriority,
-        st.servicetype_id,
-        st.servicetype_name,
-        st.priority as stpriority,
-        c.workarea_id as city_id,
-        c.workarea_name as city_name,
-        c.priority as cpriority,
-        l.workarea_id as local_id,
-        l.workarea_name as local_name,
-        l.priority as lpriority
+      <include refid="Base_Column_List"/>
         from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
         <where>
             and s.degree_id=d.degree_id
@@ -202,34 +213,7 @@
 
     <select id="querySingleServicer" resultMap="servicermap">
         select
-        s.servicer_id,
-        s.servicer_idnum,
-        s.servicer_name,
-        s.servicer_age,
-        s.servicer_sex,
-        s.servicer_phone,
-        s.servicer_img,
-        s.servicer_experience,
-        s.servicer_score,
-        s.servicer_price,
-        s.servicer_des,
-        s.servicer_file,
-        s.create_time,
-        s.lastedit_time,
-        s.enable_status,
-        s.check_status,
-        d.degree_id,
-        d.degree_name,
-        d.priority as dpriority,
-        st.servicetype_id,
-        st.servicetype_name,
-        st.priority as stpriority,
-        c.workarea_id as city_id,
-        c.workarea_name as city_name,
-        c.priority as cpriority,
-        l.workarea_id as local_id,
-        l.workarea_name as local_name,
-        l.priority as lpriority
+        <include refid="Base_Column_List"/>
         from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
         <where>
             <if test="condition.servicerid != 0">and servicer_id=#{condition.servicerid}</if>
@@ -252,28 +236,7 @@
 
     <select id="queryServicerForUser" resultMap="servicermap">
         select
-        s.servicer_id,
-        s.servicer_name,
-        s.servicer_age,
-        s.servicer_sex,
-        s.servicer_experience,
-        s.servicer_score,
-        s.servicer_price,
-        s.servicer_des,
-        s.servicer_img,
-        s.lastedit_time,
-        d.degree_id,
-        d.degree_name,
-        d.priority as dpriority,
-        st.servicetype_id,
-        st.servicetype_name,
-        st.priority as stpriority,
-        c.workarea_id as city_id,
-        c.workarea_name as city_name,
-        c.priority as cpriority,
-        l.workarea_id as local_id,
-        l.workarea_name as local_name,
-        l.priority as lpriority
+        <include refid="Base_Column_List"/>
         from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
         <where>
             <if test="condition.servicersex != -1">

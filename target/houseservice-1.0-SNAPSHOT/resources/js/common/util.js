@@ -168,20 +168,23 @@ function getItemsFromDB() {
 
 //////////////////////////////预约状态前端展示////////////////////////////////
 function reserveinfo(data) {
-    if (data == -2) {
-        return "已超时"
-    }
-    else if (data == -1) {
-        return "已拒绝"
+    if (data == -1) {
+        return "已取消"
     }
     else if (data == 0) {
         return "待处理"
     }
     else if (data == 1) {
-        return "已接受"
+        return "已受理"
     }
-    else {
+    else if(data == 2){
+        return "已确认"
+    }
+    else if(data == 3){
         return "已完成"
+    }
+    else{
+        return "状态异常"
     }
 }
 

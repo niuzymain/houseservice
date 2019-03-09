@@ -1,13 +1,12 @@
 $(function () {
     ////////////////////////////////////////显示区域列表/////////////////////////////////////////////
-    var head = "<tr><td>城市名称</td><td>优先级</td><td>操作</td><td><a href='#' id='insert'>新增</a></td><td><a href='#' id='submit'>提交</a></td></tr>"
-    $("#itemlist thead").append(head);
     $.getJSON("/admin/getitems?type=城市", function (data) {
         if (data.success) {
             for (var i = 0; i < data.result.length; i++) {
                 var body = "<tr>" +
                     "<td><a href=/admin/displaylocals?parentid=" + data.result[i].workarea.workareaid + "> " + data.result[i].workarea.workareaname + "</a></td>" +
                     "<td>" + data.result[i].workarea.priority + "</td>" +
+                    "<td>" + data.result[i].workarea.level + "</td>" +
                     "<td><a href='#' class='delete' id=" + data.result[i].workarea.workareaid + ">删除</a></td>" +
                     "</tr>"
                 $("#itemlist tbody").append(body);
@@ -19,7 +18,7 @@ $(function () {
     })
     //绑定所有操作按钮
     $("#insert").click(function () {
-        $("#itemlist tbody").append("<tr><td><input type='text' placeholder='名称' id='name'></td><td><input type='text' placeholder='优先级' id='priority'></td></tr>");
+        $("#itemlist tbody").append("<tr><td><input type='text' placeholder='名称' id='name'></td><td><input type='text' placeholder='优先级' id='priority'></td><td><input type='text' placeholder='薪水等级' id='level'></td></tr>");
     })
     $("#submit").click(function () {
         var formdata = insertitem("新增");
@@ -70,7 +69,8 @@ function insertitem(operatetype) {
     var condition = {
         workarea: {
             workareaname: $("#name").val(),
-            priority: $("#priority").val()
+            priority: $("#priority").val(),
+            level:$("#level").val()
         }
     }
     formdata.append("operatestr", JSON.stringify(condition));
