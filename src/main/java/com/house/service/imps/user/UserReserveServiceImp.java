@@ -6,6 +6,8 @@ import com.house.service.user.UserReserveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 @Service
 public class UserReserveServiceImp implements UserReserveService {
     @Autowired
@@ -25,6 +27,24 @@ public class UserReserveServiceImp implements UserReserveService {
             result = reserveDao.inseerReserve(reserve);
             if(result <= 0){
                 throw  new RuntimeException();
+            }
+            else{
+                return result;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new RuntimeException();
+        }
+    }
+
+    @Override
+    public int cancelReserve(Reserve reserve) {
+        int result;
+        try{
+            reserve.setCreatetime(new Date());
+            result = reserveDao.updateReserve(reserve);
+            if(result <= 0){
+                throw new RuntimeException();
             }
             else{
                 return result;

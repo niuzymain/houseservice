@@ -42,4 +42,25 @@ public class UserReserveController {
             return modelmap;
         }
     }
+
+    @RequestMapping(value = "/cancelreserve",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> cancelReserve(HttpServletRequest request){
+        Map<String,Object> modelmap = new HashMap<>();
+        String reservestr = request.getParameter("reservestr");
+        ObjectMapper objectMapper = new ObjectMapper();
+        try{
+            Reserve reserve = objectMapper.readValue(reservestr,Reserve.class);
+            int result = userReserveService.cancelReserve(reserve);
+            if(result > 0){
+                modelmap.put("success",true);
+            }
+            return modelmap;
+        }catch (Exception e){
+            e.printStackTrace();
+            modelmap.put("success",false);
+            modelmap.put("errormsg",e.getMessage());
+            return modelmap;
+        }
+    }
 }

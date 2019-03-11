@@ -28,7 +28,6 @@ $(function () {
             servicersex: $(".sex select").val(),
             servicerphone: $(".phone input").val(),
             servicerexperience: $(".experience select").val(),
-            servicerprice: $(".salary select").val(),
             servicerdes: $(".des textarea").val(),
             degree: {
                 degreeid: $(".degree select").val()

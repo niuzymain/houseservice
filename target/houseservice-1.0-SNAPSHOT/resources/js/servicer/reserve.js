@@ -1,6 +1,6 @@
 $(function () {
     $(function () {
-        $.getJSON("/servicer/getreservelist?enablestatus="+0, function (data) {
+        $.getJSON("/servicer/getreservelist?enablestatus="+2, function (data) {
             if (data.success) {
                 var i;
                 for (i = 0; i < data.result.length; i++) {

@@ -24,6 +24,8 @@
         s.lastedit_time,
         s.enable_status,
         s.check_status,
+        s.account_name,
+        s.pass_word,
         d.degree_id,
         d.degree_name,
         d.priority as dpriority,
@@ -56,6 +58,8 @@
         <result column="lastedit_time" property="lastedittime"/>
         <result column="enable_status" property="enablestatus"/>
         <result column="check_status" property="checkstatus"/>
+        <result column="account_name" property="accountname"/>
+        <result column="pass_word" property="password"/>
         <association property="degree" column="degree_id" javaType="com.house.entity.Degree">
             <id column="degree_id" property="degreeid"/>
             <result column="degree_name" property="degreename"/>

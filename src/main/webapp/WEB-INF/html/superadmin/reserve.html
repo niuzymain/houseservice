@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--展示学历类别和操作选项-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +10,30 @@
     <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
     <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+    <title>Title</title>
     <style type="text/css">
         div {
             float: left;
         }
 
         #menu {
-            margin-right: 50px;
+            margin-right: 30px;
+        }
+
+        select {
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
-<h1>展示学历信息</h1>
+<h1>预约处理</h1>
 <div id="menu">
     <ul id="lists" class="sui-nav nav-list nav-xlarge">
         <li class="nav-header">信息管理</li>
-        <li><a href="/admin/main" id="usermanager">账户管理</a></li>
+        <li><a href="#" id="usermanager">账户管理</a></li>
         <li><a href="/admin/displayareas" id="areamanager">区域管理</a></li>
         <li><a href="/admin/displaytypes" id="categorymanager">类别管理</a></li>
-        <li><a href="#" id="degreemanager">学历管理</a></li>
+        <li><a href="/admin/displaydegrees" id="degreemanager">学历管理</a></li>
         <li><a href="/admin/headimg" id="headimgmanager">轮播图管理</a></li>
         <li class="nav-header">信息审核
         <li><a href="/admin/qualify" id="servicerqualify">服务人员审核</a></li>
@@ -37,28 +41,29 @@
         <li><a href="/admin/reserve" id="reservequalify">用户预约审核</a></li>
         </li>
     </ul>
-</div>
 
-<div id="item">
-    <table id="itemlist">
-        <thead>
-        <tr>
-            <td>学历信息</td>
-            <td>优先级</td>
-            <td>薪水等级</td>
-            <td>操作</td>
-            <td><a href='#' id='insert'>新增</a></td>
-            <td><a href='#' id='submit'>提交</a></td>
-        </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+
+    <!--<ul id="lists">-->
+    <!--<li>-->
+    <!--<a href="#" id="usermanager">账户管理</a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<a href="#" id="itemmanager" onclick=displaychange()>分类管理</a>-->
+    <!--<ul id="itemmenulist" class="secondmenu" style="display: none">-->
+    <!--<li><a href="/admin/displayareas" id="areamanager">区域管理</a></li>-->
+    <!--<li><a href="/admin/displaytypes" id="categorymanager">类别管理</a></li>-->
+    <!--<li><a href="/admin/displaydegrees" id="degreemanager">学历管理</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<a href="/admin/headimg" id="headimgmanager">轮播图管理</a>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<a href="/admin/qualify" id="servicerqualify">服务人员审核</a>-->
+    <!--</li>-->
+    <!--</ul>-->
 </div>
-<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<!--<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>-->
-<!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>-->
-<!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>-->
-<script type="text/javascript" src="../resources/js/superadmin/showdegrees.js"></script>
+<div id="reserve">
+</div>
 </body>
 </html>

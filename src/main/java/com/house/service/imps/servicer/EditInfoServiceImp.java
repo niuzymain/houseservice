@@ -22,6 +22,8 @@ public class EditInfoServiceImp implements EditInfoService {
     @Override
     public ServicerExecution getServicerInfo(Servicer servicer) {
         try {
+            servicer.setAccountname(null);
+            servicer.setPassword(null);
             return new ServicerExecution(ServicerEnum.SUCCESS, servicerDao.querySingleServicer(servicer));
         } catch (Exception e) {
             e.printStackTrace();
@@ -31,7 +33,7 @@ public class EditInfoServiceImp implements EditInfoService {
 
     @Override
     public ServicerExecution editInfo(Servicer servicer) {
-        servicer.setCheckstatus(0);
+//        servicer.setCheckstatus(0);
         servicer.setLastedittime(new Date());
         int result;
         try {

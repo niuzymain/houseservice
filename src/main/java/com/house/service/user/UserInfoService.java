@@ -7,4 +7,5 @@ import java.util.List;
 public interface UserInfoService {
     List<Reserve> selectReservelist(Reserve reserve);
     Reserve selectSingleReservelist(Long reserveid);
+
 }

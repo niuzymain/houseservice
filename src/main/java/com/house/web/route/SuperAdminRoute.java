@@ -53,4 +53,15 @@ public class SuperAdminRoute {
         return "superadmin/qualifydetail";
     }
 
+    @RequestMapping(value = "/comment",method = RequestMethod.GET)
+    private String checkComment(){
+        return "superadmin/comment";
+    }
+
+    @RequestMapping(value = "/reserve",method = RequestMethod.GET)
+    private String checkReserve(){
+        return "superadmin/reserve";
+    }
+
+
 }

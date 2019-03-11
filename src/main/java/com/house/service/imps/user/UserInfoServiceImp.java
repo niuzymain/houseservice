@@ -23,4 +23,5 @@ public class UserInfoServiceImp implements UserInfoService {
     public Reserve selectSingleReservelist(Long reserveid) {
         return reserveDao.querySingleReserve(reserveid);
     }
+
 }

@@ -20,11 +20,11 @@ public class PathUtil {
         return "/servicerfile/";
     }
 
-    public static String reservecontract(){
+    public static String reserveContract(){
         return "/contract/reservecontract";
     }
 
-    public static String servicercontract(){
+    public static String servicerContract(){
         return "/contract/servicercontract";
     }
 }

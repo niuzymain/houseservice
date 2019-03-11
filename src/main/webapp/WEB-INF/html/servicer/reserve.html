@@ -19,7 +19,7 @@
     <div id="menu" class="first">
         <ul id="lists">
             <li>
-                <a href="#">预约情况查询</a>
+                <a href="#">业务查询</a>
             </li>
             <li>
                 <a href="/servicer/evaluate">历史评价</a>
@@ -28,7 +28,10 @@
                 <a href="#" id="userinfo" onclick="displaychange()">个人中心</a>
                 <ul id="infolist"  class="secondmenu" style="display: none">
                     <li>
-                        <a href="/servicer/displayinfo">编辑信息</a>
+                        <a href="/servicer/editinfo">修改基本信息</a>
+                    </li>
+                    <li>
+                        <a href="/servicer/displayinfo">查看个人信息</a>
                     </li>
                     <li>
                         <a href="/servicer/message">系统消息</a>
@@ -39,9 +42,8 @@
     </div>
     <div id="reserves" class="first">
         <select>
-            <option value="-1">已拒绝</option>
-            <option value="0" selected="selected">待接受</option>
-            <option value="1">已接受</option>
+            <option value="2" selected="selected">服务中</option>
+            <option value="3">已完成</option>
         </select>
         <div id="reservelist">
         </div>
