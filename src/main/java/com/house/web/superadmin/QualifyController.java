@@ -2,6 +2,8 @@ package com.house.web.superadmin;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.house.entity.AdminMsg;
+import com.house.entity.Evaluate;
+import com.house.entity.Reserve;
 import com.house.entity.Servicer;
 import com.house.service.superadmin.QualifyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
@@ -20,12 +23,12 @@ public class QualifyController {
     @Autowired
     private QualifyService qualifyService;
 
-    @RequestMapping(value = "/getqualifylist",method = RequestMethod.GET)
+    @RequestMapping(value = "/getqualifylist", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getQualifyList() {
         Map<String, Object> modelMap = new HashMap<>();
         try {
-            List<Servicer> servicerList = qualifyService.qualifyList();
+            List<Servicer> servicerList = qualifyService.servicerQualifyList();
             modelMap.put("success", true);
             modelMap.put("result", servicerList);
         } catch (Exception e) {
@@ -36,13 +39,13 @@ public class QualifyController {
         return modelMap;
     }
 
-    @RequestMapping(value = "/getqualifydetail",method = RequestMethod.GET)
+    @RequestMapping(value = "/getqualifydetail", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getQualifyDetail(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
         Long servicerid = Long.parseLong(request.getParameter("servicerid"));
         try {
-            Servicer servicer = qualifyService.getQualifyById(servicerid);
+            Servicer servicer = qualifyService.getServicerQualifyById(servicerid);
             modelMap.put("success", true);
             modelMap.put("result", servicer);
         } catch (Exception e) {
@@ -54,7 +57,7 @@ public class QualifyController {
 
     }
 
-    @RequestMapping(value = "/qualifyoperate",method = RequestMethod.POST)
+    @RequestMapping(value = "/qualifyoperate", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> QualifyOperate(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
@@ -63,18 +66,101 @@ public class QualifyController {
         ObjectMapper objectMapper = new ObjectMapper();
         int result;
         try {
-            Servicer servicer = objectMapper.readValue(servicerstr,Servicer.class);
-            if(msgstr != null){
-                AdminMsg adminMsg  = objectMapper.readValue(msgstr,AdminMsg.class);
-                result = qualifyService.qualifyOperate(adminMsg,servicer);
+            Servicer servicer = objectMapper.readValue(servicerstr, Servicer.class);
+            if (msgstr != null) {
+                AdminMsg adminMsg = objectMapper.readValue(msgstr, AdminMsg.class);
+                result = qualifyService.servicerQualifyOperate(adminMsg, servicer);
+            } else {
+                result = qualifyService.servicerQualifyOperate(null, servicer);
             }
-            else{
-                result = qualifyService.qualifyOperate(null,servicer);
-            }
-            if(result > 0 ){
+            if (result > 0) {
                 modelMap.put("success", true);
+            } else {
+                modelMap.put("success", false);
+                modelMap.put("errormsg", "内部错误");
             }
-            else{
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
+        }
+        return modelMap;
+
+    }
+
+    @RequestMapping(value = "/getcommentlist", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getCommentList(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        try {
+            List<Evaluate> evaluateList = qualifyService.commentQualifyList();
+            modelMap.put("success", true);
+            modelMap.put("list", evaluateList);
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
+        }
+        return modelMap;
+
+    }
+
+    @RequestMapping(value = "/commentoperate", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> commentOperate(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        String evalstr = request.getParameter("evalstr");
+        ObjectMapper objectMapper = new ObjectMapper();
+        int result;
+        try {
+            Evaluate evaluate = objectMapper.readValue(evalstr, Evaluate.class);
+            result = qualifyService.commentQualifyOperate(evaluate);
+            if (result > 0) {
+                modelMap.put("success", true);
+            } else {
+                modelMap.put("success", false);
+                modelMap.put("errormsg", "内部错误");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
+        }
+        return modelMap;
+
+    }
+
+    @RequestMapping(value = "/getreservelist", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getReserveList(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        int enablestatus = Integer.parseInt(request.getParameter("status"));
+        try {
+            List<Reserve> reserveList = qualifyService.reserveQualifyList(enablestatus);
+            modelMap.put("success", true);
+            modelMap.put("list", reserveList);
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
+        }
+        return modelMap;
+
+    }
+
+    @RequestMapping(value = "/reserveoperate", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> reserveOperate(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        String resstr = request.getParameter("resstr");
+        ObjectMapper objectMapper = new ObjectMapper();
+        int result;
+        try {
+            Reserve reserve = objectMapper.readValue(resstr, Reserve.class);
+            result = qualifyService.reserveQualifyOperate(reserve);
+            if (result > 0) {
+                modelMap.put("success", true);
+            } else {
                 modelMap.put("success", false);
                 modelMap.put("errormsg", "内部错误");
             }

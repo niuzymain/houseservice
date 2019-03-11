@@ -1,16 +1,34 @@
 package com.house.service.superadmin;
 
 import com.house.entity.AdminMsg;
+import com.house.entity.Evaluate;
+import com.house.entity.Reserve;
 import com.house.entity.Servicer;
 
 import java.util.List;
 
 /*
-服务人员审核service层
+审核service层
  */
 
 public interface QualifyService {
-    List<Servicer> qualifyList();
-    Servicer getQualifyById(Long servicerid);
-    int qualifyOperate(AdminMsg adminMsg, Servicer servicer);
+    /*
+    服务人员审核
+     */
+    List<Servicer> servicerQualifyList();
+    Servicer getServicerQualifyById(Long servicerid);
+    int servicerQualifyOperate(AdminMsg adminMsg, Servicer servicer);
+
+    /*
+    评论审核
+     */
+    List<Evaluate> commentQualifyList();
+    int commentQualifyOperate(Evaluate evaluate);
+
+    /*
+    预约处理
+     */
+    List<Reserve> reserveQualifyList(int enablestatus);
+    int reserveQualifyOperate(Reserve reserve);
+
 }

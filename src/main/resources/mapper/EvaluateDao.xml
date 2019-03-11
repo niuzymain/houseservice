@@ -36,11 +36,25 @@
       #{evaluate.enablestatus,jdbcType=INTEGER})
     </insert>
 
+    <update id="updateEvaluate">
+        update tb_evaluate
+        <set>
+            <if test="evaluate.evaluatedes != null">
+                evaluate_des=#{evaluate.evaluatedes},
+            </if>
+        </set>
+        <where>
+            <if test="evaluate.evaluateid != null">
+                and evaluate_id = #{evaluate.evaluateid,jdbcType=INTEGER}
+            </if>
+        </where>
+    </update>
+
     <delete id="deleteEvaluate">
         delete from tb_evaluate
         <where>
             <if test="evaluate.evaluateid != null">
-                and evaluate_id = #{evaluateid,jdbcType=INTEGER}
+                and evaluate_id = #{evaluate.evaluateid,jdbcType=INTEGER}
             </if>
         </where>
     </delete>
