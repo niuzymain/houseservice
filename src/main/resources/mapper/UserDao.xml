@@ -27,12 +27,12 @@
         where user_id=#{userid}
     </update>
     <select id="queryUser" resultType="com.house.entity.User">
-        select user_id,user_name,user_sex,enable_status,user_phone,create_time,lastedit_time,user_email
+        select user_id,user_name,user_sex,enable_status,user_phone,create_time,lastedit_time,user_email,account_name
         from tb_user
     </select>
 
     <select id="querySingleUser" resultType="com.house.entity.User">
-        select user_id,user_name,user_sex,enable_status,user_phone,create_time,lastedit_time,user_email
+        select user_id,user_name,user_sex,enable_status,user_phone,create_time,lastedit_time,user_email,account_name,pass_word
         from tb_user
         <where>
             <if test="condition.userid != 0"> and user_id=#{condition.userid}</if>

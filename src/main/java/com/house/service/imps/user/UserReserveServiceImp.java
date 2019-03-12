@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class UserReserveServiceImp implements UserReserveService {
@@ -54,4 +55,15 @@ public class UserReserveServiceImp implements UserReserveService {
             throw new RuntimeException();
         }
     }
+
+    @Override
+    public List<Reserve> selectReservelist(Reserve reserve) {
+        return reserveDao.queryReserveList(reserve);
+    }
+
+    @Override
+    public Reserve selectSingleReservelist(Long reserveid) {
+        return reserveDao.querySingleReserve(reserveid);
+    }
+
 }

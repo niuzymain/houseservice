@@ -43,9 +43,9 @@ public class UserRoute {
         return"user/reserve";
     }
 
-    @RequestMapping(value = "/record",method = RequestMethod.GET)
-    private String userRecord(){
-        return"user/record";
+    @RequestMapping(value = "/reserverecord",method = RequestMethod.GET)
+    private String userReserveRecord(){
+        return"user/reserverecord";
     }
 
     @RequestMapping(value = "/evaluate",method = RequestMethod.GET)

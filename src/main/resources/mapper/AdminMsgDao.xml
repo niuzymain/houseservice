@@ -21,8 +21,12 @@
         </association>
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="Specific_Column_List">
         a.adminmsg_id, a.create_time, a.adminmsg_des, a.type,u.user_id, u.user_name,s.servicer_id,s.servicer_name
+    </sql>
+
+    <sql id="Base_Column_List">
+        adminmsg_id, create_time, adminmsg_des, type
     </sql>
 
     <!--id:方法名   result：返回值类型-->
@@ -32,27 +36,29 @@
       values(#{adminmsg.createtime},#{adminmsg.adminmsgdes},#{adminmsg.type},#{adminmsg.user.userid},#{adminmsg.servicer.servicerid})
     </insert>
 
-    <select id="queryUserMessageList" resultMap="BaseResultMap">
+    <select id="queryUserMessageList" resultType="com.house.entity.AdminMsg">
         select
         <include refid="Base_Column_List" />
-        from tb_adminmsg a,tb_user u,tb_servicer s
+        from tb_adminmsg
         <where>
-            <if test="adminmsg.user != null &amp;&amp; adminmsg.user.userid != null">
-                and a.user_id=#{adminmsg.user.userid}
-                and u.user_id=#{adminmsg.user.userid}
-            </if>
-            <if test="adminmsg.servicer != null &amp;&amp; adminmsg.servicer.servicerid != null">
-                and a.servicer_id=#{adminmsg.servicer.servicerid}
-                and s.servicer_id=#{adminmsg.servicer.servicerid}
-            </if>
-            and a.type in(1,3)
+            and type in(1,3)
         </where>
         order by create_time desc
     </select>
 
-    <select id="queryServicerMessageList" resultMap="BaseResultMap">
+    <select id="queryServicerMessageList" resultType="com.house.entity.AdminMsg">
         select
         <include refid="Base_Column_List" />
+        from tb_adminmsg
+        <where>
+            and type in(2,3)
+        </where>
+        order by create_time desc
+    </select>
+
+    <select id="querySpecificList" resultMap="BaseResultMap">
+        select
+        <include refid="Specific_Column_List" />
         from tb_adminmsg a,tb_user u,tb_servicer s
         <where>
             <if test="adminmsg.user != null &amp;&amp; adminmsg.user.userid != null">
@@ -63,8 +69,19 @@
                 and a.servicer_id=#{adminmsg.servicer.servicerid}
                 and s.servicer_id=#{adminmsg.servicer.servicerid}
             </if>
-            and a.type in(2,3)
+            and a.type=0
         </where>
         order by create_time desc
+    </select>
+
+    <select id="querySpecificComment" resultMap="BaseResultMap">
+        select
+        <include refid="Specific_Column_List"/>
+        from tb_adminmsg a,tb_user u,tb_servicer s
+        <where>
+            <if test="adminmsg.adminmsgid != null">
+                and adminmsg_id=#{adminmsg.adminmsgid}
+            </if>
+        </where>
     </select>
 </mapper>

@@ -12,7 +12,7 @@ public class  Evaluate {
     private Date createtime;
     private User user;             //评论来自哪个用户
     private Servicer servicer;    //评论针对哪个servicer
-    private Integer enablestatus;//0.投诉 1.正常评价
+    private Integer enablestatus;//-1.违规 0.投诉 1.正常评价
 
     public long getEvaluateid() {
         return this.evaluateid;

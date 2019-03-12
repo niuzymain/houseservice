@@ -3,7 +3,7 @@ package com.house.web.user;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.house.entity.Reserve;
 import com.house.entity.User;
-import com.house.service.user.UserInfoService;
+import com.house.service.user.UserReserveService;
 import com.house.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +22,7 @@ public class UserInfoController {
     @Autowired
     private UserService userService;
     @Autowired
-    private UserInfoService userInfoService;
+    private UserReserveService userReserveService;
 
     @RequestMapping(value = "/adduser", method = RequestMethod.POST)
     @ResponseBody
@@ -60,8 +60,16 @@ public class UserInfoController {
     @ResponseBody
     public Map<String, Object> getUserInfo(HttpServletRequest request) {
         Map<String, Object> modelmap = new HashMap<>();
-        request.getSession().setAttribute("useraccount", null);
-        modelmap.put("success", true);
+        User currentuser = (User) request.getSession().getAttribute("useraccount");
+        try {
+            User user = userService.selectSingleUser(currentuser);
+            modelmap.put("result", user);
+            modelmap.put("success", true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelmap.put("errormsg", e.getMessage());
+            modelmap.put("success", false);
+        }
         return modelmap;
     }
 
@@ -69,12 +77,12 @@ public class UserInfoController {
     @ResponseBody
     public Map<String, Object> getUserReserve(HttpServletRequest request) {
         Map<String, Object> modelmap = new HashMap<>();
-        User user = (User)request.getSession().getAttribute("useraccount");
+        User user = (User) request.getSession().getAttribute("useraccount");
         int status = Integer.parseInt(request.getParameter("status"));
         Reserve reserve = new Reserve();
         reserve.setUser(user);
         reserve.setEnablestatus(status);
-        List<Reserve> reserveList = userInfoService.selectReservelist(reserve);
+        List<Reserve> reserveList = userReserveService.selectReservelist(reserve);
         modelmap.put("success", true);
         modelmap.put("list", reserveList);
         return modelmap;
@@ -85,7 +93,7 @@ public class UserInfoController {
     public Map<String, Object> getReserveDetail(HttpServletRequest request) {
         Map<String, Object> modelmap = new HashMap<>();
         Long reserveid = Long.parseLong(request.getParameter("reserveid"));
-        Reserve reserve  = userInfoService.selectSingleReservelist(reserveid);
+        Reserve reserve = userReserveService.selectSingleReservelist(reserveid);
         modelmap.put("success", true);
         modelmap.put("result", reserve);
         return modelmap;

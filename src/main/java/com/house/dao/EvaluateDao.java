@@ -13,5 +13,5 @@ public interface EvaluateDao {
     int updateEvaluate(@Param("evaluate")Evaluate evaluate);
     int deleteEvaluate(@Param("evaluate")Evaluate evaluate);
     List<Evaluate> queryEvaluate(@Param("evaluate")Evaluate evaluate);
-//    Evaluate querySingleEvaluate(@Param("evaluate")Evaluate evaluate);
+    Evaluate querySingleEvaluate(@Param("evaluate")Evaluate evaluate);
 }

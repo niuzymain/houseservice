@@ -105,16 +105,14 @@ public class QualifyController {
 
     }
 
-    @RequestMapping(value = "/commentoperate", method = RequestMethod.POST)
+    @RequestMapping(value = "/illegalcommentoperate", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> commentOperate(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
-        String evalstr = request.getParameter("evalstr");
-        ObjectMapper objectMapper = new ObjectMapper();
+        Long evaluateid = Long.parseLong(request.getParameter("evaluateid"));
         int result;
         try {
-            Evaluate evaluate = objectMapper.readValue(evalstr, Evaluate.class);
-            result = qualifyService.commentQualifyOperate(evaluate);
+            result = qualifyService.illegalCommentOperate(evaluateid);
             if (result > 0) {
                 modelMap.put("success", true);
             } else {

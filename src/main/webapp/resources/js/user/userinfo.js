@@ -7,4 +7,14 @@ $(function () {
             }
         })
     })
+    $.getJSON("/user/getuserinfo",function(data){
+        if(data.success){
+            $(".u-accountname td:first").after("<td>"+data.result.accountname+"</td>")
+            $(".u-email td:first").after("<td>"+data.result.useremail+"</td>")
+            $(".u-phone td:first").after("<td>"+data.result.userphone+"</td>")
+        }
+        else{
+            alert(dta.errormsg)
+        }
+    })
 })

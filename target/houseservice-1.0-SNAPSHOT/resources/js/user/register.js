@@ -3,7 +3,9 @@ $(function () {
     $("#submit").click(function () {
         var user = {
             accountname: $(".account .accountname").val(),
-            password: $(".account .password").val()
+            password: $(".account .password").val(),
+            userphone:$(".account .phone").val(),
+            useremail:$(".account .email").val()
         }
         var formdata = new FormData();
         formdata.append("register", JSON.stringify(user))

@@ -8,7 +8,7 @@
     <!--id:方法名   result：返回值类型-->
 
     <sql id="Base_Column_List">
-      e.evaluate_id, e.evaluate_des, e.evaluate_score, e.create_time, u.user_id,u.user_name, s.servicer_id,s.servicer_name,e.enable_status
+      e.evaluate_id, e.evaluate_des, e.evaluate_score, e.create_time, u.user_id,u.account_name, s.servicer_id,s.servicer_name,e.enable_status
     </sql>
 
     <resultMap id="BaseResultMap" type="com.house.entity.Evaluate">
@@ -19,7 +19,7 @@
         <result column="enable_status" jdbcType="INTEGER" property="enablestatus"/>
         <association property="user" column="user_id" javaType="com.house.entity.User">
             <id column="user_id" jdbcType="INTEGER" property="userid"/>
-            <result column="user_name" jdbcType="INTEGER" property="username"/>
+            <result column="account_name" jdbcType="VARCHAR" property="accountname"/>
         </association>
         <association property="servicer" column="servicer_id" javaType="com.house.entity.Servicer">
             <id column="servicer_id" jdbcType="INTEGER" property="servicerid"/>
@@ -36,11 +36,28 @@
       #{evaluate.enablestatus,jdbcType=INTEGER})
     </insert>
 
+    <update id="updateEvaluate">
+        update tb_evaluate
+        <set>
+            <if test="evaluate.evaluatedes != null">
+                evaluate_des=#{evaluate.evaluatedes},
+            </if>
+            <if test="evaluate.enablestatus != null">
+                enable_status=#{evaluate.enablestatus},
+            </if>
+        </set>
+        <where>
+            <if test="evaluate.evaluateid != null">
+                and evaluate_id = #{evaluate.evaluateid,jdbcType=INTEGER}
+            </if>
+        </where>
+    </update>
+
     <delete id="deleteEvaluate">
         delete from tb_evaluate
         <where>
             <if test="evaluate.evaluateid != null">
-                and evaluate_id = #{evaluateid,jdbcType=INTEGER}
+                and evaluate_id = #{evaluate.evaluateid,jdbcType=INTEGER}
             </if>
         </where>
     </delete>
@@ -62,5 +79,18 @@
             </if>
         </where>
         order by e.create_time desc
+    </select>
+
+    <select id="querySingleEvaluate" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_evaluate e,tb_user u,tb_servicer s
+        <where>
+            and e.user_id=u.user_id
+            and e.servicer_id=s.servicer_id
+            <if test="evaluate.evaluateid != null">
+                and e.evaluate_id=#{evaluate.evaluateid}
+            </if>
+        </where>
     </select>
 </mapper>

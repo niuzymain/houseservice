@@ -23,7 +23,7 @@ public interface QualifyService {
     评论审核
      */
     List<Evaluate> commentQualifyList();
-    int commentQualifyOperate(Evaluate evaluate);
+    int illegalCommentOperate(long evaluateid);
 
     /*
     预约处理
