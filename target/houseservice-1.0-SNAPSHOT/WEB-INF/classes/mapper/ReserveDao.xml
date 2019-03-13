@@ -8,7 +8,7 @@
 
     <sql id="Base_Column_List">
         r.reserve_id, r.create_time, r.reserve_time,r.reserve_addr, r.reserve_des, r.reserve_phone, r.reserve_msg, r.reserve_contract,u.user_id,
-        u.user_name,s.servicer_name,s.servicer_id, r.enable_status
+        u.account_name,s.servicer_name,s.servicer_id, r.enable_status
     </sql>
 
     <resultMap id="BaseResultMap" type="com.house.entity.Reserve">
@@ -24,7 +24,7 @@
         <result column="enable_status" property="enablestatus"/>
         <association property="user" column="user_id" javaType="com.house.entity.User">
             <id column="user_id" property="userid"/>
-            <result column="user_name" property="username"/>
+            <result column="account_name" property="accountname"/>
         </association>
         <association property="servicer" column="servicer_id" javaType="com.house.entity.Servicer">
             <id column="servicer_id" property="servicerid"/>
@@ -119,7 +119,7 @@
                 <!--</otherwise>-->
             <!--</choose>-->
         </where>
-        order by reserve_time desc
+        order by create_time desc
     </select>
 
     <select id="querySingleReserve" resultMap="BaseResultMap">

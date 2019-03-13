@@ -146,6 +146,24 @@ public class QualifyController {
 
     }
 
+    @RequestMapping(value = "/getspecificreserve", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getSpecificReserveList(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        Long reserveid = Long.parseLong(request.getParameter("reserveid"));
+        try {
+           Reserve reserve = qualifyService.specificReserveQualify(reserveid);
+            modelMap.put("success", true);
+            modelMap.put("result", reserve);
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
+        }
+        return modelMap;
+
+    }
+
     @RequestMapping(value = "/reserveoperate", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> reserveOperate(HttpServletRequest request) {

@@ -12,7 +12,7 @@
     <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
     <title>Title</title>
     <style type="text/css">
-        div {
+        .first {
             float: left;
         }
 
@@ -27,7 +27,7 @@
 </head>
 <body>
 <h1>预约处理</h1>
-<div id="menu">
+<div id="menu" class="first">
     <ul id="lists" class="sui-nav nav-list nav-xlarge">
         <li class="nav-header">信息管理</li>
         <li><a href="#" id="usermanager">账户管理</a></li>
@@ -63,7 +63,54 @@
     <!--</li>-->
     <!--</ul>-->
 </div>
-<div id="reserve">
+<div id="reserve" class="first">
+    <div id="status">
+        <button class="sui-btn btn-bordered btn-primary">已取消</button>
+        <button class="sui-btn btn-bordered btn-primary">待受理</button>
+        <button class="sui-btn btn-bordered btn-primary">已受理</button>
+        <button class="sui-btn btn-bordered btn-primary">已确认</button>
+        <button class="sui-btn btn-bordered btn-primary">已完成</button>
+    </div>
+    <div id="reservetable">
+        <table class="sui-table table-bordered">
+            <thead>
+            <!--<tr>-->
+            <!--<th>＃</th>-->
+            <!--<th>待付款</th>-->
+            <!--<th>宝宝数量</th>-->
+            <!--<th>交易金额</th>-->
+            <!--</tr>-->
+            </thead>
+            <tbody>
+            <!--<tr>-->
+            <!--<td>所有交易</td>-->
+            <!--<td>9999.00</td>-->
+            <!--<td>999</td>-->
+            <!--<td>99999.00</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td>待付款</td>-->
+            <!--<td>9999.00</td>-->
+            <!--<td>999</td>-->
+            <!--<td>99999.00</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td>已发货</td>-->
+            <!--<td>9999.00</td>-->
+            <!--<td>999</td>-->
+            <!--<td>99999.00</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td>已成功</td>-->
+            <!--<td>9999.00</td>-->
+            <!--<td>999</td>-->
+            <!--<td>99999.00</td>-->
+            <!--</tr>-->
+            </tbody>
+        </table>
+    </div>
 </div>
+<script type="text/javascript" src="../resources/js/superadmin/reserve.js"></script>
+<script type="text/javascript" src="../resources/js/common/util.js"></script>
 </body>
 </html>

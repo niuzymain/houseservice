@@ -29,6 +29,7 @@ public interface QualifyService {
     预约处理
      */
     List<Reserve> reserveQualifyList(int enablestatus);
+    Reserve specificReserveQualify(Long reserveid);
     int reserveQualifyOperate(Reserve reserve);
 
 }

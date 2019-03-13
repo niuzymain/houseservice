@@ -61,10 +61,34 @@ public class UserInfoController {
     public Map<String, Object> getUserInfo(HttpServletRequest request) {
         Map<String, Object> modelmap = new HashMap<>();
         User currentuser = (User) request.getSession().getAttribute("useraccount");
+        currentuser.setAccountname(null);
+        currentuser.setPassword(null);
         try {
             User user = userService.selectSingleUser(currentuser);
             modelmap.put("result", user);
             modelmap.put("success", true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelmap.put("errormsg", e.getMessage());
+            modelmap.put("success", false);
+        }
+        return modelmap;
+    }
+
+    @RequestMapping(value = "/operateuserinfo", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> operateUserInfo(HttpServletRequest request) {
+        Map<String, Object> modelmap = new HashMap<>();
+        ObjectMapper objectMapper = new ObjectMapper();
+        String userstr = request.getParameter("userstr");
+        User currentuser = (User) request.getSession().getAttribute("useraccount");
+        try {
+            User user = objectMapper.readValue(userstr,User.class);
+            user.setUserid(currentuser.getUserid());
+           int result = userService.editUser(user);
+           if(result > 0){
+               modelmap.put("success", true);
+           }
         } catch (Exception e) {
             e.printStackTrace();
             modelmap.put("errormsg", e.getMessage());

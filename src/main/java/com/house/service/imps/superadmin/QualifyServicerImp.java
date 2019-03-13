@@ -121,6 +121,17 @@ public class QualifyServicerImp implements QualifyService {
     }
 
     @Override
+    public Reserve specificReserveQualify(Long reserveid) {
+        try{
+            Reserve reserve = reserveDao.querySingleReserve(reserveid);
+            return reserve;
+        }catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
     public int reserveQualifyOperate(Reserve reserve) {
         int result;
         try{

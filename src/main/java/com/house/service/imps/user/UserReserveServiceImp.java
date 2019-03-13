@@ -25,6 +25,7 @@ public class UserReserveServiceImp implements UserReserveService {
                      */
             //////////////////////////////////////添加预约信息//////////////////////////////////////////
             reserve.setEnablestatus(0);
+            reserve.setCreatetime(new Date());
             result = reserveDao.inseerReserve(reserve);
             if(result <= 0){
                 throw  new RuntimeException();
