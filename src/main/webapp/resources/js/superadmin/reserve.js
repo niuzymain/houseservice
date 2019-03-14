@@ -5,6 +5,7 @@ $(function () {
     $.getJSON("/admin/getreservelist?status=" + status, function (data) {
         if (data.success) {
             head = "<tr>" +
+                "<th>编号</th>" +
                 "<th>预约用户</th>" +
                 "<th>预约服务人员</th>" +
                 "<th>联系方式</th>" +
@@ -17,6 +18,7 @@ $(function () {
             $("#reservetable table thead").append(head)
             for (var i = 0; i < data.list.length; i++) {
                 body = "<tr>" +
+                    "<td>" + data.list[i].reserveid+ "</td>" +
                     "<td>" + data.list[i].user.accountname + "</td>" +
                     "<td>" + data.list[i].servicer.servicername + "</td>" +
                     "<td>" + data.list[i].resrevephone + "</td>" +
@@ -24,7 +26,7 @@ $(function () {
                     "<td>" + data.list[i].reservedes + "</td>" +
                     "<td>" + timeStamp2String(data.list[i].createtime) + "</td>" +
                     "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>" +
-                    "<td><a href=\"javascript:void(0);\" class=\"sui-btn btn-xlarge btn-primary handle\">处理</a></td>" +
+                    "<td><a href=\"javascript:void(0);\" class=\"sui-btn btn-xlarge btn-primary handle\" onclick=handle(this)>处理</a></td>" +
                     "</tr>"
                 $("#reservetable table tbody").append(body)
             }
@@ -56,12 +58,13 @@ $(function () {
             alert("操作错误")
             return false;
         }
-
+//////////////////////////////////////////根据状态获取list并展示,不同状态表头有所区别//////////////////////////////////////////////
         $.getJSON("/admin/getreservelist?status=" + status, function (data) {
             if (data.success) {
                 switch (status) {
                     case -1:
                         head = "<tr>" +
+                            "<th>编号</th>" +
                             "<th>预约用户</th>" +
                             "<th>预约服务人员</th>" +
                             "<th>联系方式</th>" +
@@ -74,6 +77,7 @@ $(function () {
                         $("#reservetable table thead").append(head)
                         for (var i = 0; i < data.list.length; i++) {
                             body = "<tr>" +
+                                "<td>" + data.list[i].reserveid+ "</td>" +
                                 "<td>" + data.list[i].user.accountname + "</td>" +
                                 "<td>" + data.list[i].servicer.servicername + "</td>" +
                                 "<td>" + data.list[i].resrevephone + "</td>" +
@@ -88,6 +92,7 @@ $(function () {
                         break;
                     case 0:
                         head = "<tr>" +
+                            "<th>编号</th>" +
                             "<th>预约用户</th>" +
                             "<th>预约服务人员</th>" +
                             "<th>联系方式</th>" +
@@ -100,6 +105,7 @@ $(function () {
                         $("#reservetable table thead").append(head)
                         for (var i = 0; i < data.list.length; i++) {
                             body = "<tr>" +
+                                "<td>" + data.list[i].reserveid+ "</td>" +
                                 "<td>" + data.list[i].user.accountname + "</td>" +
                                 "<td>" + data.list[i].servicer.servicername + "</td>" +
                                 "<td>" + data.list[i].resrevephone + "</td>" +
@@ -107,13 +113,42 @@ $(function () {
                                 "<td>" + data.list[i].reservedes + "</td>" +
                                 "<td>" + timeStamp2String(data.list[i].createtime) + "</td>" +
                                 "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>" +
-                                "<td><a href=\"javascript:void(0);\" class=\"sui-btn btn-xlarge btn-primary handle\">处理</a></td>" +
+                                "<td><a href=\"javascript:void(0);\" class=\"sui-btn btn-xlarge btn-primary handle\" onclick=handle(this)>处理</a></td>" +
                                 "</tr>"
                             $("#reservetable table tbody").append(body)
                         }
                         break;
 
                     case 1:
+                        head = "<tr>" +
+                            "<th>编号</th>" +
+                            "<th>预约用户</th>" +
+                            "<th>预约服务人员</th>" +
+                            "<th>联系方式</th>" +
+                            "<th>预约地点</th>" +
+                            "<th>预约备注</th>" +
+                            "<th>操作时间</th>" +
+                            "<th>状态</th>" +
+                            "<th>操作</th>" +
+                            "</tr>"
+                        $("#reservetable table thead").append(head)
+                        for (var i = 0; i < data.list.length; i++) {
+                            body = "<tr>" +
+                                "<td>" + data.list[i].reserveid+ "</td>" +
+                                "<td>" + data.list[i].user.accountname + "</td>" +
+                                "<td>" + data.list[i].servicer.servicername + "</td>" +
+                                "<td>" + data.list[i].resrevephone + "</td>" +
+                                "<td>" + data.list[i].reserveadds + "</td>" +
+                                "<td>" + data.list[i].reservedes + "</td>" +
+                                "<td>" + timeStamp2String(data.list[i].createtime) + "</td>" +
+                                "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>" +
+                                "<td>" +
+                                "<a href=\"javascript:void(0);\" class=\"sui-btn btn-xlarge btn-primary handle\" onclick=confirm(this)>确认预约</a><br><br>" +
+                                "<a href=\"javascript:void(0);\" class=\"sui-btn btn-xlarge btn-primary handle\" onclick='cancel(this)'>客户取消</a>" +
+                                "</td>" +
+                                "</tr>"
+                            $("#reservetable table tbody").append(body)
+                        }
                         break;
 
                     case 2:
@@ -133,8 +168,61 @@ $(function () {
         })
 
     })
-//////////////////////////////////////待处理预约操作////////////////////////////////////////////
-    $("table tbody").on("click",".handle",function(){
-
-    })
 })
+
+//////////////////////////////////////待处理预约操作////////////////////////////////////////////
+function handle(e){
+        $.ajax({
+            url:"/admin/handlereserve",
+            data:{
+                reserveid:$(e).parent().parent().children(":first").text()
+            },
+            type:"post",
+            success:function(data){
+                if(data.success){
+                    alert("success")
+                    window.location.reload()
+                }
+                else{
+                    alert(data.errormsg)
+                }
+            }
+        })
+}
+
+function confirm(e){
+    window.location.href="/admin/confirmpage?reserveid="+$(e).parent().parent().children(":first").text()
+}
+
+function cancel(e){
+    var reason = prompt("取消预约")
+    if(reason){
+        var formdata = new FormData()
+        var reserve = {
+            reserveid:$(e).parent().parent().children(":first").text(),
+            reservemsg:reason,
+            enablestatus:-1
+        }
+        formdata.append("reservestr",JSON.stringify(reserve))
+        $.ajax({
+            url: "/user/cancelreserve",
+            data: formdata,
+            type: "post",
+            contentType: false,
+            processData: false,
+            cache: false,
+            success:function(data){
+                if(data.success){
+                    alert("success")
+                    window.location.reload()
+                }
+                else{
+                    alert(data.errormsg)
+                }
+            }
+        })
+    }
+    else if(reason == ""){
+        alert("请输入客户取消原因")
+    }
+}

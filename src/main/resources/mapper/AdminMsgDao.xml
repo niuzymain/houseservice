@@ -74,7 +74,7 @@
         order by create_time desc
     </select>
 
-    <select id="querySpecificComment" resultMap="BaseResultMap">
+    <select id="querySpecificMessage" resultMap="BaseResultMap">
         select
         <include refid="Specific_Column_List"/>
         from tb_adminmsg a,tb_user u,tb_servicer s

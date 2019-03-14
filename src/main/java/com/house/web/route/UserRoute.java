@@ -52,4 +52,9 @@ public class UserRoute {
     private String userEvaluate(){
         return"user/evaluate";
     }
+
+    @RequestMapping(value = "/message",method = RequestMethod.GET)
+    private String userMessage(){
+        return"user/usermessage";
+    }
 }

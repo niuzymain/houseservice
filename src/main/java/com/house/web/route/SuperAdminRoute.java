@@ -63,5 +63,9 @@ public class SuperAdminRoute {
         return "superadmin/reserve";
     }
 
+    @RequestMapping(value = "/confirmpage",method = RequestMethod.GET)
+    private String reserveConfirm() {
+        return "superadmin/confirmpage";
 
+    }
 }

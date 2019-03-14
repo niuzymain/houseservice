@@ -1,8 +1,10 @@
 package com.house.web.user;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.house.entity.AdminMsg;
 import com.house.entity.Reserve;
 import com.house.entity.User;
+import com.house.service.user.UserMessageService;
 import com.house.service.user.UserReserveService;
 import com.house.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,8 @@ public class UserInfoController {
     private UserService userService;
     @Autowired
     private UserReserveService userReserveService;
+    @Autowired
+    private UserMessageService userMessageService;
 
     @RequestMapping(value = "/adduser", method = RequestMethod.POST)
     @ResponseBody
@@ -120,6 +124,17 @@ public class UserInfoController {
         Reserve reserve = userReserveService.selectSingleReservelist(reserveid);
         modelmap.put("success", true);
         modelmap.put("result", reserve);
+        return modelmap;
+    }
+
+    @RequestMapping(value = "/getusermessagelist", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getUserMEssageList(HttpServletRequest request) {
+        Map<String, Object> modelmap = new HashMap<>();
+        User user =(User)request.getSession().getAttribute("useraccount");
+        List<AdminMsg> adminMsgList = userMessageService.getMessageList(user);
+        modelmap.put("success", true);
+        modelmap.put("list", adminMsgList);
         return modelmap;
     }
 }

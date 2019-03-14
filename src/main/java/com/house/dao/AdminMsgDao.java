@@ -10,5 +10,5 @@ public interface AdminMsgDao {
     List<AdminMsg> queryUserMessageList();
     List<AdminMsg> queryServicerMessageList();
     List<AdminMsg> querySpecificList(@Param("adminmsg") AdminMsg adminMsg);
-    AdminMsg querySpecificComment(@Param("adminmsg")AdminMsg adminMsg);
+    AdminMsg querySpecificMessage(@Param("adminmsg")AdminMsg adminMsg);
 }
