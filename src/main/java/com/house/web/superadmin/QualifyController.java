@@ -232,4 +232,22 @@ public class QualifyController {
         return modelMap;
 
     }
+
+    @RequestMapping(value = "/overreserve", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> overReserve(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        Long reserveid = Long.parseLong(request.getParameter("reserveid"));
+        try {
+            int result = qualifyReserveService.overReserve(reserveid);
+            if(result > 0){
+                modelMap.put("success", true);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
+        }
+        return modelMap;
+    }
 }

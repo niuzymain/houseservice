@@ -1,12 +1,31 @@
 $(function () {
     var status = 0;
+    var head = ""
+    var reserverow = ""
+    $.getJSON("/user/getuserinfo",function(data){
+        if(data.success){
+            $("h1 a").append(data.result.accountname)
+        }
+        else{
+            alert(data.errormsg)
+        }
+    })
     $.getJSON("/user/getuserreserve?status=0", function (data) {
         if (data.success) {
+            head = "<tr>" +
+                "<th>服务人员</th>" +
+                "<th>操作时间</th>" +
+                "<th>状态</th>" +
+                "<th>预约备注</th>" +
+                "<th>操作</th>" +
+                "</tr>"
+            $("table thead").append(head);
             for (var i = 0; i < data.list.length; i++) {
-                var reserverow = "<tr>" +
+                reserverow = "<tr>" +
                     "<td>" + data.list[i].servicer.servicername + "</td>" +
                     "<td>" + timeStamp2String(data.list[i].createtime) + "</td>" +
                     "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>" +
+                    "<td>" + data.list[i].reservedes + "</td>" +
                     "<td><a href=# id=" + data.list[i].reserveid + " class='cancel'>取消</a></td>" +
                     "</tr>"
                 $("table tbody").append(reserverow);
@@ -16,6 +35,7 @@ $(function () {
 
 
     $(".am-btn-group button").click(function () {
+        $("table thead").empty()
         $("table tbody").empty()
         if ($(this).text() == "已取消") {
             status = -1
@@ -37,30 +57,122 @@ $(function () {
         }
         $.getJSON("/user/getuserreserve?status=" + status, function (data) {
             if (data.success) {
-                for (var i = 0; i < data.list.length; i++) {
-                    var reserverow = "<tr>" +
-                        "<td>" + data.list[i].servicer.servicername + "</td>" +
-                        "<td>" + timeStamp2String(data.list[i].createtime) + "</td>" +
-                        "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>"
-                    if (data.list[i].enablestatus == -1) {
-                        reserverow += "<td>" + data.list[i].reservemsg + "</td>"
+                if (status == -1) {
+                    head = "<tr>" +
+                        "<th>服务人员</th>" +
+                        "<th>操作时间</th>" +
+                        "<th>状态</th>" +
+                        "<th>预约备注</th>" +
+                        "<th>取消原因</th>" +
+                        "</tr>"
+                    $("table thead").append(head);
+                    for (var i = 0; i < data.list.length; i++) {
+                        reserverow = "<tr>" +
+                            "<td>" + data.list[i].servicer.servicername + "</td>" +
+                            "<td>" + timeStamp2String(data.list[i].createtime) + "</td>" +
+                            "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>" +
+                            "<td>" + data.list[i].reservedes + "</td>" +
+                            "<td>" + data.list[i].reservemsg + "</td>" +
+                            "</tr>"
+                        $("table tbody").append(reserverow);
                     }
-                    else if (data.list[i].enablestatus == 0) {
-                        reserverow += "<td><a href=# id=" + data.list[i].reserveid + " class='cancel'>取消</a></td>"
+                }
+
+                else if (status == 0) {
+                    head = "<tr>" +
+                        "<th>服务人员</th>" +
+                        "<th>操作时间</th>" +
+                        "<th>状态</th>" +
+                        "<th>预约备注</th>" +
+                        "<th>操作</th>" +
+                        "</tr>"
+                    $("table thead").append(head);
+                    for (var i = 0; i < data.list.length; i++) {
+                        reserverow = "<tr>" +
+                            "<td>" + data.list[i].servicer.servicername + "</td>" +
+                            "<td>" + timeStamp2String(data.list[i].createtime) + "</td>" +
+                            "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>" +
+                            "<td>" + data.list[i].reservedes + "</td>" +
+                            "<td><a href=# id=" + data.list[i].reserveid + " class='cancel'>取消</a></td>" +
+                            "</tr>"
+                        $("table tbody").append(reserverow);
                     }
-                    else if (data.list[i].enablestatus == 2) {
-                        reserverow += "<td><a href=#>查看合同</a></td>"
+                }
+
+                else if (status == 1) {
+                    head = "<tr>" +
+                        "<th>服务人员</th>" +
+                        "<th>操作时间</th>" +
+                        "<th>状态</th>" +
+                        "<th>预约备注</th>" +
+                        "</tr>"
+                    $("table thead").append(head);
+                    for (var i = 0; i < data.list.length; i++) {
+                        reserverow = "<tr>" +
+                            "<td>" + data.list[i].servicer.servicername + "</td>" +
+                            "<td>" + timeStamp2String(data.list[i].createtime) + "</td>" +
+                            "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>" +
+                            "<td>" + data.list[i].reservedes + "</td>" +
+                            "</tr>"
+                        $("table tbody").append(reserverow);
                     }
-                    else if (data.list[i].enablestatus == 3) {
-                        reserverow += "<td><a href=/user/evaluate?reserveid=" + data.list[i].reserveid + "&servicerid=" + data.list[i].servicer.servicerid + ">评价</a></td>"
+                }
+
+                else if (status == 2) {
+                    head = "<tr>" +
+                        "<th>服务人员</th>" +
+                        "<th>操作时间</th>" +
+                        "<th>状态</th>" +
+                        "<th>预约备注</th>" +
+                        "<th>预约时间</th>" +
+                        "<th>结束时间</th>" +
+                        "<th>操作</th>" +
+                        "</tr>"
+                    $("table thead").append(head);
+                    for (var i = 0; i < data.list.length; i++) {
+                        reserverow = "<tr>" +
+                            "<td>" + data.list[i].servicer.servicername + "</td>" +
+                            "<td>" + timeStamp2String(data.list[i].createtime) + "</td>" +
+                            "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>" +
+                            "<td>" + data.list[i].reservedes + "</td>" +
+                            "<td>" + timeStamp2String(data.list[i].reservetime) + "</td>" +
+                            "<td>" + timeStamp2String(data.list[i].endtime) + "</td>" +
+                            "<td><a href=/file" + data.list[i].reservecontract + ">查看合同</a></td>" +
+                            "</tr>"
+                        $("table tbody").append(reserverow);
                     }
-                    else {
-                        reserverow += "<td>无</td>"
+                }
+
+                else if (status == 3) {
+                    head = "<tr>" +
+                        "<th>服务人员</th>" +
+                        "<th>操作时间</th>" +
+                        "<th>状态</th>" +
+                        "<th>预约备注</th>" +
+                        "<th>预约时间</th>" +
+                        "<th>结束时间</th>" +
+                        "<th>操作</th>" +
+                        "</tr>"
+                    $("table thead").append(head);
+                    for (var i = 0; i < data.list.length; i++) {
+                        reserverow = "<tr>" +
+                            "<td>" + data.list[i].servicer.servicername + "</td>" +
+                            "<td>" + timeStamp2String(data.list[i].createtime) + "</td>" +
+                            "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>" +
+                            "<td>" + data.list[i].reservedes + "</td>" +
+                            "<td>" + timeStamp2String(data.list[i].reservetime) + "</td>" +
+                            "<td>" + timeStamp2String(data.list[i].endtime) + "</td>" +
+                            "<td><a href=#>评价</a></td>" +
+                            "</tr>"
+                        $("table tbody").append(reserverow);
                     }
-                    reserverow += "</tr>"
-                    $("table tbody").append(reserverow);
+                }
+                else {
+                    alert("操作错误")
                 }
             }
+
+
         })
     })
     $("#logout button").click(function () {
@@ -89,18 +201,18 @@ $(function () {
                 contentType: false,
                 processData: false,
                 cache: false,
-                success:function(data){
-                    if(data.success){
+                success: function (data) {
+                    if (data.success) {
                         alert("success")
                         window.location.reload()
                     }
-                    else{
+                    else {
                         alert(dat.errormsg)
                     }
                 }
             })
         }
-        else if(msg == ""){
+        else if (msg == "") {
             alert("请输入取消原因")
         }
 

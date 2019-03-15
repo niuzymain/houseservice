@@ -65,8 +65,6 @@ public class UserInfoController {
     public Map<String, Object> getUserInfo(HttpServletRequest request) {
         Map<String, Object> modelmap = new HashMap<>();
         User currentuser = (User) request.getSession().getAttribute("useraccount");
-        currentuser.setAccountname(null);
-        currentuser.setPassword(null);
         try {
             User user = userService.selectSingleUser(currentuser);
             modelmap.put("result", user);
@@ -92,6 +90,7 @@ public class UserInfoController {
            int result = userService.editUser(user);
            if(result > 0){
                modelmap.put("success", true);
+               request.getSession().setAttribute("useraccount",userService.selectSingleUser(user));
            }
         } catch (Exception e) {
             e.printStackTrace();

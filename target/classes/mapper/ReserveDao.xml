@@ -7,7 +7,7 @@
 <mapper namespace="com.house.dao.ReserveDao">
 
     <sql id="Base_Column_List">
-        r.reserve_id, r.create_time, r.reserve_time,r.reserve_addr, r.reserve_des, r.reserve_phone, r.reserve_msg, r.reserve_contract,u.user_id,
+        r.reserve_id, r.create_time, r.reserve_time, r.end_time,r.reserve_addr, r.reserve_des, r.reserve_phone, r.reserve_msg, r.reserve_contract,u.user_id,
         u.account_name,s.servicer_name,s.servicer_id, r.enable_status
     </sql>
 
@@ -51,6 +51,9 @@
             </if>
             <if test="reserve.reservetime != null">
                 reserve_time = #{reserve.reservetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="reserve.endtime != null">
+                end_time = #{reserve.endtime,jdbcType=TIMESTAMP},
             </if>
             <if test="reserve.reserveaddr != null">
                 reserve_addr = #{reserve.reserveaddr,jdbcType=VARCHAR},

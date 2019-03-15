@@ -20,4 +20,5 @@ public interface QualifyReserveService {
     Reserve specificReserveQualify(Long reserveid);
     int handleReserve(long reserveid);
     int confirmReserve(Reserve reserve, InputStream contract,String filename);
+    int overReserve(long reserveid);
 }

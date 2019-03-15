@@ -9,6 +9,7 @@ $(function () {
     })
     $.getJSON("/user/getuserinfo",function(data){
         if(data.success){
+            $("h1 a").append(data.result.accountname)
             $(".u-accountname td:first").after("<td>"+data.result.accountname+"</td>")
             $(".u-email td:first").after("<td>"+data.result.useremail+"</td>")
             $(".u-phone td:first").after("<td>"+data.result.userphone+"</td>")

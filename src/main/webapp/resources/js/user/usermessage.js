@@ -7,6 +7,14 @@ $(function () {
             }
         })
     })
+    $.getJSON("/user/getuserinfo",function(data){
+        if(data.success){
+            $("h1 a").append(data.result.accountname)
+        }
+        else{
+            alert(data.errormsg)
+        }
+    })
     $.getJSON("/user/getusermessagelist", function (data) {
         if (data.success) {
             for (var i = 0; i < data.list.length; i++) {

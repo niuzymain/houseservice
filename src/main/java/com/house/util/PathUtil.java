@@ -21,10 +21,10 @@ public class PathUtil {
     }
 
     public static String reserveContract(){
-        return "/contract/reservecontract";
+        return "/contract/reservecontract/";
     }
 
     public static String servicerContract(){
-        return "/contract/servicercontract";
+        return "/contract/servicercontract/";
     }
 }

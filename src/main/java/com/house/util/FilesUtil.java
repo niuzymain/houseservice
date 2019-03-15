@@ -75,7 +75,7 @@ public class FilesUtil {
      */
     public static void deleteFile(String path){
         File file = new File(path);
-        if(file.exists()){
+        if(file.exists() && file.isFile()){
             file.delete();
         }
     }

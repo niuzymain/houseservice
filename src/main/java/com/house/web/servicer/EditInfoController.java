@@ -104,6 +104,7 @@ public class EditInfoController {
             ServicerExecution se = editInfoService.editInfo(servicer);
             if (se.getState() == ServicerEnum.SUCCESS.getState()) {
                 modelMap.put("success", true);
+                request.getSession().setAttribute("serviceraccount",editInfoService.getServicerInfo(servicer).getServicer());
             }
             else {
                 modelMap.put("success", false);

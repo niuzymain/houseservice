@@ -22,8 +22,6 @@ public class EditInfoServiceImp implements EditInfoService {
     @Override
     public ServicerExecution getServicerInfo(Servicer servicer) {
         try {
-            servicer.setAccountname(null);
-            servicer.setPassword(null);
             return new ServicerExecution(ServicerEnum.SUCCESS, servicerDao.querySingleServicer(servicer));
         } catch (Exception e) {
             e.printStackTrace();

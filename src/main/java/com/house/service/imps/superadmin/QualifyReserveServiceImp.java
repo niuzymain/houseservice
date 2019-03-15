@@ -27,7 +27,7 @@ public class QualifyReserveServiceImp implements QualifyReserveService {
     @Autowired
     private AdminMsgDao adminMsgDao;
 
-    public static SimpleDateFormat sft= new SimpleDateFormat("yyyy年MM月dd日");
+    public static SimpleDateFormat sft = new SimpleDateFormat("yyyy年MM月dd日");
 
 
     @Override
@@ -61,26 +61,25 @@ public class QualifyReserveServiceImp implements QualifyReserveService {
         Reserve currentreserve = reserveDao.querySingleReserve(reserveid);
 ///////////////////////////////创建消息///////////////////////////////////////////////////////
         AdminMsg adminMsg = new AdminMsg();
-        adminMsg.setAdminmsgdes("您于"+sft.format(currentreserve.getCreatetime())+"的预约已受理,请等待我们的联系");
+        adminMsg.setAdminmsgdes("您于" + sft.format(currentreserve.getCreatetime()) + "的预约已受理,请等待我们的联系");
         adminMsg.setCreatetime(new Date());
         adminMsg.setUser(currentreserve.getUser());
         adminMsg.setType(0);
 ////////////////////////////////////更改预约信息////////////////////////////////////////////////////////////
         currentreserve.setEnablestatus(1);
         currentreserve.setCreatetime(new Date());
-        try{
+        try {
             result = adminMsgDao.insertAdminmsg(adminMsg);
-            if(result <= 0){
+            if (result <= 0) {
                 throw new RuntimeException();
             }
             result = reserveDao.updateReserve(currentreserve);
-            if(result <= 0){
+            if (result <= 0) {
                 throw new RuntimeException();
-            }
-            else{
+            } else {
                 return result;
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException();
         }
@@ -88,25 +87,54 @@ public class QualifyReserveServiceImp implements QualifyReserveService {
 
     @Override
     @Transactional
-    public int confirmReserve(Reserve reserve, InputStream contract,String filename) {
+    public int confirmReserve(Reserve reserve, InputStream contract, String filename) {
         int result = 0;
         String url = "";
         reserve.setCreatetime(new Date());
-        try{
-            url = FilesUtil.saveReserveConntract(contract,reserve.getReserveid(),filename);
+        try {
+            url = FilesUtil.saveReserveConntract(contract, reserve.getReserveid(), filename);
             reserve.setReservecontract(url);
+            reserve.setEnablestatus(2);
             result = reserveDao.updateReserve(reserve);
-            if(result <= 0){
-                FilesUtil.deleteFile(PathUtil.rootPath()+url);
+            if (result <= 0) {
+                FilesUtil.deleteFile(PathUtil.rootPath() + url);
                 throw new RuntimeException();
-            }
-            else{
+            } else {
                 return result;
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            FilesUtil.deleteFile(PathUtil.rootPath()+url);
+            FilesUtil.deleteFile(PathUtil.rootPath() + url);
             throw new RuntimeException();
         }
     }
+
+    @Override
+    @Transactional
+    public int overReserve(long reserveid) {
+        int result = 0;
+        Reserve currentreserve = reserveDao.querySingleReserve(reserveid);
+        AdminMsg adminMsg = new AdminMsg();
+        adminMsg.setCreatetime(new Date());
+        adminMsg.setUser(currentreserve.getUser());
+        adminMsg.setType(0);
+        adminMsg.setAdminmsgdes("您于" + sft.format(currentreserve.getReservetime()) + "预约的服务已服务完成，感谢您的预约");
+        currentreserve.setCreatetime(new Date());
+        currentreserve.setEnablestatus(3);
+        try {
+            result = adminMsgDao.insertAdminmsg(adminMsg);
+            if (result <= 0) {
+                throw new RuntimeException("插入消息出现异常");
+            }
+            result = reserveDao.updateReserve(currentreserve);
+            if (result <= 0) {
+                throw new RuntimeException("插入消息出现异常");
+            }
+            return result;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("操作出现异常");
+        }
+    }
+
 }
