@@ -14,4 +14,5 @@ public interface EvaluateDao {
     int deleteEvaluate(@Param("evaluate")Evaluate evaluate);
     List<Evaluate> queryEvaluate(@Param("evaluate")Evaluate evaluate);
     Evaluate querySingleEvaluate(@Param("evaluate")Evaluate evaluate);
+    int averageScore(@Param("servicerid") Long servicerid);
 }

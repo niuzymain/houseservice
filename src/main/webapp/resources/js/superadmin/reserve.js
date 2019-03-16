@@ -21,8 +21,8 @@ $(function () {
                     "<td>" + data.list[i].reserveid + "</td>" +
                     "<td>" + data.list[i].user.accountname + "</td>" +
                     "<td>" + data.list[i].servicer.servicername + "</td>" +
-                    "<td>" + data.list[i].resrevephone + "</td>" +
-                    "<td>" + data.list[i].reserveadds + "</td>" +
+                    "<td>" + data.list[i].reservephone + "</td>" +
+                    "<td>" + data.list[i].reserveaddr + "</td>" +
                     "<td>" + data.list[i].reservedes + "</td>" +
                     "<td>" + timeStamp2String(data.list[i].createtime) + "</td>" +
                     "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>" +

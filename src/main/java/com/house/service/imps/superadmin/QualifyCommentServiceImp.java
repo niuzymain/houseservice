@@ -2,8 +2,10 @@ package com.house.service.imps.superadmin;
 
 import com.house.dao.AdminMsgDao;
 import com.house.dao.EvaluateDao;
+import com.house.dao.ServicerDao;
 import com.house.entity.AdminMsg;
 import com.house.entity.Evaluate;
+import com.house.entity.Servicer;
 import com.house.entity.User;
 import com.house.service.superadmin.QualifyCommentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,15 +26,17 @@ public class QualifyCommentServiceImp implements QualifyCommentService {
     private AdminMsgDao adminMsgDao;
     @Autowired
     private EvaluateDao evaluateDao;
+    @Autowired
+    private ServicerDao servicerDao;
 
     public static SimpleDateFormat sft = new SimpleDateFormat("yyyy年MM月dd日");
 
     @Override
     public List<Evaluate> commentQualifyList() {
-        try{
+        try {
             List<Evaluate> evaluateList = evaluateDao.queryEvaluate(new Evaluate());
             return evaluateList;
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
@@ -55,17 +59,22 @@ public class QualifyCommentServiceImp implements QualifyCommentService {
         adminMsg.setUser(user);
         adminMsg.setType(0);
         adminMsg.setCreatetime(new Date());
-        adminMsg.setAdminmsgdes("您于"+ sft.format(specific.getCreatetime())+"的评论违规，已被系统屏蔽！");
-        try{
+        adminMsg.setAdminmsgdes("您于" + sft.format(specific.getCreatetime()) + "的评论违规，已被系统屏蔽！");
+        try {
             result = evaluateDao.updateEvaluate(evaluate);
             adminMsgDao.insertAdminmsg(adminMsg);
-            if(result <= 0){
+///////////////////////////////更新服务人员评分///////////////////////////////////////////////
+            int score = evaluateDao.averageScore(specific.getServicer().getServicerid());
+            Servicer servicer = new Servicer();
+            servicer.setServicerid(specific.getServicer().getServicerid());
+            servicer.setServicerscore(score);
+            servicerDao.updateServicer(servicer);
+            if (result <= 0) {
                 throw new RuntimeException();
-            }
-            else{
+            } else {
                 return result;
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException();
         }

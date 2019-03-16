@@ -7,8 +7,8 @@
 <mapper namespace="com.house.dao.ReserveDao">
 
     <sql id="Base_Column_List">
-        r.reserve_id, r.create_time, r.reserve_time, r.end_time,r.reserve_addr, r.reserve_des, r.reserve_phone, r.reserve_msg, r.reserve_contract,u.user_id,
-        u.account_name,s.servicer_name,s.servicer_id, r.enable_status
+        r.reserve_id, r.create_time as r_c_time, r.reserve_time, r.end_time,r.reserve_addr, r.reserve_des, r.reserve_phone, r.reserve_msg, r.reserve_contract,u.user_id,
+        u.account_name,s.servicer_name,s.servicer_id, r.enable_status,e.evaluate_id,e.evaluate_des,e.create_time as e_c_time,e.evaluate_score
     </sql>
 
     <resultMap id="BaseResultMap" type="com.house.entity.Reserve">
@@ -30,16 +30,23 @@
             <id column="servicer_id" property="servicerid"/>
             <result column="servicer_name" property="servicername"/>
         </association>
+        <association property="evaluate" column="evaluate_id" javaType="com.house.entity.Evaluate">
+            <id column="evaluate_id" property="evaluateid"/>
+            <result column="evaluate_des" property="evaluatedes"/>
+            <result column="create_time" property="createtime"/>
+            <result column="evaluate_score" property="evaluatescore"/>
+        </association>
     </resultMap>
 
     <insert id="inseerReserve" useGeneratedKeys="true" keyColumn="reserve_id" keyProperty="reserveid">
         insert into tb_reserve (create_time, reserve_time,end_time,reserve_addr,
           reserve_des, reserve_phone, reserve_msg,reserve_contract,
-          user_id, servicer_id, enable_status
+          user_id, servicer_id, enable_status,evaluate_id
           )
         values (#{reserve.createtime,jdbcType=TIMESTAMP}, #{reserve.reservetime,jdbcType=TIMESTAMP}, #{reserve.endtime,jdbcType=TIMESTAMP}, #{reserve.reserveaddr,jdbcType=VARCHAR},
           #{reserve.reservedes,jdbcType=VARCHAR}, #{reserve.reservephone,jdbcType=VARCHAR}, #{reserve.reservemsg,jdbcType=VARCHAR},
-          #{reserve.reservecontract,jdbcType=VARCHAR},#{reserve.user.userid,jdbcType=INTEGER}, #{reserve.servicer.servicerid,jdbcType=INTEGER}, #{reserve.enablestatus,jdbcType=INTEGER}
+          #{reserve.reservecontract,jdbcType=VARCHAR},#{reserve.user.userid,jdbcType=INTEGER}, #{reserve.servicer.servicerid,jdbcType=INTEGER}, #{reserve.enablestatus,jdbcType=INTEGER},
+          #{reserve.evaluate.evaluateid,jdbcType=INTEGER}
           )
     </insert>
 
@@ -76,6 +83,9 @@
             <if test="reserve.servicer != null &amp;&amp;reserve.servicer.servicerid != null">
                 servicer_id = #{reserve.servicer.servicerid,jdbcType=INTEGER},
             </if>
+            <if test="reserve.evaluate != null &amp;&amp;reserve.evaluate.evaluateid != null">
+                evaluate_id = #{reserve.evaluate.evaluateid,jdbcType=INTEGER},
+            </if>
             <if test="reserve.enablestatus != null">
                 enable_status = #{reserve.enablestatus,jdbcType=INTEGER},
             </if>
@@ -93,7 +103,9 @@
     <select id="queryReserveList" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_reserve r,tb_user u,tb_servicer s
+        from (tb_reserve r,tb_user u,tb_servicer s)
+        left join tb_evaluate e
+        on r.evaluate_id=e.evaluate_id
         <where>
             and r.servicer_id=s.servicer_id
             and r.user_id=u.user_id
@@ -122,13 +134,15 @@
                 <!--</otherwise>-->
             <!--</choose>-->
         </where>
-        order by create_time desc
+        order by r_c_time desc
     </select>
 
     <select id="querySingleReserve" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_reserve r,tb_user u,tb_servicer s
+        from (tb_reserve r,tb_user u,tb_servicer s)
+        left join tb_evaluate e
+        on r.evaluate_id=e.evaluate_id
         <where>
             and r.servicer_id=s.servicer_id
             and r.user_id=u.user_id

@@ -161,9 +161,13 @@ $(function () {
                             "<td>" + reserveinfo(data.list[i].enablestatus) + "</td>" +
                             "<td>" + data.list[i].reservedes + "</td>" +
                             "<td>" + timeStamp2String(data.list[i].reservetime) + "</td>" +
-                            "<td>" + timeStamp2String(data.list[i].endtime) + "</td>" +
-                            "<td><a href=#>评价</a></td>" +
-                            "</tr>"
+                            "<td>" + timeStamp2String(data.list[i].endtime) + "</td>"
+                        if(data.list[i].evaluate != null){
+                            reserverow+="<td><a href=/user/evaluate?evaluateid="+data.list[i].evaluate.evaluateid+">查看评价</a></td></tr>"
+                        }
+                        else{
+                            reserverow+="<td><a href=/user/evaluate?reserveid="+data.list[i].reserveid+">评价</a></td></tr>"
+                        }
                         $("table tbody").append(reserverow);
                     }
                 }

@@ -27,11 +27,11 @@
         </association>
     </resultMap>
 
-    <insert id="insertEvaluate" useGeneratedKeys="true" keyColumn="evaluate_id" keyProperty="evaluateid">
-      insert into tb_evaluate (evaluate_id, evaluate_des, evaluate_score,
+    <insert id="insertEvaluate" useGeneratedKeys="true" keyColumn="evaluate_id" keyProperty="evaluate.evaluateid">
+      insert into tb_evaluate (evaluate_des, evaluate_score,
       create_time, user_id, servicer_id,
       enable_status)
-      values (#{evaluate.evaluateid,jdbcType=INTEGER}, #{evaluate.evaluateies,jdbcType=VARCHAR}, #{evaluate.evaluatescore,jdbcType=INTEGER},
+      values (#{evaluate.evaluatedes,jdbcType=VARCHAR}, #{evaluate.evaluatescore,jdbcType=INTEGER},
       #{evaluate.createtime,jdbcType=TIMESTAMP}, #{evaluate.user.userid,jdbcType=INTEGER}, #{evaluate.servicer.servicerid,jdbcType=INTEGER},
       #{evaluate.enablestatus,jdbcType=INTEGER})
     </insert>
@@ -92,5 +92,14 @@
                 and e.evaluate_id=#{evaluate.evaluateid}
             </if>
         </where>
+    </select>
+
+    <select id="averageScore" resultType="INTEGER">
+        select avg(evaluate_score)
+        from tb_evaluate
+        where
+        servicer_id=#{servicerid}
+        and
+        enable_status=1
     </select>
 </mapper>

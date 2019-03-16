@@ -17,6 +17,7 @@ public class Reserve {
     private String reservemsg;//预约留言，服务人员编辑
     private User user;
     private Servicer servicer;
+    private Evaluate evaluate;
     private Integer enablestatus;//预约状态  -1.取消 0.等待 1.已受理 2.已确认 3.已完成
 
     public long getReserveid() {
@@ -113,5 +114,13 @@ public class Reserve {
 
     public void setReservecontract(String reservecontract) {
         this.reservecontract = reservecontract;
+    }
+
+    public Evaluate getEvaluate() {
+        return this.evaluate;
+    }
+
+    public void setEvaluate(Evaluate evaluate) {
+        this.evaluate = evaluate;
     }
 }

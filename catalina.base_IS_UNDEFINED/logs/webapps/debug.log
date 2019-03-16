@@ -1,5 +1,73 @@
-2019-03-08 21;26:25.355[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - ==>  Preparing: insert into tb_adminmsg(create_time,adminmsg_des,type,user_id,servicer_id) values(?,?,?,?,?) 
-2019-03-08 21;26:25.613[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - ==> Parameters: 2019-03-08 21:26:24.458(Timestamp), 3(Integer), ssssssssss(String), null, null
-2019-03-08 21;27:48.064[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - ==>  Preparing: insert into tb_adminmsg(create_time,adminmsg_des,type,user_id,servicer_id) values(?,?,?,?,?) 
-2019-03-08 21;27:48.140[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - ==> Parameters: 2019-03-08 21:27:47.649(Timestamp), ssssssssss(String), 3(Integer), null, null
-2019-03-08 21;27:48.295[main] DEBUG com.house.dao.AdminMsgDao.insertAdminmsg - <==    Updates: 1
+2019-03-15 22;12:12.988[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_id, evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?, ?) 
+2019-03-15 22;13:02.644[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_id, evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?, ?) 
+2019-03-15 22;13:02.711[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==> Parameters: 0(Long), tttttteeeeeeesssssssttttttt(String), null, 2019-03-15 22:13:02.612(Timestamp), 3(Long), 36(Long), null
+2019-03-15 22;13:33.385[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_id, evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?, ?) 
+2019-03-15 22;13:33.441[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==> Parameters: 0(Long), tttttteeeeeeesssssssttttttt(String), 5(Integer), 2019-03-15 22:13:33.356(Timestamp), 3(Long), 36(Long), null
+2019-03-15 22;13:33.465[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - <==    Updates: 1
+2019-03-15 22;13:33.613[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==>  Preparing: update tb_reserve SET evaluate_id = ? WHERE reserve_id=? 
+2019-03-15 22;13:33.613[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==> Parameters: 0(Long), 22(Long)
+2019-03-15 22;14:37.628[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_id, evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?, ?) 
+2019-03-15 22;14:37.993[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==> Parameters: 0(Long), tttttteeeeeeesssssssttttttt(String), 5(Integer), 2019-03-15 22:14:36.69(Timestamp), 3(Long), 36(Long), null
+2019-03-15 22;14:37.993[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - <==    Updates: 1
+2019-03-15 22;14:54.192[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==>  Preparing: update tb_reserve SET evaluate_id = ? WHERE reserve_id=? 
+2019-03-15 22;14:54.192[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==> Parameters: 0(Long), 22(Long)
+2019-03-15 22;16:51.515[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_id, evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?, ?) 
+2019-03-15 22;16:51.587[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==> Parameters: 0(Long), tttttteeeeeeesssssssttttttt(String), 5(Integer), 2019-03-15 22:16:51.479(Timestamp), 3(Long), 36(Long), null
+2019-03-15 22;16:51.592[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - <==    Updates: 1
+2019-03-15 22;17:06.391[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==>  Preparing: update tb_reserve SET evaluate_id = ? WHERE reserve_id=? 
+2019-03-15 22;17:06.391[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==> Parameters: 0(Long), 22(Long)
+2019-03-15 22;20:43.636[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_id, evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?, ?) 
+2019-03-15 22;20:43.683[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==> Parameters: 0(Long), tttttteeeeeeesssssssttttttt(String), 5(Integer), 2019-03-15 22:20:43.603(Timestamp), 3(Long), 36(Long), null
+2019-03-15 22;20:43.683[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - <==    Updates: 1
+2019-03-15 22;20:55.710[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==>  Preparing: update tb_reserve SET evaluate_id = ? WHERE reserve_id=? 
+2019-03-15 22;20:55.710[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==> Parameters: 0(Long), 22(Long)
+2019-03-15 22;24:30.193[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?) 
+2019-03-15 22;24:30.235[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==> Parameters: tttttteeeeeeesssssssttttttt(String), 5(Integer), 2019-03-15 22:24:30.16(Timestamp), 3(Long), 36(Long), null
+2019-03-15 22;24:30.235[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - <==    Updates: 1
+2019-03-15 22;24:49.773[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==>  Preparing: update tb_reserve SET evaluate_id = ? WHERE reserve_id=? 
+2019-03-15 22;24:49.773[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==> Parameters: 0(Long), 22(Long)
+2019-03-15 22;29:22.962[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?) 
+2019-03-15 22;29:23.017[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==> Parameters: tttttteeeeeeesssssssttttttt(String), 5(Integer), 2019-03-15 22:29:22.912(Timestamp), 3(Long), 36(Long), null
+2019-03-15 22;29:23.017[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - <==    Updates: 1
+2019-03-15 22;30:25.032[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?) 
+2019-03-15 22;30:25.130[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==> Parameters: tttttteeeeeeesssssssttttttt(String), 5(Integer), 2019-03-15 22:30:24.937(Timestamp), 3(Long), 36(Long), null
+2019-03-15 22;30:25.133[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - <==    Updates: 1
+2019-03-15 22;30:31.698[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==>  Preparing: update tb_reserve SET evaluate_id = ? WHERE reserve_id=? 
+2019-03-15 22;30:31.698[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==> Parameters: 11(Long), 22(Long)
+2019-03-15 22;30:31.698[main] DEBUG com.house.dao.ReserveDao.updateReserve - <==    Updates: 1
+2019-03-15 22;31:36.454[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?) 
+2019-03-15 22;31:36.501[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==> Parameters: tttttteeeeeeesssssssttttttt(String), 5(Integer), 2019-03-15 22:31:36.423(Timestamp), 3(Long), 36(Long), null
+2019-03-15 22;31:36.501[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - <==    Updates: 1
+2019-03-15 22;31:37.549[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==>  Preparing: update tb_reserve SET evaluate_id = ? WHERE reserve_id=? 
+2019-03-15 22;31:37.549[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==> Parameters: 12(Long), 22(Long)
+2019-03-15 22;31:37.549[main] DEBUG com.house.dao.ReserveDao.updateReserve - <==    Updates: 1
+2019-03-15 22;31:37.565[main] DEBUG com.house.dao.EvaluateDao.averageScore - ==>  Preparing: select avg(evaluate_score) from tb_evaluate where servicer_id=? and enable_status=1 
+2019-03-15 22;31:37.565[main] DEBUG com.house.dao.EvaluateDao.averageScore - ==> Parameters: 36(Long)
+2019-03-15 22;31:37.667[main] DEBUG com.house.dao.EvaluateDao.averageScore - <==      Total: 1
+2019-03-15 22;33:16.655[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?) 
+2019-03-15 22;33:16.735[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==> Parameters: tttttteeeeeeesssssssttttttt(String), 5(Integer), 2019-03-15 22:33:16.599(Timestamp), 3(Long), 36(Long), null
+2019-03-15 22;33:16.750[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - <==    Updates: 1
+2019-03-15 22;33:18.720[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==>  Preparing: update tb_reserve SET evaluate_id = ? WHERE reserve_id=? 
+2019-03-15 22;33:18.721[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==> Parameters: 13(Long), 22(Long)
+2019-03-15 22;33:18.726[main] DEBUG com.house.dao.ReserveDao.updateReserve - <==    Updates: 1
+2019-03-15 22;33:18.734[main] DEBUG com.house.dao.EvaluateDao.averageScore - ==>  Preparing: select avg(evaluate_score) from tb_evaluate where servicer_id=? and enable_status=1 
+2019-03-15 22;33:18.736[main] DEBUG com.house.dao.EvaluateDao.averageScore - ==> Parameters: 36(Long)
+2019-03-15 22;33:18.751[main] DEBUG com.house.dao.EvaluateDao.averageScore - <==      Total: 1
+2019-03-15 22;33:18.767[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==>  Preparing: update tb_servicer SET servicer_id = ?, servicer_score = ? where servicer_id=? 
+2019-03-15 22;33:18.767[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==> Parameters: 0(Long), 3(Integer), 0(Long)
+2019-03-15 22;33:18.767[main] DEBUG com.house.dao.ServicerDao.updateServicer - <==    Updates: 0
+2019-03-15 22;34:38.263[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==>  Preparing: insert into tb_evaluate (evaluate_des, evaluate_score, create_time, user_id, servicer_id, enable_status) values (?, ?, ?, ?, ?, ?) 
+2019-03-15 22;34:38.337[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - ==> Parameters: tttttteeeeeeesssssssttttttt(String), 5(Integer), 2019-03-15 22:34:38.2(Timestamp), 3(Long), 36(Long), null
+2019-03-15 22;34:38.340[main] DEBUG com.house.dao.EvaluateDao.insertEvaluate - <==    Updates: 1
+2019-03-15 22;34:38.422[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==>  Preparing: update tb_reserve SET evaluate_id = ? WHERE reserve_id=? 
+2019-03-15 22;34:38.422[main] DEBUG com.house.dao.ReserveDao.updateReserve - ==> Parameters: 14(Long), 22(Long)
+2019-03-15 22;34:38.422[main] DEBUG com.house.dao.ReserveDao.updateReserve - <==    Updates: 1
+2019-03-15 22;34:38.422[main] DEBUG com.house.dao.EvaluateDao.averageScore - ==>  Preparing: select avg(evaluate_score) from tb_evaluate where servicer_id=? and enable_status=1 
+2019-03-15 22;34:38.422[main] DEBUG com.house.dao.EvaluateDao.averageScore - ==> Parameters: 36(Long)
+2019-03-15 22;34:38.437[main] DEBUG com.house.dao.EvaluateDao.averageScore - <==      Total: 1
+2019-03-15 22;34:38.453[main] DEBUG com.house.dao.ReserveDao.querySingleReserve - ==>  Preparing: select r.reserve_id, r.create_time as r_c_time, r.reserve_time, r.end_time,r.reserve_addr, r.reserve_des, r.reserve_phone, r.reserve_msg, r.reserve_contract,u.user_id, u.account_name,s.servicer_name,s.servicer_id, r.enable_status,e.evaluate_id,e.evaluate_des,e.create_time as e_c_time,e.evaluate_score from (tb_reserve r,tb_user u,tb_servicer s) left join tb_evaluate e on r.evaluate_id=e.evaluate_id WHERE r.servicer_id=s.servicer_id and r.user_id=u.user_id and r.reserve_id=? 
+2019-03-15 22;34:38.453[main] DEBUG com.house.dao.ReserveDao.querySingleReserve - ==> Parameters: 22(Long)
+2019-03-15 22;34:38.453[main] DEBUG com.house.dao.ReserveDao.querySingleReserve - <==      Total: 1
+2019-03-15 22;34:38.468[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==>  Preparing: update tb_servicer SET servicer_id = ?, servicer_name = ?, servicer_score = ? where servicer_id=? 
+2019-03-15 22;34:38.468[main] DEBUG com.house.dao.ServicerDao.updateServicer - ==> Parameters: 36(Long), servicer5(String), 3(Integer), 36(Long)
+2019-03-15 22;34:38.468[main] DEBUG com.house.dao.ServicerDao.updateServicer - <==    Updates: 1
