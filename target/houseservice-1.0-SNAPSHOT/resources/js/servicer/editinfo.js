@@ -1,8 +1,17 @@
 $(function () {
+    $("#logout").click(function(){
+        $.getJSON("/servicer/logout",function(data){
+            if(data.success){
+                alert("退出成功")
+                window.location.href="/login/servicer"
+            }
+        })
+    })
 /////////////////////////////////获取初始信息///////////////////////////////////////////////////////
     $.getJSON("/servicer/getservicerinfo",function(data){
         if(data.success){
 /////////////////////////////////////////////加载用户信息////////////////////////////////////////////////////////////
+            $("h1 a").append(data.result.servicername)
             $(".phone input").val(data.result.servicerphone)
             $(".accountname input").val(data.result.accountname)
             $(".password input").val(data.result.password)

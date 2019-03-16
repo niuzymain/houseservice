@@ -3,39 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>servicer</title>
-    <style type="text/css">
-        .first{
-            float: left;
-            margin-left: 30px;
-        }
-    </style>
+    <!--/////////////////////////////////////////////////Amaze UI  CDN//////////////////////////////-->
+    <link href=" http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.css" rel="stylesheet">
+    <link href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.js"></script>
+    <script type="text/javascript" src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+    <script type="text/javascript" src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.ie8polyfill.js"></script>
+    <script type="text/javascript" src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.ie8polyfill.min.js"></script>
+    <script type="text/javascript" src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.widgets.helper.js"></script>
+    <script type="text/javascript" src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.widgets.helper.min.js"></script>
+
 </head>
 <body>
-    <h1>评价信息</h1>
-    <div id="menu" class="first">
-        <ul id="lists">
-            <li>
-                <a href="/servicer/reserve">业务查询</a>
-            </li>
-            <li>
-                <a href="#">历史评价</a>
-            </li>
-            <li>
-                <a href="#" id="userinfo" onclick="displaychange()">个人中心</a>
-                <ul id="infolist"  class="secondmenu" style="display: none">
-                    <li>
-                        <a href="/servicer/editinfo">修改基本信息</a>
-                    </li>
-                    <li>
-                        <a href="/servicer/displayinfo">查看个人信息</a>
-                    </li>
-                    <li>
-                        <a href="/servicer/message">系统消息</a>
-                    </li>
-                </ul>
-            </li>
+<header class="am-topbar">
+    <h1 class="am-topbar-brand">
+        <a href="#">欢迎服务人员</a>
+    </h1>
+    <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+            <li><a href="/servicer/reserve">业务查询</a></li>
+            <li class="am-active"><a href="#">历史评价</a></li>
+            <li><a href="/servicer/message">消息中心</a></li>
+            <li><a href="/servicer/displayinfo">个人信息</a></li>
         </ul>
+        <div class="am-topbar-right">
+            <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
+                <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle"
+                        data-am-dropdown-toggle>其他 <span class="am-icon-caret-down"></span></button>
+                <ul class="am-dropdown-content">
+                    <li><a href="/servicer/editinfo">基本信息修改</a></li>
+                    <li><a href="#">定级标准</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="am-topbar-right">
+            <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" id="logout">退出登录</button>
+        </div>
     </div>
+</header>
     <div id="evaluate" class="first">
         <ul id="evaluatelist">
         </ul>

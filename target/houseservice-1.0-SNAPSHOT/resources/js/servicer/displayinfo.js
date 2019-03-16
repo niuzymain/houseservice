@@ -1,6 +1,15 @@
 $(function(){
+    $("#logout").click(function(){
+        $.getJSON("/servicer/logout",function(data){
+            if(data.success){
+             alert("退出成功")
+                window.location.href="/login/servicer"
+            }
+        })
+    })
     $.getJSON("/servicer/getservicerinfo",function(data){
         if(data.success){
+            $("h1 a").append(data.result.servicername)
             $(".name").append(data.result.servicername)
             $(".idnum").append(data.result.serviceridnum)
             $(".age").append(data.result.servicerage)
