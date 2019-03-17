@@ -30,8 +30,24 @@ public class EditInfoServiceImp implements EditInfoService {
     }
 
     @Override
+    public ServicerExecution editBaseInfo(Servicer servicer) {
+        servicer.setLastedittime(new Date());
+        int result;
+        try {
+            result = servicerDao.updateServicer(servicer);
+            if (result <= 0) {
+                throw new RuntimeException();
+            } else {
+                return new ServicerExecution(ServicerEnum.SUCCESS);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException();
+        }
+    }
+
+    @Override
     public ServicerExecution editInfo(Servicer servicer) {
-//        servicer.setCheckstatus(0);
+        servicer.setCheckstatus(0);
         servicer.setLastedittime(new Date());
         int result;
         try {

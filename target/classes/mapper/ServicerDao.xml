@@ -92,39 +92,23 @@
                     servicer_age,
                     servicer_sex,
                     servicer_phone,
-                    servicer_experience,
-                    servicer_price,
                     servicer_des,
-                    servicer_contract,
-                    city_id,
-                    local_id,
                     create_time,
-                    lastedit_time,
                     enable_status,
                     check_status,
                     account_name,
-                    pass_word,
-                    degree_id,
-                    servicetype_id)
+                    pass_word)
     values(#{serviceridnum,jdbcType=VARCHAR},
             #{servicername,jdbcType=VARCHAR},
             #{servicerage,jdbcType=INTEGER},
             #{servicersex,jdbcType=INTEGER},
             #{servicerphone,jdbcType=VARCHAR},
-            #{servicerexperience,jdbcType=INTEGER},
-            #{servicerprice,jdbcType=VARCHAR},
             #{servicerdes,jdbcType=VARCHAR},
-            #{servicercontract,jdbcType=VARCHAR},
-            #{city.workareaid,jdbcType=INTEGER},
-            #{local.workareaid,jdbcType=INTEGER},
             #{createtime,jdbcType=TIMESTAMP},
-            #{lastedittime,jdbcType=TIMESTAMP},
             #{enablestatus,jdbcType=INTEGER},
             #{checkstatus,jdbcType=INTEGER},
             #{accountname,jdbcType=VARCHAR},
-            #{password,jdbcType=VARCHAR},
-            #{degree.degreeid,jdbcType=INTEGER},
-            #{servicetype.servicetypeid,jdbcType=INTEGER})
+            #{password,jdbcType=VARCHAR})
     </insert>
 
     <update id="updateServicer" parameterType="com.house.entity.Servicer">
@@ -169,10 +153,10 @@
             <if test="servicer.servicerfile != null">
                 servicer_file = #{servicer.servicerfile,jdbcType=VARCHAR},
             </if>
-            <if test="servicer.city != null &amp;&amp; servicer.city.workareaid != null">
+            <if test="servicer.city != null &amp;&amp; servicer.city.workareaid != 0">
                 city_id = #{servicer.city.workareaid,jdbcType=INTEGER},
             </if>
-            <if test="servicer.local != null &amp;&amp; servicer.local.workareaid != null">
+            <if test="servicer.local != null &amp;&amp; servicer.local.workareaid != 0">
                 local_id = #{servicer.local.workareaid,jdbcType=INTEGER},
             </if>
             <if test="servicer.createtime != null">
@@ -193,10 +177,10 @@
             <if test="servicer.password != null">
                 pass_word = #{servicer.password,jdbcType=VARCHAR},
             </if>
-            <if test="servicer.degree != null &amp;&amp; servicer.degree.degreeid != null">
+            <if test="servicer.degree != null &amp;&amp; servicer.degree.degreeid != 0">
                 degree_id = #{servicer.degree.degreeid,jdbcType=INTEGER},
             </if>
-            <if test="servicer.servicetype != null &amp;&amp; servicer.servicetype.servicetypeid != null">
+            <if test="servicer.servicetype != null &amp;&amp; servicer.servicetype.servicetypeid != 0">
                 servicetype_id = #{servicer.servicetype.servicetypeid,jdbcType=INTEGER},
             </if>
         </set>
@@ -206,35 +190,50 @@
     <select id="queryServicer" resultMap="servicermap">
         select
       <include refid="Base_Column_List"/>
-        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
-        <where>
-            and s.degree_id=d.degree_id
-            and s.servicetype_id=st.servicetype_id
-            and s.city_id=c.workarea_id
-            and s.local_id=l.workarea_id
-        </where>
+        from tb_servicer s
+        left join tb_degree d
+        on s.degree_id=d.degree_id
+        left join tb_servicetype st
+        on s.servicetype_id=st.servicetype_id
+        left join tb_workarea c
+        on s.city_id=c.workarea_id
+        left join tb_workarea l
+        on s.local_id=l.workarea_id
+        and s.servicetype_id=st.servicetype_id
+        and s.city_id=c.workarea_id
+        and s.local_id=l.workarea_id
+        <!--<where>-->
+            <!--and s.degree_id=d.degree_id-->
+            <!--and s.servicetype_id=st.servicetype_id-->
+            <!--and s.city_id=c.workarea_id-->
+            <!--and s.local_id=l.workarea_id-->
+        <!--</where>-->
     </select>
 
     <select id="querySingleServicer" resultMap="servicermap">
         select
         <include refid="Base_Column_List"/>
-        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
+        from tb_servicer s
+        left join tb_degree d
+        on s.degree_id=d.degree_id
+        left join tb_servicetype st
+        on s.servicetype_id=st.servicetype_id
+        left join tb_workarea c
+        on s.city_id=c.workarea_id
+        left join tb_workarea l
+        on s.local_id=l.workarea_id
         <where>
             <if test="condition.servicerid != 0">and servicer_id=#{condition.servicerid}</if>
             <if test="condition.accountname != null">and account_name=#{condition.accountname}</if>
             <if test="condition.password != null">and pass_word=#{condition.password}</if>
-            and s.degree_id=d.degree_id
-            and s.servicetype_id=st.servicetype_id
-            and s.city_id=c.workarea_id
-            and s.local_id=l.workarea_id
         </where>
     </select>
 
     <select id="queryQualify" resultType="com.house.entity.Servicer">
-        select servicer_id,servicer_name,lastedit_time
+        select servicer_id,servicer_name,lastedit_time,check_status
         from tb_servicer
         where
-        check_status=0
+        check_status=#{checkstatus}
         order by lastedit_time desc
     </select>
 
@@ -287,7 +286,7 @@
             and s.city_id=c.workarea_id
             and s.local_id=l.workarea_id
             and enable_status=1
-            and check_status=1
+            and check_status=2
         </where>
         order by
         <choose>
@@ -354,7 +353,7 @@
             and s.city_id=c.workarea_id
             and s.local_id=l.workarea_id
             and enable_status=1
-            and check_status=1
+            and check_status=2
         </where>
     </select>
 </mapper>

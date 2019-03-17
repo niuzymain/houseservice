@@ -2,8 +2,10 @@ package com.house.service.imps.superadmin;
 
 import com.house.dao.AdminMsgDao;
 import com.house.dao.ReserveDao;
+import com.house.dao.ServicerDao;
 import com.house.entity.AdminMsg;
 import com.house.entity.Reserve;
+import com.house.entity.Servicer;
 import com.house.service.superadmin.QualifyReserveService;
 import com.house.util.FilesUtil;
 import com.house.util.PathUtil;
@@ -26,6 +28,8 @@ public class QualifyReserveServiceImp implements QualifyReserveService {
     private ReserveDao reserveDao;
     @Autowired
     private AdminMsgDao adminMsgDao;
+    @Autowired
+    private ServicerDao servicerDao;
 
     public static SimpleDateFormat sft = new SimpleDateFormat("yyyy年MM月dd日");
 
@@ -100,6 +104,11 @@ public class QualifyReserveServiceImp implements QualifyReserveService {
                 FilesUtil.deleteFile(PathUtil.rootPath() + url);
                 throw new RuntimeException();
             } else {
+//////////////////////////////////////////设置服务人员状态///////////////////////////////
+                Reserve currentreserve =reserveDao.querySingleReserve(reserve.getReserveid());
+                Servicer currentservicer = currentreserve.getServicer();
+                currentservicer.setEnablestatus(2);
+                servicerDao.updateServicer(currentservicer);
                 return result;
             }
         } catch (Exception e) {
@@ -129,6 +138,12 @@ public class QualifyReserveServiceImp implements QualifyReserveService {
             result = reserveDao.updateReserve(currentreserve);
             if (result <= 0) {
                 throw new RuntimeException("插入消息出现异常");
+            }
+            Servicer currentservicer = currentreserve.getServicer();
+            currentservicer.setEnablestatus(1);
+            result = servicerDao.updateServicer(currentservicer);
+            if (result <= 0) {
+                throw new RuntimeException("更改服务人员状态出现异常");
             }
             return result;
         } catch (Exception e) {

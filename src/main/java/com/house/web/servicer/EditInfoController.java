@@ -41,55 +41,55 @@ public class EditInfoController {
         return modelMap;
     }
 
-//    @RequestMapping(value = "/editservicerinfo",method = RequestMethod.POST)
-//    @ResponseBody
-//    public Map<String,Object> editServicerInfo(HttpServletRequest request){
-//        Map<String,Object> modelMap = new HashMap<>();
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        String servicerstr = request.getParameter("str");
-//        Servicer currentservicer = (Servicer)request.getSession().getAttribute("serviceraccount");
-//        try{
-//            Servicer servicer = objectMapper.readValue(servicerstr,Servicer.class);
-//            servicer.setServicerid(currentservicer.getServicerid());
-////////////////////////////////处理文件/////////////////////////////////////////////////////////////////////
-//            CommonsMultipartFile img = null;
-//            CommonsMultipartFile file = null;
-//            CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver(request.getSession().getServletContext());
-//            if(commonsMultipartResolver.isMultipart(request)){
-//                //强转为对应request
-//                MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest)request;
-//                img = (CommonsMultipartFile) multipartHttpServletRequest.getFile("img");
-//                file = (CommonsMultipartFile) multipartHttpServletRequest.getFile("file");
-//            }
-//            ServicerExecution se = new ServicerExecution();
-//            if(img == null && file == null){
-//                se = editInfoService.editInfo(servicer);
-//            }
-//            else if(img != null && file == null){
-//                se = editInfoService.editInfo(servicer,img.getInputStream(),img.getOriginalFilename());
-//            }
-//            else if(img == null && file != null){
-//                se = editInfoService.editInfo(servicer,file.getInputStream(),file.getOriginalFilename());
-//            }
-//            else{
-//                se = editInfoService.editInfo(servicer,img.getInputStream(),img.getOriginalFilename(),file.getInputStream(),file.getOriginalFilename());
-//            }
-//            if(se.getState() == ServicerEnum.SUCCESS.getState()){
-//                modelMap.put("success",true);
-//            }
-//            else{
-//                modelMap.put("success",false);
-//                modelMap.put("errormsg",se.getStateinfo());
-//            }
-//            return modelMap;
-//        }catch (Exception e){
-//            e.printStackTrace();
-//            modelMap.put("success",false);
-//            modelMap.put("errormsg",e.getMessage());
-//            return modelMap;
-//        }
-//
-//    }
+    @RequestMapping(value = "/editservicerregisterinfo",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> editServicerRegisterInfo(HttpServletRequest request){
+        Map<String,Object> modelMap = new HashMap<>();
+        ObjectMapper objectMapper = new ObjectMapper();
+        String servicerstr = request.getParameter("str");
+        Servicer currentservicer = (Servicer)request.getSession().getAttribute("serviceraccount");
+        try{
+            Servicer servicer = objectMapper.readValue(servicerstr,Servicer.class);
+            servicer.setServicerid(currentservicer.getServicerid());
+//////////////////////////////处理文件/////////////////////////////////////////////////////////////////////
+            CommonsMultipartFile img = null;
+            CommonsMultipartFile file = null;
+            CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver(request.getSession().getServletContext());
+            if(commonsMultipartResolver.isMultipart(request)){
+                //强转为对应request
+                MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest)request;
+                img = (CommonsMultipartFile) multipartHttpServletRequest.getFile("img");
+                file = (CommonsMultipartFile) multipartHttpServletRequest.getFile("file");
+            }
+            ServicerExecution se = new ServicerExecution();
+            if(img == null && file == null){
+                se = editInfoService.editInfo(servicer);
+            }
+            else if(img != null && file == null){
+                se = editInfoService.editInfo(servicer,img.getInputStream(),img.getOriginalFilename());
+            }
+            else if(img == null && file != null){
+                se = editInfoService.editInfo(servicer,file.getInputStream(),file.getOriginalFilename());
+            }
+            else{
+                se = editInfoService.editInfo(servicer,img.getInputStream(),img.getOriginalFilename(),file.getInputStream(),file.getOriginalFilename());
+            }
+            if(se.getState() == ServicerEnum.SUCCESS.getState()){
+                modelMap.put("success",true);
+            }
+            else{
+                modelMap.put("success",false);
+                modelMap.put("errormsg",se.getStateinfo());
+            }
+            return modelMap;
+        }catch (Exception e){
+            e.printStackTrace();
+            modelMap.put("success",false);
+            modelMap.put("errormsg",e.getMessage());
+            return modelMap;
+        }
+
+    }
 
     @RequestMapping(value = "/editservicerinfo", method = RequestMethod.POST)
     @ResponseBody
@@ -101,7 +101,7 @@ public class EditInfoController {
         try {
             Servicer servicer = objectMapper.readValue(servicerstr, Servicer.class);
             servicer.setServicerid(currentservicer.getServicerid());
-            ServicerExecution se = editInfoService.editInfo(servicer);
+            ServicerExecution se = editInfoService.editBaseInfo(servicer);
             if (se.getState() == ServicerEnum.SUCCESS.getState()) {
                 modelMap.put("success", true);
                 request.getSession().setAttribute("serviceraccount",editInfoService.getServicerInfo(servicer).getServicer());

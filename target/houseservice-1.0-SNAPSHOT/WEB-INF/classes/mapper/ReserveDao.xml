@@ -13,7 +13,7 @@
 
     <resultMap id="BaseResultMap" type="com.house.entity.Reserve">
         <id column="reserve_id" property="reserveid"/>
-        <result column="create_time" property="createtime"/>
+        <result column="r_c_time" property="createtime"/>
         <result column="reserve_time" property="reservetime"/>
         <result column="end_time" property="endtime"/>
         <result column="reserve_contract" property="reservecontract"/>
@@ -33,7 +33,7 @@
         <association property="evaluate" column="evaluate_id" javaType="com.house.entity.Evaluate">
             <id column="evaluate_id" property="evaluateid"/>
             <result column="evaluate_des" property="evaluatedes"/>
-            <result column="create_time" property="createtime"/>
+            <result column="e_c_time" property="createtime"/>
             <result column="evaluate_score" property="evaluatescore"/>
         </association>
     </resultMap>

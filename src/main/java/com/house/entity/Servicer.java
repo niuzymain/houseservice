@@ -25,7 +25,7 @@ public class Servicer {
     private Date createtime;
     private Date lastedittime;
     private Integer enablestatus;// 0.禁用 1.可用 2.服务中
-    private Integer checkstatus; //0.审核 1.通过 -1.未通过
+    private Integer checkstatus; //0.审核 1.待签合同 2.通过 -1.未通过
     private String accountname;
     private String password;
     private String servicercontract;
@@ -213,5 +213,6 @@ public class Servicer {
     public void setServicercontract(String servicercontract) {
         this.servicercontract = servicercontract;
     }
+
 }
 

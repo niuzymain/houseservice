@@ -1,10 +1,12 @@
 package com.house.service.superadmin;
 
+import com.house.dto.ServicerExecution;
 import com.house.entity.AdminMsg;
 import com.house.entity.Evaluate;
 import com.house.entity.Reserve;
 import com.house.entity.Servicer;
 
+import java.io.InputStream;
 import java.util.List;
 
 /*
@@ -15,8 +17,11 @@ public interface QualifyServicer {
     /*
     服务人员审核
      */
-    List<Servicer> servicerQualifyList();
+    List<Servicer> servicerQualifyList(int checkstatus);
     Servicer getServicerQualifyById(Long servicerid);
-    int servicerQualifyOperate(AdminMsg adminMsg, Servicer servicer);
+    int notPassQualifyOperate(AdminMsg adminMsg, Servicer servicer);
+    ServicerExecution passQualifyOperate(Servicer servicer);
+    int qualifySalary(Servicer servicer);
+    ServicerExecution uploadServicerContract(Long servicerid,InputStream inputStream,String filename);
 
 }

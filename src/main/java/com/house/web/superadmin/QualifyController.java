@@ -1,10 +1,12 @@
 package com.house.web.superadmin;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.house.dto.ServicerExecution;
 import com.house.entity.AdminMsg;
 import com.house.entity.Evaluate;
 import com.house.entity.Reserve;
 import com.house.entity.Servicer;
+import com.house.enums.ServicerEnum;
 import com.house.service.superadmin.QualifyCommentService;
 import com.house.service.superadmin.QualifyReserveService;
 import com.house.service.superadmin.QualifyServicer;
@@ -36,10 +38,11 @@ public class QualifyController {
 
     @RequestMapping(value = "/getqualifylist", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String, Object> getQualifyList() {
+    public Map<String, Object> getQualifyList(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
+        int checkstatus = Integer.parseInt(request.getParameter("checkstatus"));
         try {
-            List<Servicer> servicerList = qualifyServicer.servicerQualifyList();
+            List<Servicer> servicerList = qualifyServicer.servicerQualifyList(checkstatus);
             modelMap.put("success", true);
             modelMap.put("result", servicerList);
         } catch (Exception e) {
@@ -68,9 +71,9 @@ public class QualifyController {
 
     }
 
-    @RequestMapping(value = "/qualifyoperate", method = RequestMethod.POST)
+    @RequestMapping(value = "/notpassqualifyoperate", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> QualifyOperate(HttpServletRequest request) {
+    public Map<String, Object> notPassQualifyOperate(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
         String msgstr = request.getParameter("adminmsg");
         String servicerstr = request.getParameter("servicer");
@@ -80,9 +83,9 @@ public class QualifyController {
             Servicer servicer = objectMapper.readValue(servicerstr, Servicer.class);
             if (msgstr != null) {
                 AdminMsg adminMsg = objectMapper.readValue(msgstr, AdminMsg.class);
-                result = qualifyServicer.servicerQualifyOperate(adminMsg, servicer);
+                result = qualifyServicer.notPassQualifyOperate(adminMsg, servicer);
             } else {
-                result = qualifyServicer.servicerQualifyOperate(null, servicer);
+                result = qualifyServicer.notPassQualifyOperate(null, servicer);
             }
             if (result > 0) {
                 modelMap.put("success", true);
@@ -97,6 +100,63 @@ public class QualifyController {
         }
         return modelMap;
 
+    }
+
+    @RequestMapping(value = "/getSalary", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> getSalary(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        String servicerstr = request.getParameter("servicer");
+        ObjectMapper objectMapper = new ObjectMapper();
+        int result;
+        try {
+            Servicer servicer = objectMapper.readValue(servicerstr, Servicer.class);
+            int salary = qualifyServicer.qualifySalary(servicer);
+            if (salary>=0) {
+                modelMap.put("success", true);
+                modelMap.put("salary",salary);
+            } else {
+                modelMap.put("success", false);
+                modelMap.put("errormsg", "计算错误");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
+        }
+        return modelMap;
+    }
+
+    @RequestMapping(value = "/passqualifyoperate", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> passQualifyOperate(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        String servicerstr = request.getParameter("servicer");
+        ObjectMapper objectMapper = new ObjectMapper();
+        int result;
+        try {
+            Servicer servicer = objectMapper.readValue(servicerstr, Servicer.class);
+            ServicerExecution se = qualifyServicer.passQualifyOperate(servicer);
+            if (se.getState() == ServicerEnum.SUCCESS.getState()) {
+                modelMap.put("success", true);
+            } else {
+                modelMap.put("success", false);
+                modelMap.put("errormsg", se.getStateinfo());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
+        }
+        return modelMap;
+
+    }
+
+    @RequestMapping(value = "/contractyoperate", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> contractOperate(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        return modelMap;
     }
 
     @RequestMapping(value = "/getcommentlist", method = RequestMethod.GET)

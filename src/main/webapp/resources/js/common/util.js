@@ -30,6 +30,22 @@ function statusinfo(data) {
 
 }
 
+function checkinfo(data) {
+    if (data == -1) {
+        return "审核不通过"
+    }
+    else if (data == 0) {
+        return "审核中"
+    }
+    else if (data == 1) {
+        return "待签合同"
+    }
+    else if (data == 1) {
+        return "审核通过"
+    }
+
+}
+
 /////////////////////////////////根据性别值显示性别名称////////////////////////////////
 function sexinfo(data) {
     if (data == 1) {

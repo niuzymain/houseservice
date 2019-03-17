@@ -32,6 +32,7 @@ public class RegisterServiceImp implements RegisterService {
             servicer.setLastedittime(new Date());
             servicer.setEnablestatus(1);
             servicer.setCheckstatus(0);
+            servicer.setCreatetime(new Date());
             result = servicerDao.insertServicer(servicer);
             if(result <= 0){
                 throw new RuntimeException();

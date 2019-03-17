@@ -68,4 +68,9 @@ public class SuperAdminRoute {
         return "superadmin/confirmpage";
 
     }
+    @RequestMapping(value = "/servicerlevel",method = RequestMethod.GET)
+    private String servicerLEvel() {
+        return "superadmin/servicerlevel";
+
+    }
 }

@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
+
 @Service
 public class UserServiceImp implements UserService {
     @Autowired
@@ -15,6 +17,7 @@ public class UserServiceImp implements UserService {
     @Override
     public int addUser(User user) {
         user.setEnablestatus(1);
+        user.setCreatetime(new Date());
         int result = 0;
         try{
            result =  userDao.insertUser(user);

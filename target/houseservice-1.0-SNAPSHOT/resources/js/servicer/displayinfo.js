@@ -9,13 +9,21 @@ $(function(){
     })
     $.getJSON("/servicer/getservicerinfo",function(data){
         if(data.success){
+            if(data.result.checkstatus != -1){
+                $("#modify").hide()
+            }
+            $("#modify").click(function(){
+                window.location.href="/servicer/register?servicerid="+data.result.servicerid
+            })
+            $("#img img").attr("src","/file"+data.result.servicerimg)
+            $(".status .c-status").append(checkinfo(data.result.checkstatus))
+            $(".status .w-status").append(statusinfo(data.result.enablestatus))
             $("h1 a").append(data.result.servicername)
             $(".name").append(data.result.servicername)
             $(".idnum").append(data.result.serviceridnum)
             $(".age").append(data.result.servicerage)
             $(".sex").append(sexinfo(data.result.servicersex))
             $(".phone").append(data.result.servicerphone)
-            $(".img").append("<a href=/file"+data.result.servicerimg+">查看文件</a>")
             $(".experience").append(experienceinfo(data.result.servicerexperience))
             $(".salary").append(data.result.servicerprice)
             $(".des").append(data.result.servicerdes)
