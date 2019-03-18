@@ -111,10 +111,10 @@ public class QualifyController {
         int result;
         try {
             Servicer servicer = objectMapper.readValue(servicerstr, Servicer.class);
-            int salary = qualifyServicer.qualifySalary(servicer);
-            if (salary>=0) {
+            int salary = qualifyServicer.qualifyInitialSalary(servicer);
+            if (salary >= 0) {
                 modelMap.put("success", true);
-                modelMap.put("salary",salary);
+                modelMap.put("salary", salary);
             } else {
                 modelMap.put("success", false);
                 modelMap.put("errormsg", "计算错误");
@@ -133,7 +133,6 @@ public class QualifyController {
         Map<String, Object> modelMap = new HashMap<>();
         String servicerstr = request.getParameter("servicer");
         ObjectMapper objectMapper = new ObjectMapper();
-        int result;
         try {
             Servicer servicer = objectMapper.readValue(servicerstr, Servicer.class);
             ServicerExecution se = qualifyServicer.passQualifyOperate(servicer);
@@ -152,11 +151,42 @@ public class QualifyController {
 
     }
 
-    @RequestMapping(value = "/contractyoperate", method = RequestMethod.POST)
+    @RequestMapping(value = "/contractoperate", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> contractOperate(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
-        return modelMap;
+        Long servicerid = Long.parseLong(request.getParameter("servicerid"));
+        try {
+            CommonsMultipartFile contract = null;
+            CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver(request.getSession().getServletContext());
+            if (commonsMultipartResolver.isMultipart(request)) {
+                //强转为对应request
+                MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
+                contract = (CommonsMultipartFile) multipartHttpServletRequest.getFile("contract");
+            } else {
+                modelMap.put("success", false);
+                modelMap.put("errormsg", "图片不能为空");
+                return modelMap;
+            }
+            if (servicerid != null && contract != null) {
+                ServicerExecution se = qualifyServicer.uploadServicerContract(servicerid, contract.getInputStream(), contract.getOriginalFilename());
+                if (se.getState() != ServicerEnum.SUCCESS.getState()) {
+                    modelMap.put("success", false);
+                    modelMap.put("errormsg", "内部错误");
+                } else {
+                    modelMap.put("success", true);
+                }
+            } else {
+                modelMap.put("success", false);
+                modelMap.put("errormsg", "信息不全");
+            }
+            return modelMap;
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
+            return modelMap;
+        }
     }
 
     @RequestMapping(value = "/getcommentlist", method = RequestMethod.GET)
@@ -223,7 +253,7 @@ public class QualifyController {
         Map<String, Object> modelMap = new HashMap<>();
         Long reserveid = Long.parseLong(request.getParameter("reserveid"));
         try {
-           Reserve reserve = qualifyReserveService.specificReserveQualify(reserveid);
+            Reserve reserve = qualifyReserveService.specificReserveQualify(reserveid);
             modelMap.put("success", true);
             modelMap.put("result", reserve);
         } catch (Exception e) {
@@ -242,7 +272,7 @@ public class QualifyController {
         Long reserveid = Long.parseLong(request.getParameter("reserveid"));
         try {
             int result = qualifyReserveService.handleReserve(reserveid);
-            if(result > 0){
+            if (result > 0) {
                 modelMap.put("success", true);
             }
         } catch (Exception e) {
@@ -261,27 +291,26 @@ public class QualifyController {
         ObjectMapper objectMapper = new ObjectMapper();
         String reservestr = request.getParameter("reservestr");
         try {
-            Reserve reserve = objectMapper.readValue(reservestr,Reserve.class);
+            Reserve reserve = objectMapper.readValue(reservestr, Reserve.class);
             CommonsMultipartFile commonsMultipartFile = null;
             CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver(request.getSession().getServletContext());
             //判断是否有文件流
-            if(commonsMultipartResolver.isMultipart(request)){
+            if (commonsMultipartResolver.isMultipart(request)) {
                 //强转为对应request
-                MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest)request;
+                MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
                 commonsMultipartFile = (CommonsMultipartFile) multipartHttpServletRequest.getFile("contract");
-            }
-            else{
-                modelMap.put("success",false);
-                modelMap.put("errormsg","合同不能为空");
+            } else {
+                modelMap.put("success", false);
+                modelMap.put("errormsg", "合同不能为空");
                 return modelMap;
             }
-            if(commonsMultipartFile == null || reserve == null){
-                modelMap.put("success",false);
-                modelMap.put("errormsg","信息不全");
+            if (commonsMultipartFile == null || reserve == null) {
+                modelMap.put("success", false);
+                modelMap.put("errormsg", "信息不全");
                 return modelMap;
             }
-            int result = qualifyReserveService.confirmReserve(reserve,commonsMultipartFile.getInputStream(),commonsMultipartFile.getOriginalFilename());
-            if(result > 0){
+            int result = qualifyReserveService.confirmReserve(reserve, commonsMultipartFile.getInputStream(), commonsMultipartFile.getOriginalFilename());
+            if (result > 0) {
                 modelMap.put("success", true);
             }
         } catch (Exception e) {
@@ -300,7 +329,7 @@ public class QualifyController {
         Long reserveid = Long.parseLong(request.getParameter("reserveid"));
         try {
             int result = qualifyReserveService.overReserve(reserveid);
-            if(result > 0){
+            if (result > 0) {
                 modelMap.put("success", true);
             }
         } catch (Exception e) {

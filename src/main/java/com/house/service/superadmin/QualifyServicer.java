@@ -22,6 +22,6 @@ public interface QualifyServicer {
     int notPassQualifyOperate(AdminMsg adminMsg, Servicer servicer);
     ServicerExecution passQualifyOperate(Servicer servicer);
     int qualifySalary(Servicer servicer);
+    int qualifyInitialSalary(Servicer servicer);
     ServicerExecution uploadServicerContract(Long servicerid,InputStream inputStream,String filename);
-
 }

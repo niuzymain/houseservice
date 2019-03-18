@@ -18,10 +18,16 @@ $(function () {
            $(".experience").append(experienceinfo(data.result.servicerexperience))
            $(".des").append(data.result.servicerdes)
            $(".file").append("<a href=/file"+data.result.servicerfile+">查看文件</a>")
-           $(".area").append(data.result.city.workareaname+"-"+data.result.local.workareaname)
+           if(data.result.city != null && data.result.local != null){
+               $(".area").append(data.result.city.workareaname+"-"+data.result.local.workareaname)
+           }
+           if(data.result.degree != null) {
+               $(".degree").append(data.result.degree.degreename)
+           }
+           if(data.result.servicetype != null) {
+               $(".type").append(data.result.servicetype.servicetypename)
+           }
            $(".lastedittime").append(timeStamp2String(data.result.lastedittime))
-           $(".degree").append(data.result.degree.degreename)
-           $(".type").append(data.result.servicetype.servicetypename)
        }
        else{
            alert(data.errormsg);
@@ -65,6 +71,29 @@ $(function () {
                 }
                 else{
                     alert("error:"+data.errormsg)
+                }
+            }
+        })
+    })
+    $("#submit").click(function(){
+        var file = $("#contract input")[0].files[0];
+        var formdata = new FormData;
+        formdata.append("servicerid",servicerid)
+        formdata.append("contract",file)
+        $.ajax({
+            url:"/admin/contractoperate",
+            type:"post",
+            data:formdata,
+            contentType: false,
+            processData: false,
+            cache: false,
+            success:function(data){
+                if(data.success){
+                    alert("success")
+                    window.location.href="/admin/qualify"
+                }
+                else{
+                    alert(data.errormsg)
                 }
             }
         })

@@ -40,7 +40,7 @@ function checkinfo(data) {
     else if (data == 1) {
         return "待签合同"
     }
-    else if (data == 1) {
+    else if (data == 2) {
         return "审核通过"
     }
 

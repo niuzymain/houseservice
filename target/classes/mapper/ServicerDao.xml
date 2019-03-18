@@ -29,12 +29,15 @@
         d.degree_id,
         d.degree_name,
         d.priority as dpriority,
+        d.level as dlevel,
         st.servicetype_id,
         st.servicetype_name,
         st.priority as stpriority,
+        st.level as stlevel,
         c.workarea_id as city_id,
         c.workarea_name as city_name,
         c.priority as cpriority,
+        c.level as clevel,
         l.workarea_id as local_id,
         l.workarea_name as local_name,
         l.priority as lpriority
@@ -64,17 +67,20 @@
             <id column="degree_id" property="degreeid"/>
             <result column="degree_name" property="degreename"/>
             <result column="dpriority" property="priority"/>
+            <result column="dlevel" property="level"/>
         </association>
         <association property="servicetype" column="servicetype_id" javaType="com.house.entity.ServiceType">
             <id column="servicetype_id" property="servicetypeid"/>
             <result column="servicetype_name" property="servicetypename"/>
             <result column="stpriority" property="priority"/>
+            <result column="stlevel" property="level"/>
         </association>
         <!--相同类型属性通过列别名区分查询-->
         <association property="city" column="city_id" javaType="com.house.entity.WorkArea">
             <id column="city_id" property="workareaid"/>
             <result column="city_name" property="workareaname"/>
             <result column="cpriority" property="priority"/>
+            <result column="clevel" property="level"/>
         </association>
         <!--相同类型属性通过列别名区分查询-->
         <association property="local" column="local_id" javaType="com.house.entity.WorkArea">
@@ -147,7 +153,7 @@
             <if test="servicer.servicerdes != null">
                 servicer_des = #{servicer.servicerdes,jdbcType=VARCHAR},
             </if>
-            <if test="servicer.servicerdes != null">
+            <if test="servicer.servicercontract != null">
                 servicer_contract = #{servicer.servicercontract,jdbcType=VARCHAR},
             </if>
             <if test="servicer.servicerfile != null">
