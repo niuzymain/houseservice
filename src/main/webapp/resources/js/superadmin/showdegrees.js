@@ -4,7 +4,14 @@ $(function () {
     $.getJSON("/admin/getitems?type=学历", function (data) {
         if (data.success) {
             for (var i = 0; i < data.result.length; i++) {
-                var body = "<tr><td>" + data.result[i].degree.degreename + "</td><td>" + data.result[i].degree.priority + "</td><td>" + data.result[i].degree.level + "</td><td><a href='#' class='delete' id=" + data.result[i].degree.degreeid + ">删除</a></td></tr>"
+                var body = "<tr>" +
+                    "<td>" + data.result[i].degree.degreename + "</td>" +
+                    "<td><input class=d-priority readonly=readonly style='border: none' type='text' value=" + data.result[i].degree.priority + "></td>" +
+                    "<td><input class=d-level readonly=readonly style='border: none' type='text' value=" + data.result[i].degree.level + "></td>" +
+                    "<td>" +
+                    "<a href='#' class='edit' onclick=Edit(this,"  +data.result[i].degree.degreeid+  ")>修改</a>" +
+                    "</td>" +
+                    "</tr>"
                 $("#itemlist tbody").append(body);
             }
         }
@@ -16,27 +23,28 @@ $(function () {
     //绑定所有操作按钮
     $("#insert").click(function () {
         $("#itemlist tbody").append("<tr><td><input type='text' placeholder='名称' id='name'></td><td><input type='text' placeholder='优先级' id='priority'></td><td><input type='text' placeholder='薪水等级' id='level'></td></tr>");
-    })
-    $("#submit").click(function () {
-        var formdata = insertitem("新增");
-        $.ajax({
-            url: "/admin/operateitems",
-            data: formdata,
-            type: "post",
-            contentType: false,
-            processData: false,
-            cache: false,
-            success: function (data) {
-                if (data.success) {
-                    alert("success");
-                    location.reload();
+        $("#submit").click(function () {
+            var formdata = insertitem("新增");
+            $.ajax({
+                url: "/admin/operateitems",
+                data: formdata,
+                type: "post",
+                contentType: false,
+                processData: false,
+                cache: false,
+                success: function (data) {
+                    if (data.success) {
+                        alert("success");
+                        location.reload();
+                    }
+                    else {
+                        alert("error：" + data.errormsg);
+                    }
                 }
-                else {
-                    alert("error：" + data.errormsg);
-                }
-            }
+            })
         })
     })
+
     // $("#itemlist").on("click", ".delete", function (e) {
     //     var target = e.currentTarget;
     //     var formdata = deleteitem("删除", target.id)
@@ -67,7 +75,7 @@ function insertitem(operatetype) {
         degree: {
             degreename: $("#name").val(),
             priority: $("#priority").val(),
-            level:$("#priority").val()
+            level: $("#level").val()
         }
     }
     formdata.append("operatestr", JSON.stringify(condition));
@@ -84,4 +92,38 @@ function deleteitem(operatetype, id) {
     }
     formdata.append("operatestr", JSON.stringify(condition));
     return formdata;
+}
+
+function Edit(target,id){
+    $(target).parent().parent().find("input").css("border","solid 1px")
+    $(target).parent().parent().find("input").removeAttr("readonly")
+    $("#submit").click(function () {
+        var formdata = new FormData();
+        formdata.append("operate", "编辑")
+        var condition = {
+            degree: {
+                degreeid:id,
+                priority: $(target).parent().parent().find(".d-priority").val(),
+                level:$(target).parent().parent().find(".d-level").val()
+            }
+        }
+        formdata.append("operatestr", JSON.stringify(condition));
+        $.ajax({
+            url: "/admin/operateitems",
+            data: formdata,
+            type: "post",
+            contentType: false,
+            processData: false,
+            cache: false,
+            success: function (data) {
+                if (data.success) {
+                    alert("success");
+                    location.reload();
+                }
+                else {
+                    alert("error：" + data.errormsg);
+                }
+            }
+        })
+    })
 }

@@ -18,6 +18,7 @@
             <if test="workareaname != null">workarea_name=#{workareaname},</if>
             <if test="priority != null">priority=#{priority},</if>
             <if test="lastedittime != null">lastedit_time=#{lastedittime},</if>
+            <if test="level != null">level=#{level},</if>
         </set>
         where workarea_id=#{workareaid}
     </update>

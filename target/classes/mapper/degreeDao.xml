@@ -15,8 +15,9 @@
     <update id="updateDegree" parameterType="com.house.entity.Degree">
       update tb_degree
       <set>
-          <if test="degreename != null">degree_name=#{degreename}</if>
-          <if test="priority != null">priority=#{priority}</if>
+          <if test="degreename != null">degree_name=#{degreename},</if>
+          <if test="priority != null">priority=#{priority},</if>
+          <if test="level != null">level=#{level},</if>
       </set>
       where degree_id=#{degreeid}
     </update>
