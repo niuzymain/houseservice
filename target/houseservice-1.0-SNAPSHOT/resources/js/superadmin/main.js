@@ -2,15 +2,15 @@ $(function () {
     //初始显示用户信息
     $.getJSON("/admin/userlist", function (data) {
         if (data.success) {
-            var head = "<tr><td>姓名</td><td>性别</td><td>电话</td><td>创建时间</td><td>状态</td></tr>"
+            var head = "<tr><th>用户名</th><th>性别</th><th>电话</th><th>创建时间</th><th>状态</th></tr>"
             $("#userlist thead").append(head);
             for (var i = 0; i < data.result.length; i++) {
                 var body = "<tr>" +
-                    "<td>" + data.result[i].username + "</td>" +
+                    "<td>" + data.result[i].accountname + "</td>" +
                     "<td>" + data.result[i].usersex + "</td>" +
                     "<td>" + data.result[i].userphone + "</td>" +
                     "<td>" + timeStamp2String(data.result[i].createtime) + "</td>" +
-                    "<td><td><a href=# onclick=changestatus(this) id=" + data.result[i].userid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
+                    "<td><a href=# onclick=changestatus(this) id=" + data.result[i].userid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
                     "</tr>"
                 $("#userlist tbody").append(body);
             }
@@ -27,15 +27,15 @@ $(function () {
         if ($("#usertype").val() == "user") {
             $.getJSON("/admin/userlist", function (data) {
                 if (data.success) {
-                    var head = "<tr><td>姓名</td><td>性别</td><td>电话</td><td>创建时间</td><td>状态</td></tr>"
+                    var head = "<tr><th>用户名</th><th>性别</th><th>电话</th><th>创建时间</th><th>状态</th></tr>"
                     $("#userlist thead").append(head);
                     for (var i = 0; i < data.result.length; i++) {
                         var body = "<tr>" +
-                                        "<td>" + data.result[i].username + "</td>" +
+                                        "<td>" + data.result[i].accountname + "</td>" +
                                         "<td>" + data.result[i].usersex + "</td>" +
                                         "<td>" + data.result[i].userphone + "</td>" +
                                         "<td>" + timeStamp2String(data.result[i].createtime) + "</td>" +
-                                        "<td><td><a href=# onclick=changestatus(this) id=" + data.result[i].userid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
+                                        "<td><a href=# onclick=changestatus(this) id=" + data.result[i].userid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
                                     "</tr>"
                         $("#userlist tbody").append(body);
                     }
@@ -50,7 +50,7 @@ $(function () {
             $("#userlist tbody").empty();
             $.getJSON("/admin/servicerlist", function (data) {
                 if (data.success) {
-                    var head = "<tr><td>姓名</td><td>性别</td><td>电话</td><td>创建时间</td><td>状态</td></tr>"
+                    var head = "<tr><th>姓名</th><th>性别</th><th>电话</th><th>创建时间</th><th>状态</th></tr>"
                     $("#userlist thead").append(head);
                     for (var i = 0; i < data.result.length; i++) {
                         var body = "<tr>" +

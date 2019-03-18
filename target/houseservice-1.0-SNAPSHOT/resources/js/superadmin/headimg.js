@@ -1,12 +1,12 @@
 $(function () {
     var head = "<tr>" +
-        "<td>标题</td>" +
-        "<td>描述</td>" +
-        "<td>优先级</td>" +
-        "<td>图片</td>" +
-        "<td>状态</td>" +
-        "<td>操作</td>" +
-        "<td><a href='/admin/operateheadimg'>新增</a></td>" +
+        "<th>标题</th>" +
+        "<th>描述</th>" +
+        "<th>优先级</th>" +
+        "<th>图片</th>" +
+        "<th>状态</th>" +
+        "<th>操作</th>" +
+        "<th><a href=\"/admin/operateheadimg\" class=\"sui-btn btn-xlarge btn-primary\">新增</a></th>" +
         "</tr>"
     $("#headimglist thead").append(head);
     $.getJSON("/admin/headimglist", function (data) {
