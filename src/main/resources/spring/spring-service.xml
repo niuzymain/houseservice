@@ -24,25 +24,38 @@
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <!--############################配置quartz#######################################-->
+    <!--############################配置JobDetail#######################################-->
     <bean id="salaryQualifyJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
         <property name="targetObject" ref="salaryQualifyJob"/>
         <property name="targetMethod" value="salaryQualify"/>
     </bean>
-
-    <bean id="testCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+    <bean id="updateExperienceJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="updateExperienceJob"/>
+        <property name="targetMethod" value="udateExperience"/>
+    </bean>
+    <!--############################配置Trigger#######################################-->
+    <bean id="salaryCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
         <property name="jobDetail" ref="salaryQualifyJobDetail"/>
         <property name="cronExpression" value="0/20 * * ? * *"/>
         <!--cron表达式0 0 23 L * ? *-->
     </bean>
+    <bean id="experienceCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="updateExperienceJobDetail"/>
+        <property name="cronExpression" value="0/10 * * ? * *"/>
+        <!--cron表达式0 0 0 1 1 ? *-->
+    </bean>
+    <!--############################配置Schedule#######################################-->
     <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
         <property name="jobDetails">
             <list>
                 <ref bean="salaryQualifyJobDetail"/>
+                <ref bean="updateExperienceJobDetail"/>
             </list>
         </property>
         <property name="triggers">
             <list>
-                <ref bean="testCronTrigger"/>
+                <ref bean="salaryCronTrigger"/>
+                <ref bean="experienceCronTrigger"/>
             </list>
         </property>
     </bean>

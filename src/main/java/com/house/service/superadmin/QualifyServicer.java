@@ -23,5 +23,6 @@ public interface QualifyServicer {
     ServicerExecution passQualifyOperate(Servicer servicer);
     int qualifySalary(Servicer servicer);
     int qualifyInitialSalary(Servicer servicer);
+    void updateExperience(Servicer servicer);
     ServicerExecution uploadServicerContract(Long servicerid,InputStream inputStream,String filename);
 }
