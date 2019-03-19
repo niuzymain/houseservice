@@ -6,7 +6,6 @@ import com.house.dto.ServicerExecution;
 import com.house.entity.Reserve;
 import com.house.entity.Servicer;
 import com.house.enums.ServicerEnum;
-import com.house.service.schedule.HelloSchedue;
 import com.house.service.servicer.ReserveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

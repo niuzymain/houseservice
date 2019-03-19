@@ -93,11 +93,11 @@ public class QualifyServicerImp implements QualifyServicer {
     public int qualifySalary(Servicer servicer) {
         int salary = qualifyInitialSalary(servicer);
         if (servicer.getServicerscore() < 2) {
-            salary -= 1000;
+            salary -= 100;
         } else if (servicer.getServicerscore() == 4) {
-            salary += 1000;
+            salary += 100;
         } else if (servicer.getServicerscore() == 5) {
-            salary += 1500;
+            salary += 200;
         }
         return salary;
     }
