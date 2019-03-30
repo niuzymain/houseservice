@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.house.dao.RecommendDao">
+
+    <sql id="Base_Column_List">
+    recommend_id, user_id, servicer_id, check_times, create_time
+  </sql>
+
+    <insert id="insertRecommend" useGeneratedKeys="true" keyColumn="recommend_id" keyProperty="recommendId">
+        insert into tb_recommend
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="recommendId != null">
+                recommend_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="servicerId != null">
+                servicer_id,
+            </if>
+            <if test="checkTimes != null">
+                check_times,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="recommendId != null">
+                #{recommendId,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="servicerId != null">
+                #{servicerId,jdbcType=INTEGER},
+            </if>
+            <if test="checkTimes != null">
+                #{checkTimes,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateRecommendCheckTimes">
+    update tb_recommend
+    set check_times = check_times+1
+    where
+    recommend_id=#{recommendid}
+  </update>
+
+    <select id="selectRecommend" resultType="com.house.entity.Recommend">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_recommend
+        where
+        user_id=#{userid} and
+        servicer_id=#{servicerid}
+    </select>
+</mapper>

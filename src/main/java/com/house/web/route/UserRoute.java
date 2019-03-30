@@ -57,4 +57,9 @@ public class UserRoute {
     private String userMessage(){
         return"user/usermessage";
     }
+
+    @RequestMapping(value = "/recommend",method = RequestMethod.GET)
+    private String userRecommend(){
+        return"user/recommend";
+    }
 }

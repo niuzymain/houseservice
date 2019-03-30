@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.mapper.TbRecommendMapper">
+  <resultMap id="BaseResultMap" type="mybatis.entity.TbRecommend">
+    <id column="recommend_id" jdbcType="INTEGER" property="recommendId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="servicer_id" jdbcType="INTEGER" property="servicerId" />
+    <result column="check_times" jdbcType="INTEGER" property="checkTimes" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    recommend_id, user_id, servicer_id, check_times, create_time
+  </sql>
+  <select id="selectByExample" parameterType="mybatis.entity.TbRecommendExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tb_recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_recommend
+    where recommend_id = #{recommendId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tb_recommend
+    where recommend_id = #{recommendId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="mybatis.entity.TbRecommendExample">
+    delete from tb_recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="mybatis.entity.TbRecommend">
+    insert into tb_recommend (recommend_id, user_id, servicer_id, 
+      check_times, create_time)
+    values (#{recommendId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{servicerId,jdbcType=INTEGER}, 
+      #{checkTimes,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="mybatis.entity.TbRecommend">
+    insert into tb_recommend
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="recommendId != null">
+        recommend_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="servicerId != null">
+        servicer_id,
+      </if>
+      <if test="checkTimes != null">
+        check_times,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="recommendId != null">
+        #{recommendId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="servicerId != null">
+        #{servicerId,jdbcType=INTEGER},
+      </if>
+      <if test="checkTimes != null">
+        #{checkTimes,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="mybatis.entity.TbRecommendExample" resultType="java.lang.Long">
+    select count(*) from tb_recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update tb_recommend
+    <set>
+      <if test="record.recommendId != null">
+        recommend_id = #{record.recommendId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userId != null">
+        user_id = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.servicerId != null">
+        servicer_id = #{record.servicerId,jdbcType=INTEGER},
+      </if>
+      <if test="record.checkTimes != null">
+        check_times = #{record.checkTimes,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update tb_recommend
+    set recommend_id = #{record.recommendId,jdbcType=INTEGER},
+      user_id = #{record.userId,jdbcType=INTEGER},
+      servicer_id = #{record.servicerId,jdbcType=INTEGER},
+      check_times = #{record.checkTimes,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="mybatis.entity.TbRecommend">
+    update tb_recommend
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="servicerId != null">
+        servicer_id = #{servicerId,jdbcType=INTEGER},
+      </if>
+      <if test="checkTimes != null">
+        check_times = #{checkTimes,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where recommend_id = #{recommendId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="mybatis.entity.TbRecommend">
+    update tb_recommend
+    set user_id = #{userId,jdbcType=INTEGER},
+      servicer_id = #{servicerId,jdbcType=INTEGER},
+      check_times = #{checkTimes,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where recommend_id = #{recommendId,jdbcType=INTEGER}
+  </update>
+</mapper>

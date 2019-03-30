@@ -38,35 +38,35 @@
      </bean>
 
     <!--登陆认证拦截器-->
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/admin/**"/>
-            <bean class="com.house.interceptor.AdminLoginInterceptor"/>
-        </mvc:interceptor>
-        <mvc:interceptor>
-            <mvc:mapping path="/servicer/**"/>
-            <mvc:exclude-mapping path="/servicer/register"/>
-            <bean class="com.house.interceptor.ServicerLoginInterceptor"/>
-        </mvc:interceptor>
-        <mvc:interceptor>
-            <mvc:mapping path="/user/**"/>
-            <mvc:exclude-mapping path="/user/main"/>
-            <mvc:exclude-mapping path="/user/headimgdetail"/>
-            <mvc:exclude-mapping path="/user/servicerpage"/>
-            <mvc:exclude-mapping path="/user/servicerdetail"/>
-            <mvc:exclude-mapping path="/user/register"/>
-            <mvc:exclude-mapping path="/user/headimgdetail"/>
-            <mvc:exclude-mapping path="/user/headimgdetail"/>
-            <mvc:exclude-mapping path="/user/headimgdetail"/>
-            <mvc:exclude-mapping path="/user/headimgdetail"/>
-            <mvc:exclude-mapping path="/user/adduser"/>
-            <mvc:exclude-mapping path="/user/getavailableservicer"/>
-            <mvc:exclude-mapping path="/user/getservicerdetail"/>
-            <mvc:exclude-mapping path="/user/getheadimglist"/>
-            <mvc:exclude-mapping path="/user/getspecificheadimg"/>
-            <bean class="com.house.interceptor.UserLoginInterceptor"/>
-        </mvc:interceptor>
-    </mvc:interceptors>
+    <!--<mvc:interceptors>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/admin/**"/>-->
+            <!--<bean class="com.house.interceptor.AdminLoginInterceptor"/>-->
+        <!--</mvc:interceptor>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/servicer/**"/>-->
+            <!--<mvc:exclude-mapping path="/servicer/register"/>-->
+            <!--<bean class="com.house.interceptor.ServicerLoginInterceptor"/>-->
+        <!--</mvc:interceptor>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/user/**"/>-->
+            <!--<mvc:exclude-mapping path="/user/main"/>-->
+            <!--<mvc:exclude-mapping path="/user/headimgdetail"/>-->
+            <!--<mvc:exclude-mapping path="/user/servicerpage"/>-->
+            <!--<mvc:exclude-mapping path="/user/servicerdetail"/>-->
+            <!--<mvc:exclude-mapping path="/user/register"/>-->
+            <!--<mvc:exclude-mapping path="/user/headimgdetail"/>-->
+            <!--<mvc:exclude-mapping path="/user/headimgdetail"/>-->
+            <!--<mvc:exclude-mapping path="/user/headimgdetail"/>-->
+            <!--<mvc:exclude-mapping path="/user/headimgdetail"/>-->
+            <!--<mvc:exclude-mapping path="/user/adduser"/>-->
+            <!--<mvc:exclude-mapping path="/user/getavailableservicer"/>-->
+            <!--<mvc:exclude-mapping path="/user/getservicerdetail"/>-->
+            <!--<mvc:exclude-mapping path="/user/getheadimglist"/>-->
+            <!--<mvc:exclude-mapping path="/user/getspecificheadimg"/>-->
+            <!--<bean class="com.house.interceptor.UserLoginInterceptor"/>-->
+        <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
 
 
 

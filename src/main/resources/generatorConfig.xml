@@ -44,15 +44,16 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!-- 指定数据库表 -->
-        <table tableName="tb_adminmsg"></table>
-        <table tableName="tb_degree"></table>
-        <table tableName="tb_evaluate"></table>
-        <table tableName="tb_headimg"></table>
-        <table tableName="tb_reserve"></table>
-        <table tableName="tb_servicer"></table>
-        <table tableName="tb_servcietype"></table>
-        <table tableName="tb_superadmin"></table>
-        <table tableName="tb_user"></table>
-        <table tableName="tb_workarea"></table>
+        <!--<table tableName="tb_adminmsg"></table>-->
+        <!--<table tableName="tb_degree"></table>-->
+        <!--<table tableName="tb_evaluate"></table>-->
+        <!--<table tableName="tb_headimg"></table>-->
+        <!--<table tableName="tb_reserve"></table>-->
+        <!--<table tableName="tb_servicer"></table>-->
+        <!--<table tableName="tb_servcietype"></table>-->
+        <!--<table tableName="tb_superadmin"></table>-->
+        <!--<table tableName="tb_user"></table>-->
+        <!--<table tableName="tb_workarea"></table>-->
+        <table tableName="tb_recommend"></table>
     </context>
 </generatorConfiguration>
