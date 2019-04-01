@@ -195,7 +195,7 @@
 
     <select id="queryServicer" resultMap="servicermap">
         select
-      <include refid="Base_Column_List"/>
+        <include refid="Base_Column_List"/>
         from tb_servicer s
         left join tb_degree d
         on s.degree_id=d.degree_id
@@ -209,10 +209,10 @@
         and s.city_id=c.workarea_id
         and s.local_id=l.workarea_id
         <!--<where>-->
-            <!--and s.degree_id=d.degree_id-->
-            <!--and s.servicetype_id=st.servicetype_id-->
-            <!--and s.city_id=c.workarea_id-->
-            <!--and s.local_id=l.workarea_id-->
+        <!--and s.degree_id=d.degree_id-->
+        <!--and s.servicetype_id=st.servicetype_id-->
+        <!--and s.city_id=c.workarea_id-->
+        <!--and s.local_id=l.workarea_id-->
         <!--</where>-->
     </select>
 
@@ -354,6 +354,24 @@
                 and s.local_id=#{condition.local.workareaid}
                 and l.workarea_id=#{condition.local.workareaid}
             </if>
+            and s.degree_id=d.degree_id
+            and s.servicetype_id=st.servicetype_id
+            and s.city_id=c.workarea_id
+            and s.local_id=l.workarea_id
+            and enable_status=1
+            and check_status=2
+        </where>
+    </select>
+
+    <select id="queryServicerForRecommend" resultMap="servicermap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
+        <where>
+            servicer_id in
+            <foreach collection="idlist" item="item" index="index" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
             and s.degree_id=d.degree_id
             and s.servicetype_id=st.servicetype_id
             and s.city_id=c.workarea_id

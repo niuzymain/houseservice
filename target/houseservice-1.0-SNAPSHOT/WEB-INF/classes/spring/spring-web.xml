@@ -64,6 +64,8 @@
             <!--<mvc:exclude-mapping path="/user/getservicerdetail"/>-->
             <!--<mvc:exclude-mapping path="/user/getheadimglist"/>-->
             <!--<mvc:exclude-mapping path="/user/getspecificheadimg"/>-->
+            <!--<mvc:exclude-mapping path="/user/recommend"/>-->
+            <!--<mvc:exclude-mapping path="/user/getrecommendservicer"/>-->
             <!--<bean class="com.house.interceptor.UserLoginInterceptor"/>-->
         <!--</mvc:interceptor>-->
     <!--</mvc:interceptors>-->

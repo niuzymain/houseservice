@@ -35,6 +35,7 @@ public class FrontRecommendController {
                 modelmap.put("success", true);
                 modelmap.put("list", servicerList);
             }
+            modelmap.put("account",currentuser);
         } catch (Exception e) {
             e.printStackTrace();
             modelmap.put("success", false);
