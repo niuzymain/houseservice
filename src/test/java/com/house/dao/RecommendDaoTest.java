@@ -23,7 +23,7 @@ public class RecommendDaoTest extends Basetest {
 
     @Test
     public void testUpdate(){
-        recommendDao.updateRecommendCheckTimes(2l);
+//        recommendDao.updateRecommendCheckTimes(2l);
     }
 
     @Test

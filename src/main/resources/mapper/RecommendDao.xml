@@ -46,7 +46,7 @@
 
     <update id="updateRecommendCheckTimes">
     update tb_recommend
-    set check_times = check_times+1
+    set check_times = check_times+1,create_time=#{createtime}
     where
     recommend_id=#{recommendid}
   </update>

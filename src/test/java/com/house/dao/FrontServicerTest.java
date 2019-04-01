@@ -6,6 +6,7 @@ import com.house.entity.WorkArea;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FrontServicerTest extends Basetest {
@@ -21,5 +22,17 @@ public class FrontServicerTest extends Basetest {
             System.out.println("servicername:"+s.getServicername()+"   servicerprice:"+s.getServicerprice());
         }
         System.out.println("count:"+servicerDao.queryServicerCount(servicer));
+    }
+
+    @Test
+    public void testRecommendServicer(){
+        List<Long> idlist = new ArrayList<>();
+        idlist.add(37l);
+        idlist.add(42l);
+        idlist.add(49l);
+        List<Servicer> result = servicerDao.queryServicerForRecommend(idlist);
+        for (Servicer s : result) {
+            System.out.println("servicername:"+s.getServicername());
+        }
     }
 }

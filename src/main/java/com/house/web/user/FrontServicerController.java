@@ -9,6 +9,7 @@ import com.house.enums.HeadimgEnum;
 import com.house.service.servicer.EvaluateService;
 import com.house.service.user.FrontHeadimgService;
 import com.house.service.user.FrontServicerService;
+import com.house.service.user.RecommendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +28,8 @@ public class FrontServicerController {
     private FrontServicerService frontServicerService;
     @Autowired
     private EvaluateService evaluateService;
+    @Autowired
+    private RecommendService recommendService;
 
     @RequestMapping(value = "/getavailableservicer", method = RequestMethod.POST)
     @ResponseBody
@@ -59,8 +62,13 @@ public class FrontServicerController {
     @ResponseBody
     public Map<String, Object> getServicerDetail(HttpServletRequest request) {
         Map<String, Object> modelmap = new HashMap<>();
-        Long servicerid = Long.parseLong(request.getParameter("servicerid"));
         try {
+            Long servicerid = Long.parseLong(request.getParameter("servicerid"));
+            User currentuser = (User)request.getSession().getAttribute("useraccount");
+            if(currentuser != null){
+                Long userid = currentuser.getUserid();
+                int result = recommendService.addUserClick(userid,servicerid);
+            }
             Servicer servicer = frontServicerService.getSpecificServicer(servicerid);
             List<Evaluate> evaluateList = evaluateService.checkEvaluate(servicer);
             modelmap.put("success", true);
