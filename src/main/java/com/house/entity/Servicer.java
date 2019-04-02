@@ -24,11 +24,20 @@ public class Servicer {
     private WorkArea local;
     private Date createtime;
     private Date lastedittime;
-    private Integer enablestatus;// 0.禁用 1.可用 2.服务中
+    private Integer enablestatus;// -1.离职 0.禁用 1.可用 2.服务中
     private Integer checkstatus; //0.审核 1.待签合同 2.通过 -1.未通过
     private String accountname;
     private String password;
     private String servicercontract;
+    private Integer servicecount;
+
+    public Integer getServicecount() {
+        return this.servicecount;
+    }
+
+    public void setServicecount(Integer servicecount) {
+        this.servicecount = servicecount;
+    }
 
     public long getServicerid() {
         return this.servicerid;

@@ -59,7 +59,7 @@ public class CommonController {
                 if (account == null) {
                     modelMap.put("success", false);
                     modelMap.put("errormsg", "用户不存在");
-                } else if (((User) account).getEnablestatus() == 0) {
+                } else if (((User) account).getEnablestatus() == 0 || ((User) account).getEnablestatus() == -1) {
                     modelMap.put("success", false);
                     modelMap.put("errormsg", "账户不可用");
                 } else {
@@ -75,7 +75,7 @@ public class CommonController {
                 if (account == null) {
                     modelMap.put("success", false);
                     modelMap.put("errormsg", "用户不存在");
-                } else if (((Servicer) account).getEnablestatus() == 0) {
+                } else if (((Servicer) account).getEnablestatus() == 0 || ((Servicer) account).getEnablestatus() == -1) {
                     modelMap.put("success", false);
                     modelMap.put("errormsg", "账户不可用");
                 } else {

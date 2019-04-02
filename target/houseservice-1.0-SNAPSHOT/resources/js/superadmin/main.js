@@ -50,7 +50,7 @@ $(function () {
             $("#userlist tbody").empty();
             $.getJSON("/admin/servicerlist", function (data) {
                 if (data.success) {
-                    var head = "<tr><th>姓名</th><th>性别</th><th>电话</th><th>创建时间</th><th>状态</th></tr>"
+                    var head = "<tr><th>姓名</th><th>性别</th><th>电话</th><th>创建时间</th><th>状态</th><th>操作</th></tr>"
                     $("#userlist thead").append(head);
                     for (var i = 0; i < data.result.length; i++) {
                         var body = "<tr>" +
@@ -59,7 +59,10 @@ $(function () {
                                         "<td>" + data.result[i].servicerphone + "</td>" +
                                         "<td>" + timeStamp2String(data.result[i].createtime) + "</td>" +
                                         "<td><a href=# onclick=changestatus(this) id=" + data.result[i].servicerid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
-                                        "<td><a href=#>查看详情</a></td>" +
+                                        "<td>" +
+                            "<a href=# class='unemployment' onclick=unemploy("+data.result[i].servicerid+")>解雇</a><br>" +
+                            "<a href=# class='details'>查看详情</a>" +
+                            "</td>" +
                             "</tr>"
                         $("#userlist tbody").append(body);
                     }
@@ -128,6 +131,25 @@ function changestatus(target) {
             }
             else {
                 alert("error：" + data.errormsg);
+            }
+        }
+    })
+}
+
+function unemploy(id){
+    $.ajax({
+        url:"/admin/unemployment",
+        data:{
+            servicerid:id
+        },
+        type:"post",
+        success:function(data){
+            if(data.success){
+                alert("解雇成功")
+                window.location.reload()
+            }
+            else{
+                alert(data.errormsg)
             }
         }
     })

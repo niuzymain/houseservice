@@ -109,6 +109,7 @@ public class QualifyReserveServiceImp implements QualifyReserveService {
                 Servicer currentservicer = currentreserve.getServicer();
                 currentservicer.setEnablestatus(2);
                 servicerDao.updateServicer(currentservicer);
+                servicerDao.updateServiceCount(currentservicer.getServicerid());
                 return result;
             }
         } catch (Exception e) {

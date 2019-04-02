@@ -12,4 +12,5 @@ public interface UserInfoManage {
     User getUserById(Long userid);
     List<Servicer> getServicerList();
     Servicer getSingleServicer(Servicer servicer);
+    int Unemployment(Long servicerid);
 }

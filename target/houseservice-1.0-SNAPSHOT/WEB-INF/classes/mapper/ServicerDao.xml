@@ -20,6 +20,7 @@
         s.servicer_des,
         s.servicer_file,
         s.servicer_contract,
+        s.service_count,
         s.create_time,
         s.lastedit_time,
         s.enable_status,
@@ -57,6 +58,7 @@
         <result column="servicer_des" property="servicerdes"/>
         <result column="servicer_file" property="servicerfile"/>
         <result column="servicer_contract" property="servicerfile"/>
+        <result column="service_count" property="servicecount"/>
         <result column="create_time" property="createtime"/>
         <result column="lastedit_time" property="lastedittime"/>
         <result column="enable_status" property="enablestatus"/>
@@ -103,7 +105,8 @@
                     enable_status,
                     check_status,
                     account_name,
-                    pass_word)
+                    pass_word,
+                    service_count)
     values(#{serviceridnum,jdbcType=VARCHAR},
             #{servicername,jdbcType=VARCHAR},
             #{servicerage,jdbcType=INTEGER},
@@ -114,7 +117,8 @@
             #{enablestatus,jdbcType=INTEGER},
             #{checkstatus,jdbcType=INTEGER},
             #{accountname,jdbcType=VARCHAR},
-            #{password,jdbcType=VARCHAR})
+            #{password,jdbcType=VARCHAR},
+            0)
     </insert>
 
     <update id="updateServicer" parameterType="com.house.entity.Servicer">
@@ -193,6 +197,12 @@
         where servicer_id=#{servicer.servicerid}
     </update>
 
+    <update id="updateServiceCount" parameterType="long">
+        update tb_servicer
+        set service_count = service_count+1
+        where servicer_id=#{servicerid}
+    </update>
+
     <select id="queryServicer" resultMap="servicermap">
         select
         <include refid="Base_Column_List"/>
@@ -214,6 +224,7 @@
         <!--and s.city_id=c.workarea_id-->
         <!--and s.local_id=l.workarea_id-->
         <!--</where>-->
+        where enable_status != -1
     </select>
 
     <select id="querySingleServicer" resultMap="servicermap">
@@ -240,6 +251,7 @@
         from tb_servicer
         where
         check_status=#{checkstatus}
+        and enable_status != -1
         order by lastedit_time desc
     </select>
 

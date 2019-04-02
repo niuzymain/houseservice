@@ -32,6 +32,8 @@ $(function(){
             $(".lastedittime").append(timeStamp2String(data.result.lastedittime))
             $(".degree").append(data.result.degree.degreename)
             $(".type").append(data.result.servicetype.servicetypename)
+            $(".score").append(data.result.servicerscore)
+            $(".count").append(data.result.servicecount)
         }
         else{
             alert(data.errormsg)

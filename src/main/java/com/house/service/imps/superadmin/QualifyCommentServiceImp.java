@@ -50,6 +50,7 @@ public class QualifyCommentServiceImp implements QualifyCommentService {
         evaluate.setEvaluateid(evaluateid);
         evaluate.setEvaluatedes("----该评论违规，已被屏蔽----");
         evaluate.setEnablestatus(-1);
+        evaluate.setEvaluatescore(-1);
         /////////////////根据id查找相关评论信息//////////////////////////////
         Evaluate specific = evaluateDao.querySingleEvaluate(evaluate);
         //////////////////////系统消息通知用户///////////////////////////////////

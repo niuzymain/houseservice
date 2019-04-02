@@ -30,107 +30,122 @@ public class UserManageController {
     @Autowired
     private ServicerService servicerService;
 
-    @RequestMapping(value = "/editstatus",method = RequestMethod.POST)
+    @RequestMapping(value = "/editstatus", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object>editStatus(HttpServletRequest request){
-        Map<String,Object> modelMap = new HashMap<>();
+    public Map<String, Object> editStatus(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
         String operatestr = request.getParameter("operatestr");//json串
         String accounttype = request.getParameter("type");
         ObjectMapper objectMapper = new ObjectMapper();
         Object obj = null;
         int result = 0;
         try {
-            if(accounttype.equals("user")){
+            if (accounttype.equals("user")) {
                 obj = objectMapper.readValue(operatestr, User.class);
-                result = userService.editUser((User)obj);
-            }
-            else{
+                result = userService.editUser((User) obj);
+            } else {
                 obj = objectMapper.readValue(operatestr, Servicer.class);
-                result = servicerService.editServicer((Servicer)obj);
+                result = servicerService.editServicer((Servicer) obj);
             }
-            if(result <= 0){
-                modelMap.put("success",false);
-                modelMap.put("errormsg","操作失败");
+            if (result <= 0) {
+                modelMap.put("success", false);
+                modelMap.put("errormsg", "操作失败");
+            } else {
+                modelMap.put("success", true);
             }
-            else{
-                modelMap.put("success",true);
-            }
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            modelMap.put("success",false);
-            modelMap.put("errormsg",e.getMessage());
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
         }
         return modelMap;
     }
 
-    @RequestMapping(value = "/userlist",method = RequestMethod.GET)
+    @RequestMapping(value = "/userlist", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String,Object>getUserlist(HttpServletRequest request){
-        Map<String,Object> modelMap = new HashMap<>();
+    public Map<String, Object> getUserlist(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
         List<User> userList = new ArrayList<>();
-        try{
+        try {
             userList = userInfoManage.getUserList();
-            modelMap.put("success",true);
-            modelMap.put("result",userList);
-        }catch (Exception e){
+            modelMap.put("success", true);
+            modelMap.put("result", userList);
+        } catch (Exception e) {
             e.printStackTrace();
-            modelMap.put("success",false);
-            modelMap.put("errormsg",e.getMessage());
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
         }
         return modelMap;
     }
 
-    @RequestMapping(value = "/singleuser",method = RequestMethod.GET)
+    @RequestMapping(value = "/singleuser", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String,Object>getUserById(HttpServletRequest request){
-        Map<String,Object> modelMap = new HashMap<>();
+    public Map<String, Object> getUserById(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
         Long userid = Long.parseLong(request.getParameter("userid"));
         User user = new User();
-        try{
+        try {
             user = userInfoManage.getUserById(userid);
-            modelMap.put("success",true);
-            modelMap.put("result",user);
-        }catch (Exception e){
+            modelMap.put("success", true);
+            modelMap.put("result", user);
+        } catch (Exception e) {
             e.printStackTrace();
-            modelMap.put("success",false);
-            modelMap.put("errormsg",e.getMessage());
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
         }
         return modelMap;
     }
 
-    @RequestMapping(value = "/servicerlist",method = RequestMethod.GET)
+    @RequestMapping(value = "/servicerlist", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String,Object>getServicerList(HttpServletRequest request){
-        Map<String,Object> modelMap = new HashMap<>();
+    public Map<String, Object> getServicerList(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
         List<Servicer> servicerList = new ArrayList<>();
-        try{
+        try {
             servicerList = userInfoManage.getServicerList();
-            modelMap.put("success",true);
-            modelMap.put("result",servicerList);
-        }catch (Exception e){
+            modelMap.put("success", true);
+            modelMap.put("result", servicerList);
+        } catch (Exception e) {
             e.printStackTrace();
-            modelMap.put("success",false);
-            modelMap.put("errormsg",e.getMessage());
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
         }
         return modelMap;
     }
 
-    @RequestMapping(value = "/singleservicer",method = RequestMethod.GET)
+    @RequestMapping(value = "/singleservicer", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String,Object>getServicerById(HttpServletRequest request){
-        Map<String,Object> modelMap = new HashMap<>();
+    public Map<String, Object> getServicerById(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
         Long servicerid = Long.parseLong(request.getParameter("servicerid"));
         Servicer condition = new Servicer();
         condition.setServicerid(servicerid);
-        try{
+        try {
             Servicer servicer = userInfoManage.getSingleServicer(condition);
-            modelMap.put("success",true);
-            modelMap.put("result",servicer);
-        }catch (Exception e){
+            modelMap.put("success", true);
+            modelMap.put("result", servicer);
+        } catch (Exception e) {
             e.printStackTrace();
-            modelMap.put("success",false);
-            modelMap.put("errormsg",e.getMessage());
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
+        }
+        return modelMap;
+    }
+
+    @RequestMapping(value = "/unemployment", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> UnemploymentServicer(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        Long servicerid = Long.parseLong(request.getParameter("servicerid"));
+        try {
+            int result = userInfoManage.Unemployment(servicerid);
+            if (result > 0) {
+                modelMap.put("success", true);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errormsg", e.getMessage());
         }
         return modelMap;
     }

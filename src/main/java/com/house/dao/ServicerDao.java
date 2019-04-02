@@ -10,6 +10,8 @@ public interface ServicerDao {
 
     int updateServicer(@Param("servicer") Servicer servicer);
 
+    int updateServiceCount(Long servicerid);
+
     List<Servicer> queryQualify(@Param("checkstatus") int checkstatus);
 
     Servicer querySingleServicer(@Param("condition") Servicer condition);
