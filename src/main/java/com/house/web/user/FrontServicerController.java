@@ -67,7 +67,7 @@ public class FrontServicerController {
             User currentuser = (User)request.getSession().getAttribute("useraccount");
             if(currentuser != null){
                 Long userid = currentuser.getUserid();
-                int result = recommendService.addUserClick(userid,servicerid);
+//                int result = recommendService.addUserClick(userid,servicerid);
             }
             Servicer servicer = frontServicerService.getSpecificServicer(servicerid);
             List<Evaluate> evaluateList = evaluateService.checkEvaluate(servicer);

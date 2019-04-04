@@ -5,7 +5,6 @@ import com.house.dao.ServicerDao;
 import com.house.entity.Recommend;
 import com.house.entity.Servicer;
 import com.house.service.user.RecommendService;
-import com.house.util.PageIndexUtil;
 import com.mysql.cj.jdbc.MysqlDataSource;
 import org.apache.mahout.cf.taste.impl.model.jdbc.MySQLJDBCDataModel;
 import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood;
@@ -36,17 +35,17 @@ public class RecommendServiceImp implements RecommendService {
     private MysqlDataSource dataSource;
 
     @Override
-    public int addUserClick(long userid, long servicerid) {
+    public int addUserTimes(long userid, long servicerid) {
         Recommend recommend = recommendDao.selectRecommend(userid, servicerid);
         int result = 0;
         try {
             if (recommend != null) {
-                result = recommendDao.updateRecommendCheckTimes(recommend.getRecommendId(), new Date());
+                result = recommendDao.updateRecommendReserveTimes(recommend.getRecommendId(), new Date());
             } else {
                 recommend = new Recommend();
                 recommend.setUserId(userid);
                 recommend.setServicerId(servicerid);
-                recommend.setCheckTimes(1);
+                recommend.setReserveTimes(5);
                 recommend.setCreateTime(new Date());
                 result = recommendDao.insertRecommend(recommend);
             }
@@ -65,7 +64,7 @@ public class RecommendServiceImp implements RecommendService {
     public List<Servicer> findRecommendServicer(Long userid) throws Exception {
         //将数据加载到内存中，GroupLensDataModel是针对开放电影评论数据的
         Class.forName("com.mysql.cj.jdbc.Driver");
-        DataModel dataModel = new MySQLJDBCDataModel(dataSource, "tb_recommend", "user_id", "servicer_id", "check_times", "create_time");
+        DataModel dataModel = new MySQLJDBCDataModel(dataSource, "tb_recommend", "user_id", "servicer_id", "reserve_times", "create_time");
         //计算相似度，相似度算法有很多种，欧几里得、皮尔逊等等。
         UserSimilarity similarity = new EuclideanDistanceSimilarity(dataModel);
         //计算最近邻域，邻居有两种算法，基于固定数量的邻居和基于相似度的邻居，这里使用基于固定数量的邻居

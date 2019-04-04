@@ -10,6 +10,7 @@ import com.house.enums.ServicerEnum;
 import com.house.service.superadmin.QualifyCommentService;
 import com.house.service.superadmin.QualifyReserveService;
 import com.house.service.superadmin.QualifyServicer;
+import com.house.service.user.RecommendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,6 +36,9 @@ public class QualifyController {
 
     @Autowired
     private QualifyCommentService qualifyCommentService;
+
+    @Autowired
+    private RecommendService recommendService;
 
     @RequestMapping(value = "/getqualifylist", method = RequestMethod.GET)
     @ResponseBody
@@ -310,6 +314,11 @@ public class QualifyController {
                 return modelMap;
             }
             int result = qualifyReserveService.confirmReserve(reserve, commonsMultipartFile.getInputStream(), commonsMultipartFile.getOriginalFilename());
+            /*
+            👇添加用户预约记录，供推荐数据源👇
+             */
+            Reserve currentreserve = qualifyReserveService.specificReserveQualify(reserve.getReserveid());
+            recommendService.addUserTimes(currentreserve.getUser().getUserid(),currentreserve.getServicer().getServicerid());
             if (result > 0) {
                 modelMap.put("success", true);
             }

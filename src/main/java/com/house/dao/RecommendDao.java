@@ -7,6 +7,6 @@ import java.util.Date;
 
 public interface RecommendDao {
     int insertRecommend(Recommend recommend);
-    int updateRecommendCheckTimes(@Param("recommendid") long recommendid, @Param("createtime")Date createtime);
+    int updateRecommendReserveTimes(@Param("recommendid") long recommendid, @Param("createtime")Date createtime);
     Recommend selectRecommend(@Param("userid") long userid,@Param("servicerid") long servicerid);
 }
