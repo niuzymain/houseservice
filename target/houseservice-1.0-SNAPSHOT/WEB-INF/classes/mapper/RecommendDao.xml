@@ -3,7 +3,7 @@
 <mapper namespace="com.house.dao.RecommendDao">
 
     <sql id="Base_Column_List">
-    recommend_id, user_id, servicer_id, check_times, create_time
+    recommend_id, user_id, servicer_id, reserve_times, create_time
   </sql>
 
     <insert id="insertRecommend" useGeneratedKeys="true" keyColumn="recommend_id" keyProperty="recommendId">
@@ -18,8 +18,8 @@
             <if test="servicerId != null">
                 servicer_id,
             </if>
-            <if test="checkTimes != null">
-                check_times,
+            <if test="reserveTimes != null">
+                reserve_times,
             </if>
             <if test="createTime != null">
                 create_time,
@@ -35,8 +35,8 @@
             <if test="servicerId != null">
                 #{servicerId,jdbcType=INTEGER},
             </if>
-            <if test="checkTimes != null">
-                #{checkTimes,jdbcType=INTEGER},
+            <if test="reserveTimes != null">
+                #{reserveTimes,jdbcType=INTEGER},
             </if>
             <if test="createTime != null">
                 #{createTime,jdbcType=TIMESTAMP},
@@ -44,9 +44,9 @@
         </trim>
     </insert>
 
-    <update id="updateRecommendCheckTimes">
+    <update id="updateRecommendReserveTimes">
     update tb_recommend
-    set check_times = check_times+1,create_time=#{createtime}
+    set reserve_times = reserve_times+5,create_time=#{createtime}
     where
     recommend_id=#{recommendid}
   </update>

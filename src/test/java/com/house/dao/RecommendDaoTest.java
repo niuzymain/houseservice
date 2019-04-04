@@ -16,7 +16,7 @@ public class RecommendDaoTest extends Basetest {
         Recommend recommend = new Recommend();
         recommend.setUserId(1l);
         recommend.setServicerId(35l);
-        recommend.setCheckTimes(1);
+        recommend.setReserveTimes(1);
         recommend.setCreateTime(new Date());
         recommendDao.insertRecommend(recommend);
     }

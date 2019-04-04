@@ -5,7 +5,7 @@
     <id column="recommend_id" jdbcType="INTEGER" property="recommendId" />
     <result column="user_id" jdbcType="INTEGER" property="userId" />
     <result column="servicer_id" jdbcType="INTEGER" property="servicerId" />
-    <result column="check_times" jdbcType="INTEGER" property="checkTimes" />
+    <result column="check_times" jdbcType="INTEGER" property="reserveTimes" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -103,7 +103,7 @@
     insert into tb_recommend (recommend_id, user_id, servicer_id, 
       check_times, create_time)
     values (#{recommendId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{servicerId,jdbcType=INTEGER}, 
-      #{checkTimes,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP})
+      #{reserveTimes,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="mybatis.entity.TbRecommend">
     insert into tb_recommend
@@ -117,7 +117,7 @@
       <if test="servicerId != null">
         servicer_id,
       </if>
-      <if test="checkTimes != null">
+      <if test="reserveTimes != null">
         check_times,
       </if>
       <if test="createTime != null">
@@ -134,8 +134,8 @@
       <if test="servicerId != null">
         #{servicerId,jdbcType=INTEGER},
       </if>
-      <if test="checkTimes != null">
-        #{checkTimes,jdbcType=INTEGER},
+      <if test="reserveTimes != null">
+        #{reserveTimes,jdbcType=INTEGER},
       </if>
       <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
@@ -160,8 +160,8 @@
       <if test="record.servicerId != null">
         servicer_id = #{record.servicerId,jdbcType=INTEGER},
       </if>
-      <if test="record.checkTimes != null">
-        check_times = #{record.checkTimes,jdbcType=INTEGER},
+      <if test="record.reserveTimes != null">
+        check_times = #{record.reserveTimes,jdbcType=INTEGER},
       </if>
       <if test="record.createTime != null">
         create_time = #{record.createTime,jdbcType=TIMESTAMP},
@@ -176,7 +176,7 @@
     set recommend_id = #{record.recommendId,jdbcType=INTEGER},
       user_id = #{record.userId,jdbcType=INTEGER},
       servicer_id = #{record.servicerId,jdbcType=INTEGER},
-      check_times = #{record.checkTimes,jdbcType=INTEGER},
+      check_times = #{record.reserveTimes,jdbcType=INTEGER},
       create_time = #{record.createTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -191,8 +191,8 @@
       <if test="servicerId != null">
         servicer_id = #{servicerId,jdbcType=INTEGER},
       </if>
-      <if test="checkTimes != null">
-        check_times = #{checkTimes,jdbcType=INTEGER},
+      <if test="reserveTimes != null">
+        check_times = #{reserveTimes,jdbcType=INTEGER},
       </if>
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
@@ -204,7 +204,7 @@
     update tb_recommend
     set user_id = #{userId,jdbcType=INTEGER},
       servicer_id = #{servicerId,jdbcType=INTEGER},
-      check_times = #{checkTimes,jdbcType=INTEGER},
+      check_times = #{reserveTimes,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=TIMESTAMP}
     where recommend_id = #{recommendId,jdbcType=INTEGER}
   </update>
