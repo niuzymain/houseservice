@@ -20,7 +20,9 @@ public interface ServicerDao {
 
     List<Servicer> queryServicerForUser(@Param("condition") Servicer condition,@Param("order") String order,@Param("index") int dbindex,@Param("size") int dbsize);
 
-    List<Servicer> queryServicerForRecommend(@Param("idlist") List<Long> idList);
+    List<Servicer> queryUserBaseRecommend(@Param("idlist") List<Long> idList);
+
+    List<Servicer> queryItemBaseRecommend(@Param("condition") Servicer condition);
 
     int queryServicerCount(@Param("condition") Servicer servicer);
 }

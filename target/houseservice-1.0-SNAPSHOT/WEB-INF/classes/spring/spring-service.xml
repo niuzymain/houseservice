@@ -23,6 +23,12 @@
     <!-- 配置基于注解的声明式事务 -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
+    <!--以xml形式将job添加进spring容器-->
+    <bean id="salaryQualifyJob" class="com.house.schedule.SalaryQualifyJob">
+    </bean>
+    <bean id="updateExperienceJob" class="com.house.schedule.UpdateExperienceJob">
+    </bean>
+
     <!--&lt;!&ndash;############################配置quartz#######################################&ndash;&gt;-->
     <!--&lt;!&ndash;############################配置JobDetail#######################################&ndash;&gt;-->
     <!--<bean id="salaryQualifyJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->

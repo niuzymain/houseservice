@@ -124,10 +124,10 @@ public class QualifyServicerImp implements QualifyServicer {
     @Override
     @Transactional
     public void updateExperience(Servicer servicer) {
-        servicer.setServicerexperience(servicer.getServicerexperience()+12);
+        servicer.setServicerexperience(servicer.getServicerexperience() + 12);
         int result = servicerDao.updateServicer(servicer);
-        if(result <= 0){
-            throw new RuntimeException("更新"+servicer.getServicername()+"的工作经验错误");
+        if (result <= 0) {
+            throw new RuntimeException("更新" + servicer.getServicername() + "的工作经验错误");
         }
     }
 

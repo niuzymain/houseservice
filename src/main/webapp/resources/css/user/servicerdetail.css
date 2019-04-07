@@ -1,4 +1,4 @@
-#servicer,#comment{
+#whole{
     margin-left: 50px;
 }
 
@@ -38,6 +38,40 @@ h1,h3{
     width:1000px;
 }
 
+#recommend{
+    margin-top: 20px;
+    width:1000px;
+    font-size:13px;
+}
+
 .c-score{
     margin-left: 50px;
 }
+
+#recommendlist{
+    margin-top: 20px;
+    width:1200px;
+}
+
+.frontservicer{
+    display: inline-block;
+    width: 212px;
+    height: 320px;
+    padding:5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border:1px solid black;
+}
+
+.frontservicer img{
+    width: 200px;
+    height: 200px;
+}
+
+.des{
+    color: black;
+}
+.s-sex{
+    margin-left: 20px;
+}
+

@@ -61,7 +61,7 @@ public class RecommendServiceImp implements RecommendService {
     }
 
     @Override
-    public List<Servicer> findRecommendServicer(Long userid) throws Exception {
+    public List<Servicer> RecommendServicerByUser(Long userid) throws Exception {
         //将数据加载到内存中，GroupLensDataModel是针对开放电影评论数据的
         Class.forName("com.mysql.cj.jdbc.Driver");
         DataModel dataModel = new MySQLJDBCDataModel(dataSource, "tb_recommend", "user_id", "servicer_id", "reserve_times", "create_time");
@@ -81,8 +81,20 @@ public class RecommendServiceImp implements RecommendService {
         if (idList.size() == 0) {
             return null;
         } else {
-            List<Servicer> servicerList = servicerDao.queryServicerForRecommend(idList);
+            List<Servicer> servicerList = servicerDao.queryUserBaseRecommend(idList);
             return servicerList;
         }
+    }
+
+    @Override
+    public List<Servicer> RecommendServicerByItem(Long servicerid) throws Exception {
+        Servicer condition = new Servicer();
+        condition.setServicerid(servicerid);
+        Servicer servicer = servicerDao.querySingleServicer(condition);
+        Servicer recommender = new Servicer();
+        recommender.setServicetype(servicer.getServicetype());
+        recommender.setCity(servicer.getCity());
+        List<Servicer> recommendList = servicerDao.queryItemBaseRecommend(recommender);
+        return recommendList;
     }
 }

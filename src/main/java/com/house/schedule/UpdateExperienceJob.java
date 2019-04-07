@@ -1,4 +1,4 @@
-package com.house.service.schedule;
+package com.house.schedule;
 
 import com.house.dao.ServicerDao;
 import com.house.entity.Servicer;
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component("updateExperienceJob")
 public class UpdateExperienceJob {
     @Autowired
     private QualifyServicer qualifyServicer;

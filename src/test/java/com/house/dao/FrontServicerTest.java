@@ -2,7 +2,6 @@ package com.house.dao;
 
 import com.house.Basetest;
 import com.house.entity.Servicer;
-import com.house.entity.WorkArea;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -30,7 +29,7 @@ public class FrontServicerTest extends Basetest {
         idlist.add(37l);
         idlist.add(42l);
         idlist.add(49l);
-        List<Servicer> result = servicerDao.queryServicerForRecommend(idlist);
+        List<Servicer> result = servicerDao.queryUserBaseRecommend(idlist);
         for (Servicer s : result) {
             System.out.println("servicername:"+s.getServicername());
         }

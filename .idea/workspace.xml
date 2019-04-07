@@ -5,20 +5,52 @@
       <artifact name="houseservice:war exploded" />
     </artifacts-to-build>
   </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/login.html" description="&lt;div class=&quot;footer&quot; id=&quot;foot&quot;&gt;" line="43" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="5eb73dc7-a397-4b8d-a922-66f1030a9b43" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/dao/RecommendDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/dao/RecommendDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/entity/Recommend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/entity/Recommend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/demo/HelloMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/dao/ServicerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/dao/ServicerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/QualifyServicerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/QualifyServicerImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/imps/user/RecommendServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/imps/user/RecommendServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/schedule/SalaryQualifyJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/schedule/SalaryQualifyJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/schedule/UpdateExperienceJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/schedule/UpdateExperienceJob.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/house/service/user/RecommendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/service/user/RecommendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/QualifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/QualifyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/user/FrontServicerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/web/user/FrontServicerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RecommendDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RecommendDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mybatis/mapper/TbRecommendMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mybatis/mapper/TbRecommendMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/house/dao/RecommendDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/house/dao/RecommendDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/house/web/user/FrontRecommendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/house/web/user/FrontRecommendController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/recommend.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/recommend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/servicerdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/servicerdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/user/servicerdetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/user/servicerdetail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/user/recommend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/user/recommend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/user/servicerdetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/user/servicerdetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/house/dao/FrontServicerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/house/dao/FrontServicerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/house/dao/ServicerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/house/dao/ServicerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/house/service/imps/user/RecommendServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/house/service/imps/user/RecommendServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/house/service/schedule/SalaryQualifyJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/house/service/schedule/UpdateExperienceJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/house/service/user/RecommendService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/house/service/user/RecommendService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/house/web/user/FrontRecommendController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/house/web/user/FrontRecommendController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ServicerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ServicerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-service.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/dao/ServicerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/dao/ServicerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/imps/user/RecommendServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/imps/user/RecommendServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/schedule/SalaryQualifyJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/schedule/UpdateExperienceJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/user/RecommendService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/service/user/RecommendService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/user/FrontRecommendController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/com/house/web/user/FrontRecommendController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/mapper/ServicerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/mapper/ServicerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-service.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/classes/spring/spring-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/user/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/user/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/user/recommend.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/user/recommend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/user/servicerdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/WEB-INF/html/user/servicerdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/css/user/servicerdetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/css/user/servicerdetail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/user/recommend.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/user/recommend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/user/servicerdetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/houseservice-1.0-SNAPSHOT/resources/js/user/servicerdetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/house/dao/FrontServicerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/house/dao/FrontServicerTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,20 +87,20 @@
         <counts>
           <entry key="TbAdminmsg" value="1" />
           <entry key="class" value="31" />
-          <entry key="css" value="40" />
+          <entry key="css" value="51" />
           <entry key="htm" value="1" />
-          <entry key="html" value="443" />
+          <entry key="html" value="452" />
           <entry key="ibd" value="1" />
-          <entry key="java" value="951" />
+          <entry key="java" value="979" />
           <entry key="jpg" value="5" />
-          <entry key="js" value="325" />
+          <entry key="js" value="333" />
           <entry key="md" value="2" />
           <entry key="png" value="5" />
           <entry key="properties" value="4" />
           <entry key="rnc" value="2" />
           <entry key="sql" value="4" />
           <entry key="txt" value="1" />
-          <entry key="xml" value="231" />
+          <entry key="xml" value="241" />
           <entry key="xsd" value="1" />
           <entry key="负责前端界面路由" value="2" />
         </counts>
@@ -76,45 +108,46 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="31" />
-          <entry key="CSS" value="40" />
-          <entry key="HTML" value="444" />
+          <entry key="CSS" value="51" />
+          <entry key="HTML" value="453" />
           <entry key="Image" value="10" />
-          <entry key="JAVA" value="951" />
-          <entry key="JavaScript" value="325" />
+          <entry key="JAVA" value="979" />
+          <entry key="JavaScript" value="333" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Properties" value="4" />
           <entry key="RNG Compact" value="2" />
           <entry key="SQL" value="4" />
-          <entry key="XML" value="233" />
+          <entry key="XML" value="243" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="2431" />
+          <entry key="css" value="2533" />
           <entry key="dummy" value="90" />
-          <entry key="html" value="10804" />
-          <entry key="java" value="31644" />
-          <entry key="js" value="23479" />
+          <entry key="html" value="11225" />
+          <entry key="java" value="32238" />
+          <entry key="js" value="23815" />
           <entry key="txt" value="15" />
-          <entry key="xml" value="7835" />
+          <entry key="xml" value="7949" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="2431" />
-          <entry key="HTML" value="10844" />
-          <entry key="JAVA" value="31644" />
-          <entry key="JavaScript" value="23439" />
+          <entry key="CSS" value="2533" />
+          <entry key="HTML" value="11265" />
+          <entry key="JAVA" value="32238" />
+          <entry key="JavaScript" value="23775" />
           <entry key="PLAIN_TEXT" value="105" />
-          <entry key="SQL" value="306" />
-          <entry key="XML" value="7529" />
+          <entry key="SQL" value="307" />
+          <entry key="XML" value="7642" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="46" />
+          <entry key="project.closed" value="50" />
           <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.111" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="1" />
@@ -135,15 +168,17 @@
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.58" value="2" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.70" value="1" />
+          <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.75" value="1" />
+          <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.77" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="49" />
+          <entry key="project.opened" value="53" />
         </counts>
       </usages-collector>
     </session>
@@ -154,91 +189,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/user/FrontRecommendController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/recommend.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+            <state relative-caret-position="1474">
+              <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/user/FrontServicerController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/servicerdetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+            <state relative-caret-position="79">
+              <caret line="92" column="22" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/user/UserReserveController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/servicerdetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-655">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="201">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/UserManageController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/servicerpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="134" column="72" selection-start-line="134" selection-start-column="72" selection-end-line="134" selection-end-column="72" />
+            <state relative-caret-position="238">
+              <caret line="134" column="27" selection-start-line="134" selection-start-column="27" selection-end-line="134" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/QualifyController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="323" column="13" lean-forward="true" selection-start-line="323" selection-start-column="13" selection-end-line="323" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ReserveDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="26" column="66" lean-forward="true" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/QualifyReserveServiceImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/QualifyReserveService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/user/servicerdetail.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/reserve.js">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1665">
-              <caret line="258" lean-forward="true" selection-start-line="258" selection-end-line="258" />
+            <state relative-caret-position="158">
+              <caret line="418" column="19" lean-forward="true" selection-start-line="418" selection-start-column="19" selection-end-line="418" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/confirmpage.js">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/user/servicerpage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+            <state relative-caret-position="-132">
+              <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/servicerpage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="327" column="34" selection-start-line="327" selection-start-column="34" selection-end-line="327" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -252,15 +269,14 @@
         <option value="FxmlFile" />
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sex</find>
       <find>ajax</find>
       <find>time</find>
       <find>session</find>
@@ -290,6 +306,7 @@
       <find>mysql</find>
       <find>list</find>
       <find>select</find>
+      <find>single</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -298,16 +315,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/QualifyServicerImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/house/service/schedule/EditExperienceJob.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/house/service/schedule/UpdateExperienceJob.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/house/web/route/UserRoute.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/main.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/servicerpage.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/house/Basetest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/house/dao/AdminMsgDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/house/service/mahout/MahoutDemo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
@@ -315,28 +322,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/common/CommonServiceImp.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/house/dao/RecommendDaoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/house/dao/FrontServicerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/user/recommend.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/recommend.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/user/recommend.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/house/web/user/FrontRecommendController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/servicer/login.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/servicer/displayinfo.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/servicer/evaluate.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/evaluate.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/servicer/evaluate.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/QualifyCommentServiceImp.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/message.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/servicer/message.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/house/dao/ServicerDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/QualifyReserveServiceImp.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/servicer/displayinfo.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/displayinfo.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/entity/Servicer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/UserInfoManageImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/service/superadmin/UserInfoManage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/UserManageController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/common/CommonController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -345,10 +343,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/house/entity/Recommend.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/dao/RecommendDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/RecommendDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/house/service/user/RecommendService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/user/RecommendServiceImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/user/FrontServicerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/house/web/superadmin/QualifyController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/displayinfo.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/evaluate.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/main.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/QualifyServicerImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/schedule/UpdateExperienceJob.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/schedule/SalaryQualifyJob.java" />
+        <option value="$PROJECT_DIR$/src/test/java/demo/HelloMap.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/recommend.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/service/user/RecommendService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/user/recommend.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/servicerdetail.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/web/user/FrontRecommendController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/dao/ServicerDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/house/service/imps/user/RecommendServiceImp.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/user/servicerpage.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/user/recommend.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/user/servicerdetail.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/user/servicerdetail.css" />
       </list>
     </option>
   </component>
@@ -398,17 +415,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="houseservice" type="58d84e3e:PackageViewProjectNode" />
+              <item name="houseservice" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
@@ -452,15 +475,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -472,17 +486,6 @@
               <item name="house" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="imps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="imps" type="462c0819:PsiDirectoryNode" />
-              <item name="superadmin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
@@ -503,16 +506,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="house" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="superadmin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -523,36 +516,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="house" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="route" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="superadmin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
@@ -584,14 +547,6 @@
               <item name="houseservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -610,16 +565,6 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="servicer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
@@ -639,16 +584,6 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="superadmin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
@@ -685,124 +620,7 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="html" type="462c0819:PsiDirectoryNode" />
-              <item name="servicer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-              <item name="superadmin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="mahout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="houseservice-1.0-SNAPSHOT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="houseservice-1.0-SNAPSHOT" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="houseservice" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="houseservice-1.0-SNAPSHOT" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="houseservice" type="58d84e3e:PackageViewProjectNode" />
-              <item name="houseservice" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="58d84e3e:PackageViewProjectNode" />
-              <item name="houseservice" type="616d4139:PackageViewModuleNode" />
-              <item name="com.house" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -830,35 +648,7 @@
               <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="house" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="houseservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="houseservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="house" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -871,7 +661,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554350285297" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554563294771" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -913,6 +703,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.tomcat8">
+    <configuration name="HelloMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo.HelloMap" />
+      <module name="houseservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FrontServicerTest.testRecommendServicer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="houseservice" />
       <extension name="coverage">
@@ -924,22 +727,6 @@
       <option name="PACKAGE_NAME" value="com.house.dao" />
       <option name="MAIN_CLASS_NAME" value="com.house.dao.FrontServicerTest" />
       <option name="METHOD_NAME" value="testRecommendServicer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RecommendDaoTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="houseservice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.house.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.house.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.house.dao.RecommendDaoTest" />
-      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1125,19 +912,19 @@
       <item itemvalue="Maven.clean" />
       <item itemvalue="Maven.package" />
       <item itemvalue="Tomcat Server.tomcat8" />
-      <item itemvalue="JUnit.RecommendDaoTest.test" />
       <item itemvalue="JUnit.RecommendDaoTest.testInsert" />
       <item itemvalue="JUnit.RecommendDaoTest.testSelect" />
       <item itemvalue="JUnit.RecommendDaoTest.testUpdate" />
       <item itemvalue="JUnit.FrontServicerTest.testRecommendServicer" />
+      <item itemvalue="Application.HelloMap" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloMap" />
         <item itemvalue="JUnit.FrontServicerTest.testRecommendServicer" />
         <item itemvalue="JUnit.RecommendDaoTest.testUpdate" />
         <item itemvalue="JUnit.RecommendDaoTest.testSelect" />
         <item itemvalue="JUnit.RecommendDaoTest.testInsert" />
-        <item itemvalue="JUnit.RecommendDaoTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -1234,6 +1021,10 @@
       <workItem from="1554209795305" duration="1941000" />
       <workItem from="1554256866544" duration="1865000" />
       <workItem from="1554343653797" duration="2412000" />
+      <workItem from="1554458198548" duration="1775000" />
+      <workItem from="1554520036199" duration="8237000" />
+      <workItem from="1554555523237" duration="6648000" />
+      <workItem from="1554630750255" duration="2184000" />
     </task>
     <servers />
   </component>
@@ -1270,7 +1061,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="513086000" />
+    <option name="totallyTimeSpent" value="534505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1285,19 +1076,19 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49465242" visible="true" weight="0.36384267" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.090443686" visible="true" weight="0.34114978" />
       <window_info id="Structure" order="1" sideWeight="0.5064516" side_tool="true" weight="0.30786687" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" sideWeight="0.5053476" side_tool="true" weight="0.33585477" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Web" order="7" sideWeight="0.9080068" side_tool="true" weight="0.3698941" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.77474403" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3208191" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.20819113" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.4977307" weight="0.31911263" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.4977307" visible="true" weight="0.30375427" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.21160409" />
@@ -1340,280 +1131,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/QualifyCommentServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/servicer/evaluate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/evaluate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/user/servicerdetail.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="40" selection-start-line="40" selection-end-line="42" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/servicerdetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="70" column="54" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/servicer/evaluate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/servicerdetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="22" column="19" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/servicer/message.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/servicer/displayinfo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/ServiceType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/displayinfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
-          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/reserve.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/servicer/displayinfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/reserverecord.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/UserInfoManageImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7084">
-          <caret line="322" column="12" selection-start-line="322" selection-start-column="6" selection-end-line="322" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/servicer/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="41" column="71" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/login.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/login.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/UserInfoManage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/ServicerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.3.RELEASE/spring-webmvc-5.1.3.RELEASE.jar!/org/springframework/web/servlet/config/spring-mvc.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="624" column="12" selection-start-line="624" selection-start-column="12" selection-end-line="624" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RequestBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/bind/annotation/ExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-365">
-          <caret line="78" column="24" lean-forward="true" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/bind/annotation/ResponseBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RequestMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2389">
-          <caret line="76" column="18" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/common/CommonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="77" column="68" selection-start-line="77" selection-start-column="68" selection-end-line="77" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/user/FrontHeadimgController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/superadmin/main.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="62" column="118" selection-start-line="62" selection-start-column="118" selection-end-line="62" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/HeadimgController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/Recommend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/entity/Servicer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/RecommendDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RecommendDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/user/RecommendService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/user/RecommendServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="66" column="115" selection-start-line="66" selection-start-column="115" selection-end-line="66" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/user/FrontRecommendController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/user/FrontServicerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1656,24 +1173,288 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ReserveDao.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/servicer/displayinfo.css">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
-          <caret line="26" column="66" lean-forward="true" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/servicer/evaluate.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2442" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/evaluate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/editinfo.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common/util.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/servicer/displayinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/user/evaluate.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/user/login.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/user/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/util/QualifyLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/QualifyServicerImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2024">
+          <caret line="110" column="45" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/superadmin/QualifyServicer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/user/headimgdetail.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/user/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="66" column="15" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="66" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/schedule/UpdateExperienceJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/schedule/SalaryQualifyJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="239" column="6" selection-start-line="239" selection-start-column="6" selection-end-line="239" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/HelloMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/HelloJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/HelloSchedue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/superadmin/QualifyReserveServiceImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+        <state relative-caret-position="814">
+          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/superadmin/QualifyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="323" column="13" lean-forward="true" selection-start-line="323" selection-start-column="13" selection-end-line="323" selection-end-column="13" />
+        <state relative-caret-position="6424">
+          <caret line="315" column="24" selection-start-line="315" selection-start-column="24" selection-end-line="315" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/user/UserReserveServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/user/RecommendService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/ReserveDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/dao/ServicerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="24" column="80" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/web/user/FrontRecommendController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="59" column="51" lean-forward="true" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/house/service/imps/user/RecommendServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="96" column="87" lean-forward="true" selection-start-line="96" selection-start-column="87" selection-end-line="96" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/recommend.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1474">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/recommend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/servicerpage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="327" column="34" selection-start-line="327" selection-start-column="34" selection-end-line="327" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/user/servicerpage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/servicerdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="92" column="22" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/servicerpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="134" column="27" selection-start-line="134" selection-start-column="27" selection-end-line="134" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/user/recommend.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ServicerDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="418" column="19" lean-forward="true" selection-start-line="418" selection-start-column="19" selection-end-line="418" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/servicerdetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/user/servicerdetail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>

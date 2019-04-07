@@ -375,7 +375,7 @@
         </where>
     </select>
 
-    <select id="queryServicerForRecommend" resultMap="servicermap">
+    <select id="queryUserBaseRecommend" resultMap="servicermap">
         select
         <include refid="Base_Column_List"/>
         from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
@@ -391,5 +391,31 @@
             and enable_status=1
             and check_status=2
         </where>
+    </select>
+
+    <select id="queryItemBaseRecommend" resultMap="servicermap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
+        <where>
+            <if test="condition.servicetype != null and condition.servicetype.servicetypeid != -1">
+                and s.servicetype_id=#{condition.servicetype.servicetypeid}
+                and st.servicetype_id=#{condition.servicetype.servicetypeid}
+            </if>
+            <if test="condition.city != null and condition.city.workareaid != -1">
+                and s.city_id=#{condition.city.workareaid}
+                and c.workarea_id=#{condition.city.workareaid}
+            </if>
+            and s.degree_id=d.degree_id
+            and s.servicetype_id=st.servicetype_id
+            and s.city_id=c.workarea_id
+            and s.local_id=l.workarea_id
+            and enable_status=1
+            and check_status=2
+        </where>
+        order by
+                s.service_count
+        desc
+        limit 0,15;
     </select>
 </mapper>

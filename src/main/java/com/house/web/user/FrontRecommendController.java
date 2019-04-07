@@ -31,11 +31,34 @@ public class FrontRecommendController {
                 modelmap.put("list", null);
             }
             else{
-                List<Servicer> servicerList = recommendService.findRecommendServicer(currentuser.getUserid());
+                List<Servicer> servicerList = recommendService.RecommendServicerByUser(currentuser.getUserid());
                 modelmap.put("success", true);
                 modelmap.put("list", servicerList);
             }
             modelmap.put("account",currentuser);
+        } catch (Exception e) {
+            e.printStackTrace();
+            modelmap.put("success", false);
+            modelmap.put("errormsg", e.getMessage());
+        }
+        return modelmap;
+    }
+
+    @RequestMapping(value = "getdetailrecommend", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getDetailRecommend(HttpServletRequest request) {
+        Map<String, Object> modelmap = new HashMap<>();
+        try {
+            Long servicerid = Long.parseLong(request.getParameter("servicerid"));
+            if(servicerid == null){
+                modelmap.put("success", false);
+                modelmap.put("errormsg","服务人员信息为空" );
+            }
+            else{
+                List<Servicer> servicerList = recommendService.RecommendServicerByItem(servicerid);
+                modelmap.put("success", true);
+                modelmap.put("list", servicerList);
+            }
         } catch (Exception e) {
             e.printStackTrace();
             modelmap.put("success", false);

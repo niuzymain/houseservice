@@ -1,4 +1,4 @@
-package com.house.service.schedule;
+package com.house.schedule;
 
 import com.house.dao.ServicerDao;
 import com.house.entity.Servicer;
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component("salaryQualifyJob")
 public class SalaryQualifyJob {
     @Autowired
     private QualifyServicer qualifyServicer;
@@ -17,11 +16,11 @@ public class SalaryQualifyJob {
     public void salaryQualify(){
         List<Servicer> servicerList = servicerDao.queryServicer(new Servicer());
         for (Servicer s:servicerList) {
-            System.out.print("修改人员："+s.getServicername());
+//            System.out.print("修改人员："+s.getServicername());
             int salary = qualifyServicer.qualifySalary(s);
-            System.out.print("改前薪水："+s.getServicerprice());
+//            System.out.print("改前薪水："+s.getServicerprice());
             s.setServicerprice(salary);
-            System.out.println("修改后"+s.getServicerprice());
+//            System.out.println("修改后"+s.getServicerprice());
             servicerDao.updateServicer(s);
         }
     }
