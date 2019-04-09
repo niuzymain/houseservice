@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--类名-->
+<mapper namespace="com.house.dao.DataSimulator">
+    <insert id="insertUser">
+    insert into tb_user (user_name, user_sex,
+    enable_status, user_phone, create_time,
+    lastedit_time, account_name, pass_word,user_email
+    )
+    values (#{username,jdbcType=VARCHAR}, #{usersex,jdbcType=VARCHAR},
+    #{enablestatus,jdbcType=INTEGER}, #{userphone,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP},
+    #{lastedittime,jdbcType=TIMESTAMP}, #{accountname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},#{useremail,jdbcType=VARCHAR}
+    )
+    </insert>
+
+    <insert id="insertServicer">
+        insert into
+        tb_servicer (servicer_idnum, servicer_name,
+      servicer_age, servicer_sex, servicer_phone,
+      servicer_img, servicer_experience, servicer_score,
+      servicer_price, servicer_des, servicer_file,
+      city_id, local_id, create_time,
+      lastedit_time, enable_status, check_status,
+      account_name, pass_word, degree_id,
+      servicetype_id,service_count)
+    values(#{serviceridnum,jdbcType=VARCHAR},
+            #{servicername,jdbcType=VARCHAR},
+            #{servicerage,jdbcType=INTEGER},
+            #{servicersex,jdbcType=INTEGER},
+            #{servicerphone,jdbcType=VARCHAR},
+            #{servicerimg,jdbcType=VARCHAR},
+            #{servicerexperience,jdbcType=VARCHAR},
+            #{servicerscore,jdbcType=VARCHAR},
+            #{servicerprice,jdbcType=VARCHAR},
+            #{servicerdes,jdbcType=VARCHAR},
+            #{servicerfile,jdbcType=VARCHAR},
+            #{city.workareaid,jdbcType=VARCHAR},
+            #{local.workareaid,jdbcType=VARCHAR},
+            #{createtime,jdbcType=TIMESTAMP},
+            #{lastedittime,jdbcType=TIMESTAMP},
+            #{enablestatus,jdbcType=INTEGER},
+            #{checkstatus,jdbcType=INTEGER},
+            #{accountname,jdbcType=VARCHAR},
+            #{password,jdbcType=VARCHAR},
+            #{degree.degreeid,jdbcType=VARCHAR},
+            #{servicetype.servicetypeid,jdbcType=VARCHAR},
+            0)
+    </insert>
+
+    <insert id="insertDegree">
+        insert into
+      tb_degree(degree_name,priority,level)
+      values(#{degreename},#{priority},#{level})
+    </insert>
+
+    <insert id="insertServicetype">
+      insert into
+      tb_servicetype(servicetype_name,priority,create_time,lastedit_time,level)
+      values (#{servicetypename},#{priority},#{createtime},#{lastedittime},#{level})
+    </insert>
+
+    <insert id="insertWorkarea">
+        insert into
+      tb_workarea(workarea_name,priority,create_time,lastedit_time,parentarea_id,level)
+      values (#{workareaname},#{priority},#{createtime},#{lastedittime},#{parentarea.workareaid},#{level})
+    </insert>
+
+    <insert id="insertReserve">
+        insert into tb_reserve (create_time, reserve_time,end_time,reserve_addr,
+          reserve_des, reserve_phone, reserve_msg,reserve_contract,
+          user_id, servicer_id, enable_status,evaluate_id
+          )
+        values (#{reserve.createtime,jdbcType=TIMESTAMP}, #{reserve.reservetime,jdbcType=TIMESTAMP}, #{reserve.endtime,jdbcType=TIMESTAMP}, #{reserve.reserveaddr,jdbcType=VARCHAR},
+          #{reserve.reservedes,jdbcType=VARCHAR}, #{reserve.reservephone,jdbcType=VARCHAR}, #{reserve.reservemsg,jdbcType=VARCHAR},
+          #{reserve.reservecontract,jdbcType=VARCHAR},#{reserve.user.userid,jdbcType=INTEGER}, #{reserve.servicer.servicerid,jdbcType=INTEGER}, #{reserve.enablestatus,jdbcType=INTEGER},
+          #{reserve.evaluate.evaluateid,jdbcType=INTEGER}
+          )
+    </insert>
+
+    <insert id="insertEvaluate"  keyColumn="evaluate_id" keyProperty="evaluate.evaluateid">
+        insert into tb_evaluate (evaluate_des, evaluate_score,
+      create_time, user_id, servicer_id,
+      enable_status)
+      values (#{evaluate.evaluatedes,jdbcType=VARCHAR}, #{evaluate.evaluatescore,jdbcType=INTEGER},
+      #{evaluate.createtime,jdbcType=TIMESTAMP}, #{evaluate.user.userid,jdbcType=INTEGER}, #{evaluate.servicer.servicerid,jdbcType=INTEGER},
+      #{evaluate.enablestatus,jdbcType=INTEGER})
+    </insert>
+
+    <insert id="insertRecommend" useGeneratedKeys="true">
+        insert into tb_recommend
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="recommendId != null">
+                recommend_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="servicerId != null">
+                servicer_id,
+            </if>
+            <if test="score != null">
+                score,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="recommendId != null">
+                #{recommendId,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="servicerId != null">
+                #{servicerId,jdbcType=INTEGER},
+            </if>
+            <if test="score != null">
+                #{score,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+</mapper>

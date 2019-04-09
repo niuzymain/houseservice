@@ -416,6 +416,6 @@
         order by
                 s.service_count
         desc
-        limit 0,15;
+        limit 0,10;
     </select>
 </mapper>

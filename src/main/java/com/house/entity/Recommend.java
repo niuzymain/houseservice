@@ -8,7 +8,7 @@ public class Recommend {
 
     private long servicerId;
 
-    private long reserveTimes;//点击次数
+    private int score;//点击次数
 
     private Date createTime;
 
@@ -36,12 +36,12 @@ public class Recommend {
         this.servicerId = servicerId;
     }
 
-    public long getReserveTimes() {
-        return reserveTimes;
+    public int getScore() {
+        return this.score;
     }
 
-    public void setReserveTimes(long reserveTimes) {
-        this.reserveTimes = reserveTimes;
+    public void setScore(int score) {
+        this.score = score;
     }
 
     public Date getCreateTime() {

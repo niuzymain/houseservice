@@ -315,10 +315,10 @@ public class QualifyController {
             }
             int result = qualifyReserveService.confirmReserve(reserve, commonsMultipartFile.getInputStream(), commonsMultipartFile.getOriginalFilename());
             /*
-            👇添加用户预约记录，供推荐数据源👇
+            👇添加用户预约记录，作为推荐数据源👇
              */
-            Reserve currentreserve = qualifyReserveService.specificReserveQualify(reserve.getReserveid());
-            recommendService.addUserTimes(currentreserve.getUser().getUserid(),currentreserve.getServicer().getServicerid());
+//            Reserve currentreserve = qualifyReserveService.specificReserveQualify(reserve.getReserveid());
+//            recommendService.addUserPrefer(currentreserve.getUser().getUserid(),currentreserve.getServicer().getServicerid());
             if (result > 0) {
                 modelMap.put("success", true);
             }

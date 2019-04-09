@@ -1,11 +1,15 @@
 package com.house.service.user;
 
+import com.house.entity.Evaluate;
 import com.house.entity.Servicer;
 
 import java.util.List;
 
 public interface RecommendService {
-    int addUserTimes(long userid,long servicerid);
+    /*
+    根据评分写入推荐表
+     */
+    int addUserPrefer(Evaluate evaluate);
 
     /*
     协同过滤，基于用户推荐

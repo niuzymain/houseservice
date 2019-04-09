@@ -2,6 +2,7 @@ package com.house.service.imps.user;
 
 import com.house.dao.RecommendDao;
 import com.house.dao.ServicerDao;
+import com.house.entity.Evaluate;
 import com.house.entity.Recommend;
 import com.house.entity.Servicer;
 import com.house.service.user.RecommendService;
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -35,20 +37,17 @@ public class RecommendServiceImp implements RecommendService {
     private MysqlDataSource dataSource;
 
     @Override
-    public int addUserTimes(long userid, long servicerid) {
-        Recommend recommend = recommendDao.selectRecommend(userid, servicerid);
+    public int addUserPrefer(Evaluate evaluate) {
+//        Recommend recommend = recommendDao.selectRecommend(userid, servicerid);
+        Recommend recommend = new Recommend();
         int result = 0;
         try {
-            if (recommend != null) {
-                result = recommendDao.updateRecommendReserveTimes(recommend.getRecommendId(), new Date());
-            } else {
                 recommend = new Recommend();
-                recommend.setUserId(userid);
-                recommend.setServicerId(servicerid);
-                recommend.setReserveTimes(5);
+                recommend.setUserId(evaluate.getUser().getUserid());
+                recommend.setServicerId(evaluate.getServicer().getServicerid());
+                recommend.setScore(evaluate.getEvaluatescore());
                 recommend.setCreateTime(new Date());
                 result = recommendDao.insertRecommend(recommend);
-            }
             if (result <= 0) {
                 throw new RuntimeException("添加失败");
             } else {
@@ -95,6 +94,17 @@ public class RecommendServiceImp implements RecommendService {
         recommender.setServicetype(servicer.getServicetype());
         recommender.setCity(servicer.getCity());
         List<Servicer> recommendList = servicerDao.queryItemBaseRecommend(recommender);
+        /*
+        删除当前服务人员
+         */
+        Iterator<Servicer> iterator = recommendList.iterator();
+        while (iterator.hasNext()){
+            Servicer s = iterator.next();
+            if(s.getServicerid() == servicerid){
+                iterator.remove();
+                break;
+            }
+        }
         return recommendList;
     }
 }

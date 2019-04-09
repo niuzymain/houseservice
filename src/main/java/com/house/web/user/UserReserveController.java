@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.house.entity.Evaluate;
 import com.house.entity.Reserve;
 import com.house.entity.User;
+import com.house.service.user.RecommendService;
 import com.house.service.user.UserReserveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +21,9 @@ import java.util.Map;
 public class UserReserveController {
     @Autowired
     private UserReserveService userReserveService;
+
+    @Autowired
+    private RecommendService recommendService;
 
     @RequestMapping(value = "/addreserve", method = RequestMethod.POST)
     @ResponseBody
@@ -77,6 +81,10 @@ public class UserReserveController {
             Evaluate evaluate = objectMapper.readValue(evaluatestr, Evaluate.class);
             evaluate.setUser(user);
             int result = userReserveService.writeEvaluate(evaluate, reserveid);
+            /*
+            添加用户喜好
+             */
+            recommendService.addUserPrefer(evaluate);
             if (result > 0) {
                 modelmap.put("success", true);
             }
