@@ -5,15 +5,9 @@ $(function () {
 ///////////////////////////////////////展示服务人员详情信息////////////////////////////////////////////////////////////////////////
             showDetail(data)
 ////////////////////////////////////////////////////展示服务人员评价////////////////////////////////////////////////////////
-            showEvautate(data)
-        }
-        else {
-            alert(data.errormsg)
-        }
-    })
-    $.getJSON("/user/getdetailrecommend?servicerid=" + servicerid, function (data) {
-        if (data.success) {
-            displayServicer(data);
+            showEvaluate(data)
+//////////////////////////////////////////////////展示推荐服务人员/////////////////////////////////////////////
+            showRecommend(data)
         }
         else {
             alert(data.errormsg)
@@ -30,20 +24,20 @@ $(function () {
 })
 
 ///////////////////////////////////////////////展示服务人员信息//////////////////////////////////////////////////////
-function displayServicer(data) {
-    for (var i = 0; i < data.list.length; i++) {
-        var servicerbody = "        <a href=/user/servicerdetail?servicerid=" + data.list[i].servicerid + ">" +
+function showRecommend(data) {
+    for (var i = 0; i < data.servicerlist.length; i++) {
+        var servicerbody = "        <a href=/user/servicerdetail?servicerid=" + data.servicerlist[i].servicerid + ">" +
             "            <div class=frontservicer>" +
             "                <div class=img>" +
-            "                    <img src=/file" + data.list[i].servicerimg + ">" +
+            "                    <img src=/file" + data.servicerlist[i].servicerimg + ">" +
             "                </div>" +
             "                <div class=des>" +
-            "                    <p class=s-price>薪资：" + data.list[i].servicerprice + "</p>" +
+            "                    <p class=s-price>薪资：" + data.servicerlist[i].servicerprice + "</p>" +
             "                    <p>" +
-            "                        <span class=s-name>姓名:" + data.list[i].servicername + "</span>" +
-            "                        <span class=s-sex>性别：" + sexinfo(data.list[i].servicersex) + "</span>" +
+            "                        <span class=s-name>姓名:" + data.servicerlist[i].servicername + "</span>" +
+            "                        <span class=s-sex>性别：" + sexinfo(data.servicerlist[i].servicersex) + "</span>" +
             "                    </p>" +
-            "                    <p class=s-score>历史评分：" + data.list[i].servicerscore + "</p>" +
+            "                    <p class=s-score>历史评分：" + data.servicerlist[i].servicerscore + "</p>" +
             "                </div>" +
             "            </div>" +
             "        </a>"

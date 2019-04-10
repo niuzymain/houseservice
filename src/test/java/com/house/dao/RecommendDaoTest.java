@@ -28,8 +28,8 @@ public class RecommendDaoTest extends Basetest {
 
     @Test
     public void testSelect(){
-        Recommend recommend = recommendDao.selectRecommend(3l,35l);
-        System.out.println(recommend);
+//        Recommend recommend = recommendDao.s(3l,35l);
+//        System.out.println(recommend);
     }
 
 }

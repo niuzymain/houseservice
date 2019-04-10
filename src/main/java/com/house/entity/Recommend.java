@@ -1,6 +1,10 @@
 package com.house.entity;
+
 import java.util.Date;
 
+/*
+基于用户协同过滤推荐数据表，记录用户预约记录
+*/
 public class Recommend {
     private long recommendId;
 
@@ -8,7 +12,7 @@ public class Recommend {
 
     private long servicerId;
 
-    private int score;//点击次数
+    private int score;
 
     private Date createTime;
 

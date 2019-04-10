@@ -393,7 +393,7 @@
         </where>
     </select>
 
-    <select id="queryItemBaseRecommend" resultMap="servicermap">
+    <select id="querySimpleRecommend" resultMap="servicermap">
         select
         <include refid="Base_Column_List"/>
         from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
@@ -415,6 +415,63 @@
         </where>
         order by
                 s.service_count
+        desc
+        limit 0,10;
+    </select>
+
+    <select id="queryContentBaseRecommend" resultMap="servicermap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_servicer s,tb_degree d,tb_servicetype st,tb_workarea c,tb_workarea l
+        <where>
+            <if test="condition.servicersex != null">
+                and s.servicer_sex=#{condition.servicersex}
+            </if>
+            <if test="condition.servicerage != null">
+                and s.servicer_age between #{condition.servicerage} and #{condition.servicerage}+9
+            </if>
+            <if test="condition.servicerexperience != null">
+                and s.servicer_experience&gt;#{condition.servicerexperience}
+            </if>
+            <if test="condition.servicerscore != null">
+                and s.servicer_score=#{condition.servicerscore}
+            </if>
+            <choose>
+                <when test="condition.servicerprice != null &amp;&amp; condition.servicerprice != 2999 &amp;&amp; condition.servicerprice != 7000">
+                    and s.servicer_price between #{condition.servicerprice} and #{condition.servicerprice}+999
+                </when>
+                <when test="condition.servicerprice == 2999">
+                    and s.servicer_price&lt;=#{condition.servicerprice}
+                </when>
+                <when test="condition.servicerprice == 7000">
+                    and s.servicer_price&gt;=#{condition.servicerprice}
+                </when>
+            </choose>
+            <if test="condition.degree != null and condition.degree.degreeid != null">
+                and s.degree_id=#{condition.degree.degreeid}
+                and d.degree_id=#{condition.degree.degreeid}
+            </if>
+            <if test="condition.servicetype != null and condition.servicetype.servicetypeid != null">
+                and s.servicetype_id=#{condition.servicetype.servicetypeid}
+                and st.servicetype_id=#{condition.servicetype.servicetypeid}
+            </if>
+            <if test="condition.city != null and condition.city.workareaid != null">
+                and s.city_id=#{condition.city.workareaid}
+                and c.workarea_id=#{condition.city.workareaid}
+            </if>
+            <if test="condition.local != null and condition.local.workareaid != null">
+                and s.local_id=#{condition.local.workareaid}
+                and l.workarea_id=#{condition.local.workareaid}
+            </if>
+            and s.degree_id=d.degree_id
+            and s.servicetype_id=st.servicetype_id
+            and s.city_id=c.workarea_id
+            and s.local_id=l.workarea_id
+            and enable_status=1
+            and check_status=2
+        </where>
+        order by
+        servicer_score
         desc
         limit 0,10;
     </select>

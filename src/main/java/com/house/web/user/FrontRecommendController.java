@@ -31,9 +31,11 @@ public class FrontRecommendController {
                 modelmap.put("list", null);
             }
             else{
-                List<Servicer> servicerList = recommendService.RecommendServicerByUser(currentuser.getUserid());
+                List<Servicer> userCFList = recommendService.RecommendServicerByUserCF(currentuser.getUserid());
+                List<Servicer> cBList = recommendService.RecommendServicerByCB(currentuser.getUserid());
                 modelmap.put("success", true);
-                modelmap.put("list", servicerList);
+                modelmap.put("cflist", userCFList);
+                modelmap.put("cblist", cBList);
             }
             modelmap.put("account",currentuser);
         } catch (Exception e) {
@@ -44,26 +46,33 @@ public class FrontRecommendController {
         return modelmap;
     }
 
-    @RequestMapping(value = "getdetailrecommend", method = RequestMethod.GET)
+    @RequestMapping(value = "getrecommendservicerbycb", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String, Object> getDetailRecommend(HttpServletRequest request) {
+    public Map<String, Object> getRecommendServicerByCB(HttpServletRequest request) {
         Map<String, Object> modelmap = new HashMap<>();
-        try {
-            Long servicerid = Long.parseLong(request.getParameter("servicerid"));
-            if(servicerid == null){
-                modelmap.put("success", false);
-                modelmap.put("errormsg","服务人员信息为空" );
-            }
-            else{
-                List<Servicer> servicerList = recommendService.RecommendServicerByItem(servicerid);
-                modelmap.put("success", true);
-                modelmap.put("list", servicerList);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            modelmap.put("success", false);
-            modelmap.put("errormsg", e.getMessage());
-        }
         return modelmap;
     }
+
+//    @RequestMapping(value = "getdetailrecommend", method = RequestMethod.GET)
+//    @ResponseBody
+//    public Map<String, Object> getDetailRecommend(HttpServletRequest request) {
+//        Map<String, Object> modelmap = new HashMap<>();
+//        try {
+//            Long servicerid = Long.parseLong(request.getParameter("servicerid"));
+//            if(servicerid == null){
+//                modelmap.put("success", false);
+//                modelmap.put("errormsg","服务人员信息为空" );
+//            }
+//            else{
+//                List<Servicer> servicerList = recommendService.simpleRecommendServicer(servicerid);
+//                modelmap.put("success", true);
+//                modelmap.put("list", servicerList);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            modelmap.put("success", false);
+//            modelmap.put("errormsg", e.getMessage());
+//        }
+//        return modelmap;
+//    }
 }

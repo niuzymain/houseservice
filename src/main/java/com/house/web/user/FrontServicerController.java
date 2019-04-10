@@ -31,6 +31,7 @@ public class FrontServicerController {
     @Autowired
     private RecommendService recommendService;
 
+
     @RequestMapping(value = "/getavailableservicer", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> getAvailableServicer(HttpServletRequest request) {
@@ -66,14 +67,22 @@ public class FrontServicerController {
             Long servicerid = Long.parseLong(request.getParameter("servicerid"));
             User currentuser = (User)request.getSession().getAttribute("useraccount");
             if(currentuser != null){
+                /*
+                添加用户点击事件
+                 */
                 Long userid = currentuser.getUserid();
-//                int result = recommendService.addUserClick(userid,servicerid);
+                recommendService.addUserClick(userid,servicerid);
             }
             Servicer servicer = frontServicerService.getSpecificServicer(servicerid);
             List<Evaluate> evaluateList = evaluateService.checkEvaluate(servicer);
+            /*
+            推荐服务人员
+             */
+            List<Servicer> servicerList = recommendService.simpleRecommendServicer(servicerid);
             modelmap.put("success", true);
             modelmap.put("servicer", servicer);
             modelmap.put("list", evaluateList);
+            modelmap.put("servicerlist", servicerList);
             return modelmap;
         } catch (Exception e) {
             e.printStackTrace();

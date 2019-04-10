@@ -320,4 +320,12 @@ public class CreateData extends Basetest {
         }
     }
 
+    @Test
+    /*
+    同时添加预约记录，评论和推荐
+     */
+    public void createDatas(){
+
+    }
+
 }
