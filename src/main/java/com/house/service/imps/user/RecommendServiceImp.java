@@ -39,30 +39,6 @@ public class RecommendServiceImp implements RecommendService {
 
     @Autowired
     private MysqlDataSource dataSource;
-
-    @Override
-    public int addUserPrefer(Evaluate evaluate) {
-//        Recommend recommend = recommendDao.selectRecommend(userid, servicerid);
-        Recommend recommend;
-        int result = 0;
-        try {
-                recommend = new Recommend();
-                recommend.setUserId(evaluate.getUser().getUserid());
-                recommend.setServicerId(evaluate.getServicer().getServicerid());
-                recommend.setScore(evaluate.getEvaluatescore());
-                recommend.setCreateTime(new Date());
-                result = recommendDao.insertRecommend(recommend);
-            if (result <= 0) {
-                throw new RuntimeException("添加失败");
-            } else {
-                return result;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException("出现异常");
-        }
-    }
-
     @Override
     @Transactional
     public int addUserClick(Long userid, Long servicerid) {
@@ -93,7 +69,7 @@ public class RecommendServiceImp implements RecommendService {
     public List<Servicer> RecommendServicerByUserCF(Long userid) throws Exception {
         //将数据加载到内存中，GroupLensDataModel是针对开放电影评论数据的
         Class.forName("com.mysql.cj.jdbc.Driver");
-        DataModel dataModel = new MySQLJDBCDataModel(dataSource, "tb_recommend", "user_id", "servicer_id", "score", "create_time");
+        DataModel dataModel = new MySQLJDBCDataModel(dataSource, "tb_evaluate", "user_id", "servicer_id", "evaluate_score", "create_time");
         //计算相似度，相似度算法有很多种，欧几里得、皮尔逊等等。
         UserSimilarity similarity = new EuclideanDistanceSimilarity(dataModel);
         //计算最近邻域，邻居有两种算法，基于固定数量的邻居和基于相似度的邻居，这里使用基于固定数量的邻居
@@ -101,7 +77,7 @@ public class RecommendServiceImp implements RecommendService {
         //构建推荐器，协同过滤推荐有两种，分别是基于用户的和基于物品的，这里使用基于用户的协同过滤推荐
         Recommender recommender = new GenericUserBasedRecommender(dataModel, userNeighborhood, similarity);
         //给用户推荐最多20个服务人员
-        List<RecommendedItem> recommendedItemList = recommender.recommend(userid, 20);
+        List<RecommendedItem> recommendedItemList = recommender.recommend(userid, 10);
         //查找服务人员
         List<Long> idList = new ArrayList<>();
         for (int i = 0; i < recommendedItemList.size(); i++) {

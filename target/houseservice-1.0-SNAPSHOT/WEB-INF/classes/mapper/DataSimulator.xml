@@ -80,7 +80,7 @@
           )
     </insert>
 
-    <insert id="insertEvaluate"  keyColumn="evaluate_id" keyProperty="evaluate.evaluateid">
+    <insert id="insertEvaluate"  useGeneratedKeys="true" keyColumn="evaluate_id" keyProperty="evaluate.evaluateid">
         insert into tb_evaluate (evaluate_des, evaluate_score,
       create_time, user_id, servicer_id,
       enable_status)

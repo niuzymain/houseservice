@@ -225,6 +225,30 @@
         <!--and s.local_id=l.workarea_id-->
         <!--</where>-->
         where enable_status != -1
+        limit #{index},#{size}
+    </select>
+
+    <select id="queryServicerCountForAdmin" resultType="int">
+        select count(*)
+        from tb_servicer s
+        left join tb_degree d
+        on s.degree_id=d.degree_id
+        left join tb_servicetype st
+        on s.servicetype_id=st.servicetype_id
+        left join tb_workarea c
+        on s.city_id=c.workarea_id
+        left join tb_workarea l
+        on s.local_id=l.workarea_id
+        and s.servicetype_id=st.servicetype_id
+        and s.city_id=c.workarea_id
+        and s.local_id=l.workarea_id
+        <!--<where>-->
+        <!--and s.degree_id=d.degree_id-->
+        <!--and s.servicetype_id=st.servicetype_id-->
+        <!--and s.city_id=c.workarea_id-->
+        <!--and s.local_id=l.workarea_id-->
+        <!--</where>-->
+        where enable_status != -1
     </select>
 
     <select id="querySingleServicer" resultMap="servicermap">

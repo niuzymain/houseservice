@@ -11,6 +11,7 @@ public class UserExecution {
     private String stateinfo;
     private User user;
     private List<User> userList;
+    private int usercount;
 
     public UserExecution(){
     }
@@ -24,10 +25,11 @@ public class UserExecution {
         this.stateinfo = userEnum.getStateinfo();
         this.user = user;
     }
-    public UserExecution(UserEnum userEnum, List<User> userList){
+    public UserExecution(UserEnum userEnum, List<User> userList,int usercount){
         this.state = userEnum.getState();
         this.stateinfo = userEnum.getStateinfo();
         this.userList = userList;
+        this.usercount = usercount;
     }
 
     public int getState() {
@@ -60,5 +62,13 @@ public class UserExecution {
 
     public void setUserList(List<User> userList) {
         this.userList = userList;
+    }
+
+    public int getUsercount() {
+        return this.usercount;
+    }
+
+    public void setUsercount(int usercount) {
+        this.usercount = usercount;
     }
 }

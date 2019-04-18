@@ -14,7 +14,7 @@ public class SalaryQualifyJob {
     @Autowired
     private ServicerDao servicerDao;
     public void salaryQualify(){
-        List<Servicer> servicerList = servicerDao.queryServicer(new Servicer());
+        List<Servicer> servicerList = servicerDao.queryServicer(0,10000);
         for (Servicer s:servicerList) {
 //            System.out.print("修改人员："+s.getServicername());
             int salary = qualifyServicer.qualifySalary(s);

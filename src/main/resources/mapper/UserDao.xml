@@ -32,6 +32,12 @@
     <select id="queryUser" resultType="com.house.entity.User">
         select user_id,user_name,user_sex,enable_status,user_phone,create_time,lastedit_time,user_email,account_name
         from tb_user
+        limit #{index},#{size}
+    </select>
+
+    <select id="queryUserCount" resultType="int">
+        select count(*)
+        from tb_user
     </select>
 
     <select id="querySingleUser" resultType="com.house.entity.User">

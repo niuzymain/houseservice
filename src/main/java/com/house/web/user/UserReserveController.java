@@ -84,7 +84,7 @@ public class UserReserveController {
             /*
             添加用户喜好
              */
-            recommendService.addUserPrefer(evaluate);
+//            recommendService.addUserPrefer(evaluate);
             if (result > 0) {
                 modelmap.put("success", true);
             }

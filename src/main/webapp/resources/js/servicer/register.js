@@ -5,21 +5,21 @@ $(function () {
     $(".select").on("change", function () {
         $(this).find("option[value='-1']").remove();
     })
-////////////////////////////////根据城市获取地区信息///////////////////////////////////////////////
-    $(".area .citys").on("change", function () {
-        $(".area .locals").html("<option selected=selected value=0>请选择</option>");
-        $.getJSON("/common/getlocals?parentid=" + $(".area .citys").val(), function (data) {
-            if (data.success) {
-                var i;
-                for (i = 0; i < data.locals.length; i++) {
-                    $(".area .locals").append("<option value=" + data.locals[i].workareaid + ">" + data.locals[i].workareaname + "</option>")
-                }
-            }
-            else {
-                alert(data.errormsg)
-            }
-        })
-    })
+// ////////////////////////////////根据城市获取地区信息///////////////////////////////////////////////
+//     $(".area .citys").on("change", function () {
+//         $(".area .locals").html("<option selected=selected value=0>请选择</option>");
+//         $.getJSON("/common/getlocals?parentid=" + $(".area .citys").val(), function (data) {
+//             if (data.success) {
+//                 var i;
+//                 for (i = 0; i < data.locals.length; i++) {
+//                     $(".area .locals").append("<option value=" + data.locals[i].workareaid + ">" + data.locals[i].workareaname + "</option>")
+//                 }
+//             }
+//             else {
+//                 alert(data.errormsg)
+//             }
+//         })
+//     })
     if (servicerid != null) {
         //////////////////////////修改信息////////////////////////////////////////
         $("#back").attr("href","/servicer/displayinfo")
@@ -33,8 +33,8 @@ $(function () {
                 $(".des textarea").val(data.result.servicerdes)
                 $(".file").append("<a href=/file" + data.result.servicerfile + ">查看文件</a>")
                 $(".img").append("<a href=/file" + data.result.servicerimg + ">查看文件</a>")
-                $(".account .accountname").val(data.result.accountname)
-                $(".account .password").val(data.result.password)
+                $(".accountname input").val(data.result.accountname)
+                $(".password input").val(data.result.password)
             }
             else {
                 alert(data.errormsg)
@@ -113,8 +113,8 @@ $(function () {
                 local: {
                     workareaid: $(".area .locals").val()
                 },
-                accountname: $(".account .accountname").val(),
-                password: $(".account .password").val()
+                accountname: $(".accountname input").val(),
+                password: $(".password input").val()
             }
             var img = $(".img input")[0].files[0];
             var file = $(".file input")[0].files[0];

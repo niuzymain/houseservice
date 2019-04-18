@@ -6,8 +6,9 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface UserDao {
-    public int insertUser(User user);
-    public int updateUser(User user);
-    public List<User> queryUser();
-    public User querySingleUser(@Param("condition") User conditon);
+     int insertUser(User user);
+     int updateUser(User user);
+     List<User> queryUser(@Param("index") int index,@Param("size") int size);
+     int queryUserCount();
+     User querySingleUser(@Param("condition") User conditon);
 }

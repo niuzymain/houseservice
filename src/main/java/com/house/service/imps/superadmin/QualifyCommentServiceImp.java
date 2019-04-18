@@ -3,11 +3,13 @@ package com.house.service.imps.superadmin;
 import com.house.dao.AdminMsgDao;
 import com.house.dao.EvaluateDao;
 import com.house.dao.ServicerDao;
+import com.house.dto.EvaluateExecution;
 import com.house.entity.AdminMsg;
 import com.house.entity.Evaluate;
 import com.house.entity.Servicer;
 import com.house.entity.User;
 import com.house.service.superadmin.QualifyCommentService;
+import com.house.util.PageIndexUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,15 +33,13 @@ public class QualifyCommentServiceImp implements QualifyCommentService {
 
     public static SimpleDateFormat sft = new SimpleDateFormat("yyyy年MM月dd日");
 
+
     @Override
-    public List<Evaluate> commentQualifyList() {
-        try {
-            List<Evaluate> evaluateList = evaluateDao.queryEvaluate(new Evaluate());
-            return evaluateList;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
+    public EvaluateExecution commentQualifyList(int pageindex, int pagesize) {
+        int index = PageIndexUtil.TranstoDBIndex(pageindex,pagesize);
+        List<Evaluate> evaluateList = evaluateDao.queryEvaluateForAdmin(index,pagesize);
+        int evaluatecount = evaluateDao.queryEvaluateCountForAdmin();
+        return new EvaluateExecution(evaluateList,evaluatecount);
     }
 
     @Override

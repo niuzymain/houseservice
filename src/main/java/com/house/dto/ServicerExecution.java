@@ -13,6 +13,7 @@ public class ServicerExecution {
     private String stateinfo;
     private Servicer servicer;
     private List<Servicer> servicerList;
+    private int servicercount;
     public ServicerExecution(){
 
     }
@@ -28,10 +29,11 @@ public class ServicerExecution {
         this.servicer = servicer;
     }
 
-    public ServicerExecution(ServicerEnum servicerEnum, List<Servicer> servicerList){
+    public ServicerExecution(ServicerEnum servicerEnum, List<Servicer> servicerList,int servicercount){
         this.state = servicerEnum.getState();
         this.stateinfo = servicerEnum.getStateinfo();
         this.servicerList = servicerList;
+        this.servicercount = servicercount;
     }
 
     public int getState() {
@@ -64,5 +66,13 @@ public class ServicerExecution {
 
     public void setServicerList(List<Servicer> servicerList) {
         this.servicerList = servicerList;
+    }
+
+    public int getServicercount() {
+        return this.servicercount;
+    }
+
+    public void setServicercount(int servicercount) {
+        this.servicercount = servicercount;
     }
 }

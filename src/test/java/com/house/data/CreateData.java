@@ -35,7 +35,7 @@ public class CreateData extends Basetest {
 
     @Test
     public void createUser() {
-        for (int i = 1; i <= 100; i++) {
+        for (int i = 1; i <= 1000; i++) {
             User user = new User();
             user.setCreatetime(new Date());
             user.setEnablestatus(1);
@@ -105,6 +105,16 @@ public class CreateData extends Basetest {
             Servicer servicer = new Servicer();
             servicer.setServicerid(i);
             servicer.setAccountname("aa" + i);
+            servicerDao.updateServicer(servicer);
+        }
+    }
+
+    @Test
+    public void updateServicerImg(){
+        for(int i=1;i<=200;i++){
+            Servicer servicer = new Servicer();
+            servicer.setServicerid(i);
+            servicer.setServicerimg("/servicerimg/servicerimg.jpg");
             servicerDao.updateServicer(servicer);
         }
     }
@@ -263,10 +273,10 @@ public class CreateData extends Basetest {
         Date t_end = new Date();
         t_end.setTime(t_create.getTime() + 6000l);
         System.out.println("start at" + simpleDateFormat.format(starttime));
-        for (int i = 1; i <= 100; i++) {
+        for (int i = 1; i <= 1000; i++) {
             User user = new User();
             user.setUserid(i);
-            for (int j = 0; j < random.nextInt(8) + 1; j++) {
+            for (int j = 0; j < random.nextInt(4) + 2; j++) {
                 Reserve reserve = new Reserve();
                 reserve.setEnablestatus(3);
                 reserve.setCreatetime(t_create);
@@ -281,11 +291,25 @@ public class CreateData extends Basetest {
                 reserve.setReservedes("des" + i);
                 reserve.setReservephone("111111" + i);
                 dataSimulator.insertReserve(reserve);
+                /*
+                插入评价
+                 */
+                Evaluate evaluate = new Evaluate();
+                evaluate.setUser(user);
+                evaluate.setServicer(servicer);
+                evaluate.setEvaluatescore(random.nextInt(5) + 1);
+                evaluate.setEvaluatedes("eval" + i);
+                evaluate.setEnablestatus(1);
+                evaluate.setCreatetime(new Date());
+                dataSimulator.insertEvaluate(evaluate);
+                reserve.setEvaluate(evaluate);
+                reserveDao.updateReserve(reserve);
             }
         }
         Date endtime = new Date();
-        System.out.println("end at" + simpleDateFormat.format(endtime));
-        System.out.println("time pass" + simpleDateFormat.format(endtime.getTime() - starttime.getTime()));
+        Date passtime = new Date();
+        passtime.setTime(endtime.getTime() - starttime.getTime());
+        System.out.println("time pass" + simpleDateFormat.format(passtime));
     }
 
     @Test

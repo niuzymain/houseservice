@@ -9,7 +9,7 @@ public interface RecommendService {
     /*
     根据评分写入推荐表recommend
      */
-    int addUserPrefer(Evaluate evaluate);
+//    int addUserPrefer(Evaluate evaluate);
 
     /*
    根据点击事件写入推荐表recommendcb

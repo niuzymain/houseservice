@@ -13,6 +13,8 @@ public interface EvaluateDao {
     int updateEvaluate(@Param("evaluate")Evaluate evaluate);
     int deleteEvaluate(@Param("evaluate")Evaluate evaluate);
     List<Evaluate> queryEvaluate(@Param("evaluate")Evaluate evaluate);
+    List<Evaluate> queryEvaluateForAdmin(@Param("index") int index,@Param("size") int size);
+    int queryEvaluateCountForAdmin();
     Evaluate querySingleEvaluate(@Param("evaluate")Evaluate evaluate);
     int averageScore(@Param("servicerid") Long servicerid);
 }

@@ -15,7 +15,7 @@ public class UpdateExperienceJob {
     private ServicerDao servicerDao;
 
     public void udateExperience(){
-        List<Servicer> servicerList = servicerDao.queryServicer(new Servicer());
+        List<Servicer> servicerList = servicerDao.queryServicer(0,10000);
         for (Servicer s:servicerList) {
             qualifyServicer.updateExperience(s);
         }

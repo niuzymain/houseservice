@@ -45,7 +45,7 @@ $(function () {
             return false;
         }
         var adminmsg = {
-            adminmsgdes:msg,
+            adminmsgdes:"审核不通过原因："+msg,
             type:0,
             servicer:{
                 servicerid:servicerid

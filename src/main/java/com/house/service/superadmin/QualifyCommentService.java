@@ -1,5 +1,6 @@
 package com.house.service.superadmin;
 
+import com.house.dto.EvaluateExecution;
 import com.house.entity.AdminMsg;
 import com.house.entity.Evaluate;
 import com.house.entity.Reserve;
@@ -15,6 +16,6 @@ public interface QualifyCommentService {
     /*
     评论审核
      */
-    List<Evaluate> commentQualifyList();
+    EvaluateExecution commentQualifyList(int pageindex,int pagesize);
     int illegalCommentOperate(long evaluateid);
 }

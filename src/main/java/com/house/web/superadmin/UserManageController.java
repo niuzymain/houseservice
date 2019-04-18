@@ -1,6 +1,8 @@
 package com.house.web.superadmin;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.house.dto.ServicerExecution;
+import com.house.dto.UserExecution;
 import com.house.entity.Servicer;
 import com.house.entity.User;
 import com.house.service.servicer.ServicerService;
@@ -65,11 +67,13 @@ public class UserManageController {
     @ResponseBody
     public Map<String, Object> getUserlist(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
-        List<User> userList = new ArrayList<>();
+        int pageIndex = Integer.parseInt(request.getParameter("pageindex"));
+        int pageSize = Integer.parseInt(request.getParameter("pagesize"));
         try {
-            userList = userInfoManage.getUserList();
+            UserExecution userExecution = userInfoManage.getUserList(pageIndex,pageSize);
             modelMap.put("success", true);
-            modelMap.put("result", userList);
+            modelMap.put("result", userExecution.getUserList());
+            modelMap.put("count", userExecution.getUsercount());
         } catch (Exception e) {
             e.printStackTrace();
             modelMap.put("success", false);
@@ -100,11 +104,13 @@ public class UserManageController {
     @ResponseBody
     public Map<String, Object> getServicerList(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
-        List<Servicer> servicerList = new ArrayList<>();
+        int pageIndex = Integer.parseInt(request.getParameter("pageindex"));
+        int pageSize = Integer.parseInt(request.getParameter("pagesize"));
         try {
-            servicerList = userInfoManage.getServicerList();
+            ServicerExecution servicerExecution = userInfoManage.getServicerList(pageIndex,pageSize);
             modelMap.put("success", true);
-            modelMap.put("result", servicerList);
+            modelMap.put("result", servicerExecution.getServicerList());
+            modelMap.put("count", servicerExecution.getServicercount());
         } catch (Exception e) {
             e.printStackTrace();
             modelMap.put("success", false);

@@ -1,6 +1,7 @@
 package com.house.web.superadmin;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.house.dto.EvaluateExecution;
 import com.house.dto.ServicerExecution;
 import com.house.entity.AdminMsg;
 import com.house.entity.Evaluate;
@@ -198,9 +199,12 @@ public class QualifyController {
     public Map<String, Object> getCommentList(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
         try {
-            List<Evaluate> evaluateList = qualifyCommentService.commentQualifyList();
+            int pageindex = Integer.parseInt(request.getParameter("pageindex"));
+            int pagesize = Integer.parseInt(request.getParameter("pagesize"));
+            EvaluateExecution evaluateExecution= qualifyCommentService.commentQualifyList(pageindex,pagesize);
             modelMap.put("success", true);
-            modelMap.put("list", evaluateList);
+            modelMap.put("list", evaluateExecution.getEvaluateList());
+            modelMap.put("evaluatecount",evaluateExecution.getEvaluatecount());
         } catch (Exception e) {
             e.printStackTrace();
             modelMap.put("success", false);
