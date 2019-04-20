@@ -118,6 +118,9 @@ public class RecommendServiceImp implements RecommendService {
     public List<Servicer> RecommendServicerByCB(Long userid) throws Exception {
         List<RecommendCB> recommendCBList = recommendCBDao.queryServiceridByUser(userid);
         List<ServicerCount> servicerCounts = new ArrayList<>();
+        if(recommendCBList == null || recommendCBList.size() == 0){
+            return null;
+        }
         for (RecommendCB rcb:recommendCBList) {
             //1.查找服务人员
             Servicer condition = new Servicer();
