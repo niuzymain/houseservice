@@ -73,4 +73,9 @@ public class SuperAdminRoute {
         return "superadmin/servicerlevel";
 
     }
+
+    @RequestMapping(value = "/servicerdetail",method = RequestMethod.GET)
+    private String servicerDetail() {
+        return "superadmin/servicerdetail";
+    }
 }

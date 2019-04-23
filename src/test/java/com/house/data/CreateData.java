@@ -9,11 +9,9 @@ import com.house.entity.*;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class CreateData extends Basetest {
     @Autowired
@@ -28,7 +26,7 @@ public class CreateData extends Basetest {
     @Autowired
     private EvaluateDao evaluateDao;
 
-    public SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-DD-HH-mm-ss");
+    public SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 
     public Random random = new Random();
 
@@ -110,8 +108,8 @@ public class CreateData extends Basetest {
     }
 
     @Test
-    public void updateServicerImg(){
-        for(int i=1;i<=200;i++){
+    public void updateServicerImg() {
+        for (int i = 1; i <= 200; i++) {
             Servicer servicer = new Servicer();
             servicer.setServicerid(i);
             servicer.setServicerimg("/servicerimg/servicerimg.jpg");
@@ -346,10 +344,26 @@ public class CreateData extends Basetest {
 
     @Test
     /*
-    同时添加预约记录，评论和推荐
+    添加基于内容的推荐
      */
-    public void createDatas(){
-
+    public void createContent_Base() {
+//        for(int i=1;i<=1000;i++){
+//            for(int j=0;j<random.nextInt(5)+1;j++){
+//                RecommendCB recommendCB = new RecommendCB();
+//                recommendCB.setCreatetime(new Date());
+//                recommendCB.setUserid(i);
+//                recommendCB.setClickcount(random.nextInt(5)+1);
+//                recommendCB.setServicerid(random.nextInt(200) + 1);
+//                dataSimulator.insertRecommendCB(recommendCB);
+//            }
+//        }
+        Date date = new Date();
+        java.sql.Timestamp timestamp = new Timestamp(date.getTime());
+        RecommendCB recommendCB = new RecommendCB();
+        recommendCB.setCreatetime(timestamp);
+        recommendCB.setUserid(1);
+        recommendCB.setClickcount(random.nextInt(5) + 1);
+        recommendCB.setServicerid(random.nextInt(200) + 1);
+        dataSimulator.insertRecommendCB(recommendCB);
     }
-
 }

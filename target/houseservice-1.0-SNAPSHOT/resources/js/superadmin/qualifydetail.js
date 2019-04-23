@@ -6,6 +6,7 @@ $(function () {
     }
     else{
         $("#check").hide()
+        $("#message").hide()
     }
    $.getJSON("/admin/getqualifydetail?servicerid="+servicerid,function(data){
        if(data.success){

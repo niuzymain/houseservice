@@ -56,7 +56,7 @@ $(function () {
                                         "<td><a href=# onclick=changestatus(this) id=" + data.result[i].servicerid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
                                         "<td>" +
                                         "<a href=# class='unemployment' onclick=unemploy("+data.result[i].servicerid+")>解雇</a><br>" +
-                                        "<a href=# class='details'>查看详情</a>" +
+                                        "<a href=# class='details' onclick='checkdetails("+data.result[i].servicerid+")'>查看详情</a>" +
                                         "</td>" +
                                         "</tr>"
                                     $("#userlist tbody").append(body);
@@ -115,7 +115,7 @@ $(function () {
                                         "<td><a href=# onclick=changestatus(this) id=" + data.result[i].servicerid + ">" + statusinfo(data.result[i].enablestatus) + "</a></td>" +
                                         "<td>" +
                             "<a href=# class='unemployment' onclick=unemploy("+data.result[i].servicerid+")>解雇</a><br>" +
-                            "<a href=# class='details'>查看详情</a>" +
+                            "<a href=# class='details' onclick='checkdetails("+data.result[i].servicerid+")'>查看详情</a>" +
                             "</td>" +
                             "</tr>"
                         $("#userlist tbody").append(body);
@@ -208,4 +208,8 @@ function unemploy(id){
             }
         }
     })
+}
+
+function checkdetails(id) {
+    window.open("/admin/servicerdetail?servicerid="+id, '_blank')
 }

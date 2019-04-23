@@ -126,4 +126,9 @@
             </if>
         </trim>
     </insert>
+
+    <insert id="insertRecommendCB" useGeneratedKeys="true">
+        insert into tb_recommendcb(user_id,servicer_id,create_time,click_count)
+        values(#{userid},#{servicerid},#{createtime},#{clickcount})
+    </insert>
 </mapper>

@@ -22,4 +22,6 @@ public interface DataSimulator {
     int insertEvaluate(@Param("evaluate") Evaluate evaluate);
 
     int insertRecommend(Recommend recommend);
+
+    int insertRecommendCB(RecommendCB recommendCB);
 }
